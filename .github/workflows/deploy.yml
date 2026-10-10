@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up SSH
         env:
@@ -42,8 +44,34 @@ jobs:
             -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT" \
             ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
 
+      # rsync never deletes, so remove only the files this push deleted from the repo
+      - name: Remove files deleted in this push
+        if: github.event_name == 'push'
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          if ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            echo "Previous commit not available, skipping"
+            exit 0
+          fi
+          deleted=$(mktemp)
+          git diff --name-only --no-renames --diff-filter=D -z "$BEFORE" "$AFTER" \
+            -- . ':!.github' ':!.gitignore' ':!README.md' > "$deleted"
+          if [ ! -s "$deleted" ]; then
+            echo "Nothing to remove"
+            exit 0
+          fi
+          echo "Removing from server:"
+          tr '\0' '\n' < "$deleted"
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "cd $(printf %q "$DEPLOY_PATH") && xargs -0 rm -f --" < "$deleted"
+
       - name: Smoke test
         if: ${{ vars.SITE_URL != '' }}
         run: |
           curl -fsS -o /dev/null -w "index.html -> %{http_code}\n" "${{ vars.SITE_URL }}/"
-          curl -fsS -o /dev/null -w "ziad-welcome.html -> %{http_code}\n" "${{ vars.SITE_URL }}/ziad-welcome.html"
