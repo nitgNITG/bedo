@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e62c0884653548b7e3a04de80417b, type: 3}
+  m_Name: Speed Settings
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialFramework.Simulation.WindSimulationSettings
+  maximumRPM:
+    UseLocal: 0
+    LocalValue: 1000
+    Variable: {fileID: 11400000, guid: a58a3ca2b8031c84587ebf5c38d564df, type: 2}
+  sliderIncrement:
+    UseLocal: 0
+    LocalValue: 200
+    Variable: {fileID: 11400000, guid: 8ce8415cd7b581d4cb5a98f8c3c8bc3b, type: 2}
+  minimumRPM:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 11400000, guid: 400f41bb415110c4bb2a543c46a1257f, type: 2}
+  initialRPM:
+    UseLocal: 0
+    LocalValue: 0
+    Variable: {fileID: 11400000, guid: a597364c41b2c5e4ab9496ac5b03bfea, type: 2}
+  legacyClickIncrement:
+    UseLocal: 0
+    LocalValue: 100
+    Variable: {fileID: 11400000, guid: b17982dab17f09841b692732d154b73e, type: 2}
+  visualRotorMultiplier:
+    UseLocal: 0
+    LocalValue: 0.05
+    Variable: {fileID: 11400000, guid: cfe456662e90db545a755904c361266f, type: 2}

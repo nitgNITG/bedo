@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c100adba1f0bea4bb29ed7154d77640, type: 3}
+  m_Name: Localization Settings
+  m_EditorClassIdentifier: 
+  languages:
+  - languageID: ar-AR
+    languageName: Arabic
+    localizedName: Arabic (ar-Ar)
+    localizationLanguage: {fileID: 11400000, guid: 1d8b3b7fd80a1894d9593f05921c867e, type: 2}
+    isExpanded: 0
+  - languageID: en-US
+    languageName: English
+    localizedName: English (US)
+    localizationLanguage: {fileID: 11400000, guid: 7f0d34462af20e740a7fc45541f666a0, type: 2}
+    isExpanded: 0
+  tables:
+  - tableID: UI
+    localizationTable: {fileID: 11400000, guid: c4d223e438e911a44aecec230da547ea, type: 2}
+    isExpanded: 0
+  - tableID: MPC_103_Exp01
+    localizationTable: {fileID: 11400000, guid: 3859838e30ed53f46b0ba9b9bc0c8274, type: 2}
+    isExpanded: 0
+  - tableID: MPC_103_Exp02
+    localizationTable: {fileID: 11400000, guid: 6be66fa07a46b1c4c8128c7abcecfd3f, type: 2}
+    isExpanded: 0
+  - tableID: MPC_103_Components
+    localizationTable: {fileID: 11400000, guid: a6d180dd5ebbdbb4db506ef461775b09, type: 2}
+    isExpanded: 0
+  - tableID: MPC_104_Exp02
+    localizationTable: {fileID: 11400000, guid: 4449ca77052704a4d9586dff55a9ec44, type: 2}
+    isExpanded: 0
+  - tableID: MPC_104_Exp01
+    localizationTable: {fileID: 11400000, guid: 74e04707cfcfcfb43a49b0b47c2a3ec0, type: 2}
+    isExpanded: 0
+  - tableID: MPC_104_Components
+    localizationTable: {fileID: 11400000, guid: f0d520b6e2a9d544cbc62631bbb3b895, type: 2}
+    isExpanded: 0
+  - tableID: MPC_102_Components
+    localizationTable: {fileID: 11400000, guid: 0c530181cd118714f82b4f24ccfb0704, type: 2}
+    isExpanded: 0
+  - tableID: MPC_102_Exp01
+    localizationTable: {fileID: 11400000, guid: 324c2c63599c8d2418e0082e139b32e5, type: 2}
+    isExpanded: 0
+  - tableID: MPC_102_Exp02
+    localizationTable: {fileID: 11400000, guid: fcaec22566f1e804f8ea7c0dbb75bdaa, type: 2}
+    isExpanded: 0
+  - tableID: MPC_100_Components
+    localizationTable: {fileID: 11400000, guid: 93e2af971aa79d04598466361dc9472b, type: 2}
+    isExpanded: 0
+  - tableID: MPC_100_Exp01
+    localizationTable: {fileID: 11400000, guid: bee86a706d14d5d4ba0b88cd4d9bf00d, type: 2}
+    isExpanded: 0
+  - tableID: MPC_105_Components
+    localizationTable: {fileID: 11400000, guid: 3c00e5ce877b9364392e9e06cad4d092, type: 2}
+    isExpanded: 0
+  - tableID: MPC_105_Exp01
+    localizationTable: {fileID: 11400000, guid: 448b21e81e55d3345b80cf749c26107b, type: 2}
+    isExpanded: 0
+  - tableID: MPC_105_Exp02
+    localizationTable: {fileID: 11400000, guid: 536dfdbbddcc1ac4a859c8af22addfc8, type: 2}
+    isExpanded: 0
+  - tableID: MPC_100_Exp02
+    localizationTable: {fileID: 11400000, guid: c9cbb2a3998113b42833a230ae67d717, type: 2}
+    isExpanded: 1
+  - tableID: MPC_101_Components
+    localizationTable: {fileID: 11400000, guid: e0f35cb5367b0cf43bb2979d18aa3258, type: 2}
+    isExpanded: 1
+  - tableID: MPC_101_Exp01
+    localizationTable: {fileID: 11400000, guid: ee757b2896ed3c040ba908d9126b8459, type: 2}
+    isExpanded: 1
+  - tableID: MPC_101_Exp02
+    localizationTable: {fileID: 11400000, guid: 79d83ad8001512f45ab2a0b51a37cd86, type: 2}
+    isExpanded: 1
+  defaultLanguageID: English (en-US)
+  defaultLanguageIndex: 1
+  enableExperimental: 1
