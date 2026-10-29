@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.Splines;
 
 namespace TutorialFramework
 {
@@ -43,6 +44,8 @@ namespace TutorialFramework
 
         public void ToggleTransparency()
         {
+            // Include inactive cables and any renderers created since Awake.
+            CreateRuntimeCopiesAndAssign();
             transparent = !transparent;
             foreach (Material material in runtimeCopies.Values)
             {
@@ -58,17 +61,18 @@ namespace TutorialFramework
 
         private void CreateRuntimeCopiesAndAssign()
         {
-            foreach (Material source in wireMaterials)
-            {
-                if (source == null || runtimeCopies.ContainsKey(source)) continue;
-                Material copy = new Material(source)
-                {
-                    name = source.name + " (Runtime Wire Transparency)",
-                    hideFlags = HideFlags.DontSave
-                };
-                MakeOpaque(copy);
-                runtimeCopies.Add(source, copy);
-            }
+            // New/alternate cables may use a material outside the Inspector list.
+            // Discover actual cable renderers rather than relying on asset identity.
+            var cableRenderers = new HashSet<Renderer>();
+            foreach (SplineExtrude cable in Resources.FindObjectsOfTypeAll<SplineExtrude>())
+                if (cable.gameObject.scene.IsValid())
+                    foreach (Renderer renderer in cable.GetComponents<Renderer>()) cableRenderers.Add(renderer);
+            foreach (FreeLabWire cable in Resources.FindObjectsOfTypeAll<FreeLabWire>())
+                if (cable.gameObject.scene.IsValid())
+                    foreach (Renderer renderer in cable.GetComponentsInChildren<Renderer>(true)) cableRenderers.Add(renderer);
+            foreach (Material source in wireMaterials) EnsureCopy(source);
+            foreach (Renderer renderer in cableRenderers)
+                foreach (Material source in renderer.sharedMaterials) EnsureCopy(source);
 
             foreach (Renderer renderer in Resources.FindObjectsOfTypeAll<Renderer>())
             {
@@ -86,9 +90,22 @@ namespace TutorialFramework
                     replacements[i] = copy;
                 }
                 if (replacements == null) continue;
-                rendererStates.Add(new RendererState { renderer = renderer, originalMaterials = originals });
+                if (!rendererStates.Exists(state => state.renderer == renderer))
+                    rendererStates.Add(new RendererState { renderer = renderer, originalMaterials = originals });
                 renderer.sharedMaterials = replacements;
             }
+        }
+
+        private void EnsureCopy(Material source)
+        {
+            if (source == null || runtimeCopies.ContainsKey(source) || runtimeCopies.ContainsValue(source)) return;
+            var copy = new Material(source)
+            {
+                name = source.name + " (Runtime Wire Transparency)",
+                hideFlags = HideFlags.DontSave
+            };
+            if (transparent) MakeTransparent(copy); else MakeOpaque(copy);
+            runtimeCopies.Add(source, copy);
         }
 
         private void RestoreOriginalRendererMaterials()

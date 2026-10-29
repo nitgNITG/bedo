@@ -32,6 +32,15 @@ namespace TutorialFramework
             if (!allow)
                 return;
 
+            var manager = InteractionManager.Instance;
+            if (manager != null && manager.Guided)
+            {
+                var wire = GetComponentInParent<WireInteraction>();
+                if (wire != null && !wire.CanClickPoint(this)) return;
+                // Sandbox endpoints never execute their legacy click events in Guided Mode.
+                if (wire == null && GetComponent<FreeLabEndpoint>() != null) return;
+            }
+
             PlaySound();
 
 
@@ -57,23 +66,11 @@ namespace TutorialFramework
             }
 
 
-            StoryboardSteps storyboard =
-                FindObjectOfType<StoryboardSteps>();
-
-
-            if (storyboard != null)
-            {
-                BaseInteraction baseInteraction =
-                    GetComponentInParent<BaseInteraction>();
-
-
-                if (baseInteraction != null)
-                {
-                    if (!storyboard.CanExecuteInteraction(baseInteraction))
-                        return;
-                }
-            }
-
+            BaseInteraction baseInteraction = GetComponentInParent<BaseInteraction>();
+            StoryboardSteps storyboard = baseInteraction != null
+                ? baseInteraction.GetComponentInParent<StoryboardSteps>() : null;
+            if (storyboard != null && !storyboard.CanExecuteInteraction(baseInteraction))
+                return;
 
             onClicked?.Invoke();
 

@@ -211,6 +211,7 @@ public class WindTurbineSpeedController : MonoBehaviour
         {
             if (turbineRunning && CurrentSpeed > 0f)
             {
+                windMillAudio.loop = true;
                 windMillAudio.pitch = Mathf.Lerp(0.6f, 1.2f, Mathf.Clamp01(CurrentSpeed / MaxSpeed));
                 if (!windMillAudio.isPlaying) windMillAudio.Play();
             }

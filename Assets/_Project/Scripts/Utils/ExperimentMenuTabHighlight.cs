@@ -19,6 +19,13 @@ public sealed class ExperimentMenuTabHighlight : MonoBehaviour, IPointerEnterHan
 
     private void Start() => Refresh();
 
+    // Selectable/legacy animation handlers can send Normal when another
+    // control receives focus. Selection, rather than focus, owns this tab.
+    private void LateUpdate()
+    {
+        if (tab != null && tab.isOn) Refresh();
+    }
+
     private void OnDisable()
     {
         if (tab != null) tab.onValueChanged.RemoveListener(OnSelectionChanged);
@@ -45,6 +52,9 @@ public sealed class ExperimentMenuTabHighlight : MonoBehaviour, IPointerEnterHan
         // Keep the selected tab highlighted after the pointer leaves it.
         string state = !tab.IsInteractable() ? "Disabled" :
             tab.isOn || pointerInside ? "Highlighted" : "Normal";
+        if (tabAnimator.GetCurrentAnimatorStateInfo(0).IsName(state) && !tabAnimator.IsInTransition(0)) return;
+        foreach (string trigger in new[] { "Normal", "Highlighted", "Pressed", "Selected", "Disabled" })
+            tabAnimator.ResetTrigger(trigger);
         tabAnimator.Play(state, 0, 0f);
     }
 }

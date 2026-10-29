@@ -66,8 +66,35 @@ namespace TutorialFramework
 
 
 
+        // Revalidate at the wire itself as well as at the input entry point.
+        // An enabled collider/Allow flag alone does not authorize a guided connection.
+        public bool CanClickPoint(Interaction point)
+        {
+            var manager = InteractionManager.Instance;
+            if (!manager || !isActiveAndEnabled || !point || !point.isActiveAndEnabled ||
+                !point.Allow || (point != pointA && point != pointB)) return false;
+            if (!manager.Guided) return manager.Free;
+            var storyboard = GetComponentInParent<StoryboardSteps>();
+            if (!storyboard || !storyboard.isActiveAndEnabled ||
+                !manager.IsExperimentActive(storyboard) ||
+                !storyboard.IsCurrentGuidedInteraction(this) || completed) return false;
+            return waitingSecond ? firstPoint == pointA && point == pointB : point == pointA;
+        }
+
+        public override void ResetInteraction()
+        {
+            base.ResetInteraction();
+            firstPoint = null;
+            waitingSecond = false;
+            if (pointA) pointA.Disable();
+            if (pointB) pointB.Disable();
+            if (markerA) markerA.SetActive(false);
+            if (markerB) markerB.SetActive(false);
+        }
+
         public void PointClicked(Interaction point)
         {
+            if (!CanClickPoint(point)) return;
             // If wire already exists, clicking either connector removes it
             if (completed)
             {
@@ -155,9 +182,10 @@ namespace TutorialFramework
 
         private void Finish()
         {
-            // Keep points enabled so they can be clicked to remove the wire
-            pointA.Enable();
-            pointB.Enable();
+            // Removal by clicking is a Free Mode action. Guided wires stay connected
+            // after their step, even while the next-step callback is delayed.
+            if (InteractionManager.Instance.Guided) DisablePoints();
+            else { pointA.Enable(); pointB.Enable(); }
 
 
             if (markerA)
@@ -184,6 +212,7 @@ namespace TutorialFramework
 
         private void RemoveWire()
         {
+            if (!InteractionManager.Instance || !InteractionManager.Instance.Free) return;
             if (wireObject)
                 wireObject.SetActive(false);
 

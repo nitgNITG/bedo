@@ -46,6 +46,11 @@ public class PVGraphController : MonoBehaviour
     [SerializeField] private TMP_Text plottedXValuesText;
     [Tooltip("Optional TextMeshPro field. Writes every plotted Y value on its own line.")]
     [SerializeField] private TMP_Text plottedYValuesText;
+    [SerializeField] private TMP_Text plottedCurrentValuesText;
+    [SerializeField] private Button voltageGraphTab, acSpeedGraphTab;
+    private bool showingACSpeedGraph;
+    private readonly List<float> plottedACCurrentValues = new List<float>();
+    private readonly List<float> plottedCurrentValues = new List<float>();
     [SerializeField] private string plottedValueFormat = "0.##";
     [Tooltip("Optional direct Clear buttons. When assigned, no scene-wide button search is performed.")]
     [SerializeField] private OnMouseDownE[] clearButtons;
@@ -91,17 +96,52 @@ public class PVGraphController : MonoBehaviour
         // Suppress repeated readings, rather than discarding every repeated RPM.
         for (int i = 0; i < plottedXValues.Count; i++)
             if (Mathf.Abs(plottedXValues[i] - reading.rpm) < .001f &&
-                Mathf.Abs(plottedYValues[i] - graphVoltage) < .001f) return;
+                Mathf.Abs(plottedYValues[i] - graphVoltage) < .001f &&
+                Mathf.Abs(plottedCurrentValues[i] - reading.dcCurrent) < .001f &&
+                Mathf.Abs(plottedACCurrentValues[i] - reading.acCurrent) < .001f) return;
 
         // The loaded model can exceed the original reference curve's 60 V range.
         var yAxis = lineChart.GetChartComponent<YAxis>();
-        if (yAxis != null && graphVoltage > yAxis.max)
-            yAxis.max = Mathf.Ceil(graphVoltage / 12f) * 12f;
-        lineChart.AddData(PointSeries, reading.rpm, graphVoltage);
+        float graphValue = showingACSpeedGraph ? reading.acCurrent : graphVoltage;
+        if (yAxis != null && graphValue > yAxis.max)
+            yAxis.max = showingACSpeedGraph ? Mathf.Ceil(graphValue * 10f) / 10f : Mathf.Ceil(graphValue / 12f) * 12f;
+        lineChart.AddData(PointSeries, reading.rpm, graphValue);
         plottedXValues.Add(reading.rpm);
         plottedYValues.Add(graphVoltage);
+        plottedCurrentValues.Add(reading.dcCurrent);
+        plottedACCurrentValues.Add(reading.acCurrent);
         RefreshPlottedPointLists();
         if (exporter != null) exporter.AddWindMeasurement(reading, graphVoltage);
+        lineChart.RefreshChart();
+    }
+
+    public void ShowVoltageGraph() => SelectWindGraph(false);
+    public void ShowACSpeedGraph() => SelectWindGraph(true);
+
+    private void SelectWindGraph(bool acSpeed)
+    {
+        if (!EnsureWindGraph()) return;
+        showingACSpeedGraph = acSpeed;
+        lineChart.RemoveAllSerie();
+        lineChart.ClearData();
+        var series = lineChart.AddSerie<Line>(acSpeed ? "AC-Speed curve" : "Speed curve");
+        series.symbol.show = true;
+        series.symbol.size = 2;
+        var values = acSpeed ? plottedACCurrentValues : plottedYValues;
+        var axis = lineChart.GetChartComponent<YAxis>();
+        if (axis != null)
+        {
+            axis.axisName.name = acSpeed ? "AC current (A)" : yAxisLabel;
+            axis.axisLabel.numericFormatter = "0.##";
+            axis.min = 0;
+            float maximum = values.Count > 0 ? values.Max() : 0;
+            axis.max = acSpeed ? Mathf.Max(.1f, Mathf.Ceil(maximum * 10f) / 10f)
+                : Mathf.Max(60, Mathf.Ceil(maximum / 12f) * 12f);
+        }
+        for (int i = 0; i < plottedXValues.Count; i++)
+            lineChart.AddData(PointSeries, plottedXValues[i], values[i]);
+        if (voltageGraphTab) voltageGraphTab.interactable = acSpeed;
+        if (acSpeedGraphTab) acSpeedGraphTab.interactable = !acSpeed;
         lineChart.RefreshChart();
     }
 
@@ -165,6 +205,8 @@ public class PVGraphController : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (voltageGraphTab) voltageGraphTab.onClick.RemoveListener(ShowVoltageGraph);
+        if (acSpeedGraphTab) acSpeedGraphTab.onClick.RemoveListener(ShowACSpeedGraph);
         foreach (var clearButton in linkedClearButtons)
         {
             if (clearButton != null)
@@ -196,6 +238,8 @@ public class PVGraphController : MonoBehaviour
         lineChart.ClearData();
         plottedXValues.Clear();
         plottedYValues.Clear();
+        plottedCurrentValues.Clear();
+        plottedACCurrentValues.Clear();
         RefreshPlottedPointLists();
 
         // Replace prefab labels such as "Set Point (T(C))" with labels for
@@ -215,6 +259,9 @@ public class PVGraphController : MonoBehaviour
 
         if (UsesWindModel)
         {
+            // Reserve room inside the chart for the complete final RPM label.
+            var grid = lineChart.GetChartComponent<GridCoord>();
+            if (grid != null) grid.right = .07f;
             if (xAxis != null)
             {
                 xAxis.type = Axis.AxisType.Value;
@@ -384,6 +431,8 @@ public class PVGraphController : MonoBehaviour
 
         if (plottedYValuesText != null)
             plottedYValuesText.text = FormatValues(plottedYValues);
+        if (plottedCurrentValuesText != null)
+            plottedCurrentValuesText.text = FormatValues(plottedCurrentValues);
     }
 
     private string FormatValues(List<float> values)
@@ -399,6 +448,8 @@ public class PVGraphController : MonoBehaviour
     {
         plottedXValues.Clear();
         plottedYValues.Clear();
+        plottedCurrentValues.Clear();
+        plottedACCurrentValues.Clear();
         RefreshPlottedPointLists();
     }
 
@@ -430,9 +481,13 @@ public class PVGraphController : MonoBehaviour
             var scrollSync = scrollOwner.GetComponent<PVGraphReadoutScrollSync>();
             if (scrollSync == null)
                 scrollSync = scrollOwner.AddComponent<PVGraphReadoutScrollSync>();
-            scrollSync.Configure(voltageScroll, currentScroll);
+            scrollSync.Configure(voltageScroll, currentScroll, FindParentScrollRect(plottedCurrentValuesText));
         }
 
+        if (voltageGraphTab) voltageGraphTab.onClick.AddListener(ShowVoltageGraph);
+        if (acSpeedGraphTab) acSpeedGraphTab.onClick.AddListener(ShowACSpeedGraph);
+        if (voltageGraphTab) voltageGraphTab.interactable = showingACSpeedGraph;
+        if (acSpeedGraphTab) acSpeedGraphTab.interactable = !showingACSpeedGraph;
         if (lineChart == null)
             return;
 

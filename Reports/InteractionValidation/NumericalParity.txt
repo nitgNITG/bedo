@@ -1,0 +1,1 @@
+PASS: all 176 current numerical samples exactly match the phase 4 baseline after the Splines lifecycle guard.

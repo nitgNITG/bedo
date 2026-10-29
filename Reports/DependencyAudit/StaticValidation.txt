@@ -1,0 +1,7 @@
+PASS: recovered source files exist and recorded original GUIDs match.
+PASS: 22 existing YAML assets changed only legacy handler enable flags; all other serialized content is preserved.
+PASS: no duplicate asset GUIDs under Assets.
+Missing GUID identities: 79 -> 19; resolved 60.
+Unresolved serialized references across all Assets (including archived demos): 1022 -> 777.
+Unity version: m_EditorVersion: 6000.3.21f1
+Input backend: activeInputHandler: 0

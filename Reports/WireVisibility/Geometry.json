@@ -1,0 +1,250 @@
+{
+  "changedCables": [
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1437398202-0",
+      "name": "Experiments/Exp 2/exp 2/Steps/Wires/Full bringe rectifier output Red to PWM Solar Charge Controller red",
+      "maxDisplacement": 0.14035932762239436,
+      "lengthRatio": 0.9933556426852882,
+      "fixedEntryPointError": 4.315837287515549e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1835929373-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/AC Halogen N 1 to Off-grid Inverter AC Output N",
+      "maxDisplacement": 0.5547544672209727,
+      "lengthRatio": 1.0127461158180366,
+      "fixedEntryPointError": 4.315837287515549e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1250668329-0",
+      "name": "Experiments/Exp 3/exp 3/Steps/Wires/battery red to DC Halogen Red",
+      "maxDisplacement": 0.4369087053947477,
+      "lengthRatio": 1.0130336099119654,
+      "fixedEntryPointError": 4.315837287515549e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1439444865-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/Battery +ve to Off-Grid Inverter Battery +ve",
+      "maxDisplacement": 0.2981269933843975,
+      "lengthRatio": 1.000799872996422,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1751323827-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/Off-Grid Inverter Battery -ve to Battery -ve",
+      "maxDisplacement": 0.34974782043701963,
+      "lengthRatio": 1.0053486954710884,
+      "fixedEntryPointError": 4.57763671875e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-210281796-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/battery red to DC LED Red",
+      "maxDisplacement": 0.31132283331061034,
+      "lengthRatio": 1.0053998664419361,
+      "fixedEntryPointError": 4.315837287515549e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-397281618-0",
+      "name": "Experiments/Exp 1/exp 1/Steps/Wires/Full bringe rectifier output Red to rheostat 100 ohm red",
+      "maxDisplacement": 0.7363463533408698,
+      "lengthRatio": 1.003778852583735,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1916246158-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/AC Halogen L 1 to Off-grid Inverter AC Output L",
+      "maxDisplacement": 0.8376395072319714,
+      "lengthRatio": 1.0204719548457384,
+      "fixedEntryPointError": 4.57763671875e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-2029802315-0",
+      "name": "Experiments/Exp 3/exp 3/Steps/Wires/MPPT Solar Charge Controller Black to battery Black",
+      "maxDisplacement": 0.6161980064761238,
+      "lengthRatio": 1.0032564059953968,
+      "fixedEntryPointError": 4.315837287515549e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-865310611-0",
+      "name": "Experiments/Free Lab/Additional Wind Wires/DC Halogen -ve 1 to MPPT Solar Charge Controller DC Load -ve",
+      "maxDisplacement": 0.3607045258622058,
+      "lengthRatio": 1.0056115015369849,
+      "fixedEntryPointError": 2.191376741996013e-05,
+      "bakedFreeRoute": true
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1783033255-0",
+      "name": "Experiments/Exp 3/exp 3/Steps/Wires/MPPT Solar Charge Controller red to battery red",
+      "maxDisplacement": 0.29977553012125513,
+      "lengthRatio": 1.0010777387604266,
+      "fixedEntryPointError": 3.737624729588589e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1951202173-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/AC Halogen Black output to Off-grid Inverter Black input",
+      "maxDisplacement": 0.3974126143728641,
+      "lengthRatio": 1.0083666095641988,
+      "fixedEntryPointError": 4.57763671875e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1468492642-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/Full bringe rectifier -ve to Off-grid Inverter DC Input -ve",
+      "maxDisplacement": 0.3039744531570227,
+      "lengthRatio": 1.0041185380853856,
+      "fixedEntryPointError": 5.285799583645255e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-303319760-0",
+      "name": "Experiments/Exp 1/exp 1/Steps/Wires/Full bringe rectifier +ve to rheostat 100 ohm terminal 1",
+      "maxDisplacement": 0.5156611176285556,
+      "lengthRatio": 1.0034333594219333,
+      "fixedEntryPointError": 4.315837287515549e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1186964666-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/Full bringe rectifier +ve to Off-grid Inverter DC Input +ve",
+      "maxDisplacement": 0.4094924111079416,
+      "lengthRatio": 1.0096166627710055,
+      "fixedEntryPointError": 4.57763671875e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-292695035-0",
+      "name": "Experiments/Free Lab/Additional Wind Wires/PWM Solar Charge Controller DC Load +ve to DC Halogen +ve 1",
+      "maxDisplacement": 0.5452554450965853,
+      "lengthRatio": 1.0056271465540643,
+      "fixedEntryPointError": 1.52587890625e-05,
+      "bakedFreeRoute": true
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-224190106-0",
+      "name": "Experiments/Exp 2/exp 2/Steps/Wires/PWM Solar Charge Controller red to battery red",
+      "maxDisplacement": 0.18868327229554707,
+      "lengthRatio": 1.0002622395822853,
+      "fixedEntryPointError": 5.285799583645255e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-257436327-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/Full bringe rectifier L3 to wind mill module L3 wire",
+      "maxDisplacement": 0.39720911561658445,
+      "lengthRatio": 1.000853356051041,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1453163093-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/Full bringe rectifier output Red to AC Halogen Red input",
+      "maxDisplacement": 0.3375010712045693,
+      "lengthRatio": 1.0031641630562171,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1785496127-0",
+      "name": "Experiments/Exp 3/exp 3/Steps/Wires/Full bringe rectifier output Red to MPPT Solar Charge Controller red",
+      "maxDisplacement": 0.16691839232204253,
+      "lengthRatio": 1.0007923499688571,
+      "fixedEntryPointError": 5.285799583645255e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1727483346-0",
+      "name": "Experiments/Exp 2/exp 2/Steps/Wires/battery red to DC Halogen Red",
+      "maxDisplacement": 0.4369087053947477,
+      "lengthRatio": 1.0130336099119654,
+      "fixedEntryPointError": 4.315837287515549e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1694818754-0",
+      "name": "Experiments/Exp 1/exp 1/Steps/Wires/Full bringe rectifier L3 to wind mill module L3 wire",
+      "maxDisplacement": 0.43659540217515347,
+      "lengthRatio": 1.0017702654684133,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1825176315-0",
+      "name": "Experiments/Exp 2/exp 2/Steps/Wires/PWM Solar Charge Controller Battery -ve to Battery -ve",
+      "maxDisplacement": 0.21762066759423826,
+      "lengthRatio": 0.9999242359137328,
+      "fixedEntryPointError": 4.57763671875e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-706742218-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/Full bringe rectifier output Black to AC Halogen Black input",
+      "maxDisplacement": 0.498154814521197,
+      "lengthRatio": 1.0026441953825975,
+      "fixedEntryPointError": 3.0517578125e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-2091369930-0",
+      "name": "Experiments/Free Lab/Additional Wind Wires/DC Halogen -ve 1 to PWM Solar Charge Controller DC Load -ve",
+      "maxDisplacement": 0.6298373188477995,
+      "lengthRatio": 1.0060791914626728,
+      "fixedEntryPointError": 1.5728399755926745e-05,
+      "bakedFreeRoute": true
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-420041200-0",
+      "name": "Experiments/Exp 3/exp 3/Steps/Wires/Full bringe rectifier L3 to wind mill module L3 wire",
+      "maxDisplacement": 0.43659540217515347,
+      "lengthRatio": 1.0017702654684133,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-239483769-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/AC Halogen Red output to Off-grid Inverter Red input",
+      "maxDisplacement": 0.7551106690342111,
+      "lengthRatio": 1.033327224361269,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1508918137-0",
+      "name": "Experiments/Exp 4/exp 4/Steps/Wires/AC Halogen N 2 to Off-grid Inverter AC Output N",
+      "maxDisplacement": 0.5052793485267805,
+      "lengthRatio": 1.0140225314243654,
+      "fixedEntryPointError": 3.737624729588589e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1385515848-0",
+      "name": "Experiments/Exp 1/exp 1/Steps/Wires/Full bringe rectifier output Black to rheostat 100 ohm Black",
+      "maxDisplacement": 0.33926348674449414,
+      "lengthRatio": 1.0024517328223534,
+      "fixedEntryPointError": 4.57763671875e-05,
+      "bakedFreeRoute": false
+    },
+    {
+      "id": "GlobalObjectId_V1-2-0e1d88516ec0e334b83cb1d6b12918f5-1561554859-0",
+      "name": "Experiments/Exp 2/exp 2/Steps/Wires/Full bringe rectifier L3 to wind mill module L3 wire",
+      "maxDisplacement": 0.3971257136890187,
+      "lengthRatio": 1.0008521235909729,
+      "fixedEntryPointError": 3.411968959808029e-05,
+      "bakedFreeRoute": false
+    }
+  ],
+  "camerasUnchanged": true,
+  "targetsUnchanged": true,
+  "clickAreaRadiusPixels": 3,
+  "clickAreaObstructionsBefore": 21,
+  "clickAreaObstructionsAfter": 0,
+  "remainingClickObstructions": []
+}

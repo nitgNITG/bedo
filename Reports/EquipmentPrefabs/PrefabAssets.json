@@ -1,0 +1,116 @@
+[
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Connectors/AC LED Power Connectors.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Connectors/Lamp Power Connector Assembly.prefab"
+    ],
+    "sha256": "1fad33c808ef6e72affc82627972cdf8db0a9de763f4d967cb93fb0c393d43e4"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Connectors/DC Halogen Power Connectors.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Connectors/Lamp Power Connector Assembly.prefab"
+    ],
+    "sha256": "e10f7b35fd02d3b8c4728817590183701fcb52fa89dd2aabc4ad5e5cff63c2a7"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Connectors/Lamp Power Connector Assembly.prefab",
+    "source_prefabs": [],
+    "sha256": "4473fbbc750b9ff8e9908377dd265cda7c4aff8fe84153e1359359a393d27ba6"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/AC Halogen Lamp 1.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "545752b453d2030e9b2a3f74dfbfaec22b4485ad9ad06d583b69263c336cc412"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/AC Halogen Lamp 2.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "b0a3713371b1675cfcbd7bbe7d9c17fad9573a9186484a676cca43807580b70c"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/AC LED Lamp 1.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "f1edc6932ed5497eeef4fdf549dcc3f85ba199607c85b827666193a7e98402e4"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/AC LED Lamp 2.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "6b35b79c26e18b920bf0acd231f286b85f54274ae937a1433b17e1b874ed4c4a"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/DC Halogen Lamp 1.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "4139f5816c00645c5c4cb17e3a76f3f02bf899ae2ec5609e2c4533087ebbdedc"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/DC Halogen Lamp 2.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "904d4090bf60cf18c3f51a47c5527a377dee8b99224b3c0510ceb7dd69706aa3"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/DC LED Lamp 1.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "9873c67e64e2ce98dc636a2e80c924f0c7195c96bda5f29fa2db6cc21462ec26"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/DC LED Lamp 2.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab"
+    ],
+    "sha256": "2b3f28b57624d31fbebc9ad76f166da9f36e85da07e47ba5b4a607a5c0e9b677"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/Lamp On Off Assembly.prefab",
+    "source_prefabs": [],
+    "sha256": "54c0e2de58dcb5183223bc1af2c1e1c3a1aa3f00ddb449d43015e734a5a66ee2"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Lamps/Wind Lamp Outputs.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Lamps/DC Halogen Lamp 2.prefab",
+      "Assets/_Project/Prefabs/Equipment/Lamps/DC LED Lamp 2.prefab",
+      "Assets/_Project/Prefabs/Equipment/Lamps/AC LED Lamp 1.prefab",
+      "Assets/_Project/Prefabs/Equipment/Lamps/AC LED Lamp 2.prefab",
+      "Assets/_Project/Prefabs/Equipment/Lamps/AC Halogen Lamp 2.prefab",
+      "Assets/_Project/Prefabs/Equipment/Lamps/AC Halogen Lamp 1.prefab",
+      "Assets/_Project/Prefabs/Equipment/Lamps/DC LED Lamp 1.prefab",
+      "Assets/_Project/Models/Trainers/Outputs.fbx",
+      "Assets/_Project/Prefabs/Equipment/Lamps/DC Halogen Lamp 1.prefab"
+    ],
+    "sha256": "b0db1a5e12ceac9fd278584aa49577b44b5bb4b0118ec67a9c3162f1abcd7775"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Rheostats/Rheostat 150 Ohm.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Rheostats/Rheostat Assembly.prefab"
+    ],
+    "sha256": "29074dc7768a33cd81ccc71488ba4ef06e72e93c05e7927fa9a1a261fc837b03"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Rheostats/Rheostat 800 Ohm.prefab",
+    "source_prefabs": [
+      "Assets/_Project/Prefabs/Equipment/Rheostats/Rheostat Assembly.prefab"
+    ],
+    "sha256": "385208b99f820dc4b73e294c53aa68ecc7cc8307fe4020b5d8e4197245c40f2c"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/Equipment/Rheostats/Rheostat Assembly.prefab",
+    "source_prefabs": [],
+    "sha256": "11f0a353bc93771a0a8978948ba8bab6d5267e5eae596081190e81c24cd81f32"
+  }
+]

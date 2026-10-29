@@ -1,0 +1,65 @@
+{
+  "guidedCoexistingPairsAudited": 651,
+  "guidedContacts": 0,
+  "potentialFreeSlotPairsAudited": 22260,
+  "runtimePairOrdersChecked": 2262,
+  "runtimeContactsAfter": 0,
+  "pairCasesRequiringDetours": 1462,
+  "maxCableMouthRoundingErrorWorldUnits": 6.103515625e-05,
+  "clearanceCalculationMilliseconds": {
+    "median": 3.2001999616622925,
+    "p95": 13.606399536132812,
+    "max": 301.343994140625
+  },
+  "largeCombinations": [
+    {
+      "seed": 0,
+      "cables": 48,
+      "pairs": 1128,
+      "contacts": []
+    },
+    {
+      "seed": 1,
+      "cables": 48,
+      "pairs": 1128,
+      "contacts": []
+    },
+    {
+      "seed": 2,
+      "cables": 48,
+      "pairs": 1128,
+      "contacts": []
+    },
+    {
+      "seed": 3,
+      "cables": 48,
+      "pairs": 1128,
+      "contacts": []
+    },
+    {
+      "seed": 4,
+      "cables": 46,
+      "pairs": 1035,
+      "contacts": []
+    },
+    {
+      "seed": 5,
+      "cables": 48,
+      "pairs": 1128,
+      "contacts": []
+    },
+    {
+      "seed": 6,
+      "cables": 46,
+      "pairs": 1035,
+      "contacts": []
+    },
+    {
+      "seed": 7,
+      "cables": 47,
+      "pairs": 1081,
+      "contacts": []
+    }
+  ],
+  "scientificSamplesUnchanged": true
+}

@@ -78,6 +78,7 @@ namespace TutorialFramework
         public Transform rotor;
         public float rotorVisualMultiplier = .05f;
         public AudioClip windSound;
+        [SerializeField] private UnityEngine.Audio.AudioMixerGroup turbineDevicesGroup;
         public PVGraphController graph;
         public PVExperimentExporter exporter;
         [Header("SOAP simulation context")]
@@ -130,7 +131,16 @@ namespace TutorialFramework
                     else
                     {
                         var first = socket.plugs[0].transform;
-                        plug.transform.localPosition = first.localPosition + new Vector3(0, 0, -.12f * i);
+                        // Preserve authored stacked plugs. Coincident duplicates
+                        // need one visible plug-body spacing along the cable outlet.
+                        var mesh = socket.plugs[0].GetComponentInChildren<MeshFilter>(true);
+                        float length = mesh && mesh.sharedMesh
+                            ? mesh.transform.TransformVector(Vector3.forward * mesh.sharedMesh.bounds.size.z).magnitude : 1.5f;
+                        if (Vector3.Distance(plug.transform.position, first.position) < length * .5f)
+                        {
+                            Vector3 outlet = mesh ? mesh.transform.TransformDirection(Vector3.back).normalized : -first.forward;
+                            plug.transform.position = first.position + outlet * (length * .8f * i);
+                        }
                         plug.transform.localRotation = first.localRotation;
                         plug.transform.localScale = first.localScale;
                         endpoint.AddAdditionalConnectionPlug(plug);
@@ -224,6 +234,8 @@ namespace TutorialFramework
             ReadConstants(offGridModel);
             audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.clip = windSound; audioSource.loop = true; audioSource.playOnAwake = false;
+            audioSource.volume = 0.4f;
+            audioSource.outputAudioMixerGroup = turbineDevicesGroup;
             lab.InitializeFreeLab();
             IsReady = true;
             Refresh();
@@ -273,6 +285,7 @@ namespace TutorialFramework
         private void ApplyPages()
         {
             bool powered = On(mainPower);
+            if (monitors) monitors.GetComponentInParent<WindMonitorTabs>(true)?.SetPageSelection(graphShown);
             if (blackScreen) blackScreen.SetActive(!powered);
             if (monitors) monitors.SetActive(powered && !graphShown);
             if (graphPage) graphPage.SetActive(powered && graphShown);
@@ -369,7 +382,7 @@ namespace TutorialFramework
             if (speedCollider) speedCollider.enabled = powered && On(windPower);
             if (windGlow) windGlow.SetActive(generating);
             if (analyzer) analyzer.SetActive(powered && On(analyzerMode));
-            if (powerAnalyzerText) powerAnalyzerText.text = $"{reading.acPower:F2} W\n0.00 VAr\n{Mathf.Abs(reading.acVoltage * reading.acCurrent):F2} VA";
+            if (powerAnalyzerText) powerAnalyzerText.text = PVGuidedDataBinder.FormatPowerAnalyzer(reading.acPower, Mathf.Abs(reading.acVoltage * reading.acCurrent));
             if (audioSource)
             {
                 bool audible = generating && RPM > 0;

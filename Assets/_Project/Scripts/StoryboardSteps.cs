@@ -393,13 +393,21 @@ namespace TutorialFramework
         // CAN EXECUTE INTERACTION
         // =====================================================
 
+        public bool IsCurrentGuidedInteraction(BaseInteraction interaction)
+        {
+            return currentStep >= 0 && currentStep < steps.Count &&
+                steps[currentStep] != null && steps[currentStep].stepType == StepType.Interaction &&
+                steps[currentStep].interaction == interaction;
+        }
+
         public bool CanExecuteInteraction(
             BaseInteraction interaction
         )
         {
-            // Guided mode does not use free mode restrictions
+            // Reusable single controls keep their authored Allow behavior. Wires
+            // must belong to the current guided step, not merely an enabled banana.
             if (InteractionManager.Instance.Guided)
-                return true;
+                return !(interaction is WireInteraction) || IsCurrentGuidedInteraction(interaction);
 
 
             if (currentFreeStep >= freeSteps.Count)

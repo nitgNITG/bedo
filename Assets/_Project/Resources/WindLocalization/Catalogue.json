@@ -1,0 +1,2014 @@
+{
+  "entries": [
+    {
+      "english": "Connect (220 VAC) terminal and the neutral path (N) of all used modules to the (220 VAC) terminal and the neutral path (N) of the main board.",
+      "arabic": "قم بتوصيل طرف (220 VAC)، والمسار المحايد (N) لجميع الوحدات المستخدمة بأطراف (220 VAC)، والمسار المحايد (N) في اللوحة الرئيسية.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Connect an Ethernet cable from the Main frame (Comm. Out) to the wind mill module (Comm. In)",
+      "arabic": "قم بتوصيل كابل إيثرنت من اللوحة الرئيسية للتحكم (Comm.Out) إلى وحدة طاحونة الرياح (Comm.In).",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Connect (L1), (L2), and (L3) terminals of the Generator Output from the wind mill module to the (L1), (L2), and (L3) input terminals of the Full Bridge Rectifier module.",
+      "arabic": "قم بتوصيل الأطراف (L1) و (L2) و (L3) الخاصة بمخرج المولد من طاحونة الرياح بأطراف الدخول المقابلة (L1) و (L2) و (L3) الخاصة بمقوم الجسر الكامل.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Connect the rectifier's (+VE) terminal to terminal (1) of the Rheostat.",
+      "arabic": "وصّل الطرف (+VE) للمقوم بالطرف (1) للمقاومة المتغيرة",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Connect terminal (3) of the Rheostat to the rectifier's (-VE) terminal.",
+      "arabic": "وصّل الطرف (3) للمقاومة المتغيرة بالطرف (-VE) للمقوم.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Release the emergency stop button on the main board",
+      "arabic": "قم بتحرير زر الطوارئ على اللوحة الرئيسية.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Raise the circuit breaker (C.B) of the main board.",
+      "arabic": "ارفع قاطع الدائرة (C.B) الخاص باللوحة الرئيسية.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Switch on the main board ON/OFF switch.",
+      "arabic": "شغّل اللوحة الرئيسية باستخدام مفتاح التشغيل والإيقاف (ON/OFF).",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Release the emergency button on the wind mill",
+      "arabic": "قم بتحرير زر الطوارئ على طاحونة الرياح.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Raise the circuit breaker (C.B) of the wind turbine.",
+      "arabic": "ارفع قاطع الدائرة (C.B) الخاص طاحونة الرياح",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Switch on the wind mill ON/OFF.",
+      "arabic": "شغّل طاحونة الرياح باستخدام مفتاح التشغيل والإيقاف (ON/OFF) الخاص به.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Enable the generator output enable/ disable switch to allow the voltage to reach the input of the rectifier module",
+      "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المحول للسماح بوصول الجهد إلى دخل وحدة المقوم،.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Notice: The speeds of the generator and the motor increase and the voltage increases on the power analyzer.",
+      "arabic": "تزداد سرعات المولد والمحرك ويزداد الجهد على شاشة محلل الطاقة.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "The speeds of the generator and the motor increase and the voltage increases on the power analyzer.",
+      "arabic": "تزداد سرعات المولد والمحرك ويزداد الجهد على شاشة محلل الطاقة.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Gradually decrease the rheostat's resistance (increase the load) by turning its knob counter-clockwise.",
+      "arabic": "قلل تدريجيًا من مقاومة المقاومة المتغيرة (زِدْ الحمل) بتدوير مقبضها عكس اتجاه عقارب الساعة.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Note: Observe that the current increases while the voltage drops.",
+      "arabic": "ملاحظة: لاحظ أن التيار يزداد بينما ينخفض الجهد.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Observe that the current increases while the voltage drops.",
+      "arabic": "ملاحظة: لاحظ أن التيار يزداد بينما ينخفض الجهد.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Switch to the software monitor.",
+      "arabic": "قم بالانتقال الى شاشة السوفت.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Navigate to the \"Graph\" tab.",
+      "arabic": "انتقل الى صفحة \"الرسم البياني\".",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Select the graph of the Speed (RPM) vs. DC voltage.",
+      "arabic": "قم باختيار منحنى السرعة مقابل الجهد المستمر.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Now, gradually increase the wind mill speed.",
+      "arabic": "الآن، زِدْ تدريجيًا من سرعة الطاحونة.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Pop-up Quiz: What is the observed relationship between turbine speed and output voltage? A) Voltage decreases as speed increases B) Voltage increases as speed increases ✅ C) Voltage remains constant regardless of speed Correct Answer: B",
+      "arabic": "سؤال: ما هي العلاقة الملحوظة بين سرعة التوربينة وجهد الخرج؟ أ) ينخفض الجهد مع زيادة السرعة ب) يزداد الجهد مع زيادة السرعة ✅ ج) يظل الجهد ثابتًا بغض النظر عن السرعة الإجابة الصحيحة: ب",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "What is the observed relationship between turbine speed and output voltage?",
+      "arabic": "ما هي العلاقة الملحوظة بين سرعة التوربينة وجهد الخرج؟",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Voltage decreases as speed increases",
+      "arabic": "ينخفض الجهد مع زيادة السرعة",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Voltage increases as speed increases",
+      "arabic": "يزداد الجهد مع زيادة السرعة",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Voltage remains constant regardless of speed",
+      "arabic": "يظل الجهد ثابتًا بغض النظر عن السرعة",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Switch to the software monitor again.",
+      "arabic": "قم بالانتقال الي شاشة التحكم مرة اخرى.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Observe that the system compensates for the voltage drop by increasing the output voltage as speed increases.",
+      "arabic": "لاحظ أن النظام يعوّض عن انخفاض الجهد بزيادة جهد الخرج مع زيادة السرعة.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "You have finished! You can now select another experiment.",
+      "arabic": "لقد انتهيت! الآن يمكنك اختيار تجربة أخرى.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Experiment 1: Speed Curve Characteristics",
+      "arabic": "التجربة 1: خصائص منحنى السرعة",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "🎓 Instructor’s IntroductionWelcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control turbine speed and measure its effect on DC voltage and current.",
+      "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Welcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control turbine speed and measure its effect on DC voltage and current.",
+      "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "🎯 Objective of the ExperimentTo examine the relationship between the rotational speed of the wind mill emulator and the electrical output (DC voltage and current).",
+      "arabic": "فحص العلاقة بين السرعة الدورانية لطاحونة الهواء والناتج الكهربائي (الجهد والتيار المستمر)",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "To examine the relationship between the rotational speed of the wind mill emulator and the electrical output (DC voltage and current).",
+      "arabic": "فحص العلاقة بين السرعة الدورانية لطاحونة الهواء والناتج الكهربائي (الجهد والتيار المستمر)",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) output terminals of the Rectifier module to the (+VE) and (-VE) DC input terminals of the PWM charger controller module.",
+      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المعدل بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة التحكم في شاحنPWM .",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) terminals of the Battery 24V module to the (+VE) and (-VE) Battery terminals of the PWM charger controller module.",
+      "arabic": "قم بتوصيل طرفي(+VE) و (-VE) لوحدة البطارية بطرفي البطارية (+VE) و (-VE) لوحدة التحكم في شاحنPWM .",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) DC Load terminals of the PWM charger controller module to the (+VE) and (-VE) terminals of the DC Halogen Lamp module.",
+      "arabic": "قم بتوصيل طرفي (+VE) و (-VE) للحمل ذو التيار المستمر لوحدة التحكم في شاحن  PWM  بطرفي (+VE) و (-VE) لوحدة مصباح الهالوجين ذو التيار المستمر.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Operate the DC load from the PWM charge control.",
+      "arabic": "قم بتشغيل الحمل المستمر من وحدة تحكم شحنPWM .",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "“You will notice that the battery power displays a negative sign. This indicates that the battery is actively discharging to supply energy to both the DC load and the PWM charge controller.”",
+      "arabic": "\"ستلاحظ في البرنامج أن طاقة البطارية تعرض إشارة سالبة. هذا يدل على أن البطارية تفرغ طاقتها لتزويد كلا من الحمل المستمر ووحدة PWM بالطاقة.\"",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Enable the generator output enable/ disable switch to allow the voltage to reach the input of the rectifier module and adjust the emulator to minimum speed.",
+      "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المحول للسماح بوصول الجهد إلى دخل وحدة المقوم، ثم اضبط المحاكي على أقل سرعة.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Pop-up Quiz: Which of the following best describes the difference between a PWM controller and an MPPT controller in a Wind Energy Training System? A) PWM extracts maximum power, while MPPT only regulates charging. B) PWM is simple and less efficient, while MPPT tracks maximum power and is more efficient. C) Both PWM and MPPT provide the same efficiency but use different circuits. D) PWM is more advanced than MPPT in optimizing energy capture. Correct Answer: B",
+      "arabic": "سؤال: أيٌّ من التالي يوضح بشكل أدق الفرق بين متحكم PWM ومتحكم MPPT في نظام تدريب طاقة الرياح؟ أ) يقوم متحكم الـ PWM باستخراج أقصى قدرة، بينما يقتصر متحكم الـ MPPT على تنظيم الشحن. ب) متحكم الـ PWM أبسط وأقل كفاءة، بينما يقوم متحكم الـ MPPT بتتبع أقصى قدرة وهو أكثر كفاءة. ج) يوفر كل من متحكم الـ PWM ومتحكم الـ MPPT نفس الكفاءة لكن باستخدام دوائر مختلفة. د) متحكم الـ PWM أكثر تقدماً من متحكم الـ MPPT في تحسين استغلال الطاقة الإجابة الصحيحة: ب",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Which of the following best describes the difference between a PWM controller and an MPPT controller in a Wind Energy Training System?",
+      "arabic": "أيٌّ من التالي يوضح بشكل أدق الفرق بين متحكم PWM ومتحكم MPPT في نظام تدريب طاقة الرياح؟",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "PWM extracts maximum power, while MPPT only regulates charging.",
+      "arabic": "يقوم متحكم الـ PWM باستخراج أقصى قدرة، بينما يقتصر متحكم الـ MPPT على تنظيم الشحن.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "PWM is simple and less efficient, while MPPT tracks maximum power and is more efficient.",
+      "arabic": "متحكم الـ PWM أبسط وأقل كفاءة، بينما يقوم متحكم الـ MPPT بتتبع أقصى قدرة وهو أكثر كفاءة.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Both PWM and MPPT provide the same efficiency but use different circuits. D) PWM is more advanced than MPPT in optimizing energy capture.",
+      "arabic": "يوفر كل من متحكم الـ PWM ومتحكم الـ MPPT نفس الكفاءة لكن باستخدام دوائر مختلفة. د) متحكم الـ PWM أكثر تقدماً من متحكم الـ MPPT في تحسين استغلال الطاقة",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Navigate to the \"system\" tab.",
+      "arabic": "انتقل الى صفحة النظام”\".",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Use the slider in the Wind Speed Section on the screen to gradually increase the motor speed in small increments.",
+      "arabic": "استخدم السليدر في قسم سرعة الرياح على الشاشة لزيادة سرعة المحرك تدريجيًا ..",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Note: As the turbine speed increases, the current and voltage output from the turbine rise. The battery power reading becomes positive, confirming that the battery is now being charged.",
+      "arabic": "ملاحظة: مع زيادة سرعة التوربينة، يرتفع التيار وجهد الخرج منه. تصبح قراءة طاقة البطارية موجبة، مما يؤكد أنها الآن تُشحن.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "As the turbine speed increases, the current and voltage output from the turbine rise. The battery power reading becomes positive, confirming that the battery is now being charged.",
+      "arabic": "ملاحظة: مع زيادة سرعة التوربينة، يرتفع التيار وجهد الخرج منه. تصبح قراءة طاقة البطارية موجبة، مما يؤكد أنها الآن تُشحن.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Switch to the software monitor to observe the results",
+      "arabic": "قم بالانتقال الي شاشة التحكم لملاحظة النتائج.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Experiment 2: Regulating DC Output from Wind Turbine using PWM Charger",
+      "arabic": "التجربة 2: تنظيم الخرج المستمر من توربينة الرياح باستخدام وحدة تحكم شحن PWM",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "🎓 Instructor’s Introduction Welcome! In this experiment, you will learn how a wind mills system uses an PWM charge controller to regulate DC output for charging batteries and powering DC loads. You will observe how power is shared between the turbine and the battery as the mill speed changes.",
+      "arabic": "مرحبًا! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن PWM لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين الطاحونة والبطارية مع تغيير سرعة الطاحونة.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Welcome! In this experiment, you will learn how a wind mills system uses an PWM charge controller to regulate DC output for charging batteries and powering DC loads. You will observe how power is shared between the turbine and the battery as the mill speed changes.",
+      "arabic": "مرحبًا! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن PWM لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين الطاحونة والبطارية مع تغيير سرعة الطاحونة.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "🎯 Objective of the Experiment",
+      "arabic": "🎯 هدف التجربة",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "To understand the function of an PWM charge controller in regulating DC power from a wind mill for battery charging and DC load supply, and to observe the dynamic power sharing between the mill and the battery.",
+      "arabic": "فهم وظيفة وحدة تحكم شحن PWM في تنظيم الطاقة المستمرة من طاحونة الرياح لشحن البطارية وتغذية الحمل المستمر، وملاحظة تقاسم الطاقة الديناميكي بين الطاحونة والبطارية.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) output terminals of the Rectifier module to the (+VE) and (-VE) DC input terminals of the MPPT charger controller module.",
+      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المعدل بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة التحكم في شاحن",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) terminals of the Battery 24V module to the (+VE) and (-VE) Battery terminals of the MPPT charger controller module.",
+      "arabic": "قم بتوصيل طرفي(+VE) و (-VE) لوحدة البطارية بطرفي البطارية (+VE) و (-VE) لوحدة التحكم في شاحن MPPT.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) DC Load terminals of the MPPT charger controller module to the (+VE) and (-VE) terminals of the DC Halogen Lamp module.",
+      "arabic": "قم بتوصيل طرفي (+VE) و (-VE) للحمل ذو التيار المستمر لوحدة التحكم في شاحن MPPT بطرفي (+VE) و (-VE) لوحدة مصباح الهالوجين ذو التيار المستمر.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Note: Always ensure emergency buttons are released before powering on any module.",
+      "arabic": "ملاحظة: تأكد دائمًا من تحرير أزرار الطوارئ قبل تشغيل أي وحدة.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Always ensure emergency buttons are released before powering on any module.",
+      "arabic": "ملاحظة: تأكد دائمًا من تحرير أزرار الطوارئ قبل تشغيل أي وحدة.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Operate the DC load from the MPPT charge control.",
+      "arabic": "قم بتشغيل الحمل المستمر من وحدة تحكم شحن MPPT.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "“You will notice that the battery power displays a negative sign. This indicates that the battery is actively discharging to supply energy to both the DC load and the MPPT charge controller.”",
+      "arabic": "\"ستلاحظ في البرنامج أن طاقة البطارية تعرض إشارة سالبة. هذا يدل على أن البطارية تفرغ طاقتها لتزويد كلا من الحمل المستمر ووحدة MPPT بالطاقة.\"",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Gradually increase the wind mill speed in small increments.",
+      "arabic": "قم بزيادة سرعة طاحونة الهواء تدريجيا.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Pop-up Quiz: What happens to the battery's power reading when the turbine speed is increased sufficiently? A) It remains negative B) It becomes zero C) It becomes positive ✅ Correct Answer: C",
+      "arabic": "سؤال: ماذا يحدث لقراءة طاقة البطارية عندما تزداد سرعة التوربين بشكل كافٍ؟ أ) تبقى سالبة ب) تصبح صفر ج) تصبح موجبة ✅ الإجابة الصحيحة: ج",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "What happens to the battery's power reading when the turbine speed is increased sufficiently?",
+      "arabic": "ماذا يحدث لقراءة طاقة البطارية عندما تزداد سرعة التوربين بشكل كافٍ؟",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "It remains negative",
+      "arabic": "تبقى سالبة",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "It becomes zero",
+      "arabic": "تصبح صفر",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "It becomes positive",
+      "arabic": "تصبح موجبة",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Navigate to the \"System\" tab to observe the results",
+      "arabic": "انتقل الى صفحة \" النظام\".",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Attention when you finish the experiment, perform the following steps in order: Disconnect the DC load. Disconnect the wind Turbine. Finally disconnect the battery.",
+      "arabic": "عند الانتهاء من التجربة، قم بالخطوات التالية بالترتيب: قم بفصل الحمل المستمر. قم بفصل التوربينة الرياح وأخيرًا، قم بفصل البطارية.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Experiment 3: Regulating DC Output from Wind Turbine using MPPT Charger",
+      "arabic": "التجربة 3: تنظيم الخرج المستمر من توربينة الرياح باستخدام وحدة تحكم شحن MPPT",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "🎓 Instructor’s Introduction Welcome! In this experiment, you will learn how a wind mill system uses an MPPT charge controller to regulate DC output for charging batteries and powering DC loads. You will observe how power is shared between the turbine and the battery as the mill speed changes.",
+      "arabic": "مرحبًا ! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن MPPT لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين التوربينة والبطارية مع تغيير سرعة التوربينة.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Welcome! In this experiment, you will learn how a wind mill system uses an MPPT charge controller to regulate DC output for charging batteries and powering DC loads. You will observe how power is shared between the turbine and the battery as the mill speed changes.",
+      "arabic": "مرحبًا ! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن MPPT لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين التوربينة والبطارية مع تغيير سرعة التوربينة.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "To understand the function of an MPPT charge controller in regulating DC power from a wind turbine for battery charging and DC load supply, and to observe the dynamic power sharing between the turbine and the battery.",
+      "arabic": "فهم وظيفة وحدة تحكم شحن MPPT في تنظيم الطاقة المستمرة من توربينة الرياح لشحن البطارية وتغذية الحمل المستمر، وملاحظة تقاسم الطاقة الديناميكي بين التوربينة والبطارية.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) terminals of the Battery 24V module to the (+VE) and (-VE) Battery Input terminals of the Off-Grid Inverter module.",
+      "arabic": "قم بتوصيل طرفي (+VE) و (-VE) لوحدة البطارية بطرفي إدخال البطارية (+VE) و (-VE) لوحدة العاكس خارج الشبكة.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) terminals of the DC LED Lamp module to the (+VE) and (-VE) Battery Input terminals of the Off-Grid Inverter module.",
+      "arabic": "قم بتوصيل طرفي (+VE) و (-VE) لوحدة المصباح الليد ذو التيار المستمر بطرفي إدخال البطارية (+VE) و (-VE) لوحدة العاكس خارج الشبكة .",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Switch on the off-grid inverter using the power switch located beneath the device.",
+      "arabic": "قم بتشغيل العاكس خارج الشبكة باستخدام مفتاح الطاقة الموجود أسفل الجهاز.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "“You will notice that the battery power displays a negative sign. This indicates that the battery is actively discharging to supply energy to both the DC load and the Off-Grid Inverter.”",
+      "arabic": "\"ستلاحظ في البرنامج أن طاقة البطارية تعرض إشارة سالبة. هذا يدل على أن البطارية تفرغ طاقتها لتزويد كلا من الحمل المستمر ووحدة العاكس خارج الشبكة\".",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) AC Output terminals of the Off-Grid Inverter module to the (+VE) and (-VE) terminals of the AC Lamp module.",
+      "arabic": "قم بتوصيل طرفي (+VE) و (-VE) لخرج التيار المتردد لوحدة العاكس خارج الشبكة بطرفي (+VE) و (-VE) لوحدة المصباح ذو التيار المتردد.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Note: “After adding the AC lamp, the current drawn from the battery increased significantly. You can connect additional AC loads in parallel to observe the system's response to higher power demands.",
+      "arabic": "ملاحظة: بعد إضافة المصباح متردد، يزيد التيار المسحوب من البطارية بشكل ملحوظ. يمكنك توصيل أحمال متناوبة إضافية على التوازي لملاحظة استجابة النظام لزيادة الطلب على الطاقة.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "“After adding the AC lamp, the current drawn from the battery increased significantly. You can connect additional AC loads in parallel to observe the system's response to higher power demands.",
+      "arabic": "ملاحظة: بعد إضافة المصباح متردد، يزيد التيار المسحوب من البطارية بشكل ملحوظ. يمكنك توصيل أحمال متناوبة إضافية على التوازي لملاحظة استجابة النظام لزيادة الطلب على الطاقة.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Connect (L1), (L2), and (L3) terminals of the Generator Output from the wind turbine module to the (L1), (L2), and (L3) input terminals of the Full Bridge Rectifier.",
+      "arabic": "قم بتوصيل الأطراف (L1) و (L2) و (L3) الخاصة بمخرج المولد من وحدة التوربينة الهوائية بأطراف الدخول المقابلة (L1) و (L2) و (L3).  الخاصة بمقوم الجسر الكامل",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Connect the (+VE) and (-VE) output terminals of the Rectifier module to the (+VE) and (-VE) DC input terminals of the Off-Grid Inverter module.",
+      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المعدل بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة العاكس خارج الشبكة.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "“As soon as the wind turbine is activated, current sharing occurs between the battery and the turbine.”",
+      "arabic": "\"بمجرد تفعيل التوربين الهوائية، يحدث تقاسم للتيار بين البطارية والتوربين.\"",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Connect (L) and (N) terminals of the AC Input of the Off-Grid Inverter module to the (220 VAC) terminal and the neutral path (N) of the main board.",
+      "arabic": "قم بتوصيل أطراف  (L)  و  (N) لمدخل التيار المتردد في وحدة العاكس خارج الشبكة بأطراف 220 VAC  والمسار المحايد  (N)  في اللوحة الرئيسية",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "“Now, you can observe that the battery shows a positive current, indicating it is being charged by the AC grid.”",
+      "arabic": "\"الآن، يمكنك ملاحظة ان تيار البطارية أصبح موجبًا، مما يدل على أنه يتم شحنها من الشبكة الكهربائية.\"",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Pop-up Quiz: What does a positive current reading on the battery indicate after connecting the AC grid? A) The battery is discharging B) The battery is idle C) The battery is charging ✅ Correct Answer: C",
+      "arabic": "سؤال: ما الذي يدل عليه قراءة التيار الموجب على البطارية بعد توصيل الشبكة الكهربائية؟ أ) البطارية تفرغ طاقتها ب) البطارية في حالة سكون ج) البطارية تُشحن ✅ الإجابة الصحيحة: ج",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "What does a positive current reading on the battery indicate after connecting the AC grid?",
+      "arabic": "ما الذي يدل عليه قراءة التيار الموجب على البطارية بعد توصيل الشبكة الكهربائية؟",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "The battery is discharging",
+      "arabic": "البطارية تفرغ طاقتها",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "The battery is idle",
+      "arabic": "البطارية في حالة سكون",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "The battery is charging",
+      "arabic": "البطارية تُشحن",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Attention when you finish the experiment, perform the following steps in order: Disconnect the AC and DC loads. Disconnect the AC input source. Disconnect the wind Turbine. Finally disconnect the battery.",
+      "arabic": "عند الانتهاء من التجربة، قم بالخطوات التالية بالترتيب: قم بفصل الحمل المستمر والمتردد. قم بفصل مصدر دخول التيار المتردد. قم بفصل التوربينة الهوائية وأخيرًا، قم بفصل البطارية.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Experiment 4: OFF Grid System Using wind turbine",
+      "arabic": "التجربة4 : تجربة العاكس خارج الشبكة باستخدام توربينة الرياح",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "🎓 Instructor’s Introduction Welcome! In this experiment, you will learn how an off-grid system integrates a wind mill, battery bank, and inverter to power both DC and AC loads without reliance on the main utility grid.",
+      "arabic": "مرحبًا! في هذه التجربة، ستتعلم كيف يدمج النظام خارج الشبكة مُحاكي طاحونة الرياح وبنك البطاريات والعاكس لتغذية أحمال تيار مستمر ومتناوب دون الاعتماد على شبكة الكهرباء الرئيسية.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Welcome! In this experiment, you will learn how an off-grid system integrates a wind mill, battery bank, and inverter to power both DC and AC loads without reliance on the main utility grid.",
+      "arabic": "مرحبًا! في هذه التجربة، ستتعلم كيف يدمج النظام خارج الشبكة مُحاكي طاحونة الرياح وبنك البطاريات والعاكس لتغذية أحمال تيار مستمر ومتناوب دون الاعتماد على شبكة الكهرباء الرئيسية.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "To understand the operation of an off-grid inverter in converting DC power to AC power, and to study the effect of changing wind turbine speed on system performance and observe power flow between wind mill, battery, and loads.",
+      "arabic": "فهم تشغيل العاكس خارج الشبكة في تحويل الطاقة المستمرة إلى طاقة متناوبة، ودراسة تأثير تغيير سرعة طاحونة الرياح على أداء النظام. وملاحظة تدفق الطاقة بين التوربينة الهوائية والبطارية والأحمال.",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Attention when you finish the experiment, perform the following steps in order: \r\n1)Disconnect the DC load. \r\n2)Disconnect the wind Turbine. \r\n3)Finally disconnect the battery.",
+      "arabic": "عند الانتهاء من التجربة، قم بالخطوات التالية بالترتيب: قم بفصل الحمل المستمر. قم بفصل التوربينة الرياح وأخيرًا، قم بفصل البطارية.",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx (matching displayed wording)"
+    },
+    {
+      "english": "Regulating DC Output from Wind Turbine using MPPT Charger",
+      "arabic": "تنظيم الخرج المستمر من توربينة الرياح باستخدام وحدة تحكم شحن MPPT",
+      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+    },
+    {
+      "english": " As soon as you connect the AC input, wait for a while (5sec) until you hear a (Tick) sound from the off -grid inverter, this means that the inverter starts the conversion. You will notice that the battery begins to charge and the current sign becomes positive “+”. The AC input (grid) and the PVs input are sharing with each other\r\nto supply the whole system with power as supplying the AC load, DC load and charging the battery.\r",
+      "arabic": "بمجرد توصيل دخل التيار المتردد، انتظر نحو 5 ثوانٍ حتى تسمع صوت نقرة من العاكس خارج الشبكة، مما يدل على بدء التحويل. ستلاحظ بدء شحن البطارية وظهور إشارة التيار الموجب (+). يتشارك دخل الشبكة ودخل الألواح الشمسية في تغذية أحمال التيار المتردد والمستمر وشحن البطارية.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "<rotate=90>sevitcejbO </rotate>",
+      "arabic": "<rotate=90>الأهداف</rotate>",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "<rotate=90>stnemucoD</rotate>",
+      "arabic": "<rotate=90>المستندات</rotate>",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "A) Voltage increases",
+      "arabic": "أ) يزداد الجهد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "AC-Speed",
+      "arabic": "التيار المتردد مقابل السرعة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Add Cap",
+      "arabic": "إضافة غطاء",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Add Sample",
+      "arabic": "إضافة قراءة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Always connect the battery before connecting PV panels or AC sources to the charge controller.",
+      "arabic": "وصّل البطارية دائمًا قبل توصيل الألواح الشمسية أو مصادر التيار المتردد بوحدة تحكم الشحن.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Answer Sheet 04",
+      "arabic": "ورقة الإجابة 04",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "B) Voltage remains constant",
+      "arabic": "ب) يظل الجهد ثابتًا",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Battery Charging Using MPPT Charge Controller",
+      "arabic": "شحن البطارية باستخدام وحدة تحكم MPPT",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Battery Charging Using PWM Charge Controller",
+      "arabic": "شحن البطارية باستخدام وحدة تحكم PWM",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Bookmarks",
+      "arabic": "الإشارات المرجعية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Both PWM and MPPT provide the same efficiency but use different circuits.",
+      "arabic": "يوفر كل من PWM وMPPT الكفاءة نفسها، لكنهما يستخدمان دوائر مختلفة.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Button",
+      "arabic": "زر",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "C) Voltage decreases",
+      "arabic": "ج) ينخفض الجهد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Cancel\n",
+      "arabic": "إلغاء",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Cameras",
+      "arabic": "الكاميرات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Choose Experiment",
+      "arabic": "اختيار التجربة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Choose a camera",
+      "arabic": "اختيار الكاميرا",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Close Vents",
+      "arabic": "إغلاق الفتحات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Components",
+      "arabic": "المكونات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Connect (+VE) and (-VE) terminals of the PV solar panel output module to (1) and (3) terminals of Rheostat 100-ohm module.",
+      "arabic": "وصّل طرفي (+VE) و(-VE) لخرج اللوح الشمسي بالطرفين (1) و(3) للمقاومة المتغيرة 100 أوم.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Connect (+VE) and (-VE) terminals of the PV solar panel output module to (1) and (3) terminals of Rheostat 800-ohm module.",
+      "arabic": "وصّل طرفي (+VE) و(-VE) لخرج اللوح الشمسي بالطرفين (1) و(3) للمقاومة المتغيرة 800 أوم.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Connect an Ethernet cable from the PV Solar Panel (Comm. Out) to the Main Control Board module (Comm. In).",
+      "arabic": "وصّل كابل إيثرنت من مخرج الاتصال (Comm. Out) للوح الشمسي بمدخل الاتصال (Comm. In) للوحة التحكم الرئيسية.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Convert DC power from batteries to AC for household loads",
+      "arabic": "تحويل الطاقة المستمرة من البطاريات إلى تيار متردد لتغذية الأحمال المنزلية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Custom Parameters\n",
+      "arabic": "المعاملات المخصصة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "DC Voltage",
+      "arabic": "الجهد المستمر",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Determining the Effect of Light Intensity on PV Panel",
+      "arabic": "تحديد تأثير شدة الإضاءة على اللوح الشمسي",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Device Inputs",
+      "arabic": "مداخل الأجهزة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Devices Volume",
+      "arabic": "صوت الأجهزة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Elevation",
+      "arabic": "الارتفاع",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Enter password here...",
+      "arabic": "أدخل كلمة المرور هنا...",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Enter text...",
+      "arabic": "أدخل النص...",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Equations",
+      "arabic": "المعادلات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 01",
+      "arabic": "التجربة 01",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 02",
+      "arabic": "التجربة 02",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 03",
+      "arabic": "التجربة 03",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 04",
+      "arabic": "التجربة 04",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 05",
+      "arabic": "التجربة 05",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 06",
+      "arabic": "التجربة 06",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 07",
+      "arabic": "التجربة 07",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiment 08",
+      "arabic": "التجربة 08",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Experiments",
+      "arabic": "التجارب",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "False",
+      "arabic": "خطأ",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Free Mode",
+      "arabic": "الوضع الحر",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "GO AHEAD",
+      "arabic": "متابعة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Gradually decrease the rheostat's resistance (increase the load) by turning its knob counter-clockwise. Observe that the current increases while the voltage drops.",
+      "arabic": "قلل تدريجيًا مقاومة المقاومة المتغيرة (زِد الحمل) بتدوير مقبضها عكس اتجاه عقارب الساعة. لاحظ أن التيار يزداد بينما ينخفض الجهد.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Guided",
+      "arabic": "موجّه",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Guided Mode",
+      "arabic": "الوضع الموجّه",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "If you are going to reset the experiment, you have to reset the simulation in tia portal too.",
+      "arabic": "عند إعادة ضبط التجربة، يجب أيضًا إعادة ضبط المحاكاة في TIA Portal.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Increase solar panel voltage",
+      "arabic": "زيادة جهد اللوح الشمسي",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Introduction",
+      "arabic": "المقدمة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Invalid Password",
+      "arabic": "كلمة المرور غير صحيحة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Is Drilling",
+      "arabic": "جارٍ الثقب",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It can extract up to 30% more power from PV panels under varying conditions",
+      "arabic": "يمكنه استخلاص طاقة إضافية تصل إلى 30% من الألواح الشمسية في الظروف المتغيرة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It converts DC to AC",
+      "arabic": "يحوّل التيار المستمر إلى تيار متردد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It decreases slightly",
+      "arabic": "ينخفض قليلًا",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It increases significantly",
+      "arabic": "يزداد بشكل ملحوظ",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It is cheaper",
+      "arabic": "تكلفته أقل",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It maximizes energy harvest under all conditions",
+      "arabic": "يزيد الطاقة المستخلصة في جميع الظروف",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It remains constant",
+      "arabic": "يبقى ثابتًا",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It uses simple on/off switching to regulate battery voltage",
+      "arabic": "يستخدم التبديل البسيط بين التشغيل والإيقاف لتنظيم جهد البطارية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "It works only with AC loads",
+      "arabic": "يعمل فقط مع أحمال التيار المتردد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Load",
+      "arabic": "الحمل",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Loading...\n\n\n",
+      "arabic": "جارٍ التحميل...",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Main Settings\n",
+      "arabic": "الإعدادات الرئيسية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Master Volume",
+      "arabic": "مستوى الصوت العام",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Match case",
+      "arabic": "مطابقة حالة الأحرف",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Match whole word only\n",
+      "arabic": "مطابقة الكلمة كاملة فقط",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Mulitple Choices Question",
+      "arabic": "سؤال اختيار من متعدد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Music Volume",
+      "arabic": "صوت الموسيقى",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Navigate to the \"Measurements Graph\" tab.",
+      "arabic": "انتقل إلى علامة تبويب الرسم البياني للقياسات.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Note that you can:\nExport all recorded measurements to an Excel sheet by clicking the \"Export Data\" icon.\r\nSave the screen by pressing the \"Save Screen\" icon.\r\nClear the graph using the \"Clear\" icon\r",
+      "arabic": "يمكنك تصدير جميع القراءات المسجلة إلى ملف Excel بالضغط على «تصدير البيانات»، وحفظ صورة الشاشة بالضغط على «حفظ الشاشة»، ومسح الرسم البياني بالضغط على «مسح».",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Off grid inverter",
+      "arabic": "العاكس خارج الشبكة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "OFF Grid System Using wind turbine",
+      "arabic": "تجربة العاكس خارج الشبكة باستخدام توربينة الرياح",
+      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+    },
+    {
+      "english": "Ok\n",
+      "arabic": "موافق",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Observe that the battery now supplies power to both the DC load and the MPPT controller.",
+      "arabic": "لاحظ أن البطارية تغذي الآن الحمل المستمر ووحدة تحكم MPPT.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Observe that the battery now supplies power to both the DC load and the PWM controller.",
+      "arabic": "لاحظ أن البطارية تغذي الآن الحمل المستمر ووحدة تحكم PWM.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Observe that the battery now supplies the AC load.\n",
+      "arabic": "لاحظ أن البطارية تغذي الآن حمل التيار المتردد.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Open the control software on the connected PC.",
+      "arabic": "افتح برنامج التحكم على الحاسوب المتصل.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Option A",
+      "arabic": "الخيار أ",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Password needed\n",
+      "arabic": "كلمة المرور مطلوبة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Password:\n",
+      "arabic": "كلمة المرور:",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Plastic Silver",
+      "arabic": "بلاستيك فضي",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Pop Quiz",
+      "arabic": "اختبار قصير",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Press “Connect” from the top right of the screen to connect the software with TIA portal.",
+      "arabic": "اضغط «اتصال» أعلى يمين الشاشة لربط البرنامج بـ TIA Portal.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Pump Flow Rate (Qtotal):",
+      "arabic": "معدل تدفق المضخة (Qtotal):",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Pump Head",
+      "arabic": "ارتفاع الضخ",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Regulating DC Output from Wind Turbine using PWM Charger",
+      "arabic": "تنظيم الخرج المستمر من توربينة الرياح باستخدام وحدة تحكم شحن PWM",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    },
+    {
+      "english": "Release the emergency button of the PV Solar Panel.",
+      "arabic": "حرّر زر الطوارئ الخاص باللوح الشمسي.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Reset",
+      "arabic": "إعادة الضبط",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "SERVER TITLE",
+      "arabic": "عنوان الخادم",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Sample Size",
+      "arabic": "حجم العينة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Save",
+      "arabic": "حفظ",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Select the graph of the DC Current vs. DC voltage.",
+      "arabic": "اختر منحنى التيار المستمر مقابل الجهد المستمر.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Server description here.\nType something about host server, totally up to you.",
+      "arabic": "وصف الخادم هنا. اكتب وصفًا للخادم المضيف.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Speed (RPM)",
+      "arabic": "السرعة (RPM)",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Speed Curve Characteristics",
+      "arabic": "خصائص منحنى السرعة",
+      "source": "Experiment 1. Speed Curve Characteristics.docx"
+    },
+    {
+      "english": "Start\n",
+      "arabic": "بدء",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Steps",
+      "arabic": "الخطوات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Store solar energy in batteries",
+      "arabic": "تخزين الطاقة الشمسية في البطاريات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Switch on the PV Solar Panel ON/OFF.",
+      "arabic": "شغّل اللوح الشمسي باستخدام مفتاح التشغيل والإيقاف (ON/OFF).",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Switch the Run/Stop selector to Run state.",
+      "arabic": "حوّل مفتاح التشغيل والإيقاف إلى وضع التشغيل.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Switch to the software monitor again. The I-V characteristic curve will be drawn on the graph corresponding to the recorded points.",
+      "arabic": "انتقل إلى شاشة البرنامج مرة أخرى. سيُرسم منحنى التيار مقابل الجهد وفقًا للنقاط المسجلة.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "TIA Portal Connection",
+      "arabic": "اتصال TIA Portal",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Test Text",
+      "arabic": "نص تجريبي",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "They are two holes used to allow an additional water source to flow into the plate, to observe its effect on the flow streamlines.",
+      "arabic": "فتحتان تسمحان بتدفق مصدر مياه إضافي إلى اللوحة لملاحظة تأثيره على خطوط الانسياب.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Thumbnails",
+      "arabic": "الصور المصغرة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "To change panel color",
+      "arabic": "لتغيير لون اللوح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "To increase voltage",
+      "arabic": "لزيادة الجهد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "To maximize sunlight exposure",
+      "arabic": "لزيادة التعرض لأشعة الشمس",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "To prevent overheating during partial shading",
+      "arabic": "لمنع ارتفاع الحرارة أثناء التظليل الجزئي",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "To reduce current",
+      "arabic": "لتقليل التيار",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "To reduce panel weight",
+      "arabic": "لتقليل وزن اللوح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "True",
+      "arabic": "صحيح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "UI Volume",
+      "arabic": "صوت الواجهة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Upon observation, the total output voltage of the three panels in series equals the sum of their individual voltages, while the current remains equal to that of a single panel.",
+      "arabic": "عند الملاحظة، يساوي الجهد الكلي لثلاثة ألواح موصلة على التوالي مجموع جهودها، بينما يساوي التيار تيار لوح واحد.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "View turbine",
+      "arabic": "عرض التوربينة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Voltage decreases",
+      "arabic": "ينخفض الجهد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Voltage increases",
+      "arabic": "يزداد الجهد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Voltage remains constant",
+      "arabic": "يظل الجهد ثابتًا",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Warning:",
+      "arabic": "تحذير:",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What happens to the open-circuit voltage (Voc) of a solar panel when light intensity decreases?\r",
+      "arabic": "ماذا يحدث لجهد الدائرة المفتوحة (Voc) للوح الشمسي عند انخفاض شدة الإضاءة؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What happens to the output voltage of the solar panel when the load resistance is decreased?",
+      "arabic": "ماذا يحدث لجهد خرج اللوح الشمسي عند خفض مقاومة الحمل؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What is the expected total open-circuit voltage when three identical solar panels (each 20 V) are connected in series?",
+      "arabic": "ما الجهد الكلي المتوقع للدائرة المفتوحة عند توصيل ثلاثة ألواح شمسية متطابقة، جهد كل منها 20 V، على التوالي؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What is the expected total short-circuiting current when three identical solar panels (each 0.5 A) are connected in parallel?",
+      "arabic": "ما تيار القصر الكلي المتوقع عند توصيل ثلاثة ألواح شمسية متطابقة، تيار كل منها 0.5 A، على التوازي؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What is the main advantage of a MPPT charge controller over a PWM controller?",
+      "arabic": "ما الميزة الرئيسية لوحدة تحكم MPPT مقارنة بوحدة تحكم PWM؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What is the main advantage of a PWM charge controller?",
+      "arabic": "ما الميزة الرئيسية لوحدة تحكم PWM؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What is the main reason for adjusting solar panel tilt seasonally?\r",
+      "arabic": "ما السبب الرئيسي لتعديل زاوية ميل الألواح الشمسية حسب الفصل؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "What is the primary function of an off-grid inverter?",
+      "arabic": "ما الوظيفة الأساسية للعاكس خارج الشبكة؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "When you decrease the resistance (increase the load), you will notice that the current consumption increases, resulting in a voltage drop and vice versa.",
+      "arabic": "عند خفض المقاومة (زيادة الحمل)، يزداد التيار المسحوب وينخفض الجهد، والعكس صحيح.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Why are bypass diodes used in series-connected solar panels?",
+      "arabic": "لماذا تُستخدم ثنائيات التجاوز مع الألواح الشمسية الموصلة على التوالي؟",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Wind",
+      "arabic": "الرياح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Wind speed",
+      "arabic": "سرعة الرياح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "You'll notice that when PV panels share the load with battery, the battery discharge current will be reduced.",
+      "arabic": "عندما تتشارك الألواح الشمسية والبطارية في تغذية الحمل، ينخفض تيار تفريغ البطارية.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "You'll notice that when shading occurs on a solar panel, the electrical output from the panel is affected, and this effect increases as the shade area increases.",
+      "arabic": "عند تظليل اللوح الشمسي، يتأثر خرجه الكهربائي ويزداد التأثير مع زيادة مساحة التظليل.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "technology fundamentals that are highly used in many production processes such as, pneumatics, robotics, sensors, and PLC controller.\r",
+      "arabic": "أساسيات تقنية تُستخدم في عمليات إنتاج عديدة، مثل النيوماتيك والروبوتات والمستشعرات ووحدات التحكم المنطقية المبرمجة.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "unguided\n",
+      "arabic": "غير موجّه",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "•\tStudying the relation between the light intensity on the solar panel and the output voltage.",
+      "arabic": "دراسة العلاقة بين شدة الإضاءة على اللوح الشمسي وجهد الخرج.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "• Mechatronics training system is designed to represent a variety of technology fundamentals that are highly used in many production processes such as, pneumatics, robotics, sensors, and PLC controller.\r\n\r\n• The system is based on the programmable provided to allow trainees to enhance their skills on the operation and testing of different types of manufacturing production processes, sensors and actuators similar to those found in real industrial applications.\r\n\r\n• System stations provide inclusive and flexible systems to handle, and include all the required components of each system so trainees have absolute freedom to use any one based on the type of the experiments to be carried out.\r\n\r\n• System stations can also be arranged in various sequences as desired so that trainees can recreate a fully functional automated line such as processing -testing -sorting line -assembly -handling -storage line, and more.",
+      "arabic": "صُمم نظام تدريب الميكاترونكس لتمثيل مجموعة من الأساسيات التقنية المستخدمة في عمليات الإنتاج، مثل النيوماتيك والروبوتات والمستشعرات ووحدات التحكم المنطقية المبرمجة.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "•Determine the function of the off-grid inverter when engaging with variety of power sources.",
+      "arabic": "تحديد وظيفة العاكس خارج الشبكة عند التعامل مع مصادر طاقة متنوعة.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "•Studying configuration of PV panel using charge controller.\r\n•Studying operation principle of solar charge controller and how it affects charge and discharge of the battery.\r\n",
+      "arabic": "دراسة توصيل الألواح الشمسية باستخدام وحدة تحكم الشحن، ومبدأ تشغيلها وتأثيرها على شحن البطارية وتفريغها.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Graph",
+      "arabic": "الرسم البياني",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Graphs",
+      "arabic": "الرسوم البيانية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "System",
+      "arabic": "النظام",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Save Screen",
+      "arabic": "حفظ الشاشة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Export Data",
+      "arabic": "تصدير البيانات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Clear",
+      "arabic": "مسح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Documents",
+      "arabic": "المستندات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Objectives",
+      "arabic": "الأهداف",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Speed curve",
+      "arabic": "منحنى السرعة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "AC-Speed curve",
+      "arabic": "منحنى التيار المتردد والسرعة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "AC current (A)",
+      "arabic": "التيار المتردد (A)",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "DC voltage (V)",
+      "arabic": "الجهد المستمر (V)",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "DC current (A)",
+      "arabic": "التيار المستمر (A)",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Speed Meter (RPM)",
+      "arabic": "عداد السرعة (RPM)",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "DC Current",
+      "arabic": "التيار المستمر",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Voltage",
+      "arabic": "الجهد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Current",
+      "arabic": "التيار",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Power",
+      "arabic": "القدرة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Wind Energy Training System",
+      "arabic": "نظام التدريب على طاقة الرياح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Wind energy Training system apparatus",
+      "arabic": "جهاز التدريب على طاقة الرياح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Power Analyzer",
+      "arabic": "محلل القدرة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Full Bridge Rectifier",
+      "arabic": "مقوم الجسر الكامل",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Wind Turbine",
+      "arabic": "توربينة الرياح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Main board",
+      "arabic": "اللوحة الرئيسية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Rheostat",
+      "arabic": "المقاومة المتغيرة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Battery Bank",
+      "arabic": "بنك البطاريات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "AC Loads",
+      "arabic": "أحمال التيار المتردد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "DC LOAD",
+      "arabic": "حمل التيار المستمر",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "AC Multimeter",
+      "arabic": "مقياس التيار المتردد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "DC Multimeter",
+      "arabic": "مقياس التيار المستمر",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Three Phase Power Meter",
+      "arabic": "مقياس القدرة ثلاثي الأطوار",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Diversion Control",
+      "arabic": "وحدة التحكم في تحويل الحمل",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "PWM solar charge controller",
+      "arabic": "وحدة تحكم الشحن PWM",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "MPPT Solar Charge Controller",
+      "arabic": "وحدة تحكم الشحن MPPT",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Help",
+      "arabic": "المساعدة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Exit",
+      "arabic": "خروج",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Restart",
+      "arabic": "إعادة التشغيل",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Continue",
+      "arabic": "متابعة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Back",
+      "arabic": "رجوع",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Close",
+      "arabic": "إغلاق",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Settings",
+      "arabic": "الإعدادات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Controls",
+      "arabic": "أدوات التحكم",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Transparency",
+      "arabic": "الشفافية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Transparent wires",
+      "arabic": "أسلاك شفافة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Tooltips",
+      "arabic": "التلميحات",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Sound",
+      "arabic": "الصوت",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Yes",
+      "arabic": "نعم",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "No",
+      "arabic": "لا",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Correct",
+      "arabic": "إجابة صحيحة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Incorrect",
+      "arabic": "إجابة غير صحيحة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Try again",
+      "arabic": "حاول مرة أخرى",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Total overview",
+      "arabic": "منظور عام",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Rheostats",
+      "arabic": "المقاومات المتغيرة",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Lamps",
+      "arabic": "المصابيح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Battery",
+      "arabic": "البطارية",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "MPPT",
+      "arabic": "MPPT",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Diversion controller",
+      "arabic": "وحدة تحكم تحويل الحمل",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Full bridge rectifier + dump load",
+      "arabic": "مقوم الجسر الكامل وحمل التبديد",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Solar inverter device",
+      "arabic": "العاكس الشمسي",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Wind turbine control board",
+      "arabic": "لوحة تحكم توربينة الرياح",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "System screen",
+      "arabic": "شاشة النظام",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "ON",
+      "arabic": "تشغيل",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "OFF",
+      "arabic": "إيقاف",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "Motor Indication LED",
+      "arabic": "مؤشر حالة المحرك",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "An LED that shows motor status by color or blink pattern.",
+      "arabic": "مؤشر ضوئي يعرض حالة المحرك من خلال اللون أو نمط الوميض.",
+      "source": "Supplemental UI translation"
+    },
+    {
+      "english": "A PWM (Pulse Width Modulation) solar charge controller is a key component in solar power systems that regulate and control the charging process of batteries using solar panels. Its primary function is to efficiently manage the power flow from the solar panels to the batteries, ensuring optimal charging and protecting the batteries from overcharging or discharging.",
+      "arabic": "تُنظم وحدة تحكم الشحن PWM (تعديل عرض النبضة) شحن البطاريات من الألواح الشمسية. وتدير تدفق الطاقة إلى البطاريات لضمان الشحن الأمثل وحمايتها من الشحن الزائد والتفريغ المفرط.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "A Switch used to turn on the Main Panel",
+      "arabic": "مفتاح يُستخدم لتشغيل اللوحة الرئيسية.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "A full wave rectifier module produces an output voltage which is purely DC.",
+      "arabic": "تُنتج وحدة مقوم الموجة الكاملة جهد خرج من التيار المستمر.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "A rheostat terminal is a connection point on a rheostat that allows electrical wires to be attached to the resistor. It enables the circuit to use the fixed and/or adjustable resistance path to control current flow.",
+      "arabic": "طرف المقاومة المتغيرة هو نقطة توصيل الأسلاك بها، ويتيح استخدام مسار المقاومة الثابت أو القابل للضبط للتحكم في سريان التيار.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "A switch that controls the operation of the motor, either running or stopping.",
+      "arabic": "مفتاح يتحكم في تشغيل المحرك أو إيقافه.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "A switch used to shut down the system in an emergency",
+      "arabic": "مفتاح يُستخدم لإيقاف النظام في حالات الطوارئ.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "A warning light indicating if the system is overloaded.",
+      "arabic": "مصباح تحذير يضيء عند زيادة الحمل على النظام.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "AC Halogen Lamp Module",
+      "arabic": "وحدة مصابيح الهالوجين للتيار المتردد",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "AC LED Lamp Module",
+      "arabic": "وحدة مصابيح LED للتيار المتردد",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Advanced controller using MPPT technology with up to 99.9% tracking efficiency and 98% energy conversion efficiency, 15–20% more efficient than traditional PWM controllers.",
+      "arabic": "وحدة تحكم متقدمة تستخدم تقنية MPPT بكفاءة تتبع تصل إلى 99.9% وكفاءة تحويل طاقة تصل إلى 98%، وبكفاءة أعلى بنسبة 15–20% من وحدات PWM التقليدية.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Allows the user to switch between manual control or remote operation.",
+      "arabic": "يتيح التبديل بين التحكم اليدوي والتشغيل عن بُعد.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "An LED that shows motor status by color or blink pattern.",
+      "arabic": "مؤشر ضوئي يعرض حالة المحرك من خلال اللون أو نمط الوميض.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "An off-grid inverter converts DC electricity from solar panels, wind turbines, or batteries into AC electricity suitable for powering household appliances in systems not connected to the utility grid.",
+      "arabic": "يحوّل العاكس خارج الشبكة الكهرباء المستمرة من الألواح الشمسية أو توربينات الرياح أو البطاريات إلى كهرباء مترددة مناسبة للأجهزة المنزلية في الأنظمة غير المتصلة بشبكة الكهرباء.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "An off-grid inverter is an essential component of off-grid renewable energy systems. It is designed to convert the DC electricity produced by sources such as solar panels, wind turbines, or batteries into AC electricity suitable for powering common household appliances and electrical devices. In off-grid systems, where there is no access to a utility power grid, the off-grid inverter is responsible for transforming the stored or generated DC energy into AC power.",
+      "arabic": "العاكس خارج الشبكة عنصر أساسي في أنظمة الطاقة المتجددة المستقلة. يُحوّل الكهرباء المستمرة الناتجة من الألواح الشمسية أو توربينات الرياح أو البطاريات إلى كهرباء مترددة مناسبة للأجهزة المنزلية والكهربائية، ويتيح استخدام الطاقة المخزنة أو المولدة عند عدم الاتصال بشبكة الكهرباء العامة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Analyzes the power output from the generator, giving feedback on the energy being produced.",
+      "arabic": "يحلل خرج قدرة المولد ويعرض معلومات عن الطاقة المنتجة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Battery Module",
+      "arabic": "وحدة البطارية",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Central panel featuring: 1. (220V AC) terminal, 2. neutral terminal (N), 3. Circuit breaker, 4. Emergency switch, 5. Ethernet sockets, 6. power sockets, and 7. ON/OFF switch.",
+      "arabic": "لوحة رئيسية تضم: طرف (220V AC)، والطرف المحايد (N)، وقاطع الدائرة، ومفتاح الطوارئ، ومقابس إيثرنت، ومقابس الطاقة، ومفتاح التشغيل والإيقاف.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Circuit breaker",
+      "arabic": "قاطع الدائرة",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Connects the system to a network for data collection or remote operation.",
+      "arabic": "يربط النظام بالشبكة لجمع البيانات أو التشغيل عن بُعد.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "DC Halogen Lamp Module",
+      "arabic": "وحدة مصابيح الهالوجين للتيار المستمر",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "DC LED Lamp Module",
+      "arabic": "وحدة مصابيح LED للتيار المستمر",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "DESCRIPTION\n",
+      "arabic": "الوصف",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Description here",
+      "arabic": "الوصف هنا",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Diodes Module",
+      "arabic": "وحدة الثنائيات",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Displays the speed of the motor’s shaft.",
+      "arabic": "تعرض سرعة عمود المحرك.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Emergency switch",
+      "arabic": "مفتاح الطوارئ",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Enables charging and discharging of a 24V/9Ah battery as required by experiments.",
+      "arabic": "تتيح شحن بطارية 24V/9Ah وتفريغها حسب متطلبات التجربة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Ethernet Socket",
+      "arabic": "مقبس إيثرنت",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Example title",
+      "arabic": "عنوان توضيحي",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Experiment 02",
+      "arabic": "التجربة 02",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Full bridge rectifier module",
+      "arabic": "وحدة مقوم الجسر الكامل",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Generator",
+      "arabic": "المولد",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Generator output terminals",
+      "arabic": "أطراف خرج المولد",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Generator power analyzer",
+      "arabic": "محلل قدرة المولد",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "It is an advanced double-peak or multiple-peak tracking technology. It improves transmission efficiency observably, 15%-20% higher than traditional PWM charging efficiency. The product boasts an optimum MPPT tracking efficiency of up to 99.9%. Advanced digital power supply technologies raise the circuit’s energy conversion efficiency to as high as 98 %.",
+      "arabic": "تستخدم تقنية تتبع متقدمة ذات قمتين أو قمم متعددة، وتزيد كفاءة نقل الطاقة بنسبة 15%–20% مقارنة بشحن PWM التقليدي. تصل كفاءة تتبع MPPT إلى 99.9%، وتصل كفاءة تحويل الطاقة إلى 98% باستخدام تقنيات التغذية الرقمية المتقدمة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "MPPT Solar Charge Controller",
+      "arabic": "وحدة تحكم الشحن MPPT",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Main Board",
+      "arabic": "اللوحة الرئيسية",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Mode selection (Manual/Remote)",
+      "arabic": "اختيار الوضع (يدوي/عن بُعد)",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Motor Indication LED",
+      "arabic": "مؤشر حالة المحرك",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Motor Run/Stop selector",
+      "arabic": "مفتاح تشغيل المحرك وإيقافه",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Motor protection switch (enable/disable)",
+      "arabic": "مفتاح حماية المحرك (تفعيل/تعطيل)",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Motor shaft speed display",
+      "arabic": "شاشة سرعة عمود المحرك",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "ON/OFF Switch",
+      "arabic": "مفتاح التشغيل والإيقاف",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Off- Grid inverter",
+      "arabic": "العاكس خارج الشبكة",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Off-Grid Inverter",
+      "arabic": "العاكس خارج الشبكة",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Overload indicator",
+      "arabic": "مؤشر زيادة الحمل",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "PWM Solar Charge Controller",
+      "arabic": "وحدة تحكم الشحن PWM",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Photovoltaics Training System VL-RE",
+      "arabic": "نظام التدريب على الخلايا الكهروضوئية VL-RE",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Preview Title",
+      "arabic": "معاينة العنوان",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Provides blocking and bypass diodes to prevent reverse current flow and protect healthy solar panels from damaged cells.",
+      "arabic": "توفّر ثنائيات منع وتجاوز لمنع سريان التيار العكسي وحماية الألواح الشمسية السليمة من الخلايا التالفة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Provides overcurrent protection to prevent damage to the electrical components.",
+      "arabic": "يوفّر حماية من زيادة التيار لمنع تلف المكونات الكهربائية.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Provides variable resistive loads (0–150 Ω, 0–800 Ω, 0–100 Ω) that can be connected in series or parallel to create various load values for experiments.",
+      "arabic": "توفّر أحمال مقاومة متغيرة (0–150 Ω و0–800 Ω و0–100 Ω)، ويمكن توصيلها على التوالي أو التوازي لتكوين قيم أحمال متنوعة للتجارب.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Regulates battery charging from solar panels using pulse width modulation to prevent overcharging and deep discharging.",
+      "arabic": "تنظم شحن البطارية من الألواح الشمسية باستخدام تعديل عرض النبضة لمنع الشحن الزائد والتفريغ العميق.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Regulating DC Output from Wind Turbine using PWM Charger",
+      "arabic": "تنظيم الخرج المستمر من توربينة الرياح باستخدام شاحن PWM",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Resistors Module",
+      "arabic": "وحدة المقاومات",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Resistors module",
+      "arabic": "وحدة المقاومات",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Rheostat Terminal",
+      "arabic": "طرف المقاومة المتغيرة",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Shows whether the system is currently turned on.",
+      "arabic": "يوضح ما إذا كان النظام قيد التشغيل.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Solar Panel",
+      "arabic": "اللوح الشمسي",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Switch to protect the motor from damage by controlling the power supply.",
+      "arabic": "مفتاح يحمي المحرك من التلف بالتحكم في مصدر الطاقة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "System On indicator",
+      "arabic": "مؤشر تشغيل النظام",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "TITLE",
+      "arabic": "العنوان",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "The Solar stand module helps in studying the characteristics of photovoltaic in a simplified form. It includes a photovoltaic panel and a halogen fixture simulating sunlight and heat. The panel tilt angle and seasonal sun positions can be adjusted to study effects of sunlight intensity, temperature, and sun angles.",
+      "arabic": "تتيح وحدة الحامل الشمسي دراسة خصائص الخلايا الكهروضوئية بصورة مبسطة. وتضم لوحًا كهروضوئيًا ومصباح هالوجين لمحاكاة ضوء الشمس وحرارتها. يمكن ضبط زاوية ميل اللوح ومواضع الشمس الموسمية لدراسة تأثير شدة الإضاءة والحرارة وزوايا الشمس.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "The component that generates electrical energy using the wind.",
+      "arabic": "المكوّن الذي يولّد الطاقة الكهربائية باستخدام الرياح.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "The training frame is designed to be used in carrying out different experiments related to the generation of electricity from solar energy. This frame consists of different modules that allow students to use them in different applications and to study different systems.",
+      "arabic": "صُمم هيكل التدريب لإجراء تجارب متنوعة تتعلق بتوليد الكهرباء من الطاقة الشمسية، ويضم وحدات تتيح دراسة أنظمة وتطبيقات مختلفة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "These modules are designed to allow students adding loads to any experiment. This load can be connected to another load module in series or in parallel which provides students with variety of load values for experiment",
+      "arabic": "تتيح هذه الوحدات إضافة أحمال إلى التجارب، ويمكن توصيلها بوحدات أحمال أخرى على التوالي أو التوازي للحصول على قيم أحمال متنوعة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This Module is designed to enable students to charge and discharge batteries according to the experiment needs.",
+      "arabic": "تتيح هذه الوحدة شحن البطاريات وتفريغها حسب احتياجات التجربة.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This Module is designed to simulate a real AC Load, using two Halogen lamps which consume more power than the LED lamp",
+      "arabic": "تحاكي هذه الوحدة حمل تيار متردد حقيقيًا باستخدام مصباحي هالوجين يستهلكان قدرة أكبر من مصابيح LED.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This Module is designed to simulate a real AC Load, using two LED lamps.",
+      "arabic": "تحاكي هذه الوحدة حمل تيار متردد حقيقيًا باستخدام مصباحي LED.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This Module is designed to simulate a real DC Load using two LED lamps. This module consists of two LED Lamps that are connected in series internally",
+      "arabic": "تحاكي هذه الوحدة حمل تيار مستمر حقيقيًا باستخدام مصباحي LED موصلين داخليًا على التوالي.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This module simulates a higher-power AC load using two halogen lamps.\n",
+      "arabic": "تحاكي هذه الوحدة حمل تيار متردد بقدرة مرتفعة باستخدام مصباحي هالوجين.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This module simulates a higher-power DC load using two internally series-connected halogen lamps.",
+      "arabic": "تحاكي هذه الوحدة حمل تيار مستمر بقدرة مرتفعة باستخدام مصباحي هالوجين موصلين داخليًا على التوالي.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This module simulates a real AC load using two LED lamps.",
+      "arabic": "تحاكي هذه الوحدة حمل تيار متردد حقيقيًا باستخدام مصباحي LED.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "This module simulates a real DC load using two internally series-connected LED lamps.",
+      "arabic": "تحاكي هذه الوحدة حمل تيار مستمر حقيقيًا باستخدام مصباحي LED موصلين داخليًا على التوالي.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Training Mounting Frame",
+      "arabic": "هيكل تركيب وحدات التدريب",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Turns the wind turbine on or off.",
+      "arabic": "يشغّل توربينة الرياح أو يوقفها.",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Wind Energy Training System (RE-007)",
+      "arabic": "نظام التدريب على طاقة الرياح (RE-007)",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Wind On/Off switch",
+      "arabic": "مفتاح تشغيل الرياح وإيقافها",
+      "source": "Equipment tooltip translation"
+    },
+    {
+      "english": "Complete Wiring First",
+      "arabic": "أكمل توصيل الأسلاك أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Connect the modules first.",
+      "arabic": "وصّل الوحدات أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Releace The Device's Emergency Button First",
+      "arabic": "حرّر زر الطوارئ الخاص بالجهاز أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Releace The Device's Emergency Button First Before Adjusting",
+      "arabic": "حرّر زر الطوارئ الخاص بالجهاز قبل إجراء الضبط.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Release The Curcuit Breaker First Turning On Device",
+      "arabic": "ارفع قاطع الدائرة أولًا قبل تشغيل الجهاز.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Release The Emergency Button First",
+      "arabic": "حرّر زر الطوارئ أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Release The Emergency Button First Before Turning On",
+      "arabic": "حرّر زر الطوارئ قبل التشغيل.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Release The Main Board's Curcuit Breaker first",
+      "arabic": "ارفع قاطع الدائرة الخاص باللوحة الرئيسية أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Release The Main Board's Curcuit Breaker first Before Adjusting",
+      "arabic": "ارفع قاطع الدائرة الخاص باللوحة الرئيسية قبل إجراء الضبط.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Release The Main Board'sEmergency Button First",
+      "arabic": "حرّر زر الطوارئ الخاص باللوحة الرئيسية أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Release The Main Board'sEmergency Button First Before Adjusting",
+      "arabic": "حرّر زر الطوارئ الخاص باللوحة الرئيسية قبل إجراء الضبط.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Switch On The Mode",
+      "arabic": "فعّل وضع التشغيل.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Turn On the Main Board First",
+      "arabic": "شغّل اللوحة الرئيسية أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Turn On the Main Board First Before Adjusting The Rheostat",
+      "arabic": "شغّل اللوحة الرئيسية أولًا قبل ضبط المقاومة المتغيرة.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Turn The Device On",
+      "arabic": "شغّل الجهاز.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Turn The Device On Before Adjusting The Rheostat",
+      "arabic": "شغّل الجهاز قبل ضبط المقاومة المتغيرة.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "Turn off the power first.",
+      "arabic": "أوقف تشغيل الطاقة أولًا.",
+      "source": "Runtime interaction warning"
+    },
+    {
+      "english": "This action cannot be performed now.",
+      "arabic": "لا يمكن تنفيذ هذا الإجراء الآن.",
+      "source": "Runtime interaction warning"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+PASS: no runtime errors.
+Full bringe rectifier Black output first=(-123.94, 153.96, -52.64) second=(-123.94, 153.96, -53.85) separation=1.202209
+Full bringe rectifier Red output first=(-123.92, 154.88, -52.64) second=(-123.92, 154.88, -53.85) separation=1.202209
+Full bringe rectifier +ve first=(-124.48, 146.38, -52.69) second=(-124.48, 146.38, -54.20) separation=1.509003
+Full bringe rectifier -ve first=(-129.50, 146.38, -52.69) second=(-129.50, 146.38, -54.20) separation=1.509003
+Battery Output Red first=(-131.76, 170.38, -52.66) second=(-131.76, 170.38, -53.86) separation=1.202209
+Battery Output Black first=(-131.76, 169.50, -52.66) second=(-131.76, 169.50, -53.86) separation=1.202209
+Battery Input Black first=(-142.51, 169.50, -52.66) second=(-142.51, 169.50, -53.86) separation=1.202209
+Battery Input Red first=(-142.51, 170.38, -52.66) second=(-142.51, 170.38, -53.86) separation=1.202209
+Battery +ve first=(-138.04, 162.22, -52.69) second=(-138.04, 162.22, -54.20) separation=1.509003
+Battery -ve first=(-136.19, 162.22, -52.70) second=(-136.19, 162.22, -54.21) separation=1.509003
+DC Halogen -ve first=(-126.17, 175.02, -52.73) second=(-126.17, 175.02, -53.93) separation=1.202209
+PWM Solar Charge Controller DC Load -ve first=(-106.08, 145.16, -52.72) second=(-106.08, 145.16, -53.92) separation=1.202209
+PWM Solar Charge Controller DC Load +ve first=(-106.85, 145.16, -52.72) second=(-106.85, 145.16, -53.92) separation=1.202209
+DC Halogen +ve first=(-127.79, 175.03, -52.73) second=(-127.79, 175.03, -53.93) separation=1.202209
+MPPT Solar Charge Controller DC Load -ve first=(-106.16, 160.45, -52.72) second=(-106.16, 160.45, -53.92) separation=1.202209
+MPPT Solar Charge Controller DC Load +ve first=(-106.93, 160.45, -52.72) second=(-106.93, 160.45, -53.92) separation=1.202209
+Off-grid inverter black input first=(-122.17, 169.48, -52.64) second=(-122.17, 169.48, -53.85) separation=1.202209
+Off grid inverter red input first=(-122.17, 170.34, -52.64) second=(-122.17, 170.34, -53.85) separation=1.202209
+Off-Grid Inverter Battery +ve first=(-118.08, 166.94, -52.69) second=(-118.08, 166.94, -53.96) separation=1.264465
+Off-Grid Inverter Battery -ve first=(-117.24, 166.94, -52.69) second=(-117.24, 166.94, -53.92) separation=1.225464
+DC LED -ve first=(-118.41, 175.03, -52.71) second=(-118.41, 175.03, -54.22) separation=1.509003
+DC LED +ve first=(-120.01, 175.02, -52.71) second=(-120.01, 175.02, -54.22) separation=1.509003
+Off grid inverter Ac Output L first=(-118.06, 164.03, -52.64) second=(-118.06, 164.03, -53.97) separation=1.322968
+Off grid inverter Ac Output N first=(-117.26, 164.03, -52.64) second=(-117.26, 164.03, -53.93) separation=1.283966
+DC Halogen -ve 1 first=(-126.17, 179.84, -52.73) second=(-126.17, 179.84, -53.93) separation=1.202209
+DC Halogen +ve 1 first=(-127.79, 179.85, -52.73) second=(-127.79, 179.85, -53.93) separation=1.202209
+DC LED -ve 1 first=(-118.39, 179.84, -52.73) second=(-118.39, 179.84, -53.93) separation=1.202209
+DC LED +ve 1 first=(-120.01, 179.85, -52.73) second=(-120.01, 179.85, -53.93) separation=1.202209
+PASS 28 pools acquire/preview two active plug renderers.
+PASS: no runtime errors.
+Full bringe rectifier Black output first=(-123.94, 153.96, -52.64) second=(-123.94, 153.96, -53.85) separation=1.202209
+Full bringe rectifier Red output first=(-123.92, 154.88, -52.64) second=(-123.92, 154.88, -53.85) separation=1.202209
+Full bringe rectifier +ve first=(-124.48, 146.38, -52.69) second=(-124.48, 146.38, -54.20) separation=1.509003
+Full bringe rectifier -ve first=(-129.50, 146.38, -52.69) second=(-129.50, 146.38, -54.20) separation=1.509003
+Battery Output Red first=(-131.76, 170.38, -52.66) second=(-131.76, 170.38, -53.86) separation=1.202209
+Battery Output Black first=(-131.76, 169.50, -52.66) second=(-131.76, 169.50, -53.86) separation=1.202209
+Battery Input Black first=(-142.51, 169.50, -52.66) second=(-142.51, 169.50, -53.86) separation=1.202209
+Battery Input Red first=(-142.51, 170.38, -52.66) second=(-142.51, 170.38, -53.86) separation=1.202209
+Battery +ve first=(-138.04, 162.22, -52.69) second=(-138.04, 162.22, -54.20) separation=1.509003
+Battery -ve first=(-136.19, 162.22, -52.70) second=(-136.19, 162.22, -54.21) separation=1.509003
+DC Halogen -ve first=(-126.17, 175.02, -52.73) second=(-126.17, 175.02, -53.93) separation=1.202209
+PWM Solar Charge Controller DC Load -ve first=(-106.08, 145.16, -52.72) second=(-106.08, 145.16, -53.92) separation=1.202209
+PWM Solar Charge Controller DC Load +ve first=(-106.85, 145.16, -52.72) second=(-106.85, 145.16, -53.92) separation=1.202209
+DC Halogen +ve first=(-127.79, 175.03, -52.73) second=(-127.79, 175.03, -53.93) separation=1.202209
+MPPT Solar Charge Controller DC Load -ve first=(-106.16, 160.45, -52.72) second=(-106.16, 160.45, -53.92) separation=1.202209
+MPPT Solar Charge Controller DC Load +ve first=(-106.93, 160.45, -52.72) second=(-106.93, 160.45, -53.92) separation=1.202209
+Off-grid inverter black input first=(-122.17, 169.48, -52.64) second=(-122.17, 169.48, -53.85) separation=1.202209
+Off grid inverter red input first=(-122.17, 170.34, -52.64) second=(-122.17, 170.34, -53.85) separation=1.202209
+Off-Grid Inverter Battery +ve first=(-118.08, 166.94, -52.69) second=(-118.08, 166.94, -53.96) separation=1.264465
+Off-Grid Inverter Battery -ve first=(-117.24, 166.94, -52.69) second=(-117.24, 166.94, -53.92) separation=1.225464
+DC LED -ve first=(-118.41, 175.03, -52.71) second=(-118.41, 175.03, -54.22) separation=1.509003
+DC LED +ve first=(-120.01, 175.02, -52.71) second=(-120.01, 175.02, -54.22) separation=1.509003
+Off grid inverter Ac Output L first=(-118.06, 164.03, -52.64) second=(-118.06, 164.03, -53.97) separation=1.322968
+Off grid inverter Ac Output N first=(-117.26, 164.03, -52.64) second=(-117.26, 164.03, -53.93) separation=1.283966
+DC Halogen -ve 1 first=(-126.17, 179.84, -52.73) second=(-126.17, 179.84, -53.93) separation=1.202209
+DC Halogen +ve 1 first=(-127.79, 179.85, -52.73) second=(-127.79, 179.85, -53.93) separation=1.202209
+DC LED -ve 1 first=(-118.39, 179.84, -52.73) second=(-118.39, 179.84, -53.93) separation=1.202209
+DC LED +ve 1 first=(-120.01, 179.85, -52.73) second=(-120.01, 179.85, -53.93) separation=1.202209
+PASS 28 pools acquire/preview two active plug renderers.
+PASS all four profiles connect using actual endpoint clicks and remove/release all allocated slots.
+PASS: no runtime errors.
+Full bringe rectifier Black output first=(-123.94, 153.96, -52.64) second=(-123.94, 153.96, -53.85) separation=1.202209
+Full bringe rectifier Red output first=(-123.92, 154.88, -52.64) second=(-123.92, 154.88, -53.85) separation=1.202209
+Full bringe rectifier +ve first=(-124.48, 146.38, -52.69) second=(-124.48, 146.38, -54.20) separation=1.509003
+Full bringe rectifier -ve first=(-129.50, 146.38, -52.69) second=(-129.50, 146.38, -54.20) separation=1.509003
+Battery Output Red first=(-131.76, 170.38, -52.66) second=(-131.76, 170.38, -53.86) separation=1.202209
+Battery Output Black first=(-131.76, 169.50, -52.66) second=(-131.76, 169.50, -53.86) separation=1.202209
+Battery Input Black first=(-142.51, 169.50, -52.66) second=(-142.51, 169.50, -53.86) separation=1.202209
+Battery Input Red first=(-142.51, 170.38, -52.66) second=(-142.51, 170.38, -53.86) separation=1.202209
+Battery +ve first=(-138.04, 162.22, -52.69) second=(-138.04, 162.22, -54.20) separation=1.509003
+Battery -ve first=(-136.19, 162.22, -52.70) second=(-136.19, 162.22, -54.21) separation=1.509003
+DC Halogen -ve first=(-126.17, 175.02, -52.73) second=(-126.17, 175.02, -53.93) separation=1.202209
+PWM Solar Charge Controller DC Load -ve first=(-106.08, 145.16, -52.72) second=(-106.08, 145.16, -53.92) separation=1.202209
+PWM Solar Charge Controller DC Load +ve first=(-106.85, 145.16, -52.72) second=(-106.85, 145.16, -53.92) separation=1.202209
+DC Halogen +ve first=(-127.79, 175.03, -52.73) second=(-127.79, 175.03, -53.93) separation=1.202209
+MPPT Solar Charge Controller DC Load -ve first=(-106.16, 160.45, -52.72) second=(-106.16, 160.45, -53.92) separation=1.202209
+MPPT Solar Charge Controller DC Load +ve first=(-106.93, 160.45, -52.72) second=(-106.93, 160.45, -53.92) separation=1.202209
+Off-grid inverter black input first=(-122.17, 169.48, -52.64) second=(-122.17, 169.48, -53.85) separation=1.202209
+Off grid inverter red input first=(-122.17, 170.34, -52.64) second=(-122.17, 170.34, -53.85) separation=1.202209
+Off-Grid Inverter Battery +ve first=(-118.08, 166.94, -52.69) second=(-118.08, 166.94, -53.96) separation=1.264465
+Off-Grid Inverter Battery -ve first=(-117.24, 166.94, -52.69) second=(-117.24, 166.94, -53.92) separation=1.225464
+DC LED -ve first=(-118.41, 175.03, -52.71) second=(-118.41, 175.03, -54.22) separation=1.509003
+DC LED +ve first=(-120.01, 175.02, -52.71) second=(-120.01, 175.02, -54.22) separation=1.509003
+Off grid inverter Ac Output L first=(-118.06, 164.03, -52.64) second=(-118.06, 164.03, -53.97) separation=1.322968
+Off grid inverter Ac Output N first=(-117.26, 164.03, -52.64) second=(-117.26, 164.03, -53.93) separation=1.283966
+DC Halogen -ve 1 first=(-126.17, 179.84, -52.73) second=(-126.17, 179.84, -53.93) separation=1.202209
+DC Halogen +ve 1 first=(-127.79, 179.85, -52.73) second=(-127.79, 179.85, -53.93) separation=1.202209
+DC LED -ve 1 first=(-118.39, 179.84, -52.73) second=(-118.39, 179.84, -53.93) separation=1.202209
+DC LED +ve 1 first=(-120.01, 179.85, -52.73) second=(-120.01, 179.85, -53.93) separation=1.202209
+PASS 28 pools acquire/preview two active plug renderers.
+PASS all four profiles connect using actual endpoint clicks and remove/release all allocated slots.
+PASS: no runtime errors.

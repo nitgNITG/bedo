@@ -104,14 +104,18 @@ namespace Bedo.Core.UI
             if (filter == null || filter.sharedMesh == null)
                 throw new System.InvalidOperationException("The monitor surface needs a mesh.");
             Mesh mesh = filter.sharedMesh;
-            int[] triangles = mesh.triangles;
-            Vector3[] vertices = mesh.vertices;
-            Vector3 a = surface.transform.TransformPoint(vertices[triangles[0]]);
-            Vector3 b = surface.transform.TransformPoint(vertices[triangles[1]]);
-            Vector3 c = surface.transform.TransformPoint(vertices[triangles[2]]);
-            Vector3 forward = mesh.normals.Length == vertices.Length
-                ? -surface.transform.localToWorldMatrix.inverse.transpose.MultiplyVector(mesh.normals[triangles[0]]).normalized
-                : Vector3.Cross(b - a, c - a).normalized;
+            // Submesh bounds remain available after Unity discards CPU vertex/index
+            // buffers in a player build. Never read triangles, vertices or normals here.
+            if (mesh.subMeshCount == 0)
+                throw new System.InvalidOperationException("The monitor surface has no rendered submesh.");
+            Bounds bounds = mesh.GetSubMesh(0).bounds;
+            for (int submesh = 1; submesh < mesh.subMeshCount; submesh++)
+                bounds.Encapsulate(mesh.GetSubMesh(submesh).bounds);
+            Vector3 extent = bounds.size;
+            Vector3 normal = extent.x <= extent.y && extent.x <= extent.z ? Vector3.right :
+                extent.y <= extent.z ? Vector3.up : Vector3.forward;
+            Vector3 a = surface.transform.TransformPoint(bounds.center);
+            Vector3 forward = surface.transform.localToWorldMatrix.inverse.transpose.MultiplyVector(normal).normalized;
             var reference = Camera.main;
             if (reference != null && Vector3.Dot(forward, surface.bounds.center - reference.transform.position) < 0f)
                 forward = -forward;
@@ -120,15 +124,36 @@ namespace Bedo.Core.UI
             Vector3 right = Vector3.Cross(up, forward).normalized;
             Vector2 min = new Vector2(float.PositiveInfinity, float.PositiveInfinity);
             Vector2 max = new Vector2(float.NegativeInfinity, float.NegativeInfinity);
-            // Imported meshes can retain unused vertices; fit the rendered triangles only.
-            foreach (int index in triangles)
+            // Fit the rendered submeshes, excluding unused imported vertices.
+            for (int corner = 0; corner < 8; corner++)
             {
-                Vector3 point = surface.transform.TransformPoint(vertices[index]) - a;
+                Vector3 local = bounds.center + Vector3.Scale(bounds.extents,
+                    new Vector3((corner & 1) == 0 ? -1f : 1f,
+                        (corner & 2) == 0 ? -1f : 1f, (corner & 4) == 0 ? -1f : 1f));
+                Vector3 point = surface.transform.TransformPoint(local) - a;
                 Vector2 projected = new Vector2(Vector3.Dot(point, right), Vector3.Dot(point, up));
                 min = Vector2.Min(min, projected);
                 max = Vector2.Max(max, projected);
             }
             Vector2 size = max - min;
+            // Authored corners give imported monitors an exact crop even when
+            // their imported submesh bounds retain unused vertices.
+            var frame = surface.transform.Find("Screenshot Frame");
+            if (frame != null)
+            {
+                var bottomLeft = frame.Find("Bottom Left");
+                var bottomRight = frame.Find("Bottom Right");
+                var topLeft = frame.Find("Top Left");
+                if (bottomLeft == null || bottomRight == null || topLeft == null)
+                    throw new System.InvalidOperationException("The monitor screenshot frame is incomplete.");
+                a = bottomLeft.position;
+                right = (bottomRight.position - a).normalized;
+                up = (topLeft.position - a).normalized;
+                forward = Vector3.Cross(right, up).normalized;
+                size = new Vector2(Vector3.Distance(a, bottomRight.position), Vector3.Distance(a, topLeft.position));
+                min = Vector2.zero;
+                max = size;
+            }
             if (size.x <= .001f || size.y <= .001f) throw new System.InvalidOperationException("The monitor surface has no capture area.");
             width = Mathf.Max(16, width);
             int height = Mathf.Max(16, Mathf.RoundToInt(width * size.y / size.x));
@@ -149,6 +174,7 @@ namespace Bedo.Core.UI
             try
             {
                 camera.targetTexture = target;
+                camera.ResetProjectionMatrix();
                 camera.Render();
                 RenderTexture.active = target;
                 image = new Texture2D(width, height, TextureFormat.RGB24, false);

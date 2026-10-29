@@ -1,0 +1,82 @@
+[
+  {
+    "experiment": "1",
+    "mode": "Free",
+    "frames": 150,
+    "median_ms": 16.626,
+    "p95_ms": 17.029,
+    "max_ms": 22.095,
+    "over33ms": 0,
+    "median_gc_kib": 320.25
+  },
+  {
+    "experiment": "1",
+    "mode": "Guided",
+    "frames": 150,
+    "median_ms": 16.667,
+    "p95_ms": 17.018,
+    "max_ms": 24.551,
+    "over33ms": 0,
+    "median_gc_kib": 278.55
+  },
+  {
+    "experiment": "2",
+    "mode": "Free",
+    "frames": 150,
+    "median_ms": 16.642,
+    "p95_ms": 17.069,
+    "max_ms": 24.68,
+    "over33ms": 0,
+    "median_gc_kib": 320.25
+  },
+  {
+    "experiment": "2",
+    "mode": "Guided",
+    "frames": 150,
+    "median_ms": 16.671,
+    "p95_ms": 17.123,
+    "max_ms": 18.802,
+    "over33ms": 0,
+    "median_gc_kib": 279.18
+  },
+  {
+    "experiment": "3",
+    "mode": "Free",
+    "frames": 149,
+    "median_ms": 16.675,
+    "p95_ms": 17.01,
+    "max_ms": 26.698,
+    "over33ms": 0,
+    "median_gc_kib": 331.31
+  },
+  {
+    "experiment": "3",
+    "mode": "Guided",
+    "frames": 150,
+    "median_ms": 16.681,
+    "p95_ms": 17.069,
+    "max_ms": 20.227,
+    "over33ms": 0,
+    "median_gc_kib": 301.28
+  },
+  {
+    "experiment": "4",
+    "mode": "Free",
+    "frames": 150,
+    "median_ms": 16.675,
+    "p95_ms": 17.101,
+    "max_ms": 20.454,
+    "over33ms": 0,
+    "median_gc_kib": 331.3
+  },
+  {
+    "experiment": "4",
+    "mode": "Guided",
+    "frames": 150,
+    "median_ms": 16.663,
+    "p95_ms": 17.025,
+    "max_ms": 20.653,
+    "over33ms": 0,
+    "median_gc_kib": 311.64
+  }
+]

@@ -1,0 +1,3 @@
+Scene: System Selection Tab on by default; each of four graph buttons has its own Selection Tab reference.
+PASS exclusive selection indicators, EXP1 initial graph lock, Free Mode graph/system round trip.
+PASS: no runtime errors.

@@ -29,6 +29,41 @@ public class SliderRangeChecker : MonoBehaviour
     [SerializeField] private WindTurbineSpeedController[] windSpeedControllers;
     [SerializeField] private Collider windSliderCollider;
     [SerializeField] private AudioClip windSliderClick;
+    [Header("Wind speed popup")]
+    [SerializeField] private CanvasGroup windSpeedPopup;
+    [SerializeField] private SmoothCameraMovement turbineViewCamera;
+    [SerializeField] private int turbineViewIndex = -1;
+
+    public void ToggleWindSpeedPopup()
+    {
+        if (windSpeedPopup == null) return;
+        SetWindSpeedPopup(windSpeedPopup.alpha < .5f);
+        SharedInteractionClickSound.Play(windSliderClick);
+    }
+
+    public void CloseWindSpeedPopup()
+    {
+        SetWindSpeedPopup(false);
+        SharedInteractionClickSound.Play(windSliderClick);
+    }
+
+    public void ViewWindTurbine()
+    {
+        if (turbineViewCamera != null && turbineViewIndex >= 0)
+            turbineViewCamera.MoveToPosition(turbineViewIndex);
+        SharedInteractionClickSound.Play(windSliderClick);
+    }
+
+    private void SetWindSpeedPopup(bool visible)
+    {
+        if (windSpeedPopup == null) return;
+        // Keep the actual slider active so hiding the panel cannot reset the
+        // authored guided unlock, speed, or maximum-reached event.
+        windSpeedPopup.alpha = visible ? 1f : 0f;
+        windSpeedPopup.interactable = visible;
+        windSpeedPopup.blocksRaycasts = visible;
+    }
+
     private WindTurbineSpeedController activeWindController;
 
     private bool IsWindSlider => windSpeedControllers != null && windSpeedControllers.Length > 0;

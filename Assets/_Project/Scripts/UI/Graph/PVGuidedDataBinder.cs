@@ -298,7 +298,7 @@ public class PVGuidedDataBinder : MonoBehaviour
             {
                 // The wind model uses P = V * I (unity power factor), so Q = 0 and S = |P|.
                 float apparentPower = Mathf.Abs(reading.acVoltage * reading.acCurrent);
-                powerAnalyzerText.text = $"{reading.acPower:F2} W\n{0f:F2} VAr\n{apparentPower:F2} VA";
+                powerAnalyzerText.text = FormatPowerAnalyzer(reading.acPower, apparentPower);
             }
             return;
         }
@@ -310,6 +310,12 @@ public class PVGuidedDataBinder : MonoBehaviour
 
         SetOutput(voltage.ToString("F2"), current.ToString("F2"), power.ToString("F2"));
     }
+
+    // Fixed unit column matches the physical analyzer LCD; equations stay unchanged.
+    public static string FormatPowerAnalyzer(float activePower, float apparentPower) =>
+        $"<line-height=140%><mspace=0.12>{activePower:F2}</mspace><pos=75%>W\n" +
+        $"<mspace=0.12>{0f:F2}</mspace><pos=75%>VAr\n" +
+        $"<mspace=0.12>{apparentPower:F2}</mspace><pos=75%>VA";
 
     /// <summary>Called by the Free Mode calculation router from its authored wire sets.</summary>
     public void SetArrayConfiguration(bool series, bool parallel)

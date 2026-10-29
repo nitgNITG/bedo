@@ -11,12 +11,24 @@ public sealed class WindMonitorTabs : MonoBehaviour
         public StoryboardSteps storyboard;
         public Interaction graphButton;
         public SingleClickInteraction firstGraphInteraction;
+        public GameObject selectionTab;
     }
 
     [SerializeField] private GameObject monitors;
     [SerializeField] private GameObject graphPage;
     [SerializeField] private Interaction systemButton;
     [SerializeField] private ExperimentTab[] experiments;
+    [SerializeField] private GameObject systemSelectionTab;
+
+    private void Start() => SetPageSelection(false);
+
+    public void SetPageSelection(bool showingGraph)
+    {
+        if (systemSelectionTab) systemSelectionTab.SetActive(!showingGraph);
+        if (experiments == null) return;
+        foreach (var entry in experiments)
+            if (entry != null && entry.selectionTab) entry.selectionTab.SetActive(showingGraph);
+    }
     private ExperimentTab active;
     private bool unlocked, graphShown;
     private int lastStep = -1;
@@ -55,6 +67,7 @@ public sealed class WindMonitorTabs : MonoBehaviour
             }
         }
         lastStep = step;
+        if (next != null) SetPageSelection(graphShown);
     }
 
     public void ShowGraph(Interaction clickedButton)
@@ -73,6 +86,7 @@ public sealed class WindMonitorTabs : MonoBehaviour
         }
         else clickedButton.PlaySound();
         graphShown = true;
+        SetPageSelection(true);
         graphPage.SetActive(true);
         monitors.SetActive(false);
         clickedButton.Allow = false;
@@ -89,6 +103,7 @@ public sealed class WindMonitorTabs : MonoBehaviour
         monitors.SetActive(true);
         graphPage.SetActive(false);
         graphShown = false;
+        SetPageSelection(false);
         systemButton.Allow = false;
         active.graphButton.Allow = true;
     }

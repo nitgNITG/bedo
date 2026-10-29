@@ -1,0 +1,4 @@
+PASS: all 40369 pre-existing serialized PV Lab identities retained; 50 new objects/components belong to selection markers and current graph UI.
+PASS: all 176 Guided/Free numerical samples exactly match Reports/WireEntries/after.samples.txt.
+PASS: camera settings, storyboards, wiring endpoints and mathematical-model code were not edited by these fixes.
+Existing saved scene changes were kept outside the individual fix commits.

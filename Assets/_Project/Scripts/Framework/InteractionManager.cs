@@ -789,6 +789,9 @@ namespace TutorialFramework
             if (interaction == null)
                 return;
 
+            if (Guided && interaction is WireInteraction wire && !wire.CanClickPoint(clicked))
+                return;
+
 
             // =================================================
             // FIND THE STORYBOARD THAT OWNS THIS INTERACTION

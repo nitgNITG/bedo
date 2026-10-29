@@ -11,6 +11,8 @@ public class MultipleChoiceQuiz : MonoBehaviour
     {
         public Button button;
         public bool correct;
+        public GameObject correctHighlight;
+        public GameObject incorrectHighlight;
     }
 
     [System.Serializable]
@@ -39,6 +41,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
         // Hide all questions
         foreach (Question q in questions)
         {
+            ResetAnswerHighlights(q);
             if (q.questionObject != null)
                 q.questionObject.SetActive(false);
             if (q.correctFeedbackObject != null)
@@ -86,6 +89,8 @@ public class MultipleChoiceQuiz : MonoBehaviour
             return;
 
         Question question = questions[currentQuestion];
+        ResetAnswerHighlights(question);
+        SetAnswerHighlight(answer, answer.correct);
 
         StartCoroutine(answer.correct
             ? CorrectAnswerRoutine(question)
@@ -93,12 +98,30 @@ public class MultipleChoiceQuiz : MonoBehaviour
     }
 
 
+    private static void ResetAnswerHighlights(Question question)
+    {
+        if (question.correctFeedbackObject) question.correctFeedbackObject.SetActive(false);
+        if (question.incorrectFeedbackObject) question.incorrectFeedbackObject.SetActive(false);
+        if (question.incorrectFeedbackObject2) question.incorrectFeedbackObject2.SetActive(false);
+        foreach (var answer in question.answers)
+        {
+            if (answer.correctHighlight) answer.correctHighlight.SetActive(false);
+            if (answer.incorrectHighlight) answer.incorrectHighlight.SetActive(false);
+        }
+    }
+
+    private static void SetAnswerHighlight(Answer answer, bool correct)
+    {
+        var selected = correct ? answer.correctHighlight : answer.incorrectHighlight;
+        if (selected) selected.SetActive(true);
+    }
+
     private IEnumerator CorrectAnswerRoutine(Question question)
     {
         waitingForNext = true;
 
-        if (question.correctFeedbackObject != null)
-            question.correctFeedbackObject.SetActive(true);
+        // The selected answer owns its green/red highlight.
+        // Legacy shared feedback must not highlight a different answer.
 
         yield return new WaitForSeconds(nextQuestionDelay);
 
@@ -110,6 +133,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
         if (questions[currentQuestion].questionObject != null)
             questions[currentQuestion].questionObject.SetActive(false);
 
+        ResetAnswerHighlights(question);
         currentQuestion++;
 
         if (currentQuestion < questions.Count)
@@ -125,10 +149,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
     {
         waitingForNext = true;
 
-        if (question.incorrectFeedbackObject != null)
-            question.incorrectFeedbackObject.SetActive(true);
-        if (question.incorrectFeedbackObject2 != null)
-            question.incorrectFeedbackObject2.SetActive(true);
+        // Keep only the clicked wrong answer highlighted during the retry delay.
 
         yield return new WaitForSeconds(nextQuestionDelay);
 
@@ -139,6 +160,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
         if (question.incorrectFeedbackObject2 != null)
             question.incorrectFeedbackObject2.SetActive(false);
 
+        ResetAnswerHighlights(question);
         // Keep the current question visible so the learner can try again.
         waitingForNext = false;
     }

@@ -1,0 +1,10 @@
+PASS: scientific data and solver/controller/graph source hashes unchanged from phase 5.
+PASS: all 16 equipment prefab files unchanged from phase 3.
+PASS: temporary acceptance runners removed from imported Assets and retained only as report reproduction sources.
+PASS: Unity version unchanged at 6000.3.21f1.
+PASS: PlayerSettings content restored after the failed build probe.
+PASS: final runtime interaction harness reports 20 reset cycles and zero runtime errors.
+PASS: final five-resolution/scaler/graph harness completed; visual/layout and browser limitations are separately reported.
+PASS: final runtime and Editor assemblies compile with exit 0; no temporary acceptance-runner sources in compilation inputs.
+PRESERVED: the four pre-existing driven-height edits in PV Lab remain uncommitted; acceptance commits do not include them.
+PASS: follow-up modifies exactly 75 subtitle anchored Y offsets; final resolution captures and graph checks repeated; original four scene edits excluded from its commit.
