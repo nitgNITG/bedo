@@ -1,0 +1,3 @@
+Added shared DC-current scrolling column and Voltage/Current graph tabs; assigned all five wind graph controllers. Current comes from the same live WindReading as the meters. Existing RPM/voltage export format retained.
+PASS live current matches meter/model; current and voltage charts retain identical row counts when switching; all three columns scroll together; Clear clears current rows.
+PASS: no runtime errors.

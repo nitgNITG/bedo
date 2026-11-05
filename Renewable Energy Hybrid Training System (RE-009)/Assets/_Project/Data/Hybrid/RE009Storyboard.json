@@ -1,0 +1,194 @@
+{
+  "instructions": [
+    {
+      "number": 1,
+      "english": "Connect (220 VAC) terminal and the neutral path (N) of all used modules to the (220 VAC) terminal and the neutral path (N) of the main board.",
+      "arabic": "قم بتوصيل طرف (220 VAC)، والمسار المحايد (N) لجميع الوحدات المستخدمة بأطراف (220 VAC)، والمسار المحايد (N) في اللوحة الرئيسية."
+    },
+    {
+      "number": 2,
+      "english": "Connect an Ethernet cable from the PV Solar Panel (Comm. Out) to the Main Control Board module (Comm. In).",
+      "arabic": "قم بتوصيل كابل إيثرنت من وحدة الخلية الشمسية (Comm. Out) إلى اللوحة الرئيسية للتحكم (Comm. In)."
+    },
+    {
+      "number": 3,
+      "english": "Connect an Ethernet cable from the Wind Turbine (Comm. in) to the Main Control Board module (Comm. out).",
+      "arabic": "قم بتوصيل كابل إيثرنت من وحدة توربينة الرياح (Comm. in) إلى اللوحة الرئيسية للتحكم (Comm. out)."
+    },
+    {
+      "number": 4,
+      "english": "Connect Dump Load terminals of the Wind/Solar Hybrid System Controller module to the terminals of the Dump Load 400W module.",
+      "arabic": "قم بتوصيل طرفي حمل التفريغ لوحدة التحكم في نظام الرياح/ الطاقة الشمسية الهجينة بأطراف وحدة تحميل التفريغ 400 واط."
+    },
+    {
+      "number": 5,
+      "english": "Connect (+VE) and (-VE) Battery Input terminals of the Wind/Solar Hybrid System Controller module to (+VE) and (-VE) terminals of the Battery 24V/ 9AH module.",
+      "arabic": "قم بتوصيل أطراف دخل البطارية (+VE) و (-VE) لوحدة التجكم في نظام الرياح/ الطاقة الشمسية الهجينة بأطراف (+VE) و (-VE) لوحدة البطارية 24 فولت/9 أمبير."
+    },
+    {
+      "number": 6,
+      "english": "Connect (+VE) and (-VE) Battery Input terminals of the Off-Grid Inverter module to (+VE) and (-VE) terminals of the Battery 24V/ 9AH module.",
+      "arabic": "قم بتوصيل أطراف دخل البطارية (+VE) و (-VE) لوحدة العاكس غير المتصل بالشبكة بأطراف (+VE) و (-VE) لوحدة البطارية 24 فولت/9 أمبير."
+    },
+    {
+      "number": 7,
+      "english": "Connect (L1), (L2), and (L3) terminals of the Generator Output from the Wind Turbine module to (U), (V), and (W) terminals of the Wind Input of the Wind/Solar Hybrid System Controller module.",
+      "arabic": "قم بتوصيل الأطراف (L1) و (L2) و (L3) الخاصة بمخرج المولد من وحدة التوربينة الهوائية بأطراف الدخول المقابلة (U) و (V) و (W).  الخاصة بأطراف دخل وحدة التوربينة الهوائية لوحدة التجكم في نظام الرياح/ الطاقة الشمسية الهجينة."
+    },
+    {
+      "number": 8,
+      "english": "Connect (L) and (N) AC Output terminals of the Off-Grid Inverter module to (L) and (N) terminals of the AC Halogen Lamp and AC LED Lamp modules.",
+      "arabic": "قم بتوصيل أطراف إخراج التيار المتردد (L) و (N) لوحدة العاكس خارج الشبكة بأطراف (L) و (N) لوحدتي مصباح الهالوجين ومصباح LED."
+    },
+    {
+      "number": 9,
+      "english": "Connect (+VE) and (-VE) Solar Input terminals of the Wind/Solar Hybrid System Controller module to (+VE) and (-VE) terminals of the PV Solar Panel Output module.",
+      "arabic": "قم بتوصيل أطراف الخلية الشمسية (+VE) و (-VE) لوحدة التجكم في نظام الرياح/ الطاقة الشمسية الهجينة بأطراف (+VE) و (-VE) لوحدة خرج الخلية الشمسية."
+    },
+    {
+      "number": 10,
+      "english": "Release the emergency stop button on the main board.",
+      "arabic": "قم بتحرير زر الطوارئ على اللوحة الرئيسية."
+    },
+    {
+      "number": 11,
+      "english": "Raise the circuit breaker (C.B) of the main board.",
+      "arabic": "ارفع قاطع الدائرة (C.B) الخاص باللوحة الرئيسية."
+    },
+    {
+      "number": 12,
+      "english": "Switch on the main board ON/OFF switch.",
+      "arabic": "شغّل اللوحة الرئيسية باستخدام مفتاح التشغيل والإيقاف (ON/OFF)."
+    },
+    {
+      "number": 13,
+      "english": "Release the emergency button of the PV Solar Panel.",
+      "arabic": "قم بتحرير زر الطوارئ للخلية الشمسية."
+    },
+    {
+      "number": 14,
+      "english": "Switch on the PV Solar Panel ON/OFF.",
+      "arabic": "قم بتشغيل الخلية الشمسية باستخدام مفتاح التشغيل والإيقاف (ON/OFF) الخاص به."
+    },
+    {
+      "number": 15,
+      "english": "Switch the Run/Stop selector to Run state.",
+      "arabic": "قم بتبديل مفتاح التشغيل/الإيقاف (Run/Stop) إلى وضع التشغيل (Run)."
+    },
+    {
+      "number": 16,
+      "english": "Switch to the software monitor",
+      "arabic": "قم بالانتقال الى شاشة السوفت وير."
+    },
+    {
+      "number": 17,
+      "english": "Press on “Enable” button.",
+      "arabic": "قم بالضغط على زر \"Enable\"."
+    },
+    {
+      "number": 18,
+      "english": "Release the emergency button on the wind turbine",
+      "arabic": "قم بتحرير زر الطوارئ على توربينة الرياح."
+    },
+    {
+      "number": 19,
+      "english": "Raise the circuit breaker (C.B) of the wind turbine.",
+      "arabic": "ارفع قاطع الدائرة (C.B) الخاص بتوربينة الرياح"
+    },
+    {
+      "number": 20,
+      "english": "Switch on the wind turbine ON/OFF.",
+      "arabic": "شغّل توربينة الرياح باستخدام مفتاح التشغيل والإيقاف (ON/OFF) الخاص به."
+    },
+    {
+      "number": 21,
+      "english": "Switch the Run/Stop selector to Run state.",
+      "arabic": "بدّل مفتاح التشغيل/الإيقاف (Run/Stop) إلى وضع التشغيل (Run)."
+    },
+    {
+      "number": 22,
+      "english": "Gradually increase the motor speed in small increments.",
+      "arabic": "قم بزيادة سرعة المحرك تدريجيا."
+    },
+    {
+      "number": 23,
+      "english": "Switch to the software monitor.",
+      "arabic": "قم بالانتقال الي شاشة التحكم."
+    },
+    {
+      "number": 24,
+      "english": "You have finished! You can now select another experiment.",
+      "arabic": "لقد انتهيت! الآن يمكنك اختيار تجربة أخرى."
+    }
+  ],
+  "experimentId": "RE009 Off Grid Inverter",
+  "englishTitle": "Experiment 1: OFF Grid Inverter",
+  "arabicTitle": "التجربة 1: العاكس غير المتصل بالشبكة",
+  "modelStatus": "Temporary reuse of RE-007 wind/PV models; replace when RE-009 model is supplied.",
+  "source": "Exp.1 Off Grid.docx",
+  "corrections": [
+    "Instruction 9 uses AC Halogen + AC LED, authorized by user.",
+    "No additional inverter power instruction."
+  ],
+  "notes": [
+    {
+      "afterInstruction": 6,
+      "english": "Always connect the battery before connecting PV panels or AC sources to the charge controller.",
+      "arabic": "قم دائمًا بتوصيل البطارية قبل توصيل الألواح الشمسية أو مصادر التيار المتردد إلى وحدة التحكم."
+    },
+    {
+      "afterInstruction": 16,
+      "english": "Observe that the battery now supplies the AC load.",
+      "arabic": "لاحظ أن البطارية الآن تقوم بتزويد الحمل المتردد."
+    },
+    {
+      "afterInstruction": 23,
+      "english": "You'll notice that when PV panels share the load with battery and Wind turbine, the battery discharge current will be reduced.",
+      "arabic": "ستلاحظ أنه عندما تشارك الألواح الكهروضوئية الحمل مع البطارية والتوربينة الهوائية، سيتم تقليل سحب التيار من البطارية."
+    }
+  ],
+  "quizzes": [
+    {
+      "afterInstruction": 8,
+      "english": "What is the primary purpose of a dump load in a solar-wind hybrid off-grid system?",
+      "arabic": "ما الغرض الرئيسي من حمل التفريغ في نظام هجين شمسي-رياح خارج الشبكة؟",
+      "englishAnswers": [
+        "To supply additional power to household appliances.",
+        "To absorb excess generated energy when batteries are fully charged, preventing system overvoltage.",
+        "To convert AC power back into DC for battery storage."
+      ],
+      "arabicAnswers": [
+        "لتزويد الأجهزة المنزلية بطاقة إضافية.",
+        "لامتصاص الطاقة الزائدة عندما تكون البطاريات مشحونة بالكامل، ومنع ارتفاع جهد النظام عن الحد الآمن.",
+        "لتحويل التيار المتردد مرة أخرى إلى تيار مستمر لتخزينه في البطارية."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "afterInstruction": 22,
+      "english": "In a solar-wind hybrid off-grid system, what happens when both solar panels and the wind emulator are active while supplying AC loads?",
+      "arabic": "في نظام هجين شمسي-رياح خارج الشبكة، ماذا يحدث عندما تكون الألواح الشمسية ومحاكي الرياح نشطين معًا أثناء تغذية أحمال متردد؟",
+      "englishAnswers": [
+        "The battery stops functioning completely.",
+        "The off-grid inverter shuts down for safety.",
+        "Solar, wind, and battery share the load, and excess power charges the battery."
+      ],
+      "arabicAnswers": [
+        "تتوقف البطارية عن العمل تمامًا.",
+        "ينطفئ العاكس خارج الشبكة لأسباب الأمان.",
+        "تشارك مصادر الطاقة الشمسية والرياح والبطارية في تغذية الحمل، ويتم شحن البطارية بالطاقة الزائدة."
+      ],
+      "correctAnswerIndex": 2
+    }
+  ],
+  "objectives": [
+    {
+      "english": "Determine the function of the off-grid inverter when engaging with various power sources.",
+      "arabic": "تحديد وظيفة العاكس خارج الشبكة عند التفاعل مع مصادر طاقة متنوعة."
+    },
+    {
+      "english": "Study the operation principle of the wind/solar hybrid system controller and its effect on battery charging and discharging.",
+      "arabic": "دراسة مبدأ عمل وحدة التحكم الهجينة (شمسية/رياح) وتأثيرها على شحن وتفريغ البطارية."
+    }
+  ]
+}

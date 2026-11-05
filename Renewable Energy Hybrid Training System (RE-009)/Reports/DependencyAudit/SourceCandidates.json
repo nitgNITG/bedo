@@ -1,0 +1,490 @@
+{
+  "09482a4d48be0034bbb6d3c5ed68f418": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "09482a4d48be0034bbb6d3c5ed68f418",
+      "path": "Assets/Bedo/Core/Soap/ScriptableObjects/MaterialVariable.cs"
+    }
+  ],
+  "147844318cee38c47a70dd9335954e17": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "147844318cee38c47a70dd9335954e17",
+      "path": "Assets/Bedo/Core/Soap/ScriptableObjects/EventListenerMaterialVariable.cs"
+    }
+  ],
+  "1e4d8f94a0c34a4469dece3b4cf25cdc": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "1e4d8f94a0c34a4469dece3b4cf25cdc",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/UI/SampleASampleUi.cs"
+    }
+  ],
+  "20990e22d0bf5c144a7b0f55ebd9f059": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "20990e22d0bf5c144a7b0f55ebd9f059",
+      "path": "Assets/UI_V3.0/Scripts/ButtonPointerProxyExtender.cs"
+    }
+  ],
+  "2be4161beb6babe428f8453728aa3300": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "2be4161beb6babe428f8453728aa3300",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableEvents/EventListener/EventListenerString.cs"
+    }
+  ],
+  "34f8a019a585bd54ca4ef5e4a5e5f472": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "34f8a019a585bd54ca4ef5e4a5e5f472",
+      "path": "Assets/Experiments/01_Loading_station_MR109_01/Scripts/ScriptableObjectsScripts/LoadingStationUnityVariables.cs"
+    }
+  ],
+  "3ae14a8dc19d552438f7d33ca52cd47a": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "3ae14a8dc19d552438f7d33ca52cd47a",
+      "path": "Assets/UI_V3.0/Scripts/StepListPopulatorUsingScriptableListString.cs"
+    }
+  ],
+  "3b484db397ebc0642991ce841ace14b9": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "3b484db397ebc0642991ce841ace14b9",
+      "path": "Assets/Bedo/Core/Soap/Cinemachine/ScriptableEventCinemachineVirtualCamera.cs"
+    }
+  ],
+  "3bfac9a54cf4046408a7aec6d6563ead": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "3bfac9a54cf4046408a7aec6d6563ead",
+      "path": "Assets/Experiments/01_Loading_station_MR109_01/Scripts/ScriptableObjectsScripts/LoadingStationEvents.cs"
+    }
+  ],
+  "3f518898c856f9442914f15599a1f150": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "3f518898c856f9442914f15599a1f150",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/UI/PDFRelated/DocumentScrollViewItem.cs"
+    }
+  ],
+  "4390c1776882070498b00e219daddc27": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "4390c1776882070498b00e219daddc27",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/UI/DialogWindow.cs"
+    }
+  ],
+  "45803f4da29bd9a47aed28e14ed88ea9": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "45803f4da29bd9a47aed28e14ed88ea9",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableLists/ScriptableListGameObject.cs"
+    }
+  ],
+  "47dd921c704d40d4eb96f6609f410a01": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "47dd921c704d40d4eb96f6609f410a01",
+      "path": "Assets/Shift - Complete Sci-Fi UI/Scripts/Input/GamepadChecker.cs"
+    }
+  ],
+  "47e02915cc02d3840ba2ed9a2fa08ddb": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "47e02915cc02d3840ba2ed9a2fa08ddb",
+      "path": "Assets/UI_V3.0/Scripts/HoveringToolTipPanel.cs"
+    }
+  ],
+  "4fb3badf2164b6945a15ef7f45419a7f": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "4fb3badf2164b6945a15ef7f45419a7f",
+      "path": "Assets/Bedo/Core/Soap/ScriptableExperiment/ScriptableEnumExperiment.cs"
+    }
+  ],
+  "4fea4c01f7b9c144b880ba54cc38c030": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "4fea4c01f7b9c144b880ba54cc38c030",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/ButtonCooldown.cs"
+    }
+  ],
+  "54f080280755eba4aac3dc73d9d4418f": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "54f080280755eba4aac3dc73d9d4418f",
+      "path": "Assets/Bedo/Integrations/Soap/Bindings/BindSliderToFloatVariableUsingUpdate.cs"
+    }
+  ],
+  "56cdb8ad39a5bdd4f8ed3d18fae14a63": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "56cdb8ad39a5bdd4f8ed3d18fae14a63",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableVariables/IntVariable.cs"
+    }
+  ],
+  "5798d9261dd3eae4d920ab34987f7ade": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "5798d9261dd3eae4d920ab34987f7ade",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableVariables/GameObjectVariable.cs"
+    }
+  ],
+  "5abe140360159184bbfde72117e6728a": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "5abe140360159184bbfde72117e6728a",
+      "path": "Assets/Experiments/04_Processing_station_MR109_04/Scripts/ScriptableObjects/MR109_04_Processing_UnityRelated.cs"
+    }
+  ],
+  "6a11231538da9894d8dce88b47df6a36": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "6a11231538da9894d8dce88b47df6a36",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableVariables/BoolVariable.cs"
+    }
+  ],
+  "6df4a5eebdaedac42881073b67f58a60": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "6df4a5eebdaedac42881073b67f58a60",
+      "path": "Assets/UI_V3.0/Scripts/TrueFalseQuestionPanel.cs"
+    }
+  ],
+  "7bd2cd728a13cc24e9ec09b2e24baa33": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "7bd2cd728a13cc24e9ec09b2e24baa33",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/ScriptableObjectsScripts/ScriptableEventDialogRequest.cs"
+    }
+  ],
+  "7e36e6614b0044141acbd8a0ccfb7369": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "7e36e6614b0044141acbd8a0ccfb7369",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/ScriptableObjectsScripts/SampleASampleData.cs"
+    }
+  ],
+  "7f1c9422027e30b42a96b300ee041e01": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "7f1c9422027e30b42a96b300ee041e01",
+      "path": "Assets/Bedo/Core/Soap/True False Question/Old/TrueAndFalseQuestionScriptableObject.cs"
+    }
+  ],
+  "82033a3b8ed41f2408f424294c861ca3": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "82033a3b8ed41f2408f424294c861ca3",
+      "path": "Assets/Bedo/Integrations/Soap/Bindings/BindIntTextMeshPro.cs"
+    }
+  ],
+  "8942d18b342c9694099c848cee63f730": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "8942d18b342c9694099c848cee63f730",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/ScriptableObjectsScripts/ScriptableListString.cs"
+    }
+  ],
+  "8e763e56e08314e4193dc7523e1f9b15": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "8e763e56e08314e4193dc7523e1f9b15",
+      "path": "Assets/Obvious/Soap/Integrations/Bedo/ValueChangedListener/ValueChangedListenerInt.cs"
+    }
+  ],
+  "974f833efdfdf284aa66e2cb2f3a3668": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "974f833efdfdf284aa66e2cb2f3a3668",
+      "path": "Assets/Obvious/Soap/Core/Runtime/Bindings/BindComparisonToUnityEvent.cs"
+    }
+  ],
+  "9b6b5940af8446547baf867af7257513": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "9b6b5940af8446547baf867af7257513",
+      "path": "Assets/Bedo/Core/Soap/True False Question/Old/ScriptableEventTrueAndFalseQuestionScriptableObject.cs"
+    }
+  ],
+  "9d882c116e09dcd4bb595d565420af77": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "9d882c116e09dcd4bb595d565420af77",
+      "path": "Assets/UI_V3.0/Scripts/ScriptableObject/ToolTip/ScriptableEventTooltipComponentDescription.cs"
+    }
+  ],
+  "9ecddeb51e792c84a85a59c75c6af6ca": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "9ecddeb51e792c84a85a59c75c6af6ca",
+      "path": "Assets/UI_V3.0/Scripts/MultipleChoiceQuestionPanel.cs"
+    }
+  ],
+  "a19a862ad2e04bd46997c615d95dba27": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "a19a862ad2e04bd46997c615d95dba27",
+      "path": "Assets/Experiments/05_Assembly_station_MR109_05/Scripts/ScriptableObjects/MR109_05_Assembly_UnityRelated.cs"
+    }
+  ],
+  "a49b7e678b3ebb7418adb84806d24646": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "a49b7e678b3ebb7418adb84806d24646",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableEvents/ScriptableEventNoParam.cs"
+    }
+  ],
+  "a58a34e08b21b904b82ea652aa3c5d86": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "a58a34e08b21b904b82ea652aa3c5d86",
+      "path": "Assets/Obvious/Soap/Integrations/Bedo/ValueChangedListener/ValueChangedListenerBool.cs"
+    }
+  ],
+  "a9978ce9c8bdc724896114c9952c52ea": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "a9978ce9c8bdc724896114c9952c52ea",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableVariables/FloatVariable.cs"
+    }
+  ],
+  "aa6370ef2a703634382c9320860abef5": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "aa6370ef2a703634382c9320860abef5",
+      "path": "Assets/Shift - Complete Sci-Fi UI/Scripts/UI Element/ToggleAnimationForButtonControllers.cs"
+    }
+  ],
+  "aae12814f708f8c4fba6eaa27d4e986e": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "aae12814f708f8c4fba6eaa27d4e986e",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/10_Service_Station_MR109_10/Scripts/ServiceStationScriptableObjects.cs"
+    }
+  ],
+  "addda37ad196a0a4faf3bc8c39c3d81f": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "addda37ad196a0a4faf3bc8c39c3d81f",
+      "path": "Assets/Bedo/Core/UI/Independent Toggle Group/IndependentAnimatedToggle.cs"
+    }
+  ],
+  "ae3fd0aee0442264286923201fa30a14": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "ae3fd0aee0442264286923201fa30a14",
+      "path": "Assets/Shift - Complete Sci-Fi UI/Scripts/Bedo/UI/MechaToolTipPanel.cs"
+    }
+  ],
+  "afccf293aebc12d488ef29c1ec9a149d": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "afccf293aebc12d488ef29c1ec9a149d",
+      "path": "Assets/UI_V3.0/Scripts/ChoiceItem.cs"
+    }
+  ],
+  "b39aec1c856ef5d4e8318ba2a2264280": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "b39aec1c856ef5d4e8318ba2a2264280",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/UI/PDFRelated/DocumentScorllView.cs"
+    }
+  ],
+  "b7ddcd873a6b3a54587a8dd5a1678ff5": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "b7ddcd873a6b3a54587a8dd5a1678ff5",
+      "path": "Assets/Bedo/Core/UI/Independent Toggle Group/IndependentToggleGroup.cs"
+    }
+  ],
+  "ba1bd61ff5f85b642a175fc402fe4bc7": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "ba1bd61ff5f85b642a175fc402fe4bc7",
+      "path": "Assets/Obvious/Soap/Core/Runtime/Bindings/BindFillingImage.cs"
+    }
+  ],
+  "bdc855cdf831dc242a3017a3829ff7df": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "bdc855cdf831dc242a3017a3829ff7df",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scriptableobjects/Ui/AudioSettingsManager.cs"
+    }
+  ],
+  "c9b0097770bb11a4face0d0c2d0b46b6": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "c9b0097770bb11a4face0d0c2d0b46b6",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scriptableobjects/Ui/Resources/ScriptableEventScriptableListString.cs"
+    }
+  ],
+  "d3f39f579066605409b539400e8d7b94": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "d3f39f579066605409b539400e8d7b94",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableEvents/ScriptableEventString.cs"
+    }
+  ],
+  "d6916e32cbfbb69408e0a98ac54cf42c": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "d6916e32cbfbb69408e0a98ac54cf42c",
+      "path": "Assets/Shift - Complete Sci-Fi UI/Scripts/Other/QualityManager.cs"
+    }
+  ],
+  "d810e3d2c0c80294fac8303c24ef20e0": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "d810e3d2c0c80294fac8303c24ef20e0",
+      "path": "Assets/Bedo/Core/Soap/Multiple Choice Question/Old/ScriptableEventMultipleChoiceQuestionScriptableObject.cs"
+    }
+  ],
+  "d93ba61543949824db31c7cb89b4f009": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "d93ba61543949824db31c7cb89b4f009",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableEvents/EventListener/EventListenerNoParam.cs"
+    }
+  ],
+  "e2fb1c8bab02427087aa07a952ef4018": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "e2fb1c8bab02427087aa07a952ef4018",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableEvents/ScriptableEventBool.cs"
+    }
+  ],
+  "e89d3c5688564194f80f13ddff919709": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "e89d3c5688564194f80f13ddff919709",
+      "path": "Assets/Bedo/Core/Soap/ScriptableObjects/ScriptableEventMaterialVariable.cs"
+    }
+  ],
+  "eabbe649d2a3e3e4d9121c3e8cbae5fc": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "eabbe649d2a3e3e4d9121c3e8cbae5fc",
+      "path": "Assets/Bedo/Core/Soap/Multiple Choice Question/Old/MultipleChoiceQuestionScriptableObject.cs"
+    }
+  ],
+  "ebb34337dbca08a4cb127fe2e4365173": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "ebb34337dbca08a4cb127fe2e4365173",
+      "path": "Assets/Shift - Complete Sci-Fi UI/Scripts/Input/VirtualCursorAnimate.cs"
+    }
+  ],
+  "ec38dd8f4baaae14ab5c9f0d56ad154a": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "ec38dd8f4baaae14ab5c9f0d56ad154a",
+      "path": "Assets/UI_V3.0/Scripts/ScriptableObject/ToolTip/TooltipComponentDescription.cs"
+    }
+  ],
+  "eca49ccdbc3362d4397b0fbd0b2b9d2a": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "eca49ccdbc3362d4397b0fbd0b2b9d2a",
+      "path": "Assets/Obvious/Soap/Core/Runtime/Bindings/BindTextMeshPro.cs"
+    }
+  ],
+  "ed2a53a13d3e4066b3ccfe94e017a207": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "ed2a53a13d3e4066b3ccfe94e017a207",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableEvents/ScriptableEventInt.cs"
+    }
+  ],
+  "f16d00ee0552e834983d10fb61c384b5": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "f16d00ee0552e834983d10fb61c384b5",
+      "path": "Assets/Bedo/Core/Soap/ScriptableExperiment/ScriptableEnumExperimentVariable.cs"
+    }
+  ],
+  "f6846f638bfa0cd44ab74e5cd81e9463": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "f6846f638bfa0cd44ab74e5cd81e9463",
+      "path": "Assets/LABS/T R A I N E R S/MR109_Compact/Experiments/00_Layout_MR109/Scripts/UI/LoadSceneWithFreeMode.cs"
+    }
+  ],
+  "f87365a294fe01249a5225e69b4408ec": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "f87365a294fe01249a5225e69b4408ec",
+      "path": "Assets/Shift - Complete Sci-Fi UI/Scripts/Panel/SplashScreenManager.cs"
+    }
+  ],
+  "fbb51723e892a404a87b22018981eb5d": [
+    {
+      "kind": "archive",
+      "archive": "Assets\\_Reference\\SourcePackages\\Inputs\\General Assets\\Overlay UI Package\\Overlay UI Package\\Bedo UI V3.0.2.unitypackage",
+      "guid": "fbb51723e892a404a87b22018981eb5d",
+      "path": "Assets/Obvious/Soap/Core/Runtime/ScriptableVariables/StringVariable.cs"
+    }
+  ]
+}

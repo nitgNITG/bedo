@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 32
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98246ae2c5e805c4d97162f672f72623, type: 3}
+  m_Name: Runtime State
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialFramework.Simulation.WindRuntimeState
+  TagIndex: 0
+  Description: 
+  _guid: 
+  _saveGuid: 0
+  _value:
+    requestedRPM: 0
+    activeResistance: 0
+    activeExperiment: 4
+    turbineRunning: 0
+    offGridSystemOn: 0
+    offGridInverterOn: 0
+    pwmSystemOn: 0
+    pwmLoadOn: 0
+    pwmOutputOn: 0
+    source:
+      rpm: 0
+      resistance: 0
+      acVoltage: 0
+      acCurrent: 0
+      acPower: 0
+      dcVoltage: 0
+      dcCurrent: 0
+      dcPower: 0
+    bus:
+      batteryVoltage: 0
+      batteryCurrent: 0
+      batteryPower: 0
+      dcLoadCurrent: 0
+      dcLoadPower: 0
+      acLoadVoltage: 0
+      acLoadCurrent: 0
+      acLoadPower: 0
+      inverterCurrent: 0
+      inverterPower: 0
+      gridVoltage: 0
+      gridCurrent: 0
+      gridPower: 0
+      availableChargeCurrent: 0
+      dumpCurrent: 0
+    batteryCurrent: 0
+    dumpCurrent: 0
+  _debugLogEnabled: 0
+  _saved: 0
+  _defaultValue:
+    requestedRPM: 0
+    activeResistance: 0
+    activeExperiment: 0
+    turbineRunning: 0
+    offGridSystemOn: 0
+    offGridInverterOn: 0
+    pwmSystemOn: 0
+    pwmLoadOn: 0
+    pwmOutputOn: 0
+    source:
+      rpm: 0
+      resistance: 0
+      acVoltage: 0
+      acCurrent: 0
+      acPower: 0
+      dcVoltage: 0
+      dcCurrent: 0
+      dcPower: 0
+    bus:
+      batteryVoltage: 0
+      batteryCurrent: 0
+      batteryPower: 0
+      dcLoadCurrent: 0
+      dcLoadPower: 0
+      acLoadVoltage: 0
+      acLoadCurrent: 0
+      acLoadPower: 0
+      inverterCurrent: 0
+      inverterPower: 0
+      gridVoltage: 0
+      gridCurrent: 0
+      gridPower: 0
+      availableChargeCurrent: 0
+      dumpCurrent: 0
+    batteryCurrent: 0
+    dumpCurrent: 0
+  _resetOn: 2
+  _runtimeValue:
+    requestedRPM: 0
+    activeResistance: 0
+    activeExperiment: 0
+    turbineRunning: 0
+    offGridSystemOn: 0
+    offGridInverterOn: 0
+    pwmSystemOn: 0
+    pwmLoadOn: 0
+    pwmOutputOn: 0
+    source:
+      rpm: 0
+      resistance: 0
+      acVoltage: 0
+      acCurrent: 0
+      acPower: 0
+      dcVoltage: 0
+      dcCurrent: 0
+      dcPower: 0
+    bus:
+      batteryVoltage: 0
+      batteryCurrent: 0
+      batteryPower: 0
+      dcLoadCurrent: 0
+      dcLoadPower: 0
+      acLoadVoltage: 0
+      acLoadCurrent: 0
+      acLoadPower: 0
+      inverterCurrent: 0
+      inverterPower: 0
+      gridVoltage: 0
+      gridCurrent: 0
+      gridPower: 0
+      availableChargeCurrent: 0
+      dumpCurrent: 0
+    batteryCurrent: 0
+    dumpCurrent: 0

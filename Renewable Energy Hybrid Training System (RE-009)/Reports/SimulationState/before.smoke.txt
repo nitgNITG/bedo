@@ -1,0 +1,21 @@
+Unity 6000.3.21f1; prefab regression smoke test.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP1 Main Menu -> Guided: 26 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP1 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP2 Main Menu -> Guided: 32 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP2 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+RUNTIME Exception: NullReferenceException: Object reference not set to an instance of an object
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP3 Main Menu -> Guided: 31 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP3 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+RUNTIME Exception: NullReferenceException: Object reference not set to an instance of an object
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP4 Main Menu -> Guided: 39 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP4 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+RUNTIME Exception: NullReferenceException: Object reference not set to an instance of an object
+FAIL: 3 runtime errors; edit scene restored; numerical/structural comparisons are reported separately.

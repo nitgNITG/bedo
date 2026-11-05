@@ -1,0 +1,4 @@
+Embedded existing Unity Splines 2.9.0; no version change.
+710 package files copied from the installed cache.
+Only Runtime/SplineExtrude.cs differs: capture the rebuilt mesh and null-check the deferred editor asset-save callback.
+No runtime extrusion equation, route, radius, material, prefab or scene changes.

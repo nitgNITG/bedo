@@ -1,0 +1,24 @@
+PASS Multiple Choice Question Wide Question (1) answer 0 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 1 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 2 correct=True isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (2) answer 0 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (2) answer 1 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (2) answer 2 correct=True isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 0 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 1 correct=True isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 2 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 0 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 1 correct=True isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 2 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 0 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 1 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (1) answer 2 correct=True isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question answer 0 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question answer 1 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question answer 2 correct=True isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (2) answer 0 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (2) answer 1 correct=False isolated, visible with Normal hidden, duration and reset
+PASS Multiple Choice Question Wide Question (2) answer 2 correct=True isolated, visible with Normal hidden, duration and reset
+PASS total 21 actual button click paths
+
+Explicit Inspector fields on each Answer. All original scene objects retained. Feedback copied to each button root outside animated Normal/Highlighted states; no runtime name search. Existing question content, correct answers, retry and 1.5s delay preserved.

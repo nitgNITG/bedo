@@ -1,0 +1,5 @@
+PASS System Speed curve monitor surface=speed collider=True
+PASS System Diversion control monitor surface=Diversion collider=True
+PASS System MPPT control monitor surface=Mppt collider=True
+PASS System Off Grid Control monitor surface=Off Grid collider=True
+PASS Graph monitor surface=Wind graph

@@ -1,0 +1,9 @@
+PASS EXP1 Guided: bound, starts off, lit LCD, 3 rows, live W/VAr/VA match model: 30.25W;0.00VAr;30.25VA
+PASS EXP1 Free: shared LCD bound
+PASS EXP2 Guided: bound, starts off, lit LCD, 3 rows, live W/VAr/VA match model: 756.25W;0.00VAr;756.25VA
+PASS EXP2 Free: shared LCD bound
+PASS EXP3 Guided: bound, starts off, lit LCD, 3 rows, live W/VAr/VA match model: 756.25W;0.00VAr;756.25VA
+PASS EXP3 Free: shared LCD bound
+PASS EXP4 Guided: bound, starts off, lit LCD, 3 rows, live W/VAr/VA match model: 756.25W;0.00VAr;756.25VA
+PASS EXP4 Free: shared LCD bound
+PASS complete; edit scene restored
