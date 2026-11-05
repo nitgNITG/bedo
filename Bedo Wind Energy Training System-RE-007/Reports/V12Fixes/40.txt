@@ -1,0 +1,3 @@
+Only the two grid-input definitions allow connection/removal while powered. They were already absent from the power-on requirements; those requirements are preserved.
+PASS actual Free EXP4 power clicks without grid leads; connect/remove both named grid leads while powered; unrelated live-wire removal remains blocked.
+PASS: no runtime errors.

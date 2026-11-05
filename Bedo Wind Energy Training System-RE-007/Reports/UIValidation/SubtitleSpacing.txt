@@ -1,0 +1,2 @@
+Raised 75 top-level EXP1–4 subtitle panels to anchored Y=110 reference pixels, above the bottom navigation.
+Only anchoredPosition.y changes; text, dimensions, children, step bindings, notifications and wiring unchanged.

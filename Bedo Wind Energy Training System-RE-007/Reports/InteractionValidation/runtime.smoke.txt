@@ -1,0 +1,42 @@
+Unity 6000.3.21f1; prefab regression smoke test.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP1 Main Menu -> Guided: 26 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP1 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS EXP1 disconnected activation, invalid cable rejection, exact authored cable reuse, removal forwarding, operating restriction, emergency cut and power-off removal.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP2 Main Menu -> Guided: 32 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP2 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS EXP2 disconnected activation, invalid cable rejection, exact authored cable reuse, removal forwarding, operating restriction, emergency cut and power-off removal.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP3 Main Menu -> Guided: 31 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP3 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS EXP3 disconnected activation, invalid cable rejection, exact authored cable reuse, removal forwarding, operating restriction, emergency cut and power-off removal.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP4 Main Menu -> Guided: 39 storyboard entries; model, lamp and 86 wire references resolve.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP4 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS EXP4 disconnected activation, invalid cable rejection, exact authored cable reuse, removal forwarding, operating restriction, emergency cut and power-off removal.
+PASS restart cycle 1/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 2/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 3/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 4/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 5/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 6/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 7/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 8/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 9/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 10/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 11/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 12/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 13/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 14/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 15/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 16/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 17/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 18/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 19/20, Free: zero inputs/wires, switches off, rheostat defaults.
+PASS restart cycle 20/20, Guided: zero inputs/wires, switches off, rheostat defaults.
+PASS: 0 runtime errors; edit scene restored and baseline verified.

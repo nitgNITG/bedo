@@ -1,0 +1,657 @@
+case,field,expected,actual,tolerance,status,reference
+WindExp1Data-1,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 3
+WindExp1Data-1,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 3
+WindExp1Data-1,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 3
+WindExp1Data-1,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 3
+WindExp1Data-1,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 3
+WindExp1Data-1,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 3
+WindExp1Data-1,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 3
+WindExp1Data-1,resistance,100.0,100.0,0.00019999999999999998,PASS,workbook sheet1 row 3
+WindExp1Data-2,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 4
+WindExp1Data-2,acCurrent,0.11,0.11,1e-05,PASS,workbook sheet1 row 4
+WindExp1Data-2,acPower,1.21,1.21,1e-05,PASS,workbook sheet1 row 4
+WindExp1Data-2,dcVoltage,22.91666666666667,22.916664,4.583333333333334e-05,PASS,workbook sheet1 row 4
+WindExp1Data-2,dcCurrent,0.07638888888888891,0.07638888,1e-05,PASS,workbook sheet1 row 4
+WindExp1Data-2,dcPower,1.7505787037037046,1.7505783,1e-05,PASS,workbook sheet1 row 4
+WindExp1Data-2,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 4
+WindExp1Data-2,resistance,100.0,100.0,0.00019999999999999998,PASS,workbook sheet1 row 4
+WindExp1Data-3,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 5
+WindExp1Data-3,acCurrent,0.22,0.22,1e-05,PASS,workbook sheet1 row 5
+WindExp1Data-3,acPower,4.84,4.84,1e-05,PASS,workbook sheet1 row 5
+WindExp1Data-3,dcVoltage,45.83333333333334,45.83333,9.166666666666668e-05,PASS,workbook sheet1 row 5
+WindExp1Data-3,dcCurrent,0.15277777777777782,0.15277776,1e-05,PASS,workbook sheet1 row 5
+WindExp1Data-3,dcPower,7.002314814814818,7.002313,1.4004629629629636e-05,PASS,workbook sheet1 row 5
+WindExp1Data-3,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 5
+WindExp1Data-3,resistance,100.0,100.0,0.00019999999999999998,PASS,workbook sheet1 row 5
+WindExp1Data-4,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 6
+WindExp1Data-4,acCurrent,0.33,0.33,1e-05,PASS,workbook sheet1 row 6
+WindExp1Data-4,acPower,10.89,10.89,2.178e-05,PASS,workbook sheet1 row 6
+WindExp1Data-4,dcVoltage,68.75,68.74999,0.00013749999999999998,PASS,workbook sheet1 row 6
+WindExp1Data-4,dcCurrent,0.22916666666666666,0.22916664,1e-05,PASS,workbook sheet1 row 6
+WindExp1Data-4,dcPower,15.755208333333332,15.755205,3.1510416666666666e-05,PASS,workbook sheet1 row 6
+WindExp1Data-4,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 6
+WindExp1Data-4,resistance,100.0,100.0,0.00019999999999999998,PASS,workbook sheet1 row 6
+WindExp1Data-5,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 7
+WindExp1Data-5,acCurrent,0.44,0.44,1e-05,PASS,workbook sheet1 row 7
+WindExp1Data-5,acPower,19.36,19.36,3.8719999999999995e-05,PASS,workbook sheet1 row 7
+WindExp1Data-5,dcVoltage,91.66666666666669,91.66666,0.00018333333333333336,PASS,workbook sheet1 row 7
+WindExp1Data-5,dcCurrent,0.30555555555555564,0.30555552,1e-05,PASS,workbook sheet1 row 7
+WindExp1Data-5,dcPower,28.009259259259274,28.009253,5.6018518518518545e-05,PASS,workbook sheet1 row 7
+WindExp1Data-5,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 7
+WindExp1Data-5,resistance,100.0,100.0,0.00019999999999999998,PASS,workbook sheet1 row 7
+WindExp1Data-6,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 8
+WindExp1Data-6,acCurrent,0.55,0.55,1e-05,PASS,workbook sheet1 row 8
+WindExp1Data-6,acPower,30.250000000000004,30.25,6.050000000000001e-05,PASS,workbook sheet1 row 8
+WindExp1Data-6,dcVoltage,114.58333333333334,114.58333,0.00022916666666666666,PASS,workbook sheet1 row 8
+WindExp1Data-6,dcCurrent,0.3819444444444445,0.38194442,1e-05,PASS,workbook sheet1 row 8
+WindExp1Data-6,dcPower,43.7644675925926,43.76446,8.75289351851852e-05,PASS,workbook sheet1 row 8
+WindExp1Data-6,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 8
+WindExp1Data-6,resistance,100.0,100.0,0.00019999999999999998,PASS,workbook sheet1 row 8
+WindExp1Data-7,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 9
+WindExp1Data-7,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 9
+WindExp1Data-7,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 9
+WindExp1Data-7,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 9
+WindExp1Data-7,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 9
+WindExp1Data-7,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 9
+WindExp1Data-7,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 9
+WindExp1Data-7,resistance,80.0,80.0,0.00015999999999999999,PASS,workbook sheet1 row 9
+WindExp1Data-8,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 10
+WindExp1Data-8,acCurrent,0.1375,0.1375,1e-05,PASS,workbook sheet1 row 10
+WindExp1Data-8,acPower,1.5125000000000002,1.5125,1e-05,PASS,workbook sheet1 row 10
+WindExp1Data-8,dcVoltage,20.16666666666667,20.166666,4.033333333333334e-05,PASS,workbook sheet1 row 10
+WindExp1Data-8,dcCurrent,1.9391025641025645,1.9391025,1e-05,PASS,workbook sheet1 row 10
+WindExp1Data-8,dcPower,39.10523504273506,39.105232,7.821047008547011e-05,PASS,workbook sheet1 row 10
+WindExp1Data-8,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 10
+WindExp1Data-8,resistance,80.0,80.0,0.00015999999999999999,PASS,workbook sheet1 row 10
+WindExp1Data-9,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 11
+WindExp1Data-9,acCurrent,0.275,0.275,1e-05,PASS,workbook sheet1 row 11
+WindExp1Data-9,acPower,6.050000000000001,6.05,1.2100000000000001e-05,PASS,workbook sheet1 row 11
+WindExp1Data-9,dcVoltage,40.33333333333334,40.333332,8.066666666666668e-05,PASS,workbook sheet1 row 11
+WindExp1Data-9,dcCurrent,3.878205128205129,3.878205,1e-05,PASS,workbook sheet1 row 11
+WindExp1Data-9,dcPower,156.42094017094024,156.42093,0.00031284188034188046,PASS,workbook sheet1 row 11
+WindExp1Data-9,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 11
+WindExp1Data-9,resistance,80.0,80.0,0.00015999999999999999,PASS,workbook sheet1 row 11
+WindExp1Data-10,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 12
+WindExp1Data-10,acCurrent,0.4125,0.4125,1e-05,PASS,workbook sheet1 row 12
+WindExp1Data-10,acPower,13.612499999999999,13.6125,2.7224999999999998e-05,PASS,workbook sheet1 row 12
+WindExp1Data-10,dcVoltage,60.50000000000001,60.499996,0.00012100000000000001,PASS,workbook sheet1 row 12
+WindExp1Data-10,dcCurrent,5.8173076923076925,5.8173075,1.1634615384615384e-05,PASS,workbook sheet1 row 12
+WindExp1Data-10,dcPower,351.9471153846154,351.94708,0.0007038942307692308,PASS,workbook sheet1 row 12
+WindExp1Data-10,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 12
+WindExp1Data-10,resistance,80.0,80.0,0.00015999999999999999,PASS,workbook sheet1 row 12
+WindExp1Data-11,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 13
+WindExp1Data-11,acCurrent,0.55,0.55,1e-05,PASS,workbook sheet1 row 13
+WindExp1Data-11,acPower,24.200000000000003,24.2,4.8400000000000004e-05,PASS,workbook sheet1 row 13
+WindExp1Data-11,dcVoltage,80.66666666666669,80.666664,0.00016133333333333337,PASS,workbook sheet1 row 13
+WindExp1Data-11,dcCurrent,7.756410256410258,7.75641,1.5512820512820516e-05,PASS,workbook sheet1 row 13
+WindExp1Data-11,dcPower,625.683760683761,625.6837,0.0012513675213675218,PASS,workbook sheet1 row 13
+WindExp1Data-11,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 13
+WindExp1Data-11,resistance,80.0,80.0,0.00015999999999999999,PASS,workbook sheet1 row 13
+WindExp1Data-12,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 14
+WindExp1Data-12,acCurrent,0.6875,0.6875,1e-05,PASS,workbook sheet1 row 14
+WindExp1Data-12,acPower,37.8125,37.8125,7.5625e-05,PASS,workbook sheet1 row 14
+WindExp1Data-12,dcVoltage,100.83333333333334,100.833336,0.00020166666666666667,PASS,workbook sheet1 row 14
+WindExp1Data-12,dcCurrent,9.695512820512821,9.695514,1.939102564102564e-05,PASS,workbook sheet1 row 14
+WindExp1Data-12,dcPower,977.6308760683762,977.631,0.0019552617521367524,PASS,workbook sheet1 row 14
+WindExp1Data-12,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 14
+WindExp1Data-12,resistance,80.0,80.0,0.00015999999999999999,PASS,workbook sheet1 row 14
+WindExp1Data-13,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 15
+WindExp1Data-13,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 15
+WindExp1Data-13,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 15
+WindExp1Data-13,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 15
+WindExp1Data-13,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 15
+WindExp1Data-13,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 15
+WindExp1Data-13,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 15
+WindExp1Data-13,resistance,60.0,60.0,0.00011999999999999999,PASS,workbook sheet1 row 15
+WindExp1Data-14,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 16
+WindExp1Data-14,acCurrent,0.18333333333333332,0.18333334,1e-05,PASS,workbook sheet1 row 16
+WindExp1Data-14,acPower,2.0166666666666666,2.0166667,1e-05,PASS,workbook sheet1 row 16
+WindExp1Data-14,dcVoltage,17.416666666666668,17.416666,3.483333333333334e-05,PASS,workbook sheet1 row 16
+WindExp1Data-14,dcCurrent,2.232905982905983,2.2329059,1e-05,PASS,workbook sheet1 row 16
+WindExp1Data-14,dcPower,38.88977920227921,38.889774,7.777955840455841e-05,PASS,workbook sheet1 row 16
+WindExp1Data-14,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 16
+WindExp1Data-14,resistance,60.0,60.0,0.00011999999999999999,PASS,workbook sheet1 row 16
+WindExp1Data-15,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 17
+WindExp1Data-15,acCurrent,0.36666666666666664,0.36666667,1e-05,PASS,workbook sheet1 row 17
+WindExp1Data-15,acPower,8.066666666666666,8.066667,1.6133333333333334e-05,PASS,workbook sheet1 row 17
+WindExp1Data-15,dcVoltage,34.833333333333336,34.833332,6.966666666666668e-05,PASS,workbook sheet1 row 17
+WindExp1Data-15,dcCurrent,4.465811965811966,4.4658117,1e-05,PASS,workbook sheet1 row 17
+WindExp1Data-15,dcPower,155.55911680911683,155.5591,0.00031111823361823363,PASS,workbook sheet1 row 17
+WindExp1Data-15,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 17
+WindExp1Data-15,resistance,60.0,60.0,0.00011999999999999999,PASS,workbook sheet1 row 17
+WindExp1Data-16,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 18
+WindExp1Data-16,acCurrent,0.55,0.55,1e-05,PASS,workbook sheet1 row 18
+WindExp1Data-16,acPower,18.150000000000002,18.15,3.63e-05,PASS,workbook sheet1 row 18
+WindExp1Data-16,dcVoltage,52.25,52.249996,0.00010449999999999999,PASS,workbook sheet1 row 18
+WindExp1Data-16,dcCurrent,6.698717948717948,6.6987176,1.3397435897435896e-05,PASS,workbook sheet1 row 18
+WindExp1Data-16,dcPower,350.00801282051276,350.00797,0.0007000160256410255,PASS,workbook sheet1 row 18
+WindExp1Data-16,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 18
+WindExp1Data-16,resistance,60.0,60.0,0.00011999999999999999,PASS,workbook sheet1 row 18
+WindExp1Data-17,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 19
+WindExp1Data-17,acCurrent,0.7333333333333333,0.73333335,1e-05,PASS,workbook sheet1 row 19
+WindExp1Data-17,acPower,32.266666666666666,32.266666,6.453333333333333e-05,PASS,workbook sheet1 row 19
+WindExp1Data-17,dcVoltage,69.66666666666667,69.666664,0.00013933333333333335,PASS,workbook sheet1 row 19
+WindExp1Data-17,dcCurrent,8.931623931623932,8.931623,1.7863247863247862e-05,PASS,workbook sheet1 row 19
+WindExp1Data-17,dcPower,622.2364672364673,622.2364,0.0012444729344729345,PASS,workbook sheet1 row 19
+WindExp1Data-17,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 19
+WindExp1Data-17,resistance,60.0,60.0,0.00011999999999999999,PASS,workbook sheet1 row 19
+WindExp1Data-18,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 20
+WindExp1Data-18,acCurrent,0.9166666666666666,0.9166667,1e-05,PASS,workbook sheet1 row 20
+WindExp1Data-18,acPower,50.416666666666664,50.416668,0.00010083333333333332,PASS,workbook sheet1 row 20
+WindExp1Data-18,dcVoltage,87.08333333333333,87.08333,0.00017416666666666665,PASS,workbook sheet1 row 20
+WindExp1Data-18,dcCurrent,11.164529914529913,11.16453,2.2329059829059823e-05,PASS,workbook sheet1 row 20
+WindExp1Data-18,dcPower,972.2444800569799,972.2444,0.0019444889601139598,PASS,workbook sheet1 row 20
+WindExp1Data-18,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 20
+WindExp1Data-18,resistance,60.0,60.0,0.00011999999999999999,PASS,workbook sheet1 row 20
+WindExp1Data-19,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 21
+WindExp1Data-19,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 21
+WindExp1Data-19,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 21
+WindExp1Data-19,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 21
+WindExp1Data-19,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 21
+WindExp1Data-19,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 21
+WindExp1Data-19,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 21
+WindExp1Data-19,resistance,40.0,40.0,7.999999999999999e-05,PASS,workbook sheet1 row 21
+WindExp1Data-20,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 22
+WindExp1Data-20,acCurrent,0.275,0.275,1e-05,PASS,workbook sheet1 row 22
+WindExp1Data-20,acPower,3.0250000000000004,3.025,1e-05,PASS,workbook sheet1 row 22
+WindExp1Data-20,dcVoltage,14.66666666666667,14.666666,2.933333333333334e-05,PASS,workbook sheet1 row 22
+WindExp1Data-20,dcCurrent,2.291666666666667,2.2916667,1e-05,PASS,workbook sheet1 row 22
+WindExp1Data-20,dcPower,33.61111111111112,33.61111,6.722222222222225e-05,PASS,workbook sheet1 row 22
+WindExp1Data-20,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 22
+WindExp1Data-20,resistance,40.0,40.0,7.999999999999999e-05,PASS,workbook sheet1 row 22
+WindExp1Data-21,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 23
+WindExp1Data-21,acCurrent,0.55,0.55,1e-05,PASS,workbook sheet1 row 23
+WindExp1Data-21,acPower,12.100000000000001,12.1,2.4200000000000002e-05,PASS,workbook sheet1 row 23
+WindExp1Data-21,dcVoltage,29.33333333333334,29.333332,5.866666666666668e-05,PASS,workbook sheet1 row 23
+WindExp1Data-21,dcCurrent,4.583333333333334,4.5833335,1e-05,PASS,workbook sheet1 row 23
+WindExp1Data-21,dcPower,134.44444444444449,134.44444,0.000268888888888889,PASS,workbook sheet1 row 23
+WindExp1Data-21,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 23
+WindExp1Data-21,resistance,40.0,40.0,7.999999999999999e-05,PASS,workbook sheet1 row 23
+WindExp1Data-22,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 24
+WindExp1Data-22,acCurrent,0.825,0.825,1e-05,PASS,workbook sheet1 row 24
+WindExp1Data-22,acPower,27.224999999999998,27.225,5.4449999999999995e-05,PASS,workbook sheet1 row 24
+WindExp1Data-22,dcVoltage,44.0,43.999996,8.8e-05,PASS,workbook sheet1 row 24
+WindExp1Data-22,dcCurrent,6.875,6.875,1.3749999999999999e-05,PASS,workbook sheet1 row 24
+WindExp1Data-22,dcPower,302.5,302.49997,0.000605,PASS,workbook sheet1 row 24
+WindExp1Data-22,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 24
+WindExp1Data-22,resistance,40.0,40.0,7.999999999999999e-05,PASS,workbook sheet1 row 24
+WindExp1Data-23,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 25
+WindExp1Data-23,acCurrent,1.1,1.1,1e-05,PASS,workbook sheet1 row 25
+WindExp1Data-23,acPower,48.400000000000006,48.4,9.680000000000001e-05,PASS,workbook sheet1 row 25
+WindExp1Data-23,dcVoltage,58.66666666666668,58.666664,0.00011733333333333336,PASS,workbook sheet1 row 25
+WindExp1Data-23,dcCurrent,9.166666666666668,9.166667,1.8333333333333336e-05,PASS,workbook sheet1 row 25
+WindExp1Data-23,dcPower,537.7777777777779,537.7778,0.001075555555555556,PASS,workbook sheet1 row 25
+WindExp1Data-23,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 25
+WindExp1Data-23,resistance,40.0,40.0,7.999999999999999e-05,PASS,workbook sheet1 row 25
+WindExp1Data-24,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 26
+WindExp1Data-24,acCurrent,1.375,1.375,1e-05,PASS,workbook sheet1 row 26
+WindExp1Data-24,acPower,75.625,75.625,0.00015125,PASS,workbook sheet1 row 26
+WindExp1Data-24,dcVoltage,73.33333333333334,73.333336,0.0001466666666666667,PASS,workbook sheet1 row 26
+WindExp1Data-24,dcCurrent,11.458333333333334,11.458334,2.2916666666666667e-05,PASS,workbook sheet1 row 26
+WindExp1Data-24,dcPower,840.2777777777779,840.27783,0.0016805555555555558,PASS,workbook sheet1 row 26
+WindExp1Data-24,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 26
+WindExp1Data-24,resistance,40.0,40.0,7.999999999999999e-05,PASS,workbook sheet1 row 26
+WindExp1Data-25,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 27
+WindExp1Data-25,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 27
+WindExp1Data-25,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 27
+WindExp1Data-25,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 27
+WindExp1Data-25,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 27
+WindExp1Data-25,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 27
+WindExp1Data-25,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 27
+WindExp1Data-25,resistance,20.0,20.0,3.9999999999999996e-05,PASS,workbook sheet1 row 27
+WindExp1Data-26,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 28
+WindExp1Data-26,acCurrent,0.55,0.55,1e-05,PASS,workbook sheet1 row 28
+WindExp1Data-26,acPower,6.050000000000001,6.05,1.2100000000000001e-05,PASS,workbook sheet1 row 28
+WindExp1Data-26,dcVoltage,11.916666666666668,11.916665,2.3833333333333334e-05,PASS,workbook sheet1 row 28
+WindExp1Data-26,dcCurrent,2.291666666666667,2.2916665,1e-05,PASS,workbook sheet1 row 28
+WindExp1Data-26,dcPower,27.309027777777786,27.309023,5.461805555555557e-05,PASS,workbook sheet1 row 28
+WindExp1Data-26,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 28
+WindExp1Data-26,resistance,20.0,20.0,3.9999999999999996e-05,PASS,workbook sheet1 row 28
+WindExp1Data-27,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 29
+WindExp1Data-27,acCurrent,1.1,1.1,1e-05,PASS,workbook sheet1 row 29
+WindExp1Data-27,acPower,24.200000000000003,24.2,4.8400000000000004e-05,PASS,workbook sheet1 row 29
+WindExp1Data-27,dcVoltage,23.833333333333336,23.83333,4.766666666666667e-05,PASS,workbook sheet1 row 29
+WindExp1Data-27,dcCurrent,4.583333333333334,4.583333,1e-05,PASS,workbook sheet1 row 29
+WindExp1Data-27,dcPower,109.23611111111114,109.23609,0.00021847222222222228,PASS,workbook sheet1 row 29
+WindExp1Data-27,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 29
+WindExp1Data-27,resistance,20.0,20.0,3.9999999999999996e-05,PASS,workbook sheet1 row 29
+WindExp1Data-28,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 30
+WindExp1Data-28,acCurrent,1.65,1.65,1e-05,PASS,workbook sheet1 row 30
+WindExp1Data-28,acPower,54.449999999999996,54.45,0.00010889999999999999,PASS,workbook sheet1 row 30
+WindExp1Data-28,dcVoltage,35.75,35.749996,7.15e-05,PASS,workbook sheet1 row 30
+WindExp1Data-28,dcCurrent,6.875,6.8749995,1.3749999999999999e-05,PASS,workbook sheet1 row 30
+WindExp1Data-28,dcPower,245.78125,245.7812,0.0004915625,PASS,workbook sheet1 row 30
+WindExp1Data-28,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 30
+WindExp1Data-28,resistance,20.0,20.0,3.9999999999999996e-05,PASS,workbook sheet1 row 30
+WindExp1Data-29,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 31
+WindExp1Data-29,acCurrent,2.2,2.2,1e-05,PASS,workbook sheet1 row 31
+WindExp1Data-29,acPower,96.80000000000001,96.8,0.00019360000000000002,PASS,workbook sheet1 row 31
+WindExp1Data-29,dcVoltage,47.66666666666667,47.66666,9.533333333333334e-05,PASS,workbook sheet1 row 31
+WindExp1Data-29,dcCurrent,9.166666666666668,9.166666,1.8333333333333336e-05,PASS,workbook sheet1 row 31
+WindExp1Data-29,dcPower,436.94444444444457,436.94437,0.0008738888888888891,PASS,workbook sheet1 row 31
+WindExp1Data-29,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 31
+WindExp1Data-29,resistance,20.0,20.0,3.9999999999999996e-05,PASS,workbook sheet1 row 31
+WindExp1Data-30,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 32
+WindExp1Data-30,acCurrent,2.75,2.75,1e-05,PASS,workbook sheet1 row 32
+WindExp1Data-30,acPower,151.25,151.25,0.0003025,PASS,workbook sheet1 row 32
+WindExp1Data-30,dcVoltage,59.583333333333336,59.58333,0.00011916666666666667,PASS,workbook sheet1 row 32
+WindExp1Data-30,dcCurrent,11.458333333333334,11.458333,2.2916666666666667e-05,PASS,workbook sheet1 row 32
+WindExp1Data-30,dcPower,682.7256944444445,682.72565,0.001365451388888889,PASS,workbook sheet1 row 32
+WindExp1Data-30,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 32
+WindExp1Data-30,resistance,20.0,20.0,3.9999999999999996e-05,PASS,workbook sheet1 row 32
+WindExp1Data-31,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-31,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-31,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-31,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-31,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-31,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-31,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-31,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 33
+WindExp1Data-32,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 34
+WindExp1Data-32,acCurrent,2.75,2.75,1e-05,PASS,workbook sheet1 row 34
+WindExp1Data-32,acPower,30.25,30.25,6.05e-05,PASS,workbook sheet1 row 34
+WindExp1Data-32,dcVoltage,9.166666666666668,9.166666,1.8333333333333336e-05,PASS,workbook sheet1 row 34
+WindExp1Data-32,dcCurrent,2.291666666666667,2.2916665,1e-05,PASS,workbook sheet1 row 34
+WindExp1Data-32,dcPower,21.00694444444445,21.00694,4.20138888888889e-05,PASS,workbook sheet1 row 34
+WindExp1Data-32,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 34
+WindExp1Data-32,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 34
+WindExp1Data-33,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 35
+WindExp1Data-33,acCurrent,5.5,5.5,1.1e-05,PASS,workbook sheet1 row 35
+WindExp1Data-33,acPower,121.0,121.0,0.000242,PASS,workbook sheet1 row 35
+WindExp1Data-33,dcVoltage,18.333333333333336,18.333332,3.666666666666667e-05,PASS,workbook sheet1 row 35
+WindExp1Data-33,dcCurrent,4.583333333333334,4.583333,1e-05,PASS,workbook sheet1 row 35
+WindExp1Data-33,dcPower,84.0277777777778,84.02776,0.0001680555555555556,PASS,workbook sheet1 row 35
+WindExp1Data-33,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 35
+WindExp1Data-33,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 35
+WindExp1Data-34,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 36
+WindExp1Data-34,acCurrent,8.25,8.25,1.6499999999999998e-05,PASS,workbook sheet1 row 36
+WindExp1Data-34,acPower,272.25,272.25,0.0005445,PASS,workbook sheet1 row 36
+WindExp1Data-34,dcVoltage,27.5,27.499998,5.4999999999999995e-05,PASS,workbook sheet1 row 36
+WindExp1Data-34,dcCurrent,6.875,6.8749995,1.3749999999999999e-05,PASS,workbook sheet1 row 36
+WindExp1Data-34,dcPower,189.0625,189.06247,0.000378125,PASS,workbook sheet1 row 36
+WindExp1Data-34,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 36
+WindExp1Data-34,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 36
+WindExp1Data-35,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 37
+WindExp1Data-35,acCurrent,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 37
+WindExp1Data-35,acPower,484.0,484.0,0.000968,PASS,workbook sheet1 row 37
+WindExp1Data-35,dcVoltage,36.66666666666667,36.666664,7.333333333333334e-05,PASS,workbook sheet1 row 37
+WindExp1Data-35,dcCurrent,9.166666666666668,9.166666,1.8333333333333336e-05,PASS,workbook sheet1 row 37
+WindExp1Data-35,dcPower,336.1111111111112,336.11105,0.0006722222222222224,PASS,workbook sheet1 row 37
+WindExp1Data-35,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 37
+WindExp1Data-35,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 37
+WindExp1Data-36,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 38
+WindExp1Data-36,acCurrent,13.75,13.75,2.7499999999999998e-05,PASS,workbook sheet1 row 38
+WindExp1Data-36,acPower,756.25,756.25,0.0015125,PASS,workbook sheet1 row 38
+WindExp1Data-36,dcVoltage,45.833333333333336,45.833332,9.166666666666667e-05,PASS,workbook sheet1 row 38
+WindExp1Data-36,dcCurrent,11.458333333333334,11.458333,2.2916666666666667e-05,PASS,workbook sheet1 row 38
+WindExp1Data-36,dcPower,525.1736111111112,525.1736,0.0010503472222222223,PASS,workbook sheet1 row 38
+WindExp1Data-36,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 38
+WindExp1Data-36,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 38
+WindExp2Data-1,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-1,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-1,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-1,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-1,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-1,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-1,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-1,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 70
+WindExp2Data-2,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 71
+WindExp2Data-2,acCurrent,2.75,2.75,1e-05,PASS,workbook sheet1 row 71
+WindExp2Data-2,acPower,30.25,30.25,6.05e-05,PASS,workbook sheet1 row 71
+WindExp2Data-2,dcVoltage,9.166666666666668,9.166666,1.8333333333333336e-05,PASS,workbook sheet1 row 71
+WindExp2Data-2,dcCurrent,2.291666666666667,2.2916665,1e-05,PASS,workbook sheet1 row 71
+WindExp2Data-2,dcPower,21.00694444444445,21.00694,4.20138888888889e-05,PASS,workbook sheet1 row 71
+WindExp2Data-2,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 71
+WindExp2Data-2,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 71
+WindExp2Data-3,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 72
+WindExp2Data-3,acCurrent,5.5,5.5,1.1e-05,PASS,workbook sheet1 row 72
+WindExp2Data-3,acPower,121.0,121.0,0.000242,PASS,workbook sheet1 row 72
+WindExp2Data-3,dcVoltage,18.333333333333336,18.333332,3.666666666666667e-05,PASS,workbook sheet1 row 72
+WindExp2Data-3,dcCurrent,4.583333333333334,4.583333,1e-05,PASS,workbook sheet1 row 72
+WindExp2Data-3,dcPower,84.0277777777778,84.02776,0.0001680555555555556,PASS,workbook sheet1 row 72
+WindExp2Data-3,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 72
+WindExp2Data-3,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 72
+WindExp2Data-4,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 73
+WindExp2Data-4,acCurrent,8.25,8.25,1.6499999999999998e-05,PASS,workbook sheet1 row 73
+WindExp2Data-4,acPower,272.25,272.25,0.0005445,PASS,workbook sheet1 row 73
+WindExp2Data-4,dcVoltage,27.5,27.499998,5.4999999999999995e-05,PASS,workbook sheet1 row 73
+WindExp2Data-4,dcCurrent,6.875,6.8749995,1.3749999999999999e-05,PASS,workbook sheet1 row 73
+WindExp2Data-4,dcPower,189.0625,189.06247,0.000378125,PASS,workbook sheet1 row 73
+WindExp2Data-4,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 73
+WindExp2Data-4,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 73
+WindExp2Data-5,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 74
+WindExp2Data-5,acCurrent,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 74
+WindExp2Data-5,acPower,484.0,484.0,0.000968,PASS,workbook sheet1 row 74
+WindExp2Data-5,dcVoltage,36.66666666666667,36.666664,7.333333333333334e-05,PASS,workbook sheet1 row 74
+WindExp2Data-5,dcCurrent,9.166666666666668,9.166666,1.8333333333333336e-05,PASS,workbook sheet1 row 74
+WindExp2Data-5,dcPower,336.1111111111112,336.11105,0.0006722222222222224,PASS,workbook sheet1 row 74
+WindExp2Data-5,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 74
+WindExp2Data-5,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 74
+WindExp2Data-6,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 75
+WindExp2Data-6,acCurrent,13.75,13.75,2.7499999999999998e-05,PASS,workbook sheet1 row 75
+WindExp2Data-6,acPower,756.25,756.25,0.0015125,PASS,workbook sheet1 row 75
+WindExp2Data-6,dcVoltage,45.833333333333336,45.833332,9.166666666666667e-05,PASS,workbook sheet1 row 75
+WindExp2Data-6,dcCurrent,11.458333333333334,11.458333,2.2916666666666667e-05,PASS,workbook sheet1 row 75
+WindExp2Data-6,dcPower,525.1736111111112,525.1736,0.0010503472222222223,PASS,workbook sheet1 row 75
+WindExp2Data-6,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 75
+WindExp2Data-6,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 75
+WindExp2Data-7,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 76
+WindExp2Data-7,acCurrent,13.75,13.75,2.7499999999999998e-05,PASS,workbook sheet1 row 76
+WindExp2Data-7,acPower,756.25,756.25,0.0015125,PASS,workbook sheet1 row 76
+WindExp2Data-7,dcVoltage,45.833333333333336,45.833332,9.166666666666667e-05,PASS,workbook sheet1 row 76
+WindExp2Data-7,dcCurrent,11.458333333333334,11.458333,2.2916666666666667e-05,PASS,workbook sheet1 row 76
+WindExp2Data-7,dcPower,525.1736111111112,525.1736,0.0010503472222222223,PASS,workbook sheet1 row 76
+WindExp2Data-7,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 76
+WindExp2Data-7,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 76
+WindExp4Data-1,acVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-1,acCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-1,acPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-1,dcVoltage,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-1,dcCurrent,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-1,dcPower,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-1,rpm,0.0,0.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-1,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 70
+WindExp4Data-2,acVoltage,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 71
+WindExp4Data-2,acCurrent,2.75,2.75,1e-05,PASS,workbook sheet1 row 71
+WindExp4Data-2,acPower,30.25,30.25,6.05e-05,PASS,workbook sheet1 row 71
+WindExp4Data-2,dcVoltage,9.166666666666668,9.166666,1.8333333333333336e-05,PASS,workbook sheet1 row 71
+WindExp4Data-2,dcCurrent,2.291666666666667,2.2916665,1e-05,PASS,workbook sheet1 row 71
+WindExp4Data-2,dcPower,21.00694444444445,21.00694,4.20138888888889e-05,PASS,workbook sheet1 row 71
+WindExp4Data-2,rpm,200.0,200.0,0.00039999999999999996,PASS,workbook sheet1 row 71
+WindExp4Data-2,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 71
+WindExp4Data-3,acVoltage,22.0,22.0,4.4e-05,PASS,workbook sheet1 row 72
+WindExp4Data-3,acCurrent,5.5,5.5,1.1e-05,PASS,workbook sheet1 row 72
+WindExp4Data-3,acPower,121.0,121.0,0.000242,PASS,workbook sheet1 row 72
+WindExp4Data-3,dcVoltage,18.333333333333336,18.333332,3.666666666666667e-05,PASS,workbook sheet1 row 72
+WindExp4Data-3,dcCurrent,4.583333333333334,4.583333,1e-05,PASS,workbook sheet1 row 72
+WindExp4Data-3,dcPower,84.0277777777778,84.02776,0.0001680555555555556,PASS,workbook sheet1 row 72
+WindExp4Data-3,rpm,400.0,400.0,0.0007999999999999999,PASS,workbook sheet1 row 72
+WindExp4Data-3,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 72
+WindExp4Data-4,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,workbook sheet1 row 73
+WindExp4Data-4,acCurrent,8.25,8.25,1.6499999999999998e-05,PASS,workbook sheet1 row 73
+WindExp4Data-4,acPower,272.25,272.25,0.0005445,PASS,workbook sheet1 row 73
+WindExp4Data-4,dcVoltage,27.5,27.499998,5.4999999999999995e-05,PASS,workbook sheet1 row 73
+WindExp4Data-4,dcCurrent,6.875,6.8749995,1.3749999999999999e-05,PASS,workbook sheet1 row 73
+WindExp4Data-4,dcPower,189.0625,189.06247,0.000378125,PASS,workbook sheet1 row 73
+WindExp4Data-4,rpm,600.0,600.0,0.0012,PASS,workbook sheet1 row 73
+WindExp4Data-4,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 73
+WindExp4Data-5,acVoltage,44.0,44.0,8.8e-05,PASS,workbook sheet1 row 74
+WindExp4Data-5,acCurrent,11.0,11.0,2.2e-05,PASS,workbook sheet1 row 74
+WindExp4Data-5,acPower,484.0,484.0,0.000968,PASS,workbook sheet1 row 74
+WindExp4Data-5,dcVoltage,36.66666666666667,36.666664,7.333333333333334e-05,PASS,workbook sheet1 row 74
+WindExp4Data-5,dcCurrent,9.166666666666668,9.166666,1.8333333333333336e-05,PASS,workbook sheet1 row 74
+WindExp4Data-5,dcPower,336.1111111111112,336.11105,0.0006722222222222224,PASS,workbook sheet1 row 74
+WindExp4Data-5,rpm,800.0,800.0,0.0015999999999999999,PASS,workbook sheet1 row 74
+WindExp4Data-5,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 74
+WindExp4Data-6,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 75
+WindExp4Data-6,acCurrent,13.75,13.75,2.7499999999999998e-05,PASS,workbook sheet1 row 75
+WindExp4Data-6,acPower,756.25,756.25,0.0015125,PASS,workbook sheet1 row 75
+WindExp4Data-6,dcVoltage,45.833333333333336,45.833332,9.166666666666667e-05,PASS,workbook sheet1 row 75
+WindExp4Data-6,dcCurrent,11.458333333333334,11.458333,2.2916666666666667e-05,PASS,workbook sheet1 row 75
+WindExp4Data-6,dcPower,525.1736111111112,525.1736,0.0010503472222222223,PASS,workbook sheet1 row 75
+WindExp4Data-6,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 75
+WindExp4Data-6,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 75
+WindExp4Data-7,acVoltage,55.0,55.0,0.00010999999999999999,PASS,workbook sheet1 row 76
+WindExp4Data-7,acCurrent,13.75,13.75,2.7499999999999998e-05,PASS,workbook sheet1 row 76
+WindExp4Data-7,acPower,756.25,756.25,0.0015125,PASS,workbook sheet1 row 76
+WindExp4Data-7,dcVoltage,45.833333333333336,45.833332,9.166666666666667e-05,PASS,workbook sheet1 row 76
+WindExp4Data-7,dcCurrent,11.458333333333334,11.458333,2.2916666666666667e-05,PASS,workbook sheet1 row 76
+WindExp4Data-7,dcPower,525.1736111111112,525.1736,0.0010503472222222223,PASS,workbook sheet1 row 76
+WindExp4Data-7,rpm,1000.0,1000.0,0.002,PASS,workbook sheet1 row 76
+WindExp4Data-7,resistance,4.0,4.0,1e-05,PASS,workbook sheet1 row 76
+graph-reference-1,voltage,38.43,38.43,7.685999999999999e-05,PASS,"workbook O3:P3; reference-only API, live graph uses DC model"
+graph-reference-2,voltage,40.28,40.28,8.056e-05,PASS,"workbook O4:P4; reference-only API, live graph uses DC model"
+graph-reference-3,voltage,42.12,42.12,8.423999999999999e-05,PASS,"workbook O5:P5; reference-only API, live graph uses DC model"
+graph-reference-4,voltage,43.36,43.36,8.672e-05,PASS,"workbook O6:P6; reference-only API, live graph uses DC model"
+graph-reference-5,voltage,43.81,43.81,8.762e-05,PASS,"workbook O7:P7; reference-only API, live graph uses DC model"
+graph-reference-6,voltage,44.63,44.63,8.926e-05,PASS,"workbook O8:P8; reference-only API, live graph uses DC model"
+graph-reference-7,voltage,45.58,45.58,9.115999999999999e-05,PASS,"workbook O9:P9; reference-only API, live graph uses DC model"
+graph-reference-8,voltage,46.91,46.91,9.381999999999999e-05,PASS,"workbook O10:P10; reference-only API, live graph uses DC model"
+graph-reference-9,voltage,47.93,47.93,9.586e-05,PASS,"workbook O11:P11; reference-only API, live graph uses DC model"
+graph-reference-10,voltage,49.16,49.16,9.832e-05,PASS,"workbook O12:P12; reference-only API, live graph uses DC model"
+graph-reference-11,voltage,50.47,50.47,0.00010093999999999999,PASS,"workbook O13:P13; reference-only API, live graph uses DC model"
+graph-reference-12,voltage,51.81,51.81,0.00010362,PASS,"workbook O14:P14; reference-only API, live graph uses DC model"
+graph-reference-13,voltage,53.86,53.86,0.00010771999999999999,PASS,"workbook O15:P15; reference-only API, live graph uses DC model"
+graph-reference-14,voltage,55.17,55.17,0.00011034,PASS,"workbook O16:P16; reference-only API, live graph uses DC model"
+offgrid-grid-0,gridCurrent,1.4181818181818182,1.4181818,1e-05,PASS,"workbook X70,V70,P70,R70,L70"
+offgrid-grid-0,batteryCurrent,9,9.0,1.8e-05,PASS,"workbook X70,V70,P70,R70,L70"
+offgrid-grid-0,acLoadCurrent,0.2,0.2,1e-05,PASS,"workbook X70,V70,P70,R70,L70"
+offgrid-grid-0,acLoadVoltage,220,220.0,0.00043999999999999996,PASS,"workbook X70,V70,P70,R70,L70"
+offgrid-grid-0,dcLoadCurrent,2,2.0,1e-05,PASS,"workbook X70,V70,P70,R70,L70"
+offgrid-grid-1,gridCurrent,1.1681818181818182,1.1681818,1e-05,PASS,"workbook X71,V71,P71,R71,L71"
+offgrid-grid-1,batteryCurrent,9,9.0,1.8e-05,PASS,"workbook X71,V71,P71,R71,L71"
+offgrid-grid-1,acLoadCurrent,0.2,0.2,1e-05,PASS,"workbook X71,V71,P71,R71,L71"
+offgrid-grid-1,acLoadVoltage,220,220.0,0.00043999999999999996,PASS,"workbook X71,V71,P71,R71,L71"
+offgrid-grid-1,dcLoadCurrent,2,2.0,1e-05,PASS,"workbook X71,V71,P71,R71,L71"
+offgrid-grid-2,gridCurrent,0.9181818181818182,0.9181818,1e-05,PASS,"workbook X72,V72,P72,R72,L72"
+offgrid-grid-2,batteryCurrent,9,9.0,1.8e-05,PASS,"workbook X72,V72,P72,R72,L72"
+offgrid-grid-2,acLoadCurrent,0.2,0.2,1e-05,PASS,"workbook X72,V72,P72,R72,L72"
+offgrid-grid-2,acLoadVoltage,220,220.0,0.00043999999999999996,PASS,"workbook X72,V72,P72,R72,L72"
+offgrid-grid-2,dcLoadCurrent,2,2.0,1e-05,PASS,"workbook X72,V72,P72,R72,L72"
+offgrid-grid-3,gridCurrent,0.6681818181818182,0.66818184,1e-05,PASS,"workbook X73,V73,P73,R73,L73"
+offgrid-grid-3,batteryCurrent,9,9.0,1.8e-05,PASS,"workbook X73,V73,P73,R73,L73"
+offgrid-grid-3,acLoadCurrent,0.2,0.2,1e-05,PASS,"workbook X73,V73,P73,R73,L73"
+offgrid-grid-3,acLoadVoltage,220,220.0,0.00043999999999999996,PASS,"workbook X73,V73,P73,R73,L73"
+offgrid-grid-3,dcLoadCurrent,2,2.0,1e-05,PASS,"workbook X73,V73,P73,R73,L73"
+offgrid-grid-4,gridCurrent,0.41818181818181804,0.41818178,1e-05,PASS,"workbook X74,V74,P74,R74,L74"
+offgrid-grid-4,batteryCurrent,9,9.0,1.8e-05,PASS,"workbook X74,V74,P74,R74,L74"
+offgrid-grid-4,acLoadCurrent,0.2,0.2,1e-05,PASS,"workbook X74,V74,P74,R74,L74"
+offgrid-grid-4,acLoadVoltage,220,220.0,0.00043999999999999996,PASS,"workbook X74,V74,P74,R74,L74"
+offgrid-grid-4,dcLoadCurrent,2,2.0,1e-05,PASS,"workbook X74,V74,P74,R74,L74"
+offgrid-grid-5,gridCurrent,0.16818181818181813,0.16818185,1e-05,PASS,"workbook X75,V75,P75,R75,L75"
+offgrid-grid-5,batteryCurrent,9,9.0,1.8e-05,PASS,"workbook X75,V75,P75,R75,L75"
+offgrid-grid-5,acLoadCurrent,0.2,0.2,1e-05,PASS,"workbook X75,V75,P75,R75,L75"
+offgrid-grid-5,acLoadVoltage,220,220.0,0.00043999999999999996,PASS,"workbook X75,V75,P75,R75,L75"
+offgrid-grid-5,dcLoadCurrent,2,2.0,1e-05,PASS,"workbook X75,V75,P75,R75,L75"
+boundary-0-4,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-4,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-4,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-4,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-20,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-20,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-20,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-20,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-40,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-40,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-40,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-40,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-60,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-60,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-60,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-60,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-80,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-80,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-80,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-80,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-100,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-100,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-100,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-100,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-150,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-150,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-150,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-150,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-800,rpm,0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-800,acVoltage,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-800,acCurrent,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-0-800,acPower,0.0,0.0,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-4,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-4,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-4,acCurrent,2.75,2.75,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-4,acPower,30.25,30.25,6.05e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-20,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-20,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-20,acCurrent,0.55,0.55,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-20,acPower,6.05,6.05,1.21e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-40,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-40,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-40,acCurrent,0.275,0.275,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-40,acPower,3.025,3.025,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-60,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-60,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-60,acCurrent,0.18333333333333332,0.18333334,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-60,acPower,2.0166666666666666,2.0166667,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-80,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-80,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-80,acCurrent,0.1375,0.1375,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-80,acPower,1.5125,1.5125,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-100,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-100,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-100,acCurrent,0.11,0.11,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-100,acPower,1.21,1.21,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-150,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-150,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-150,acCurrent,0.07333333333333333,0.07333333,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-150,acPower,0.8066666666666666,0.8066666,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-800,rpm,200,200.0,0.00039999999999999996,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-800,acVoltage,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-800,acCurrent,0.01375,0.01375,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-200-800,acPower,0.15125,0.15125,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-4,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-4,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-4,acCurrent,5.5,5.5,1.1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-4,acPower,121.0,121.0,0.000242,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-20,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-20,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-20,acCurrent,1.1,1.1,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-20,acPower,24.2,24.2,4.84e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-40,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-40,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-40,acCurrent,0.55,0.55,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-40,acPower,12.1,12.1,2.42e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-60,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-60,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-60,acCurrent,0.36666666666666664,0.36666667,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-60,acPower,8.066666666666666,8.066667,1.6133333333333334e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-80,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-80,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-80,acCurrent,0.275,0.275,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-80,acPower,6.05,6.05,1.21e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-100,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-100,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-100,acCurrent,0.22,0.22,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-100,acPower,4.84,4.84,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-150,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-150,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-150,acCurrent,0.14666666666666667,0.14666666,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-150,acPower,3.2266666666666666,3.2266665,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-800,rpm,400,400.0,0.0007999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-800,acVoltage,22.0,22.0,4.4e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-800,acCurrent,0.0275,0.0275,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-400-800,acPower,0.605,0.605,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-4,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-4,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-4,acCurrent,8.25,8.25,1.6499999999999998e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-4,acPower,272.25,272.25,0.0005445,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-20,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-20,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-20,acCurrent,1.65,1.65,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-20,acPower,54.45,54.45,0.0001089,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-40,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-40,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-40,acCurrent,0.825,0.825,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-40,acPower,27.225,27.225,5.445e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-60,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-60,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-60,acCurrent,0.55,0.55,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-60,acPower,18.15,18.15,3.6299999999999995e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-80,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-80,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-80,acCurrent,0.4125,0.4125,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-80,acPower,13.6125,13.6125,2.7225e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-100,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-100,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-100,acCurrent,0.33,0.33,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-100,acPower,10.89,10.89,2.178e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-150,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-150,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-150,acCurrent,0.22,0.22,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-150,acPower,7.26,7.2599998,1.4519999999999998e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-800,rpm,600,600.0,0.0012,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-800,acVoltage,33.0,33.0,6.599999999999999e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-800,acCurrent,0.04125,0.04125,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-600-800,acPower,1.36125,1.36125,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-4,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-4,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-4,acCurrent,11.0,11.0,2.2e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-4,acPower,484.0,484.0,0.000968,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-20,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-20,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-20,acCurrent,2.2,2.2,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-20,acPower,96.8,96.8,0.0001936,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-40,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-40,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-40,acCurrent,1.1,1.1,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-40,acPower,48.4,48.4,9.68e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-60,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-60,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-60,acCurrent,0.7333333333333333,0.73333335,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-60,acPower,32.266666666666666,32.266666,6.453333333333333e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-80,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-80,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-80,acCurrent,0.55,0.55,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-80,acPower,24.2,24.2,4.84e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-100,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-100,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-100,acCurrent,0.44,0.44,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-100,acPower,19.36,19.36,3.8719999999999995e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-150,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-150,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-150,acCurrent,0.29333333333333333,0.29333332,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-150,acPower,12.906666666666666,12.906666,2.5813333333333332e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-800,rpm,800,800.0,0.0015999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-800,acVoltage,44.0,44.0,8.8e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-800,acCurrent,0.055,0.055,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-800-800,acPower,2.42,2.42,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-4,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-4,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-4,acCurrent,13.75,13.75,2.7499999999999998e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-4,acPower,756.25,756.25,0.0015125,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-20,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-20,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-20,acCurrent,2.75,2.75,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-20,acPower,151.25,151.25,0.0003025,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-40,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-40,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-40,acCurrent,1.375,1.375,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-40,acPower,75.625,75.625,0.00015125,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-60,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-60,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-60,acCurrent,0.9166666666666666,0.9166667,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-60,acPower,50.416666666666664,50.416668,0.00010083333333333332,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-80,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-80,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-80,acCurrent,0.6875,0.6875,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-80,acPower,37.8125,37.8125,7.5625e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-100,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-100,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-100,acCurrent,0.55,0.55,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-100,acPower,30.25,30.25,6.05e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-150,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-150,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-150,acCurrent,0.36666666666666664,0.36666667,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-150,acPower,20.166666666666668,20.166668,4.0333333333333336e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-800,rpm,1000,1000.0,0.002,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-800,acVoltage,55.0,55.0,0.00010999999999999999,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-800,acCurrent,0.06875,0.06875,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+boundary-1000-800,acPower,3.78125,3.78125,1e-05,PASS,AC workbook equations F2:H2; >100 Ohm calibration approval pending
+balance-0-0-False-0,batteryCurrent,0,0.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-0-0-False-0,dumpCurrent,0,0.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-0-0-False-0,dcLoadCurrent,0,0.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-0-0-False-0,inverterCurrent,0,0.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-0,batteryCurrent,-4.2,-4.2,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-0,dumpCurrent,0,0.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-0,dcLoadCurrent,0.2,0.2,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-0,inverterCurrent,4,4.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-20,batteryCurrent,9,9.0,1.8e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-20,dumpCurrent,6.800000000000001,6.799999,1.36e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-20,dcLoadCurrent,0.2,0.2,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-2-True-20,inverterCurrent,4,4.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-1-False-0,batteryCurrent,-4,-4.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-1-False-0,dumpCurrent,0,0.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-1-False-0,dcLoadCurrent,2,2.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+balance-1-1-False-0,inverterCurrent,2,2.0,1e-05,PASS,derived workbook current balance; variant assumptions require approval
+zero-resistance,accepted,False,False,,PASS,invalid input rejection
+negative-resistance,accepted,False,False,,PASS,invalid input rejection
+nan-rpm,accepted,False,False,,PASS,invalid input rejection
+infinite-rpm,accepted,False,False,,PASS,invalid input rejection

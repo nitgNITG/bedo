@@ -1,0 +1,3 @@
+PASS wrong choice highlights only itself and stays on question; correct choice uses its Correct child and advances once after delay.
+PASS wrong choice highlights only itself and stays on question; correct choice uses its Correct child and advances once after delay.
+PASS: no runtime errors.

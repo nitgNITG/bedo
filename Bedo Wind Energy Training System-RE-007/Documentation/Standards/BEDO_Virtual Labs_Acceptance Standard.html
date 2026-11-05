@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BEDO Unity Virtual Laboratory Development & Acceptance Standard v1.0</title>
+<style>
+  :root{
+    --navy:#17365d;
+    --blue:#244a7c;
+    --light:#eef4fa;
+    --lighter:#f7f9fc;
+    --line:#c9d3df;
+    --text:#1d2430;
+    --muted:#637083;
+    --pass:#e7f6ea;
+    --fail:#fde8e8;
+    --warn:#fff4d6;
+    --accent:#f4a300;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:#f2f4f7;
+    line-height:1.45;
+  }
+  .shell{max-width:1500px;margin:0 auto;background:#fff;min-height:100vh}
+  header{
+    background:linear-gradient(135deg,var(--navy),var(--blue));
+    color:#fff;
+    padding:30px 36px 24px;
+    border-bottom:5px solid var(--accent);
+  }
+  header h1{margin:0 0 8px;font-size:30px}
+  header .sub{font-size:16px;opacity:.95}
+  .meta{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(140px,1fr));
+    gap:10px;
+    margin-top:20px;
+  }
+  .meta div{
+    background:rgba(255,255,255,.10);
+    padding:10px 12px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:6px;
+  }
+  .meta b{display:block;font-size:12px;opacity:.75;margin-bottom:3px}
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:10px 24px;
+    display:flex;gap:8px;flex-wrap:wrap;
+  }
+  nav a{
+    text-decoration:none;color:var(--navy);font-weight:700;
+    padding:6px 9px;border-radius:5px;background:var(--light);
+    font-size:13px;
+  }
+  main{padding:28px 34px 50px}
+  h2{
+    color:var(--navy);font-size:24px;
+    border-bottom:2px solid var(--navy);
+    padding-bottom:7px;margin-top:36px
+  }
+  h3{color:var(--blue);font-size:18px;margin-top:26px}
+  .callout{
+    border-left:5px solid var(--accent);
+    background:#fff7e6;
+    padding:14px 16px;
+    margin:14px 0 20px;
+  }
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{
+    border:1px solid var(--line);border-radius:8px;padding:14px;background:var(--lighter)
+  }
+  .card h3{margin-top:0}
+  table{
+    width:100%;border-collapse:collapse;margin:12px 0 24px;font-size:13.5px;
+  }
+  th{
+    background:var(--navy);color:#fff;text-align:left;padding:9px;border:1px solid #3d5677;
+  }
+  td{padding:9px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fbfcfe}
+  .rule-title{font-weight:700;color:var(--navy)}
+  .mandatory{font-weight:700;color:#8b1e1e}
+  .conditional{font-weight:700;color:#8a5a00}
+  .advisory{font-weight:700;color:#356b3e}
+  code,.mono{
+    font-family:Consolas,Menlo,monospace;
+    background:#f1f3f6;padding:1px 4px;border-radius:3px
+  }
+  ul.compact{margin-top:6px;margin-bottom:8px;padding-left:20px}
+  .status{
+    min-width:110px;padding:5px;border:1px solid #b8c4d1;border-radius:4px;background:#fff
+  }
+  .notes{
+    width:100%;min-height:42px;border:1px solid #b8c4d1;border-radius:4px;padding:6px;resize:vertical
+  }
+  .toolbar{
+    display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 10px
+  }
+  button{
+    background:var(--navy);color:#fff;border:0;border-radius:5px;padding:9px 14px;
+    font-weight:700;cursor:pointer
+  }
+  button.secondary{background:#68778a}
+  button.danger{background:#8a2e2e}
+  .small{font-size:12px;color:var(--muted)}
+  .formula{
+    font-family:Consolas,Menlo,monospace;
+    background:#f4f7fb;border:1px solid var(--line);
+    padding:12px;border-radius:6px;margin:8px 0 14px
+  }
+  .pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:12px;font-weight:700}
+  .pill.must{background:#fde8e8;color:#8b1e1e}
+  .pill.cond{background:#fff0c7;color:#8a5a00}
+  .pill.info{background:#e8f0fb;color:#224d80}
+  .sourcebox{
+    margin-top:36px;border-top:2px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px
+  }
+  .review-summary{
+    background:#f5f8fc;border:1px solid var(--line);border-radius:8px;padding:14px;
+  }
+  @media(max-width:900px){
+    .meta,.grid2{grid-template-columns:1fr 1fr}
+    main{padding:20px}
+  }
+  @media(max-width:600px){
+    .meta,.grid2{grid-template-columns:1fr}
+    header h1{font-size:24px}
+  }
+  @media print{
+    nav,.toolbar{display:none!important}
+    body{background:#fff}
+    .shell{max-width:none}
+    .status,.notes{border:0}
+    h2{break-after:avoid}
+    table{break-inside:auto}
+    tr{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+  <h1>BEDO Unity Virtual Laboratory Development & Acceptance Standard</h1>
+  <div class="sub">Final v1.0 — Outsourced Unity / WebGL Virtual Laboratory Projects</div>
+  <div class="meta">
+    <div><b>Owner</b>BEDO / Virtual Labs</div>
+    <div><b>Status</b>FINAL STANDARD</div>
+    <div><b>Acceptance Model</b>Binary PASS / FAIL by applicable gate</div>
+    <div><b>Primary Runtime</b>Unity 6000.0.60f1 + WebGL</div>
+  </div>
+</header>
+
+<nav>
+  <a href="#purpose">Purpose</a>
+  <a href="#acceptance">Acceptance</a>
+  <a href="#gate-a">A Architecture</a>
+  <a href="#gate-b">B Science</a>
+  <a href="#gate-c">C Interaction</a>
+  <a href="#gate-d">D UI/UX</a>
+  <a href="#gate-e">E 3D</a>
+  <a href="#gate-f">F Performance</a>
+  <a href="#gate-g">G QA</a>
+  <a href="#gate-h">H Progress/LMS</a>
+  <a href="#gate-i">I Delivery</a>
+  <a href="#checklist">Acceptance Sheet</a>
+</nav>
+
+<main>
+
+<section id="purpose">
+<h2>1. Purpose & Scope</h2>
+<p>This standard defines the minimum technical, scientific, interaction, UI/UX, 3D, WebGL performance, testing, progress-tracking and delivery requirements for outsourced BEDO Unity virtual laboratory projects.</p>
+
+<div class="callout">
+  <b>Core principle:</b> A visually correct demonstration is not sufficient for acceptance. A delivery is accepted only when all applicable mandatory gates pass, all required evidence is supplied, and no open Critical or Major defects remain.
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Applies to</h3>
+    <ul class="compact">
+      <li>New Unity virtual laboratories.</li>
+      <li>Major upgrades to existing laboratories.</li>
+      <li>Windows desktop and WebGL delivery.</li>
+      <li>Projects integrated with BEDO progress/LMS reporting.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Rule classes</h3>
+    <p><span class="pill must">Mandatory</span> failure blocks the gate.</p>
+    <p><span class="pill cond">Conditional</span> mandatory when the referenced feature is in scope.</p>
+    <p><span class="pill info">Advisory</span> improvement note; does not block by itself.</p>
+  </div>
+</div>
+</section>
+
+<section id="acceptance">
+<h2>2. Acceptance Model & Defect Severity</h2>
+
+<table>
+<thead><tr><th>Severity</th><th>Typical Examples</th><th>Acceptance Effect</th></tr></thead>
+<tbody>
+<tr><td><b>Critical</b></td><td>Wrong mandatory scientific result, unrecoverable crash, corrupted experiment state, project cannot build/run.</td><td>Blocks acceptance immediately.</td></tr>
+<tr><td><b>Major</b></td><td>Core experiment step impossible, reset broken, Guided/Free inconsistency, severe performance degradation, major UI path inaccessible.</td><td>Blocks acceptance.</td></tr>
+<tr><td><b>Minor</b></td><td>Localized UI/content issue with no scientific or workflow impact.</td><td>May be accepted only if BEDO explicitly records it on a punch list.</td></tr>
+<tr><td><b>Cosmetic / Advisory</b></td><td>Pure polish with no functional effect.</td><td>Does not block unless the project brief makes it mandatory.</td></tr>
+</tbody>
+</table>
+
+<p><b>Milestone decision:</b> <span class="mono">ACCEPTED</span> only when every applicable mandatory gate is PASS, all required evidence is supplied, and there are no open Critical or Major defects. Otherwise: <span class="mono">RETURNED FOR CORRECTION</span>.</p>
+</section>
+
+<section id="gate-a">
+<h2>3. Gate A — Unity Architecture, Prefabs & Project Structure</h2>
+
+<table>
+<thead><tr><th style="width:18%">Rule</th><th>Requirement</th><th>PASS When</th><th>Required Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">A-01 Approved Unity Version</td>
+<td>Use <b>Unity 6000.0.60f1</b> unless BEDO approves a written exception. Package/plugin versions shall be pinned and shall not be upgraded/downgraded without approval.</td>
+<td>Project opens, builds and runs on the approved version with no forced migration.</td>
+<td><span class="mono">ProjectVersion.txt</span>, package manifest, build log.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">A-02 SOAP State Architecture</td>
+<td>Use SOAP references for tunable gameplay/configuration values and shared experiment state. Avoid unmanaged duplicated raw state across unrelated components.</td>
+<td>Critical experiment values have one identifiable authoritative source of truth.</td>
+<td>State map, representative SOAP assets, source review.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">A-03 Prefab Integrity</td>
+<td>Reusable laboratory equipment shall remain connected to its source Prefab. <b>Unpack Completely</b> is prohibited for reusable content unless BEDO approves a documented exception.</td>
+<td>Repeated content exists as prefab instances with intentional overrides/variants instead of duplicated scene hierarchies.</td>
+<td>Prefab audit, scene inspection, hierarchy screenshots.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">A-04 Nested Prefabs & Variants</td>
+<td>Use Nested Prefabs and Prefab Variants when reusable structures need controlled differences.</td>
+<td>Structural differences are implemented without copy-paste duplication.</td>
+<td>Prefab relationship review.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">A-05 Scene Hierarchy Discipline</td>
+<td>Hierarchy must be readable, grouped by responsibility, and free of unexplained duplicate object trees. Reusable equipment must not be manually duplicated as independent object copies.</td>
+<td>A reviewer can locate experiments, reusable systems, UI, cameras, lighting and equipment without tracing arbitrary object names.</td>
+<td>Hierarchy review.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">A-06 Asset Folder Organization</td>
+<td>Production assets shall be organized at minimum into clear folders such as Models, Materials, Textures, Prefabs and Scenes.</td>
+<td>Assets can be traced and maintained without searching through mixed/unstructured folders.</td>
+<td>Project tree screenshot.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">A-07 No Hidden Global Coupling</td>
+<td>Do not rely on undocumented globals, static state, scene-name side effects or local developer-machine paths for core behavior.</td>
+<td>Project behavior is reproducible from a clean checkout and scene ownership is explicit.</td>
+<td>Architecture note, clean-build test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="gate-b">
+<h2>4. Gate B — Scientific & Simulation Correctness</h2>
+
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">B-01 Approved Scientific Model</td>
+<td>Equations, relationships, assumptions, units and sign conventions shall match the approved project specification.</td>
+<td>No unapproved substitutions, clamps or simplified logic affect mandatory reference cases.</td>
+<td>Reference-case table, formula/config trace, test results.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">B-02 Cross-View Consistency</td>
+<td>3D equipment, software monitor, gauges, labels and graphs shall represent the same authoritative scientific state, allowing only approved display rounding.</td>
+<td>No view displays a conflicting value for the same state.</td>
+<td>Cross-view screenshots/tests.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">B-03 Guided / Free Numerical Parity</td>
+<td>Guided Mode may control sequence and access, but shall not own a separate scientific truth unless explicitly specified.</td>
+<td>Identical accepted physical inputs produce the same scientific result in Guided and Free modes.</td>
+<td>Parity test.</td>
+<td class="conditional">Conditional</td>
+</tr>
+<tr>
+<td class="rule-title">B-04 Valid Power / Wiring Logic</td>
+<td>Power states, lamps, displays, instruments, wires and warnings shall follow the approved physical/electrical logic.</td>
+<td>No device appears powered when disconnected; valid wiring does not trigger incorrect warnings; invalid wiring cannot produce a valid result.</td>
+<td>Positive/negative wiring tests.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">B-05 Boundary & Special Cases</td>
+<td>Zero values, maxima, minimums, mode boundaries, disconnected states and required special cases shall be tested.</td>
+<td>All approved boundary scenarios behave correctly.</td>
+<td>Boundary test suite.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">B-06 Reset Removes Prior Influence</td>
+<td>Reset/restart shall return the experiment to the approved initial state with no hidden scientific leftovers.</td>
+<td>A rerun after reset matches a fresh run for the same inputs.</td>
+<td>Reset/repeat test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="gate-c">
+<h2>5. Gate C — Gameplay, Guided Mode & Free Mode</h2>
+
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">C-01 Single Interaction Owner</td>
+<td>Each control or interactive object shall have one clear owner. Double bindings and competing handlers are prohibited.</td>
+<td>One user action creates one intended state transition.</td>
+<td>Interaction test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">C-02 Guided Mode Step Control</td>
+<td>Guided Mode shall expose/highlight only the interactions required by the current step unless specified otherwise.</td>
+<td>Unrequired controls cannot skip/completely bypass the intended procedure; required controls are discoverable.</td>
+<td>Guided E2E test.</td>
+<td class="conditional">Conditional</td>
+</tr>
+<tr>
+<td class="rule-title">C-03 Free Mode Independence</td>
+<td>Free Mode shall support approved physical interactions without hidden dependency on Guided Mode state.</td>
+<td>Approved interactions work in valid order without requiring guided-step state.</td>
+<td>Free-mode E2E test.</td>
+<td class="conditional">Conditional</td>
+</tr>
+<tr>
+<td class="rule-title">C-04 Mode Switching</td>
+<td>Switching between Guided and Free shall not silently alter scientific inputs or create impossible states.</td>
+<td>State is preserved or reset only according to the approved rule.</td>
+<td>Mode-switch test.</td>
+<td class="conditional">Conditional</td>
+</tr>
+<tr>
+<td class="rule-title">C-05 Camera/View Consistency</td>
+<td>Camera transitions shall support the task without resetting values, duplicating actions or making required controls inaccessible.</td>
+<td>View changes preserve valid experiment state.</td>
+<td>Camera E2E test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">C-06 Rapid Input Safety</td>
+<td>Fast dragging, repeated clicking or slider motion shall not skip mandatory checkpoints or corrupt state.</td>
+<td>Stress interaction follows the intended procedure and remains recoverable.</td>
+<td>Rapid-input test.</td>
+<td class="conditional">Conditional</td>
+</tr>
+<tr>
+<td class="rule-title">C-07 Reset / Restart</td>
+<td>Reset shall be complete, repeatable and idempotent.</td>
+<td>Repeated reset/restart produces the approved initial state every time.</td>
+<td>Reset ×20 report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="gate-d">
+<h2>6. Gate D — UI, UX, Graphs & Camera Presentation</h2>
+
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">D-01 Approved UI System</td>
+<td>Use the approved BEDO UI design/reference assets. Do not invent a local visual language where approved patterns already exist.</td>
+<td>Panels, buttons, monitor, warnings, toolboxes and experiment navigation match approved references.</td>
+<td>UI comparison review.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">D-02 Standard Control States</td>
+<td>Normal, hover, pressed, selected, disabled, focus and error states shall be visually distinguishable where applicable.</td>
+<td>Control behavior matches the approved pattern.</td>
+<td>UI state checklist.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">D-03 Resolution & Scaling</td>
+<td>Reference resolution is <b>1600×900</b>, 16:9. Minimum supported presets: 1280×720, 1600×900, 1920×1080, 2560×1440, 3840×2160. Use Canvas Scaler → Scale With Screen Size, reference 1600×900, Match 0.5.</td>
+<td>No clipping, overlap or inaccessible controls at approved target sizes.</td>
+<td>Resolution screenshot matrix.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">D-04 WebGL Browser Zoom</td>
+<td>UI must remain usable and visually correct at browser zoom 90–125% with no text clipping.</td>
+<td>All mandatory screens remain readable and operable across the approved zoom range.</td>
+<td>Browser screenshot matrix.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">D-05 Graph / Table Behavior</td>
+<td>Graphs, tables, scroll areas, numeric rows and labels must remain aligned, readable and synchronized with authoritative values.</td>
+<td>No duplicated rows, independent column drift, broken scrolling, overlapping text or conflicting values.</td>
+<td>Graph/table functional test.</td>
+<td class="conditional">Conditional</td>
+</tr>
+<tr>
+<td class="rule-title">D-06 Warning Quality</td>
+<td>Learner-facing warnings shall explain the required corrective action and must not display raw developer errors.</td>
+<td>Warnings are correct, actionable and appear only in the proper state.</td>
+<td>Negative-path UI tests.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">D-07 Visual Regression</td>
+<td>Approved screenshots shall be stored for key experiment/UI states and compared against future builds.</td>
+<td>Unexplained differences are resolved before acceptance.</td>
+<td>Visual regression report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="gate-e">
+<h2>7. Gate E — 3D Assets & Scene Optimization</h2>
+
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">E-01 FBX & Units</td>
+<td>Models shall be exported in FBX format with unit scale consistently set to meters.</td>
+<td>Scale is consistent and scientific/render coordinates are traceable.</td>
+<td>Import settings and asset audit.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">E-02 Spatial Consistency</td>
+<td>Approved lab coordinates and trainer placement must be preserved.</td>
+<td>Models align to approved scene coordinates without corrective arbitrary offsets.</td>
+<td>Scene inspection.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">E-03 Pivot Setup</td>
+<td>Pivots shall be correctly prepared for knobs, gauge handles, fluids, buttons, valves and other interactive elements.</td>
+<td>Interactive movement occurs around the intended physical pivot.</td>
+<td>Interaction inspection.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">E-04 Normalized Transforms</td>
+<td>Object scales shall be normalized/reset before export where required.</td>
+<td>Imported object transforms are clean and predictable.</td>
+<td>Transform audit.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">E-05 Geometry & Texture Optimization</td>
+<td>Topology and texture resolution shall be appropriate to WebGL performance needs. Avoid unused large assets and uncontrolled duplication.</td>
+<td>Scene/build statistics stay inside the approved performance budget.</td>
+<td>Asset statistics report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">E-06 Lighting Restrictions</td>
+<td>No real-time lighting, reflection probes or shadows unless specifically approved. Prefer baked/low-cost presentation suitable for web deployment.</td>
+<td>Web build meets visual and performance targets without prohibited lighting cost.</td>
+<td>Scene settings review.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="gate-f">
+<h2>8. Gate F — WebGL, Performance, Stability & Resource Management</h2>
+
+<div class="callout">
+  <b>Mandatory delivery:</b> Every applicable laboratory shall provide a working WebGL build in addition to the Windows build. Performance acceptance is measured on agreed reference devices, not only on the developer workstation.
+</div>
+
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">F-01 Reference Environment</td>
+<td>Every performance run shall identify device, CPU/GPU/RAM, OS, browser, viewport and quality preset.</td>
+<td>Results are reproducible on the agreed environment.</td>
+<td>Acceptance sheet.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-02 Windows FPS — Baseline Device</td>
+<td>Windows x86_64 IL2CPP: average ≥30 FPS; 99th-percentile frame time ≤45 ms; no single hitch &gt;200 ms.</td>
+<td>10-minute run meets all criteria.</td>
+<td>Profiler/performance capture.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-03 Windows FPS — High-End QA Device</td>
+<td>Target ≥120 FPS; capping at 120 is acceptable.</td>
+<td>Measured run meets target on the agreed high-end QA device.</td>
+<td>Performance capture.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-04 WebGL FPS — Baseline Device</td>
+<td>Average ≥25 FPS.</td>
+<td>10-minute run in the most demanding typical scene meets target.</td>
+<td>Browser performance capture.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-05 WebGL FPS — High-End QA Device</td>
+<td>Target ≥60 FPS (browser vsync).</td>
+<td>Measured run meets target.</td>
+<td>Browser performance capture.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-06 Measurement Protocol</td>
+<td>Measure over a continuous 10-minute session in the most demanding typical scene. Baseline Device shall be plugged in and set to High Performance power mode.</td>
+<td>Run is continuous and representative of normal learner interaction.</td>
+<td>Recorded test protocol.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-07 WebGL Build Settings</td>
+<td>Use WebGL 2.0, Brotli compression, Data Caching on, Exceptions disabled, and controlled initial memory (starting 512–768 MB; changes require approval).</td>
+<td>Acceptance build uses approved settings and has no OOM failures in normal flows.</td>
+<td>Player settings screenshots/build config.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-08 Low Quality Preset</td>
+<td>For baseline hardware: Shadows Off or Hard Low; Texture Max Size ≤1024; Anisotropic Off; Post-processing Off; optional Resolution Scale 0.8–1.0.</td>
+<td>Preset is selectable/usable as specified and performance target is met.</td>
+<td>Quality settings review.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-09 Runtime Allocation & GC Discipline</td>
+<td>Avoid large runtime allocations and long GC spikes. Reuse objects/resources where practical.</td>
+<td>No repeated stutter caused by avoidable allocations during normal use.</td>
+<td>Profiler capture.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-10 Scene / Mode Transition</td>
+<td>Experiment switching, Guided↔Free, reset and reload must not produce excessive black screens, freezes or partially initialized interaction.</td>
+<td>Transitions reach Ready state within the approved project-specific budget and remain responsive.</td>
+<td>Transition timing report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">F-11 Performance Regression</td>
+<td>After the first approved release, major load-time, scene-size, frame-time or FPS regression requires explanation and approval.</td>
+<td>New build stays within the approved baseline or has a documented exception.</td>
+<td>Release comparison report.</td>
+<td class="conditional">Conditional</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="gate-g">
+<h2>9. Gate G — Testing, Regression & QA</h2>
+
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">G-01 Scientific Reference Cases</td>
+<td>Each experiment shall define approved inputs/states and expected outputs/behaviors.</td>
+<td>All mandatory cases pass within approved tolerance.</td>
+<td>Reference-case table/report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">G-02 State & Interaction Tests</td>
+<td>Critical state transitions, invalid operations, reset and mode switching shall be tested.</td>
+<td>Mandatory interaction/state scenarios pass.</td>
+<td>Test report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">G-03 Bug Regression Rule</td>
+<td>Every fixed Critical or Major defect that can reasonably recur shall receive a documented regression test or repeatable validation case.</td>
+<td>Regression check exists and passes before defect closure.</td>
+<td>Defect record + regression evidence.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">G-04 No Regression of Approved Features</td>
+<td>A new build must not break a feature or experiment state previously approved without an approved change request.</td>
+<td>Regression checklist passes across previously approved flows.</td>
+<td>Build-to-build comparison.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">G-05 No Runtime Error Spam</td>
+<td>Normal approved flows shall not generate repeated exceptions, error logs or development debug spam in the acceptance build.</td>
+<td>Console/log review is clean for mandatory flows.</td>
+<td>Log capture.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">G-06 Reset ×20 Stability</td>
+<td>Complete flow/reset cycle shall be repeatable without accumulating broken state, duplicate listeners or resource leaks.</td>
+<td>Twenty consecutive reset/restart cycles complete without degradation.</td>
+<td>Reset ×20 report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="gate-h">
+<h2>10. Gate H — Progress Tracking, Questions & LMS Integration</h2>
+
+<div class="callout">
+  <b>Scope:</b> The initial BEDO progress implementation is intentionally simple: track required experiment steps, record question outcomes, and report lifecycle events. Progress, completion and grading remain separate concepts.
+</div>
+
+<h3>10.1 Required-Step Progress</h3>
+<div class="formula">
+Progress % = 100 × (Distinct Completed Required Tracked Steps / Total Required Tracked Steps)
+</div>
+<ul class="compact">
+  <li><span class="mono">tracked = false</span> items are navigation/non-progress and do not count.</li>
+  <li>Each required tracked step contributes at most once at a time within one attempt.</li>
+  <li><span class="mono">StepRetried</span> removes the previous contribution until the step is completed again.</li>
+  <li>Progress is calculated per <span class="mono">experimentAttemptId</span>; separate attempts shall not be merged.</li>
+</ul>
+
+<h3>10.2 Project Manifest</h3>
+<p>Every LMS-integrated release shall provide stable project data including:</p>
+<table>
+<thead><tr><th>Field</th><th>Requirement</th></tr></thead>
+<tbody>
+<tr><td><span class="mono">projectId</span></td><td>Stable project identity.</td></tr>
+<tr><td><span class="mono">projectVersion</span></td><td>Exact published simulation build version.</td></tr>
+<tr><td><span class="mono">assessmentVersion</span></td><td>Learning/assessment definition version.</td></tr>
+<tr><td><span class="mono">experimentId</span></td><td>Stable experiment identity.</td></tr>
+<tr><td><span class="mono">stepNumber</span></td><td>Stable numeric catalog number; do not renumber by visit order.</td></tr>
+<tr><td><span class="mono">tracked</span></td><td>Whether the step emits/counts progress.</td></tr>
+<tr><td><span class="mono">requiredForCompletion</span></td><td>Whether the tracked step contributes to required progress.</td></tr>
+<tr><td><span class="mono">questionId</span></td><td>Stable question identity.</td></tr>
+<tr><td><span class="mono">questionType</span></td><td>Currently MultipleChoice or TrueFalse.</td></tr>
+</tbody>
+</table>
+
+<h3>10.3 Minimum Lifecycle Events</h3>
+<p>The reusable BEDO reporter shall support the approved schema 2.1 event semantics including:</p>
+<p class="mono">SessionStarted · SessionCompleted · ExperimentStarted · ExperimentCompleted · ExperimentAborted · StepStarted · StepCompleted · StepFailed · StepRetried · QuestionShown · QuestionAnswered · QuestionCorrect · QuestionIncorrect</p>
+
+<h3>10.4 Questions — Learner Feedback Policy</h3>
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">H-01 Hide Correct/Incorrect Result</td>
+<td>After answer submission, the learner shall <b>not</b> be shown whether the answer was correct or incorrect unless the project specification explicitly requires feedback. No green/red correctness indicator shall be shown by default.</td>
+<td>Question submission proceeds without revealing correctness to the learner.</td>
+<td>UI review + E2E question test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">H-02 Record Answer Outcome Internally</td>
+<td>Each answer submission shall record Question ID, selected answer, attempt number, and corresponding Correct/Incorrect result.</td>
+<td>Every submitted answer has exactly one recorded result event.</td>
+<td>Event log / LMS test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">H-03 Progress Sheet Question Summary</td>
+<td>The learner progress record shall maintain at minimum: <b>Answered Questions, Correct Answers, Incorrect Answers</b> per experiment attempt.</td>
+<td>Summary counts match the underlying recorded submissions/results.</td>
+<td>Progress sheet / LMS report.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">H-04 Retry Attempts</td>
+<td>Each new answer submission to the same question increments <span class="mono">attempt</span> starting at 1. Previous attempts remain recorded.</td>
+<td>Wrong → retry → correct creates two distinct submissions/results with attempt numbers 1 and 2.</td>
+<td>Question retry test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">H-05 Progress ≠ Completion ≠ Grade</td>
+<td>Step progress percentage, ExperimentCompleted lifecycle state, and numeric/pass-fail grading shall remain separate. ExperimentCompleted shall not manufacture missing step/question evidence or automatically award 100%/pass.</td>
+<td>Each concept is stored and reported independently.</td>
+<td>State/report review.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">H-06 No LMS Dependency for Scientific Truth</td>
+<td>Scientific solver and learner interaction shall remain functional if LMS/network reporting is unavailable.</td>
+<td>Loss of reporting transport does not change experiment calculations or physical state.</td>
+<td>Offline/transport-failure test.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+<section id="gate-i">
+<h2>11. Gate I — Delivery, Versioning & Documentation</h2>
+
+<table>
+<thead><tr><th>Rule</th><th>Requirement</th><th>PASS When</th><th>Evidence</th><th>Applicability</th></tr></thead>
+<tbody>
+<tr>
+<td class="rule-title">I-01 Complete Unity Project</td>
+<td>BEDO shall receive the complete project source and all project-owned assets needed to build.</td>
+<td>Independent reviewer can open and build the project.</td>
+<td>Repository/project package access.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">I-02 Windows + WebGL Builds</td>
+<td>Submit acceptance Windows and WebGL builds mapped to the exact project version/revision.</td>
+<td>Both required builds run successfully on the agreed environments.</td>
+<td>Build packages + version identity.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">I-03 Release Identity</td>
+<td>Every accepted build shall have a unique <span class="mono">projectVersion</span>. Visual/technical fixes still require a new project version.</td>
+<td>Reviewer can identify exactly which source/build produced the delivery.</td>
+<td>Release note / tag / build ID.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">I-04 Assessment Versioning</td>
+<td>If step meanings/order, required items, questions, answer meaning, correct answers or grading rules change, <span class="mono">assessmentVersion</span> shall change.</td>
+<td>Assessment-equivalent fixes preserve assessment version; learning-definition changes do not.</td>
+<td>Version comparison note.</td>
+<td class="conditional">Conditional</td>
+</tr>
+<tr>
+<td class="rule-title">I-05 Known Issues</td>
+<td>All known defects and limitations shall be disclosed.</td>
+<td>Known-issues list matches observed build state.</td>
+<td>Release notes.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">I-06 Validation Package</td>
+<td>Delivery shall include current scientific validation, QA/regression, visual comparison, performance and progress/LMS test evidence where applicable.</td>
+<td>All reports correspond to the delivered build.</td>
+<td>Evidence package.</td>
+<td class="mandatory">Mandatory</td>
+</tr>
+<tr>
+<td class="rule-title">I-07 Progress/LMS Package</td>
+<td>When progress integration is in scope, deliver projectId, projectVersion, assessmentVersion, manifest, question catalog, completion definition and contract-test results.</td>
+<td>Runtime manifest matches the approved registered project definition.</td>
+<td>Manifest + LMS contract test report.</td>
+<td class="conditional">Conditional</td>
+</tr>
+</tbody>
+</table>
+
+<h3>11.1 Contractor Submission Package</h3>
+<table>
+<thead><tr><th>Artifact</th><th>Mandatory Contents</th></tr></thead>
+<tbody>
+<tr><td>Unity Project / Repository</td><td>Full project source and required assets.</td></tr>
+<tr><td>Windows Build</td><td>Acceptance executable package.</td></tr>
+<tr><td>WebGL Build</td><td>Acceptance web build + deployment identity.</td></tr>
+<tr><td>Architecture Note</td><td>Scene ownership, SOAP state owner, reusable systems, prefab strategy.</td></tr>
+<tr><td>Scientific Validation</td><td>Reference cases, tolerances and results.</td></tr>
+<tr><td>Regression Report</td><td>Previously approved features + fixed Critical/Major defects.</td></tr>
+<tr><td>Visual Regression</td><td>Approved reference screenshots and current comparison.</td></tr>
+<tr><td>Performance Report</td><td>Reference environment, FPS/frame time, transition time, scene/build stats, reset ×20 result.</td></tr>
+<tr><td>Asset Report</td><td>Models/textures/audio/animations and optimization notes.</td></tr>
+<tr><td>Known Issues</td><td>All remaining non-blocking limitations.</td></tr>
+<tr><td>Progress/LMS Package</td><td>Manifest, versions, question catalog, progress definition and contract tests where applicable.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="checklist">
+<h2>12. BEDO Acceptance Sheet — Interactive</h2>
+<p class="small">Status and notes are saved locally in this browser. Use Print / Save PDF to generate a review copy.</p>
+
+<div class="toolbar">
+  <button onclick="window.print()">Print / Save PDF</button>
+  <button class="secondary" onclick="saveReview()">Save Review Locally</button>
+  <button class="danger" onclick="resetReview()">Reset Review</button>
+</div>
+
+<div class="review-summary" id="summaryBox">Review summary will update automatically.</div>
+
+<table id="acceptanceTable">
+<thead><tr><th>Gate</th><th>Area</th><th>Status</th><th>Evidence / Notes</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>Unity Architecture, Prefabs & Project Structure</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>B</td><td>Scientific & Simulation Correctness</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>C</td><td>Gameplay, Guided Mode & Free Mode</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>D</td><td>UI, UX, Graphs & Camera Presentation</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>E</td><td>3D Assets & Scene Optimization</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>F</td><td>WebGL, Performance, Stability & Resource Management</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>G</td><td>Testing, Regression & QA</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>H</td><td>Progress Tracking, Questions & LMS Integration</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+<tr><td>I</td><td>Delivery, Versioning & Documentation</td><td><select class="status"><option>Not Reviewed</option><option>PASS</option><option>FAIL</option><option>N/A</option></select></td><td><textarea class="notes"></textarea></td></tr>
+</tbody>
+</table>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Project Information</h3>
+    <table>
+      <tr><td>Project / Lab Code</td><td contenteditable="true">Click to edit</td></tr>
+      <tr><td>Delivery Version</td><td contenteditable="true">Click to edit</td></tr>
+      <tr><td>Assessment Version</td><td contenteditable="true">Click to edit</td></tr>
+      <tr><td>WebGL URL / Build</td><td contenteditable="true">Click to edit</td></tr>
+      <tr><td>Windows Build ID</td><td contenteditable="true">Click to edit</td></tr>
+      <tr><td>Reviewer</td><td contenteditable="true">Click to edit</td></tr>
+      <tr><td>Review Date</td><td contenteditable="true">Click to edit</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Final Decision</h3>
+    <p><b>Decision:</b> <span id="finalDecision" class="mono">PENDING REVIEW</span></p>
+    <p class="small">Accepted requires all applicable gates = PASS and no blocking defects.</p>
+  </div>
+</div>
+</section>
+
+<section class="sourcebox">
+  <b>Source basis for this standard:</b>
+  <ul>
+    <li>Unity Scene Load-Time Investigation — Photovoltaic Lab.</li>
+    <li>PV Solar Edits Checklist V11.</li>
+    <li>Project Requirements & Technical Specification.</li>
+    <li>BEDO Interim Three.js Laboratory Development & Acceptance Handbook v0.1 (used as the structural acceptance model).</li>
+    <li>BEDO LMS Simulation Integration Contract v0.1 / Wire Schema 2.1.</li>
+  </ul>
+  <p>This document is the final BEDO Unity virtual laboratory development and acceptance standard for contractor use. Project-specific scientific requirements remain authoritative where they define exact experiment behavior.</p>
+</section>
+
+</main>
+</div>
+
+<script>
+function collectReview(){
+  const rows=[...document.querySelectorAll('#acceptanceTable tbody tr')];
+  return rows.map((r,i)=>({
+    status:r.querySelector('.status').value,
+    notes:r.querySelector('.notes').value
+  }));
+}
+function saveReview(){
+  localStorage.setItem('bedoUnityAcceptanceReview', JSON.stringify(collectReview()));
+  updateSummary();
+  alert('Review saved locally in this browser.');
+}
+function loadReview(){
+  const raw=localStorage.getItem('bedoUnityAcceptanceReview');
+  if(!raw) return;
+  try{
+    const data=JSON.parse(raw);
+    const rows=[...document.querySelectorAll('#acceptanceTable tbody tr')];
+    rows.forEach((r,i)=>{
+      if(!data[i]) return;
+      r.querySelector('.status').value=data[i].status || 'Not Reviewed';
+      r.querySelector('.notes').value=data[i].notes || '';
+    });
+  }catch(e){}
+}
+function resetReview(){
+  if(!confirm('Reset all acceptance statuses and notes?')) return;
+  localStorage.removeItem('bedoUnityAcceptanceReview');
+  document.querySelectorAll('.status').forEach(x=>x.value='Not Reviewed');
+  document.querySelectorAll('.notes').forEach(x=>x.value='');
+  updateSummary();
+}
+function updateSummary(){
+  const statuses=[...document.querySelectorAll('.status')].map(x=>x.value);
+  const counts={PASS:0,FAIL:0,'N/A':0,'Not Reviewed':0};
+  statuses.forEach(s=>counts[s]=(counts[s]||0)+1);
+  document.getElementById('summaryBox').innerHTML =
+    '<b>Review Summary:</b> PASS: '+counts.PASS+
+    ' &nbsp; | &nbsp; FAIL: '+counts.FAIL+
+    ' &nbsp; | &nbsp; N/A: '+counts['N/A']+
+    ' &nbsp; | &nbsp; Not Reviewed: '+counts['Not Reviewed'];
+  let decision='PENDING REVIEW';
+  if(counts.FAIL>0) decision='RETURNED FOR CORRECTION';
+  else if(counts['Not Reviewed']===0) decision='ACCEPTED (subject to defect review)';
+  document.getElementById('finalDecision').textContent=decision;
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  loadReview();
+  document.querySelectorAll('.status,.notes').forEach(el=>{
+    el.addEventListener('change', updateSummary);
+    el.addEventListener('input', updateSummary);
+  });
+  updateSummary();
+});
+</script>
+</body>
+</html>

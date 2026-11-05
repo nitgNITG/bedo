@@ -1,0 +1,9 @@
+Scene: Assets/_Project/Scenes/Main Menu.unity dirty=False
+Unity: 6000.3.21f1
+ROOT  Dont destroy ScriptHolders
+ROOT Scene Notes
+ROOT Views
+ROOT Interface
+ROOT Systems
+Transforms: 3625; missing components: 2
+Connected prefab instance roots: 227

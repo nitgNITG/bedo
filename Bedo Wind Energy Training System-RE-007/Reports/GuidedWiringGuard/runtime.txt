@@ -1,0 +1,10 @@
+Guided wire permission / Free Mode regression
+PASS EXP1: 10 guided wire steps; wrong/future/repeated/out-of-order clicks blocked before callbacks; both legitimate clicks work; removal blocked before and after advancing; plugs/wires preserved.
+PASS EXP1: Free Mode connects through normal banana clicks and removes through the existing wire click handler.
+PASS EXP2: 18 guided wire steps; wrong/future/repeated/out-of-order clicks blocked before callbacks; both legitimate clicks work; removal blocked before and after advancing; plugs/wires preserved.
+PASS EXP2: Free Mode connects through normal banana clicks and removes through the existing wire click handler.
+PASS EXP3: 18 guided wire steps; wrong/future/repeated/out-of-order clicks blocked before callbacks; both legitimate clicks work; removal blocked before and after advancing; plugs/wires preserved.
+PASS EXP3: Free Mode connects through normal banana clicks and removes through the existing wire click handler.
+PASS EXP4: 26 guided wire steps; wrong/future/repeated/out-of-order clicks blocked before callbacks; both legitimate clicks work; removal blocked before and after advancing; plugs/wires preserved.
+PASS EXP4: Free Mode connects through normal banana clicks and removes through the existing wire click handler.
+COMPLETE; no scene assets saved
