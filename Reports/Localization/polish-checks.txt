@@ -1,7 +1,0 @@
-Localization polish regression
-Main Menu: language center=(760.86, -199.00, 0.00); Reload center=(760.86, -286.00, 0.00); gap=(0.00, 87.00, 0.00); active=True; inherited Reload handlers=0
-Main Menu: sampled 32 active Arabic labels across 180 updates; text/font/rectangle/line-count changes=0
-PV Lab: language center=(760.86, -199.00, 0.00); Reload center=(760.86, -286.00, 0.00); gap=(0.00, 87.00, 0.00); active=True; inherited Reload handlers=0
-PV Lab: sampled 23 active Arabic labels across 180 updates; text/font/rectangle/line-count changes=0
-PASS language switching and Reload callback isolation
-COMPLETE; no scene assets saved

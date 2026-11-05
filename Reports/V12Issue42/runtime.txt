@@ -1,5 +1,0 @@
-EXP1 PASS: Free pan/zoom, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-EXP2 PASS: Free pan/zoom, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-EXP3 PASS: Free pan/zoom, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-EXP4 PASS: Free pan/zoom, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-COMPLETE errors=0

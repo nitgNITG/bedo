@@ -1,1 +1,0 @@
-PASS all 18 runtime warning strings translated to Arabic and restored exactly to English; Lean keys=392.

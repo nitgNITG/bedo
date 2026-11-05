@@ -1,2 +1,0 @@
-PASS all four Guided controllers enforce loop on playback and stop on power off. Free Mode retains its existing loop=true source.
-PASS: no runtime errors.

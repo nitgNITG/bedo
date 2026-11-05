@@ -1,5 +1,0 @@
-PASS: five independent SOAP contexts, eight independent switch assets, all production references bound.
-PASS: session-owned connection list; no destroyed wire references in Edit Mode.
-PASS: state is not saved to PlayerPrefs and uses explicit session resets.
-PASS: all 65787 existing serialized object/component hashes match; only new SOAP properties and the new session child are excluded.
-PASS: existing transforms, steps, events, wiring, visual data and references preserved; 175 pre-existing missing components unchanged.

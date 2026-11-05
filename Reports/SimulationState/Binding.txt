@@ -1,1 +1,0 @@
-PASS SOAP state bindings saved; Main Menu and experiment steps untouched.

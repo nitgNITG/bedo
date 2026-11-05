@@ -1,1 +1,0 @@
-PASS: all 176 Guided/Free numerical samples exactly match the prior baseline; zero runtime errors in final activation/render/cache/raycast/removal tests.

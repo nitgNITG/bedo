@@ -1,6 +1,0 @@
-Wind button: Interface/Bedo UI V3 Bernollie FM103 Variant Variant/Right Panel/Wind Speed Button
-Panel uses existing Main Settings background/border; right-side button visual states/animator copied.
-Exp 1 element 22 old pointer: Experiments/Exp 1/exp 1/Steps/Pointers/Slider Button pointer
-Exp 2 element 29 old pointer: Experiments/Exp 2/exp 2/Steps/Pointers/Slider Button pointer
-Exp 3 element 26 old pointer: Experiments/Exp 3/exp 3/Steps/Pointers/Slider Button pointer
-Exp 4 element 31 old pointer: Experiments/Exp 4/exp 4/Steps/Pointers/Slider Button pointer

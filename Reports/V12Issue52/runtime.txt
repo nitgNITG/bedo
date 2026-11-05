@@ -1,5 +1,0 @@
-EXP1 PASS: Guided view 12 zoom only, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-EXP2 PASS: Guided view 12 zoom only, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-EXP3 PASS: Guided view 12 zoom only, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-EXP4 PASS: Guided view 12 zoom only, saved-view reset, UI guard, bounds, focus/release guards, rotation preserved, LateUpdate requests.
-COMPLETE errors=0

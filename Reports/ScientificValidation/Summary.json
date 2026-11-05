@@ -1,9 +1,0 @@
-{
-  "cases": 126,
-  "assertions": 656,
-  "passed": 656,
-  "failed": 0,
-  "solverSha256": "9ac4e38b659bf2c3a9c9068cf5cbfb851a1164a7168d24ca103c98d05798152f",
-  "tolerance": "provisional engineering tolerance max(1e-5 absolute, 2e-6 relative); BEDO approval required",
-  "engine": "production wind solver methods compiled verbatim with minimal engine primitive substitutes; not Unity/player UI validation"
-}

@@ -1,9 +1,0 @@
-Speed curve: bound 2 collider/mouse handlers to local screenshot component; capture surface=speed; existing colliders retained.
-Diversion control: bound 2 collider/mouse handlers to local screenshot component; capture surface=Diversion; existing colliders retained.
-MPPT control: bound 2 collider/mouse handlers to local screenshot component; capture surface=Mppt; existing colliders retained.
-Off Grid Control: bound 2 collider/mouse handlers to local screenshot component; capture surface=Off Grid; existing colliders retained.
-PASS Speed curve: physical mouse callback starts capture; monitor surface renders PNG (83037 bytes). Native save dialog deliberately not opened by automated test.
-PASS Diversion control: physical mouse callback starts capture; monitor surface renders PNG (120791 bytes). Native save dialog deliberately not opened by automated test.
-PASS MPPT control: physical mouse callback starts capture; monitor surface renders PNG (123464 bytes). Native save dialog deliberately not opened by automated test.
-PASS Off Grid Control: physical mouse callback starts capture; monitor surface renders PNG (123826 bytes). Native save dialog deliberately not opened by automated test.
-PASS: no runtime errors.

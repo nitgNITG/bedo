@@ -1,3 +1,0 @@
-Reparented 2 adjustment canvases beside their knob, preserving world pose and existing references/events.
-PASS Guided 100-ohm adjustment changes resistance while its canvas world rotation/position stay fixed.
-PASS: no runtime errors.

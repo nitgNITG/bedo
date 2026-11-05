@@ -1,9 +1,0 @@
-EXP1 Guided PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-EXP1 Free PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-EXP2 Guided PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-EXP2 Free PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-EXP3 Guided PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-EXP3 Free PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-EXP4 Guided PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-EXP4 Free PASS: all saved views, no immediate pose writes, movement observed after Update, interruption/latest request, invalid index, label, zero/negative duration, disable/re-enable and destroyed target.
-COMPLETE errors=0

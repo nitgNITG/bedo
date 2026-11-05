@@ -1,5 +1,0 @@
-PASS: all 40369 serialized scene object/component identities retained.
-PASS: only the main spline data of 102 selected SplineContainer components changed.
-PASS: all other serialized components, cameras, transforms, plugs, interactions, events, colliders, materials and UI data match the pre-change scene exactly.
-PASS: extra legacy splines and knot-link data retained.
-PASS: 13 generated mesh caches restored; cable activation rebuilds visuals and click surfaces from spline data.

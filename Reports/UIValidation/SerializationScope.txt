@@ -1,3 +1,0 @@
-Main Menu: copied only existing CanvasScaler fields and scaler prefab overrides from Unity save; all unrelated serialized data retained from pre-step baseline.
-PV Lab: copied only existing CanvasScaler fields and scaler prefab overrides from Unity save; all unrelated serialized data retained from pre-step baseline.
-Additional intended change: Main Menu camera fallback RGB changed from blue to black; clear mode, pose and all other camera properties retained.

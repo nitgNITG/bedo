@@ -1,6 +1,0 @@
-PASS: Main Menu is byte-for-byte unchanged.
-PASS: PVCSVReader equations unchanged; only two result-struct serialization attributes added.
-PASS: all 16 equipment prefab asset files are unchanged since phase 3.
-PASS: wind mathematical/reference CSV content matches tracked originals (line endings normalized).
-PASS: all 176 before/after numerical samples match exactly.
-PASS: context assets retain zero/off authored input defaults; none use PlayerPrefs persistence.
