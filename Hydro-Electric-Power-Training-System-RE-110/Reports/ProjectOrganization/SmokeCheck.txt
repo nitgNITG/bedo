@@ -1,0 +1,37 @@
+PASS Menu launch target: Speed Curve Characteristics
+PASS Menu launch target: Regulating DC Output from Wind Turbine using PWM Charger
+PASS Menu launch target: Regulating DC Output from Wind Turbine using MPPT Charger
+PASS Menu launch target: OFF Grid System Using Wind Turbine
+PASS EXP1 Guided scene loads
+PASS EXP1 selected storyboard restored
+PASS Grouped audio service discoverable
+PASS EXP1 Free Mode initializes
+PASS EXP1 selection retained through mode switch
+PASS Mathematical data assets still resolve
+PASS All authored Free Mode wire references resolve
+PASS New rheostat wire connects after regrouping
+PASS EXP2 Guided scene loads
+PASS EXP2 selected storyboard restored
+PASS Grouped audio service discoverable
+PASS EXP2 Free Mode initializes
+PASS EXP2 selection retained through mode switch
+PASS Mathematical data assets still resolve
+PASS All authored Free Mode wire references resolve
+PASS New rheostat wire connects after regrouping
+PASS EXP3 Guided scene loads
+PASS EXP3 selected storyboard restored
+PASS Grouped audio service discoverable
+PASS EXP3 Free Mode initializes
+PASS EXP3 selection retained through mode switch
+PASS Mathematical data assets still resolve
+PASS All authored Free Mode wire references resolve
+PASS New rheostat wire connects after regrouping
+PASS EXP4 Guided scene loads
+PASS EXP4 selected storyboard restored
+PASS Grouped audio service discoverable
+PASS EXP4 Free Mode initializes
+PASS EXP4 selection retained through mode switch
+PASS Mathematical data assets still resolve
+PASS All authored Free Mode wire references resolve
+PASS New rheostat wire connects after regrouping
+COMPLETE — smoke checks only, not full experiment E2E acceptance.

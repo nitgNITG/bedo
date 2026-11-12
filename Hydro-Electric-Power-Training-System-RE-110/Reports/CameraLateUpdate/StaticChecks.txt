@@ -1,0 +1,3 @@
+PASS: MoveToPosition only records transition state and updates existing selection/label UI.
+PASS: camera pose writes occur only inside LateUpdate; no coroutine remains.
+PASS: serialized field names and MoveToPosition(int) signature retained.

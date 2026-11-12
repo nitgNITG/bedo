@@ -1,0 +1,13 @@
+Unity 6000.3.21f1
+OS Windows 11  (10.0.26200)
+CPU AMD Ryzen 7 9700X 8-Core Processor 
+RAM 15417 MB
+GPU AMD Radeon RX 9060 XT
+Graphics memory 16192 MB
+Enabled scenes: Assets/_Project/Scenes/Main Menu.unity, Assets/_Project/Scenes/PV Lab.unity
+WebGL installed: False
+BLOCKED WebGL: target module is not installed; browser zoom/performance cannot be certified.
+Windows installed: True
+Windows IL2CPP result: Failed; errors=1; warnings=0; duration=00:00:01.0882680; bytes=0
+Error building Player: Currently selected scripting backend (IL2CPP) is not installed.
+FINISHED. Build output is ignored by Git; runtime/performance approval is a separate check.

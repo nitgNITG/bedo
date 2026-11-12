@@ -1,0 +1,92 @@
+5 contexts, 57 numeric variables, 8 switches, 1 connection list.
+Assets/_Project/Data/Wind/Simulation/Exp 1
+Assets/_Project/Data/Wind/Simulation/Exp 1/Charger
+Assets/_Project/Data/Wind/Simulation/Exp 1/Charger/pwmBatteryVoltage.asset
+Assets/_Project/Data/Wind/Simulation/Exp 1/Charger/pwmLoadCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 1/Charger/pwmMaximumChargeCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 1/Charger/pwmScreenChangePerSecond.asset
+Assets/_Project/Data/Wind/Simulation/Exp 1/Runtime State.asset
+Assets/_Project/Data/Wind/Simulation/Exp 2
+Assets/_Project/Data/Wind/Simulation/Exp 2/Charger
+Assets/_Project/Data/Wind/Simulation/Exp 2/Charger/pwmBatteryVoltage.asset
+Assets/_Project/Data/Wind/Simulation/Exp 2/Charger/pwmLoadCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 2/Charger/pwmMaximumChargeCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 2/Charger/pwmScreenChangePerSecond.asset
+Assets/_Project/Data/Wind/Simulation/Exp 2/Runtime State.asset
+Assets/_Project/Data/Wind/Simulation/Exp 3
+Assets/_Project/Data/Wind/Simulation/Exp 3/Charger
+Assets/_Project/Data/Wind/Simulation/Exp 3/Charger/pwmBatteryVoltage.asset
+Assets/_Project/Data/Wind/Simulation/Exp 3/Charger/pwmLoadCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 3/Charger/pwmMaximumChargeCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 3/Charger/pwmScreenChangePerSecond.asset
+Assets/_Project/Data/Wind/Simulation/Exp 3/Runtime State.asset
+Assets/_Project/Data/Wind/Simulation/Exp 4
+Assets/_Project/Data/Wind/Simulation/Exp 4/Charger
+Assets/_Project/Data/Wind/Simulation/Exp 4/Charger/pwmBatteryVoltage.asset
+Assets/_Project/Data/Wind/Simulation/Exp 4/Charger/pwmLoadCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 4/Charger/pwmMaximumChargeCurrent.asset
+Assets/_Project/Data/Wind/Simulation/Exp 4/Charger/pwmScreenChangePerSecond.asset
+Assets/_Project/Data/Wind/Simulation/Exp 4/Runtime State.asset
+Assets/_Project/Data/Wind/Simulation/Free Mode
+Assets/_Project/Data/Wind/Simulation/Free Mode/Physical Connections.asset
+Assets/_Project/Data/Wind/Simulation/Free Mode/Runtime State.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats
+Assets/_Project/Data/Wind/Simulation/Rheostats/1 air speed power adjustment001  rheostat 100
+Assets/_Project/Data/Wind/Simulation/Rheostats/1 air speed power adjustment001  rheostat 100/maxResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/1 air speed power adjustment001  rheostat 100/minResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/1 air speed power adjustment001  rheostat 100/Resistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/1 air speed power adjustment001  rheostat 100/resistanceStep.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/1 air speed power adjustment001  rheostat 100/rotationPerClick.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/2 air speed power adjustment001 (1)
+Assets/_Project/Data/Wind/Simulation/Rheostats/2 air speed power adjustment001 (1)/maxResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/2 air speed power adjustment001 (1)/minResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/2 air speed power adjustment001 (1)/Resistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/2 air speed power adjustment001 (1)/resistanceStep.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/2 air speed power adjustment001 (1)/rotationPerClick.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/3 air speed power adjustment001 (1)
+Assets/_Project/Data/Wind/Simulation/Rheostats/3 air speed power adjustment001 (1)/maxResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/3 air speed power adjustment001 (1)/minResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/3 air speed power adjustment001 (1)/Resistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/3 air speed power adjustment001 (1)/resistanceStep.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/3 air speed power adjustment001 (1)/rotationPerClick.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/4 air speed power adjustment001 (1)
+Assets/_Project/Data/Wind/Simulation/Rheostats/4 air speed power adjustment001 (1)/maxResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/4 air speed power adjustment001 (1)/minResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/4 air speed power adjustment001 (1)/Resistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/4 air speed power adjustment001 (1)/resistanceStep.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/4 air speed power adjustment001 (1)/rotationPerClick.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/5 air speed power adjustment001 rheostat 150
+Assets/_Project/Data/Wind/Simulation/Rheostats/5 air speed power adjustment001 rheostat 150/maxResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/5 air speed power adjustment001 rheostat 150/minResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/5 air speed power adjustment001 rheostat 150/Resistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/5 air speed power adjustment001 rheostat 150/resistanceStep.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/5 air speed power adjustment001 rheostat 150/rotationPerClick.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/6 air speed power adjustment001 rheostat 800
+Assets/_Project/Data/Wind/Simulation/Rheostats/6 air speed power adjustment001 rheostat 800/maxResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/6 air speed power adjustment001 rheostat 800/minResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/6 air speed power adjustment001 rheostat 800/Resistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/6 air speed power adjustment001 rheostat 800/resistanceStep.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/6 air speed power adjustment001 rheostat 800/rotationPerClick.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/7 air speed power adjustment001 (1)
+Assets/_Project/Data/Wind/Simulation/Rheostats/7 air speed power adjustment001 (1)/maxResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/7 air speed power adjustment001 (1)/minResistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/7 air speed power adjustment001 (1)/Resistance.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/7 air speed power adjustment001 (1)/resistanceStep.asset
+Assets/_Project/Data/Wind/Simulation/Rheostats/7 air speed power adjustment001 (1)/rotationPerClick.asset
+Assets/_Project/Data/Wind/Simulation/Speed
+Assets/_Project/Data/Wind/Simulation/Speed/Initial RPM.asset
+Assets/_Project/Data/Wind/Simulation/Speed/Legacy Click Increment.asset
+Assets/_Project/Data/Wind/Simulation/Speed/Maximum RPM.asset
+Assets/_Project/Data/Wind/Simulation/Speed/Minimum RPM.asset
+Assets/_Project/Data/Wind/Simulation/Speed/Slider Increment.asset
+Assets/_Project/Data/Wind/Simulation/Speed/Visual Multiplier.asset
+Assets/_Project/Data/Wind/Simulation/Speed Settings.asset
+Assets/_Project/Data/Wind/Simulation/Switches
+Assets/_Project/Data/Wind/Simulation/Switches/Main Board Circuit Breaker.asset
+Assets/_Project/Data/Wind/Simulation/Switches/Main Board Emergency.asset
+Assets/_Project/Data/Wind/Simulation/Switches/Main Board On_Off.asset
+Assets/_Project/Data/Wind/Simulation/Switches/Off Grid Inverter Power.asset
+Assets/_Project/Data/Wind/Simulation/Switches/Power Analyzer Mode.asset
+Assets/_Project/Data/Wind/Simulation/Switches/Wind Circuit Breaker.asset
+Assets/_Project/Data/Wind/Simulation/Switches/Wind Emergency.asset
+Assets/_Project/Data/Wind/Simulation/Switches/Wind Power.asset

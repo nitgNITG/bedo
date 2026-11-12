@@ -1,0 +1,4 @@
+PASS: 16 equipment assets; 3 shared bases, 12 equipment variants and 1 model variant.
+PASS: output model retains its Outputs.fbx source and nests all eight lamp variants.
+PASS: all source prefab GUIDs resolve; no duplicate GUIDs under Assets.
+PASS: Main Menu scene is byte-for-byte unchanged.

@@ -1,0 +1,4 @@
+PV Lab: removed TIA Portal Connection from EXP4 document list by disabling its layout item; other experiments unchanged.
+Main Menu: removed TIA Portal Connection from EXP4 document list by disabling its layout item; other experiments unchanged.
+PASS PV Lab EXP4 TIA document item remains disabled at runtime.
+PASS: no runtime errors.

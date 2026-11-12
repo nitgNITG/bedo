@@ -1,0 +1,404 @@
+[
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Button/Bedo/Main Button/Add Sample Button Square (1) Variant.prefab",
+    "component_fileID": "4696015352275109001",
+    "script_guid": "4fea4c01f7b9c144b880ba54cc38c030",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Button/Bedo/Main Button/LOGIN Button (1).prefab",
+    "component_fileID": "3709709670661518542",
+    "script_guid": "ebb34337dbca08a4cb127fe2e4365173",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Modal Window/Bedo/Component Description Wide.prefab",
+    "component_fileID": "114582790746279218",
+    "script_guid": "ebb34337dbca08a4cb127fe2e4365173",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Modal Window/Bedo/Component Description Wide.prefab",
+    "component_fileID": "5854412594359468540",
+    "script_guid": "ae3fd0aee0442264286923201fa30a14",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Modal Window/Bedo/Component Description Wide.prefab",
+    "component_fileID": "114074916462589894",
+    "script_guid": "ebb34337dbca08a4cb127fe2e4365173",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Scrollbar/Bedo/Scrollbar Item/Experiment Item.prefab",
+    "component_fileID": "3278736775573445513",
+    "script_guid": "b7ddcd873a6b3a54587a8dd5a1678ff5",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Scrollbar/Bedo/Scrollbar Item/Experiment Item.prefab",
+    "component_fileID": "6562487423307584737",
+    "script_guid": "addda37ad196a0a4faf3bc8c39c3d81f",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Scrollbar/Bedo/Scrollbar Item/Experiment Item.prefab",
+    "component_fileID": "1896152274804237125",
+    "script_guid": "addda37ad196a0a4faf3bc8c39c3d81f",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/Shift - Complete Sci-Fi UI/Prefabs/Switch/Bedo/Audio Toggle Member Button (6).prefab",
+    "component_fileID": "4906392741921216539",
+    "script_guid": "aa6370ef2a703634382c9320860abef5",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "3472078086243942271",
+    "script_guid": "bdc855cdf831dc242a3017a3829ff7df",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "2515383422084314445",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "77368640201561428",
+    "script_guid": "ba1bd61ff5f85b642a175fc402fe4bc7",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "4263561920426792333",
+    "script_guid": "4390c1776882070498b00e219daddc27",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "159783854711465647",
+    "script_guid": "1e4d8f94a0c34a4469dece3b4cf25cdc",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "676178456243064689",
+    "script_guid": "974f833efdfdf284aa66e2cb2f3a3668",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "9180319620623391785",
+    "script_guid": "974f833efdfdf284aa66e2cb2f3a3668",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "4016031339874131675",
+    "script_guid": "147844318cee38c47a70dd9335954e17",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "7558711066938372308",
+    "script_guid": "eca49ccdbc3362d4397b0fbd0b2b9d2a",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "2250335019697293952",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "8642109530312512685",
+    "script_guid": "974f833efdfdf284aa66e2cb2f3a3668",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "4260753260638054833",
+    "script_guid": "974f833efdfdf284aa66e2cb2f3a3668",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "6687837231168514748",
+    "script_guid": "2be4161beb6babe428f8453728aa3300",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "2132936874476024426",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "3211789897067498305",
+    "script_guid": "974f833efdfdf284aa66e2cb2f3a3668",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "4910595192979969014",
+    "script_guid": "974f833efdfdf284aa66e2cb2f3a3668",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "6395065433583913469",
+    "script_guid": "f87365a294fe01249a5225e69b4408ec",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "2750019136195107596",
+    "script_guid": "47dd921c704d40d4eb96f6609f410a01",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "1329656005784822285",
+    "script_guid": "b39aec1c856ef5d4e8318ba2a2264280",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "8531000306844337484",
+    "script_guid": "b39aec1c856ef5d4e8318ba2a2264280",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Prefabs/UI/Layout/Bedo UI V3.prefab",
+    "component_fileID": "8366879235041258891",
+    "script_guid": "4fea4c01f7b9c144b880ba54cc38c030",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Scenes/Main Menu.unity",
+    "component_fileID": "386775088",
+    "script_guid": "eca49ccdbc3362d4397b0fbd0b2b9d2a",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/Scenes/PV Lab.unity",
+    "component_fileID": "386775088",
+    "script_guid": "eca49ccdbc3362d4397b0fbd0b2b9d2a",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Bedo UI V3 Bernollie FM103 Variant Variant.prefab",
+    "component_fileID": "6721657175775325160",
+    "script_guid": "147844318cee38c47a70dd9335954e17",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Bedo UI V3 Bernollie FM103 Variant Variant.prefab",
+    "component_fileID": "8566560970970781893",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Bedo UI V3 Bernollie FM103 Variant Variant.prefab",
+    "component_fileID": "7811525531228292945",
+    "script_guid": "4fea4c01f7b9c144b880ba54cc38c030",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Buttons/Document Item.prefab",
+    "component_fileID": "3276944321385416777",
+    "script_guid": "3f518898c856f9442914f15599a1f150",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Buttons/Varients/A Choice.prefab",
+    "component_fileID": "4167729717441264229",
+    "script_guid": "20990e22d0bf5c144a7b0f55ebd9f059",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Buttons/Varients/A Choice.prefab",
+    "component_fileID": "1898945186819216929",
+    "script_guid": "afccf293aebc12d488ef29c1ec9a149d",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Buttons/Varients/Add Sample Button Square Variant.prefab",
+    "component_fileID": "7012209925611828263",
+    "script_guid": "4fea4c01f7b9c144b880ba54cc38c030",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Cameras Indicator Ui Canvas.prefab",
+    "component_fileID": "5700200060752324831",
+    "script_guid": "eca49ccdbc3362d4397b0fbd0b2b9d2a",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Cameras Indicator Ui Canvas.prefab",
+    "component_fileID": "6399227282541106181",
+    "script_guid": "8e763e56e08314e4193dc7523e1f9b15",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "943300312331371693",
+    "script_guid": "147844318cee38c47a70dd9335954e17",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "1978766733012010440",
+    "script_guid": "82033a3b8ed41f2408f424294c861ca3",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "8896131832870351173",
+    "script_guid": "3ae14a8dc19d552438f7d33ca52cd47a",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "5073864172799213316",
+    "script_guid": "eca49ccdbc3362d4397b0fbd0b2b9d2a",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "8344514164387032402",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "8401538097384067571",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "5652348208531255904",
+    "script_guid": "d93ba61543949824db31c7cb89b4f009",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "5765648134419316706",
+    "script_guid": "d93ba61543949824db31c7cb89b4f009",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Bedo UI V3 Laminar FM115 Variant.prefab",
+    "component_fileID": "6378103351260968028",
+    "script_guid": "4fea4c01f7b9c144b880ba54cc38c030",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Buttom Panel.prefab",
+    "component_fileID": "6789619282727037290",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Buttom Panel.prefab",
+    "component_fileID": "4265608014585528666",
+    "script_guid": "aa6370ef2a703634382c9320860abef5",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Buttom Panel.prefab",
+    "component_fileID": "7292549918398587825",
+    "script_guid": "aa6370ef2a703634382c9320860abef5",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Buttom Panel.prefab",
+    "component_fileID": "2211626644625646168",
+    "script_guid": "a58a34e08b21b904b82ea652aa3c5d86",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Buttom Panel.prefab",
+    "component_fileID": "7031571453070388972",
+    "script_guid": "aa6370ef2a703634382c9320860abef5",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Buttom Panel.prefab",
+    "component_fileID": "2621049910098512724",
+    "script_guid": "aa6370ef2a703634382c9320860abef5",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Buttom Panel.prefab",
+    "component_fileID": "4649257544584326815",
+    "script_guid": "974f833efdfdf284aa66e2cb2f3a3668",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Hoving Tooltip Panel Variant.prefab",
+    "component_fileID": "1549410823017243027",
+    "script_guid": "47e02915cc02d3840ba2ed9a2fa08ddb",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Main Settings Multiple Slider Detached.prefab",
+    "component_fileID": "4161942240310687332",
+    "script_guid": "54f080280755eba4aac3dc73d9d4418f",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Main Settings Multiple Slider Detached.prefab",
+    "component_fileID": "565808748761106823",
+    "script_guid": "54f080280755eba4aac3dc73d9d4418f",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Main Settings Multiple Slider Detached.prefab",
+    "component_fileID": "6966842107722198221",
+    "script_guid": "54f080280755eba4aac3dc73d9d4418f",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Main Settings Multiple Slider Detached.prefab",
+    "component_fileID": "3461965505029994855",
+    "script_guid": "54f080280755eba4aac3dc73d9d4418f",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Multiple Choice Question Wide Question Variant.prefab",
+    "component_fileID": "7054516919334694469",
+    "script_guid": "9ecddeb51e792c84a85a59c75c6af6ca",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/Top Panel.prefab",
+    "component_fileID": "3145049535916146137",
+    "script_guid": "f6846f638bfa0cd44ab74e5cd81e9463",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Collections/True And False Wide Question.prefab",
+    "component_fileID": "5519874133135959463",
+    "script_guid": "6df4a5eebdaedac42881073b67f58a60",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Toggles/Variants/Top Panel/Top Free Main Button Variant.prefab",
+    "component_fileID": "8219624629971330039",
+    "script_guid": "aa6370ef2a703634382c9320860abef5",
+    "action": "keep restored legacy handler disabled"
+  },
+  {
+    "asset": "Assets/_Project/UI/BEDO/V3.0/Prefabs/Toggles/Variants/Top Panel/Top Guided Main Button Variant.prefab",
+    "component_fileID": "7966365275876689762",
+    "script_guid": "aa6370ef2a703634382c9320860abef5",
+    "action": "keep restored legacy handler disabled"
+  }
+]

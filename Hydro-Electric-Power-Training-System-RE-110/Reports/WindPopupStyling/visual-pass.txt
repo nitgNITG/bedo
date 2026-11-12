@@ -1,0 +1,3 @@
+PASS EXP1 Guided: placement, shared visual style, step highlight/pointer replacement, unlock/max/exit/re-entry, popup.
+PASS EXP1 Free: styled shared button/popup, no guided highlight.
+COMPLETE errors=0

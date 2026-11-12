@@ -1,0 +1,38 @@
+Unity 6000.3.21f1; prefab regression smoke test.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP1 Main Menu -> Guided: 26 storyboard entries; model, lamp and 86 wire references resolve.
+PASS popup EXP1 Guided: same slider active, icon/close work, range/control state preserved.
+PASS EXP1: slider 0..1000, 200 RPM increments, authored unlock/max once; analyzer mode event shows existing backlight and W/VAr/VA screen.
+PASS EXP1 activated 9 corrected Guided cable meshes.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP1 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS popup EXP1 Free: same slider active, icon/close work, range/control state preserved.
+PASS EXP1 all 10 Free Mode cable click meshes regenerated and raycast successfully.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP2 Main Menu -> Guided: 32 storyboard entries; model, lamp and 86 wire references resolve.
+PASS popup EXP2 Guided: same slider active, icon/close work, range/control state preserved.
+PASS EXP2: slider 0..1000, 200 RPM increments, authored unlock/max once; analyzer mode event shows existing backlight and W/VAr/VA screen.
+PASS EXP2 activated 17 corrected Guided cable meshes.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP2 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS popup EXP2 Free: same slider active, icon/close work, range/control state preserved.
+PASS EXP2 all 18 Free Mode cable click meshes regenerated and raycast successfully.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP3 Main Menu -> Guided: 31 storyboard entries; model, lamp and 86 wire references resolve.
+PASS popup EXP3 Guided: same slider active, icon/close work, range/control state preserved.
+PASS EXP3: slider 0..1000, 200 RPM increments, authored unlock/max once; analyzer mode event shows existing backlight and W/VAr/VA screen.
+PASS EXP3 activated 17 corrected Guided cable meshes.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP3 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS popup EXP3 Free: same slider active, icon/close work, range/control state preserved.
+PASS EXP3 all 18 Free Mode cable click meshes regenerated and raycast successfully.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP4 Main Menu -> Guided: 39 storyboard entries; model, lamp and 86 wire references resolve.
+PASS popup EXP4 Guided: same slider active, icon/close work, range/control state preserved.
+CHECK issue 7 EXP4: analyzer canvas/text references are empty; left unchanged as requested.
+PASS EXP4 activated 25 corrected Guided cable meshes.
+Observed runtime storyboards: Storyboard @ Storyboard, OFF Grid System Using Wind Turbine @ Exp 4, Regulating DC Output from Wind Turbine using MPPT Charger @ Exp 3, Regulating DC Output from Wind Turbine using PWM Charger @ Exp 2, Speed Curve Characteristics @ Exp 1
+PASS EXP4 Guided -> Free: ready; 100/150/800-ohm ranges and each canvas's +/- controls verified.
+PASS popup EXP4 Free: same slider active, icon/close work, range/control state preserved.
+PASS EXP4 all 20 Free Mode cable click meshes regenerated and raycast successfully.
+PASS: 0 runtime errors; edit scene restored and baseline verified.

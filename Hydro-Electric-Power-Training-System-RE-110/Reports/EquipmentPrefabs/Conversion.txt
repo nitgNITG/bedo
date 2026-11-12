@@ -1,0 +1,18 @@
+Baseline captured; 15494 transforms, 175 pre-existing missing components.
+PASS Experiments[0]/Rheostat 150[6] -> Assets/_Project/Prefabs/Equipment/Rheostats/Rheostat 150 Ohm.prefab; preserved 67 objects and 6 external bindings.
+PASS Experiments[0]/rheostat 800[7] -> Assets/_Project/Prefabs/Equipment/Rheostats/Rheostat 800 Ohm.prefab; preserved 67 objects and 6 external bindings.
+PASS Rheostats: full scene matches baseline after save/reopen once existing UI layout has rebuilt (explicit verify).
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/AC Halogen Lamp 1[1] -> Assets/_Project/Prefabs/Equipment/Lamps/AC Halogen Lamp 1.prefab; preserved 10 objects and 0 external bindings.
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/AC Halogen Lamp 2[2] -> Assets/_Project/Prefabs/Equipment/Lamps/AC Halogen Lamp 2.prefab; preserved 10 objects and 0 external bindings.
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/DC Halogen Lamp 1[3] -> Assets/_Project/Prefabs/Equipment/Lamps/AC LED Lamp 1.prefab; preserved 10 objects and 0 external bindings.
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/DC Halogen Lamp 2[4] -> Assets/_Project/Prefabs/Equipment/Lamps/AC LED Lamp 2.prefab; preserved 10 objects and 0 external bindings.
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/DC LED Lamp 1[5] -> Assets/_Project/Prefabs/Equipment/Lamps/DC LED Lamp 1.prefab; preserved 10 objects and 0 external bindings.
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/DC LED Lamp 2[6] -> Assets/_Project/Prefabs/Equipment/Lamps/DC LED Lamp 2.prefab; preserved 10 objects and 0 external bindings.
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/DC Halogen Lamp 1[7] -> Assets/_Project/Prefabs/Equipment/Lamps/DC Halogen Lamp 1.prefab; preserved 10 objects and 0 external bindings.
+PASS Equipment[4]/Wind Lab[5]/Outputs[4]/DC Halogen Lamp 2[8] -> Assets/_Project/Prefabs/Equipment/Lamps/DC Halogen Lamp 2.prefab; preserved 10 objects and 0 external bindings.
+PASS Lamps: full scene serialization matches baseline after save/reopen and UI layout rebuild.
+PASS Experiments[0]/DC Halogen Lamp Module power Connectors[8] -> Assets/_Project/Prefabs/Equipment/Connectors/DC Halogen Power Connectors.prefab; preserved 62 objects and 0 external bindings.
+PASS Experiments[0]/AC LED Lamp Module power Connectors[9] -> Assets/_Project/Prefabs/Equipment/Connectors/AC LED Power Connectors.prefab; preserved 66 objects and 0 external bindings.
+PASS Connectors: full scene serialization matches baseline after save/reopen and UI layout rebuild.
+PASS Outputs model variant with nested lamp variants: full scene serialization matches baseline after save/reopen and UI layout rebuild.
+PASS Final delivery-scene audit: full scene serialization matches baseline after save/reopen and UI layout rebuild.
