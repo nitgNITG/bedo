@@ -102,7 +102,7 @@ public class PVGraphController : MonoBehaviour
 
         // The loaded model can exceed the original reference curve's 60 V range.
         var yAxis = lineChart.GetChartComponent<YAxis>();
-        float graphValue = showingACSpeedGraph ? reading.acCurrent : graphVoltage;
+        float graphValue = showingACSpeedGraph ? reading.dcCurrent : graphVoltage;
         if (yAxis != null && graphValue > yAxis.max)
             yAxis.max = showingACSpeedGraph ? Mathf.Ceil(graphValue * 10f) / 10f : Mathf.Ceil(graphValue / 12f) * 12f;
         lineChart.AddData(PointSeries, reading.rpm, graphValue);
@@ -124,14 +124,14 @@ public class PVGraphController : MonoBehaviour
         showingACSpeedGraph = acSpeed;
         lineChart.RemoveAllSerie();
         lineChart.ClearData();
-        var series = lineChart.AddSerie<Line>(acSpeed ? "AC-Speed curve" : "Speed curve");
+        var series = lineChart.AddSerie<Line>("Speed curve");
         series.symbol.show = true;
         series.symbol.size = 2;
-        var values = acSpeed ? plottedACCurrentValues : plottedYValues;
+        var values = acSpeed ? plottedCurrentValues : plottedYValues;
         var axis = lineChart.GetChartComponent<YAxis>();
         if (axis != null)
         {
-            axis.axisName.name = acSpeed ? "AC current (A)" : yAxisLabel;
+            axis.axisName.name = acSpeed ? "DC current (A)" : yAxisLabel;
             axis.axisLabel.numericFormatter = "0.##";
             axis.min = 0;
             float maximum = values.Count > 0 ? values.Max() : 0;
@@ -485,6 +485,11 @@ public class PVGraphController : MonoBehaviour
         }
 
         if (voltageGraphTab) voltageGraphTab.onClick.AddListener(ShowVoltageGraph);
+        if (acSpeedGraphTab != null)
+        {
+            var label = acSpeedGraphTab.GetComponentInChildren<TMP_Text>(true);
+            if (label != null) label.text = "Speed";
+        }
         if (acSpeedGraphTab) acSpeedGraphTab.onClick.AddListener(ShowACSpeedGraph);
         if (voltageGraphTab) voltageGraphTab.interactable = showingACSpeedGraph;
         if (acSpeedGraphTab) acSpeedGraphTab.interactable = !showingACSpeedGraph;

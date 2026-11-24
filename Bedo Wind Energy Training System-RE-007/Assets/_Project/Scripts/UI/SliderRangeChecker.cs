@@ -33,10 +33,13 @@ public class SliderRangeChecker : MonoBehaviour
     [SerializeField] private CanvasGroup windSpeedPopup;
     [SerializeField] private SmoothCameraMovement turbineViewCamera;
     [SerializeField] private int turbineViewIndex = -1;
+    private readonly List<PanelToggleButton> bottomPanels = new List<PanelToggleButton>();
 
     public void ToggleWindSpeedPopup()
     {
         if (windSpeedPopup == null) return;
+        if (windSpeedPopup.alpha < .5f && bottomPanels.Exists(tab => tab != null && tab.IsOpen))
+            return;
         SetWindSpeedPopup(windSpeedPopup.alpha < .5f);
         SharedInteractionClickSound.Play(windSliderClick);
     }
@@ -45,6 +48,11 @@ public class SliderRangeChecker : MonoBehaviour
     {
         SetWindSpeedPopup(false);
         SharedInteractionClickSound.Play(windSliderClick);
+    }
+
+    public void CloseWindSpeedPopupSilently()
+    {
+        SetWindSpeedPopup(false);
     }
 
     public void ViewWindTurbine()
@@ -157,6 +165,24 @@ public class SliderRangeChecker : MonoBehaviour
 
     private void OnEnable()
     {
+        bottomPanels.Clear();
+        // Close this popup directly whenever the student selects Main Settings,
+        // Steps, or Experiments from the bottom navigation.
+        foreach (var button in Resources.FindObjectsOfTypeAll<Button>())
+        {
+            if (button == null || button.gameObject.scene != gameObject.scene ||
+                button.transform.parent == null || button.transform.parent.name != "Buttom Bar") continue;
+            string buttonName = button.name.ToLowerInvariant();
+            if (buttonName.Contains("main settings") || buttonName.Contains("steps") || buttonName.Contains("experiments"))
+            {
+                var tab = button.GetComponent<PanelToggleButton>();
+                if (tab != null)
+                    bottomPanels.Add(tab);
+                button.onClick.RemoveListener(CloseWindSpeedPopupSilently);
+                button.onClick.AddListener(CloseWindSpeedPopupSilently);
+            }
+        }
+
         if (IsWindSlider && slider != null)
         {
             slider.onValueChanged.RemoveListener(OnWindSliderChanged);
@@ -169,7 +195,7 @@ public class SliderRangeChecker : MonoBehaviour
         RefreshValueText();
     }
 
-    private void Update()
+private void Update()
     {
         RefreshWindSlider();
         // A few of the training controls reset the slider silently so they do
@@ -177,6 +203,8 @@ public class SliderRangeChecker : MonoBehaviour
         // mirror the slider in both Guided and Free Mode.
         RefreshValueText();
     }
+
+
 
 
     // =====================================================

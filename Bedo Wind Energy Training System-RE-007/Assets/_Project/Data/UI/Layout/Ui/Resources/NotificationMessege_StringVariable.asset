@@ -16,8 +16,7 @@ MonoBehaviour:
   Description: 
   _guid: a7bf780df62eaa34ca9ad391621ac9aa
   _saveGuid: 0
-  _value: "Press \u201CConnect\u201D from the top right of the screen to connect
-    the software with TIA portal."
+  _value: "Connection is not available in this module."
   _debugLogEnabled: 0
   _saved: 0
   _defaultValue: 

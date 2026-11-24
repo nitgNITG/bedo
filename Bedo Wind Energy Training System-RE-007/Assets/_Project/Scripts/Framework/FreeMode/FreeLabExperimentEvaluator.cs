@@ -120,6 +120,17 @@ namespace TutorialFramework
             );
             if (bestMatch >= 0)
                 states[bestMatch].onEntered?.Invoke();
+            if (bestMatch >= 0 &&
+                states[bestMatch].stateName == "B - Modules Connected")
+            {
+                string trackingId = WindStudentTracking.FreeExperimentId(ExperimentId);
+                if (WindStudentTracking.IsActiveExperiment(trackingId))
+                {
+                    WindStudentTracking.CompleteStep(1);
+                    WindStudentTracking.CompleteExperiment();
+                }
+            }
+
             onStateChanged?.Invoke(currentStateName);
         }
 

@@ -5,6 +5,7 @@ public class PanelToggleButton : MonoBehaviour
 {
     [Header("Panel")]
     [SerializeField] private GameObject panel;
+    public bool IsOpen => panel != null && panel.activeInHierarchy;
 
     [Tooltip("Opening this panel closes the panels controlled by these buttons.")]
     [SerializeField] private PanelToggleButton[] exclusivePeers;

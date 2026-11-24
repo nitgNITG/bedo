@@ -112,7 +112,10 @@ public static class ArabicTextLayout
     private static string Line(string text)
     {
         // Treat each Latin/number run as a single token before reversing the line.
-        var tokens=Regex.Matches(text, @"[A-Za-z0-9][A-Za-z0-9 ./+%:_-]*|\P{M}\p{M}*")
+        // Keep spaces as separate tokens. Including trailing spaces in a Latin run
+        // makes them land on the wrong side when the bidi token order is reversed
+        // (for example, "PWM في" was rendered as "PWMفي").
+        var tokens=Regex.Matches(text, @"[A-Za-z0-9]+(?:[./+%:_-][A-Za-z0-9]+)*|\P{M}\p{M}*")
             .Cast<Match>().Select(m=>m.Value).ToList();
         tokens.Reverse(); var output=new StringBuilder();
         foreach(string token in tokens)
@@ -128,6 +131,37 @@ public static class ArabicTextLayout
         bool rotated=logical.Contains("<rotate=");
         string plain=Regex.Replace(logical,"<[^>]*>","");
         if(rotated)return "<rotate=90>"+Visual(Shape(plain))+"</rotate>";
+        // TextMesh Pro receives visual order here. Keep the title separator
+        // to the left of the digits, and the shaped experiment label to their right.
+        var experimentTitle = Regex.Match(plain, @"^التجربة\s+(\d+)\s*:\s*(.+)$");
+        if (!rotated && experimentTitle.Success)
+            return WrapArabic(experimentTitle.Groups[2].Value, target, availableWidth) + " : " +
+                experimentTitle.Groups[1].Value + " " + Line(Shape("التجربة"));
+        // Experiment card subtitles are just over the two-line width at their
+        // authored size. Measure them at 90% of the display size so the full
+        // "توربينة الرياح" and "شحن PWM/MPPT" phrases stay together.
+        bool experimentCardSubtitle = Regex.IsMatch(plain.Trim(),
+            @"^تنظيم الخرج المستمر من (?:توربينة|طاحونة) الرياح باستخدام وحدة تحكم شحن (?:PWM|MPPT)$");
+        if (experimentCardSubtitle)
+        {
+            float scaledWidth = availableWidth > 0 ? availableWidth / .9f : 0;
+            return "<size=90%>" + WrapArabic(plain, target, scaledWidth) + "</size>";
+        }
+        // Keep the off-grid card's subject first. Auto-wrapping this longer
+        // subtitle can place the tail phrase above "تجربة العاكس" in the
+        // visual-order text used by TMP, so give it a stable, semantic break.
+        var offGridCardSubtitle = Regex.Match(plain.Trim(),
+            @"^تجربة العاكس خارج الشبكة باستخدام (توربينة|طاحونة) الرياح$");
+        if (offGridCardSubtitle.Success)
+        {
+            string turbine = offGridCardSubtitle.Groups[1].Value;
+            string cardSubtitle = "تجربة العاكس خارج الشبكة\nباستخدام " + turbine + " الرياح";
+            return WrapArabic(cardSubtitle, target, availableWidth);
+        }
+        return WrapArabic(plain, target, availableWidth);
+    }
+    private static string WrapArabic(string plain, TMP_Text target, float availableWidth)
+    {
         float width=Math.Max(1,(availableWidth > 0 ? availableWidth : target.rectTransform.rect.width)-target.margin.x-target.margin.z);
         var lines=new List<string>();
         foreach(string paragraph in plain.Replace("\r", "").Split('\n'))
@@ -136,13 +170,12 @@ public static class ArabicTextLayout
             foreach(string word in paragraph.Split(new[]{' '},StringSplitOptions.RemoveEmptyEntries))
             {
                 string candidate=line.Length==0?word:line+" "+word;
-                if(line.Length>0 && target.GetPreferredValues(Shape(candidate),float.PositiveInfinity,float.PositiveInfinity).x>width)
+                if(line.Length>0 && target.GetPreferredValues(Line(Shape(candidate)),float.PositiveInfinity,float.PositiveInfinity).x>width)
                 { lines.Add(Line(Shape(line))); line=word; }
                 else line=candidate;
             }
             lines.Add(Line(Shape(line)));
         }
-        string result=string.Join("\n",lines);
-        return rotated?"<rotate=90>"+result+"</rotate>":result;
+        return string.Join("\n",lines);
     }
 }

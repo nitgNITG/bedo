@@ -50,7 +50,7 @@ public class StepListPopulator : MonoBehaviour
                 Instantiate(stepItemPrefab, contentParent);
 
             step.InitItem(
-                (i + 1).ToString(),
+                steps[i].StartsWith("You have finished!") ? "" : (i + 1).ToString(),
                 steps[i]
             );
 

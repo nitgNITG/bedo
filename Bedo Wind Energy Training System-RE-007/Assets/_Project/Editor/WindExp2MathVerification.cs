@@ -74,7 +74,7 @@ public static class WindExp2MathVerification
         if (Application.isPlaying) throw new InvalidOperationException("Stop Play Mode first.");
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty)
             throw new InvalidOperationException("Save your scene edits before reloading.");
-        UnityEditor.SceneManagement.EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+        UnityEditor.SceneManagement.EditorSceneManager.OpenScene("Assets/_Project/Scenes/Wind Lab.unity");
     }
     private static T Find<T>(ulong id) where T : Object
     {

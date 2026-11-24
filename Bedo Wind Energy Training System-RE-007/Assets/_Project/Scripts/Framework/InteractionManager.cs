@@ -64,10 +64,10 @@ namespace TutorialFramework
 
 
         [Header("Window Title")]
-        [Tooltip("The fixed title currently required for the Photovoltaics lab.")]
+        [Tooltip("The fixed title for the Wind Energy lab.")]
         [SerializeField]
         private string fixedWindowTitle =
-            "Photovoltaics Training System VL-RE";
+            "Wind Energy";
 
         [Tooltip("Leave off to keep the fixed machine title. Turn on later to restore experiment-specific window titles.")]
         [SerializeField]
@@ -181,6 +181,7 @@ namespace TutorialFramework
             // disable only runtime components that must not initialize in the
             // lightweight menu scene.
             PrepareMainMenuScene();
+            WindStudentTracking.StartSession();
         }
 
 
@@ -244,7 +245,7 @@ namespace TutorialFramework
             experimentsRoot.SetActive(true);
 
 
-            // The physical lab is in PV Lab.  Main Menu retains only the
+            // The physical lab is in Wind Lab.  Main Menu retains only the
             // selector UI, so prevent Free Lab and storyboards from doing
             // their normal scene-wide initialization here.
             foreach (FreeLabManager freeLabManager in
@@ -552,6 +553,8 @@ namespace TutorialFramework
         {
             if (IsInMainMenuScene)
                 return;
+            WindStudentTracking.AbortActiveExperiment();
+
 
 
             FirstTimeRun = false;
@@ -599,6 +602,8 @@ namespace TutorialFramework
 
         public void RestartScenario()
         {
+            WindStudentTracking.AbortActiveExperiment();
+
             if (restarting)
             {
                 if (sceneReloaded)

@@ -158,13 +158,22 @@ namespace TutorialFramework
                 foreach (var spline in container.Splines)
                 {
                     if (spline.Count < 2) continue;
-                    int segments = Mathf.Clamp(Mathf.CeilToInt(SplineUtility.CalculateLength(spline, container.transform.localToWorldMatrix) / .5f), 16, 512);
+                    using var worldSpline = new NativeSpline(spline, container.transform.localToWorldMatrix, Unity.Collections.Allocator.Temp);
+                    float length = worldSpline.GetLength();
+                    if (length <= Mathf.Epsilon) continue;
+
+                    // Leave a dead zone at each plug while retaining a clickable
+                    // middle on even the shortest cables.
+                    const float plugClearance = 1f;
+                    float trim = Mathf.Min(plugClearance, length * .25f) / length;
+                    float clickableLength = length * (1f - 2f * trim);
+                    int segments = Mathf.Clamp(Mathf.CeilToInt(clickableLength / .5f), 16, 512);
                     int first = vertices.Count;
                     for (int i = 0; i <= segments; i++)
                     {
-                        float t = (float)i / segments;
-                        Vector3 center = container.transform.TransformPoint((Vector3)SplineUtility.EvaluatePosition(spline, t));
-                        Vector3 tangent = container.transform.TransformVector((Vector3)SplineUtility.EvaluateTangent(spline, t)).normalized;
+                        float t = Mathf.Lerp(trim, 1f - trim, (float)i / segments);
+                        Vector3 center = (Vector3)SplineUtility.EvaluatePosition(worldSpline, t);
+                        Vector3 tangent = ((Vector3)SplineUtility.EvaluateTangent(worldSpline, t)).normalized;
                         if (tangent.sqrMagnitude < .01f) tangent = Vector3.forward;
                         Vector3 side = Vector3.Cross(tangent, Mathf.Abs(Vector3.Dot(tangent, Vector3.up)) > .95f ? Vector3.right : Vector3.up).normalized;
                         Vector3 up = Vector3.Cross(tangent, side).normalized;
@@ -194,7 +203,8 @@ namespace TutorialFramework
             surface.sharedMesh = mesh;
             surface.enabled = true; surface.isTrigger = false;
             clickCollider = surface;
-            foreach (var collider in GetComponentsInChildren<MeshCollider>()) if (collider != surface) collider.enabled = false;
+            foreach (var collider in GetComponentsInChildren<Collider>(true))
+                if (collider != surface) collider.enabled = false;
             if (cableClickMesh) Destroy(cableClickMesh);
             cableClickMesh = mesh;
             return true;

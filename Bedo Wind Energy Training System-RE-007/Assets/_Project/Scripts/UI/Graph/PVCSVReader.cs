@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Globalization;
-using System.IO;
 using UnityEngine;
 
 
@@ -86,8 +85,7 @@ public class PVCSVReader : MonoBehaviour
         return true;
     }
 
-    // Wind calibration is opt-in. The existing PV reader and Free Mode data
-    // continue to use PVData.csv and Calculate exactly as before.
+    // Wind calculations are independent of the legacy PV calibration reader.
     [System.Serializable]
     public struct WindReading
     {
@@ -95,54 +93,25 @@ public class PVCSVReader : MonoBehaviour
         public float dcVoltage, dcCurrent, dcPower;
     }
 
-    public static bool TryCalculateWind(TextAsset calibration, float rpm,
+public static bool TryCalculateWind(TextAsset calibration, float rpm,
         float resistance, out WindReading reading)
     {
         reading = default;
-        if (calibration == null || float.IsNaN(rpm) || float.IsInfinity(rpm) ||
+        if (float.IsNaN(rpm) || float.IsInfinity(rpm) ||
             float.IsNaN(resistance) || float.IsInfinity(resistance) || resistance <= 0f)
             return false;
 
-        var factors = new SortedDictionary<float, Vector2>();
-        using (var reader = new StringReader(calibration.text))
-        {
-            reader.ReadLine(); // R, C1, C2, followed by workbook reference values.
-            string row;
-            while ((row = reader.ReadLine()) != null)
-            {
-                if (string.IsNullOrWhiteSpace(row)) continue;
-                string[] cells = row.Split(',');
-                if (cells.Length < 3 ||
-                    !float.TryParse(cells[0], NumberStyles.Float, CultureInfo.InvariantCulture, out float r) ||
-                    !float.TryParse(cells[1], NumberStyles.Float, CultureInfo.InvariantCulture, out float c1) ||
-                    !float.TryParse(cells[2], NumberStyles.Float, CultureInfo.InvariantCulture, out float c2) ||
-                    r <= 0f || c1 <= 0f || c2 <= 0f)
-                    return false;
-                factors[r] = new Vector2(c1, c2);
-            }
-        }
-        if (factors.Count == 0) return false;
-
-        // Interpolate only the source calibration factors, then evaluate the
-        // equations at the exact RPM and load. Do not interpolate power values.
-        var lower = factors.First();
-        var upper = factors.Last();
-        foreach (var pair in factors)
-        {
-            if (pair.Key <= resistance) lower = pair;
-            if (pair.Key >= resistance) { upper = pair; break; }
-        }
-        Vector2 constants = lower.Key == upper.Key ? lower.Value :
-            Vector2.Lerp(lower.Value, upper.Value,
-                Mathf.InverseLerp(lower.Key, upper.Key, resistance));
+        // E1: use the physical generator/load equations directly. The prior
+        // C1/C2 resistance table could make loaded DC voltage and power
+        // exceed their physically possible source values.
         reading.rpm = Mathf.Clamp(rpm, 0f, 1000f);
         reading.resistance = resistance;
         reading.acVoltage = 0.055f * reading.rpm;
-        reading.acCurrent = reading.acVoltage / resistance;
-        reading.acPower = reading.acVoltage * reading.acCurrent;
-        reading.dcVoltage = reading.acVoltage / 1.2f * constants.x;
-        reading.dcCurrent = reading.dcVoltage / (resistance * constants.y);
+        reading.dcVoltage = reading.acVoltage * resistance / (resistance + 0.8f);
+        reading.dcCurrent = reading.dcVoltage / resistance;
         reading.dcPower = reading.dcVoltage * reading.dcCurrent;
+        reading.acCurrent = 1.2f * reading.dcCurrent;
+        reading.acPower = reading.acVoltage * reading.acCurrent;
         return true;
     }
 
@@ -154,138 +123,6 @@ public class PVCSVReader : MonoBehaviour
     [Tooltip("The source workbook formula is ISC = V / R × 2.5.")]
     [SerializeField] private float shortCircuitCurrentMultiplier = 2.5f;
 
-
-    private void Start()
-    {
-        LoadCSV();
-    }
-
-
-
-    private void LoadCSV()
-    {
-        string path = Path.Combine(
-            Application.streamingAssetsPath,
-            "PVData.csv"
-        );
-
-
-        if (!File.Exists(path))
-        {
-            Debug.LogError(
-                "CSV not found: " + path
-            );
-
-            return;
-        }
-
-
-        string[] lines = File.ReadAllLines(path);
-
-
-
-        // Skip:
-        // Line 0 = headers
-        // Line 1 = descriptions
-        // Start from line 2
-
-        for (int i = 2; i < lines.Length; i++)
-        {
-
-            if (string.IsNullOrWhiteSpace(lines[i]))
-                continue;
-
-
-            string[] values =
-                lines[i].Split(',');
-
-
-
-            // Need at least 13 columns
-            if (values.Length < 13)
-                continue;
-
-
-
-            PVPoint point =
-                new PVPoint();
-
-
-
-            point.intensity =
-                Parse(values[0]);
-
-
-            point.irradiance =
-                Parse(values[1]);
-
-
-            point.tilt =
-                Parse(values[2]);
-
-
-            point.azimuth =
-                Parse(values[3]);
-
-
-            point.sunAngle =
-                Parse(values[4]);
-
-
-
-            point.resistance =
-                Parse(values[6]);
-
-            point.constantC1 = Parse(values[7]);
-            point.openCircuitVoltage = Parse(values[8]);
-            point.adjustedIrradiance = Parse(values[5]);
-            point.shortCircuitCurrent = Parse(values[10]);
-
-            // Register the calibration before evaluating this row.
-            data.Add(point);
-
-            // DC Voltage, DC Current and Power are formula columns in the
-            // workbook, so calculate them rather than trusting stale exports.
-            Calculate(point.intensity, point.tilt, point.azimuth, point.sunAngle,
-                point.resistance, out PVPoint calculated);
-            point.voltage = calculated.voltage;
-            point.current = calculated.current;
-            point.power = calculated.power;
-        }
-
-
-        Debug.Log(
-            "PV rows loaded: "
-            + data.Count
-        );
-
-        Debug.Log(
-    "First Point: " +
-    data[0].voltage +
-    "V  " +
-    data[0].current +
-    "A"
-);
-    }
-
-
-
-
-    float Parse(string value)
-    {
-        float result;
-
-
-        float.TryParse(
-            value,
-            NumberStyles.Any,
-            CultureInfo.InvariantCulture,
-            out result
-        );
-
-
-        return result;
-    }
 
     /// <summary>
     /// Recreates the PV workbook's formulas. C1 comes from the CSV resistance

@@ -1,3 +1,4 @@
+using TutorialFramework;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -129,7 +130,11 @@ public class TrueFalseQuestionPanel : MonoBehaviour
     private void HandleQuestionActivated(TrueAndFalseQuestionScriptableObject question)
     {
         currentQuestion = question;
-        IsTrueFalseQuestionPanelShowen.Value = true;
+        IsTrueFalseQuestionPanelShowen.Value = true;
+        WindStudentTracking.ShowQuestion(
+            currentQuestion.name,
+            "TrueFalse");
+
         //ShowPanel();
     }
 
@@ -156,7 +161,13 @@ public class TrueFalseQuestionPanel : MonoBehaviour
     /// </summary>
     private void OnAnswerSelected(bool answer, Button buttonPressed)
     {
-        bool correct = currentQuestion.IsAnsweredCorrectly(answer);
+        bool correct = currentQuestion.IsAnsweredCorrectly(answer);
+        WindStudentTracking.AnswerQuestion(
+            currentQuestion.name,
+            "TrueFalse",
+            answer ? "true" : "false",
+            correct);
+
         // Store result in BoolVariable
         if (correct)
         {

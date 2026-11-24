@@ -346,7 +346,9 @@ namespace TutorialFramework
             }
             float bus = Constant("Battery_Voltage_V", 24), limit = Constant("Grid_Charge_Current_A", 9), acVoltage = Constant("AC_Lamp_Voltage_V", 220);
             bool grid = batteryBus && ActiveExperiment == 4 && Connected(gridConnections);
-            float balance = reading.dcCurrent - dcLoad - acEquivalent;
+            // E2: below the 24 V battery bus, the turbine cannot charge or feed this bus.
+            float sourceCurrent = reading.dcVoltage >= bus ? reading.dcCurrent : 0f;
+            float balance = sourceCurrent - dcLoad - acEquivalent;
             var result = new PVCSVReader.OffGridReading();
             if (batteryBus)
             {

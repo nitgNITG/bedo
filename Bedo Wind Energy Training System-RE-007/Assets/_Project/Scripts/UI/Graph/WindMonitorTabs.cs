@@ -30,16 +30,19 @@ public sealed class WindMonitorTabs : MonoBehaviour
             if (entry != null && entry.selectionTab) entry.selectionTab.SetActive(showingGraph);
     }
     private ExperimentTab active;
-    private bool unlocked, graphShown;
+    private bool graphShown;
     private int lastStep = -1;
 
     private void LateUpdate()
     {
         RefreshExperiment();
         if (active == null) return;
-        if (unlocked) active.graphButton.Allow = !graphShown;
-        if (systemButton != null) systemButton.Allow = unlocked && graphShown;
+        if (active.graphButton != null) active.graphButton.Allow = !graphShown || IsGraphInstruction;
+        if (systemButton != null) systemButton.Allow = graphShown;
     }
+
+    private bool IsGraphInstruction => active != null && active.firstGraphInteraction != null &&
+        active.storyboard.IsCurrentGuidedInteraction(active.firstGraphInteraction);
 
     private void RefreshExperiment()
     {
@@ -56,14 +59,12 @@ public sealed class WindMonitorTabs : MonoBehaviour
         {
             if (active != null && active.graphButton != null) active.graphButton.Allow = false;
             active = next;
-            unlocked = next != null && next.firstGraphInteraction == null;
             graphShown = false;
             if (systemButton != null) systemButton.Allow = false;
             if (next != null)
             {
                 monitors.SetActive(true);
                 graphPage.SetActive(false);
-                // Begin() owns the first guided unlock; do not enable it here.
             }
         }
         lastStep = step;
@@ -75,15 +76,13 @@ public sealed class WindMonitorTabs : MonoBehaviour
         if (InteractionManager.Instance != null && InteractionManager.Instance.Free && FreeLabWindController.Instance != null)
         { FreeLabWindController.Instance.ShowGraph(); return; }
         RefreshExperiment();
-        if (active == null || clickedButton != active.graphButton || graphShown) return;
-        if (!unlocked)
+        if (active == null || clickedButton != active.graphButton) return;
+        if (IsGraphInstruction && clickedButton.Allow)
         {
-            if (!clickedButton.Allow) return;
-            // The initial click still completes precisely the authored graph step.
             clickedButton.Click();
-            unlocked = true;
             lastStep = active.storyboard.CurrentStep;
         }
+        else if (graphShown) return;
         else clickedButton.PlaySound();
         graphShown = true;
         SetPageSelection(true);
@@ -98,7 +97,7 @@ public sealed class WindMonitorTabs : MonoBehaviour
         if (InteractionManager.Instance != null && InteractionManager.Instance.Free && FreeLabWindController.Instance != null)
         { FreeLabWindController.Instance.ShowSystem(); return; }
         RefreshExperiment();
-        if (active == null || !unlocked || !graphShown || systemButton == null || !systemButton.Allow) return;
+        if (active == null || !graphShown || systemButton == null) return;
         systemButton.PlaySound();
         monitors.SetActive(true);
         graphPage.SetActive(false);

@@ -61,7 +61,10 @@ public class PVGuidedDataBinder : MonoBehaviour
         bool grid = powered && Connected(offGridGridWires);
         // EXP4 connects the LED module; use column M (0.2 A), rather than
         // column L's 2 A halogen example. AC calculation still uses column Q.
-        PVCSVReader.TryCalculateOffGrid(offGridModel, generating ? source.dcCurrent : 0, dcLoads, acLoads, grid, out var result, true);
+        // E2: a controller cannot charge a 24 V battery from a lower DC source.
+        PVCSVReader.TryCalculateOffGrid(offGridModel,
+            generating && source.dcVoltage >= 24f ? source.dcCurrent : 0f,
+            dcLoads, acLoads, grid, out var result, true);
         if (!powered) result = default;
         OffGridReading = result;
         // Generator/rectifier can run while inverter is off; its readings still
@@ -134,7 +137,9 @@ public class PVGuidedDataBinder : MonoBehaviour
     private void RefreshPWMDisplay(PVCSVReader.WindReading reading)
     {
         bool generating = pwmSystemOn && pwmOutputOn && windSpeedController.IsTurbineRunning;
-        float sourceCurrent = generating ? reading.dcCurrent : 0;
+        // E2: below the battery voltage, the source supplies no charging current.
+        float sourceCurrent = generating && reading.dcVoltage >= PWMBatteryVoltage
+            ? reading.dcCurrent : 0f;
         float loadCurrent = pwmSystemOn && pwmLoadOn ? PWMLoadCurrent : 0;
         PWMBatteryCurrent = pwmSystemOn ? Mathf.Min(sourceCurrent - loadCurrent, PWMMaximumChargeCurrent) : 0;
         PWMDumpCurrent = pwmSystemOn ? Mathf.Max(0, sourceCurrent - loadCurrent - PWMMaximumChargeCurrent) : 0;
@@ -312,10 +317,10 @@ public class PVGuidedDataBinder : MonoBehaviour
     }
 
     // Fixed unit column matches the physical analyzer LCD; equations stay unchanged.
-    public static string FormatPowerAnalyzer(float activePower, float apparentPower) =>
-        $"<line-height=140%><mspace=0.12>{activePower:F2}</mspace><pos=75%>W\n" +
-        $"<mspace=0.12>{0f:F2}</mspace><pos=75%>VAr\n" +
-        $"<mspace=0.12>{apparentPower:F2}</mspace><pos=75%>VA";
+public static string FormatPowerAnalyzer(float activePower, float apparentPower) =>
+        $"<line-height=140%><mspace=0.12>{activePower:F2}</mspace><pos=75%>V\n" +
+        $"<mspace=0.12>{0f:F2}</mspace><pos=75%>A\n" +
+        $"<mspace=0.12>{apparentPower:F2}</mspace><pos=75%>W";
 
     /// <summary>Called by the Free Mode calculation router from its authored wire sets.</summary>
     public void SetArrayConfiguration(bool series, bool parallel)

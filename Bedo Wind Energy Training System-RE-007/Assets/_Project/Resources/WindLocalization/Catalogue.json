@@ -47,7 +47,7 @@
     },
     {
       "english": "Raise the circuit breaker (C.B) of the wind turbine.",
-      "arabic": "ارفع قاطع الدائرة (C.B) الخاص طاحونة الرياح",
+      "arabic": "ارفع قاطع الدائرة (C.B) الخاص بطاحونة الرياح",
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
@@ -87,12 +87,12 @@
     },
     {
       "english": "Switch to the software monitor.",
-      "arabic": "قم بالانتقال الى شاشة السوفت.",
+      "arabic": "قم بالانتقال إلى شاشة السوفت.",
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
       "english": "Navigate to the \"Graph\" tab.",
-      "arabic": "انتقل الى صفحة \"الرسم البياني\".",
+      "arabic": "انتقل إلى صفحة \"الرسم البياني\".",
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
@@ -132,7 +132,7 @@
     },
     {
       "english": "Switch to the software monitor again.",
-      "arabic": "قم بالانتقال الي شاشة التحكم مرة اخرى.",
+      "arabic": "قم بالانتقال إلى شاشة التحكم مرة اخرى.",
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
@@ -152,12 +152,12 @@
     },
     {
       "english": "🎓 Instructor’s IntroductionWelcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control turbine speed and measure its effect on DC voltage and current.",
-      "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
+      "arabic": "مرحبًا! في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
       "english": "Welcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control turbine speed and measure its effect on DC voltage and current.",
-      "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
+      "arabic": "مرحبًا! في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
@@ -172,12 +172,12 @@
     },
     {
       "english": "Connect the (+VE) and (-VE) output terminals of the Rectifier module to the (+VE) and (-VE) DC input terminals of the PWM charger controller module.",
-      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المعدل بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة التحكم في شاحنPWM .",
+      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المقوم بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة التحكم في شاحن PWM.",
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
       "english": "Connect the (+VE) and (-VE) terminals of the Battery 24V module to the (+VE) and (-VE) Battery terminals of the PWM charger controller module.",
-      "arabic": "قم بتوصيل طرفي(+VE) و (-VE) لوحدة البطارية بطرفي البطارية (+VE) و (-VE) لوحدة التحكم في شاحنPWM .",
+      "arabic": "قم بتوصيل طرفي(+VE) و (-VE) لوحدة البطارية بطرفي البطارية (+VE) و (-VE) لوحدة التحكم في شاحن PWM.",
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
@@ -201,8 +201,8 @@
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
-      "english": "Pop-up Quiz: Which of the following best describes the difference between a PWM controller and an MPPT controller in a Wind Energy Training System? A) PWM extracts maximum power, while MPPT only regulates charging. B) PWM is simple and less efficient, while MPPT tracks maximum power and is more efficient. C) Both PWM and MPPT provide the same efficiency but use different circuits. D) PWM is more advanced than MPPT in optimizing energy capture. Correct Answer: B",
-      "arabic": "سؤال: أيٌّ من التالي يوضح بشكل أدق الفرق بين متحكم PWM ومتحكم MPPT في نظام تدريب طاقة الرياح؟ أ) يقوم متحكم الـ PWM باستخراج أقصى قدرة، بينما يقتصر متحكم الـ MPPT على تنظيم الشحن. ب) متحكم الـ PWM أبسط وأقل كفاءة، بينما يقوم متحكم الـ MPPT بتتبع أقصى قدرة وهو أكثر كفاءة. ج) يوفر كل من متحكم الـ PWM ومتحكم الـ MPPT نفس الكفاءة لكن باستخدام دوائر مختلفة. د) متحكم الـ PWM أكثر تقدماً من متحكم الـ MPPT في تحسين استغلال الطاقة الإجابة الصحيحة: ب",
+      "english": "Pop-up Quiz: Which of the following best describes the difference between a PWM controller and an MPPT controller in a Wind Energy Training System? A) PWM extracts maximum power, while MPPT only regulates charging. B) PWM is simple and less efficient, while MPPT tracks maximum power and is more efficient. C) Both PWM and MPPT provide the same efficiency but use different circuits. Correct Answer: B",
+      "arabic": "سؤال: أيٌّ من التالي يوضح بشكل أدق الفرق بين متحكم PWM ومتحكم MPPT في نظام تدريب طاقة الرياح؟ أ) يقوم متحكم الـ PWM باستخراج أقصى قدرة، بينما يقتصر متحكم الـ MPPT على تنظيم الشحن. ب) متحكم الـ PWM أبسط وأقل كفاءة، بينما يقوم متحكم الـ MPPT بتتبع أقصى قدرة وهو أكثر كفاءة. ج) يوفر كل من متحكم الـ PWM ومتحكم الـ MPPT نفس الكفاءة لكن باستخدام دوائر مختلفة. الإجابة الصحيحة: ب",
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
@@ -221,13 +221,13 @@
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
-      "english": "Both PWM and MPPT provide the same efficiency but use different circuits. D) PWM is more advanced than MPPT in optimizing energy capture.",
-      "arabic": "يوفر كل من متحكم الـ PWM ومتحكم الـ MPPT نفس الكفاءة لكن باستخدام دوائر مختلفة. د) متحكم الـ PWM أكثر تقدماً من متحكم الـ MPPT في تحسين استغلال الطاقة",
+      "english": "Both PWM and MPPT provide the same efficiency but use different circuits.",
+      "arabic": "يوفر كل من متحكم الـ PWM ومتحكم الـ MPPT نفس الكفاءة لكن باستخدام دوائر مختلفة.",
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
       "english": "Navigate to the \"system\" tab.",
-      "arabic": "انتقل الى صفحة النظام”\".",
+      "arabic": "انتقل إلى صفحة النظام”\".",
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
@@ -247,7 +247,7 @@
     },
     {
       "english": "Switch to the software monitor to observe the results",
-      "arabic": "قم بالانتقال الي شاشة التحكم لملاحظة النتائج.",
+      "arabic": "قم بالانتقال إلى شاشة التحكم لملاحظة النتائج.",
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
@@ -277,7 +277,7 @@
     },
     {
       "english": "Connect the (+VE) and (-VE) output terminals of the Rectifier module to the (+VE) and (-VE) DC input terminals of the MPPT charger controller module.",
-      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المعدل بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة التحكم في شاحن",
+      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المقوم بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة التحكم في شاحن MPPT",
       "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
     },
     {
@@ -342,7 +342,7 @@
     },
     {
       "english": "Navigate to the \"System\" tab to observe the results",
-      "arabic": "انتقل الى صفحة \" النظام\".",
+      "arabic": "انتقل إلى صفحة \"System\" لملاحظة النتائج.",
       "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
     },
     {
@@ -357,12 +357,12 @@
     },
     {
       "english": "🎓 Instructor’s Introduction Welcome! In this experiment, you will learn how a wind mill system uses an MPPT charge controller to regulate DC output for charging batteries and powering DC loads. You will observe how power is shared between the turbine and the battery as the mill speed changes.",
-      "arabic": "مرحبًا ! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن MPPT لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين التوربينة والبطارية مع تغيير سرعة التوربينة.",
+      "arabic": "مرحبًا! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن MPPT لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين التوربينة والبطارية مع تغيير سرعة التوربينة.",
       "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
     },
     {
       "english": "Welcome! In this experiment, you will learn how a wind mill system uses an MPPT charge controller to regulate DC output for charging batteries and powering DC loads. You will observe how power is shared between the turbine and the battery as the mill speed changes.",
-      "arabic": "مرحبًا ! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن MPPT لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين التوربينة والبطارية مع تغيير سرعة التوربينة.",
+      "arabic": "مرحبًا! في هذه التجربة، ستتعلم كيف يستخدم نظام طاقة الرياح وحدة تحكم شحن MPPT لتنظيم الخرج المستمر لشحن البطاريات وتغذية الأحمال المستمرة. ستلاحظ كيفية تقاسم الطاقة بين التوربينة والبطارية مع تغيير سرعة التوربينة.",
       "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
     },
     {
@@ -381,8 +381,8 @@
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
-      "english": "Switch on the off-grid inverter using the power switch located beneath the device.",
-      "arabic": "قم بتشغيل العاكس خارج الشبكة باستخدام مفتاح الطاقة الموجود أسفل الجهاز.",
+      "english": "Switch on the off-grid inverter by clicking the buttons next to its display.",
+      "arabic": "شغّل العاكس خارج الشبكة بالضغط على الأزرار بجوار شاشته.",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
@@ -391,18 +391,18 @@
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
-      "english": "Connect the (+VE) and (-VE) AC Output terminals of the Off-Grid Inverter module to the (+VE) and (-VE) terminals of the AC Lamp module.",
-      "arabic": "قم بتوصيل طرفي (+VE) و (-VE) لخرج التيار المتردد لوحدة العاكس خارج الشبكة بطرفي (+VE) و (-VE) لوحدة المصباح ذو التيار المتردد.",
+      "english": "Connect the (L) and (N) AC output terminals of the Off-Grid Inverter module to the (L) and (N) terminals of the AC Lamp module.",
+      "arabic": "صِل طرفي خرج التيار المتردد (L) و(N) لوحدة العاكس خارج الشبكة بطرفي (L) و(N) لوحدة مصباح التيار المتردد.",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
       "english": "Note: “After adding the AC lamp, the current drawn from the battery increased significantly. You can connect additional AC loads in parallel to observe the system's response to higher power demands.",
-      "arabic": "ملاحظة: بعد إضافة المصباح متردد، يزيد التيار المسحوب من البطارية بشكل ملحوظ. يمكنك توصيل أحمال متناوبة إضافية على التوازي لملاحظة استجابة النظام لزيادة الطلب على الطاقة.",
+      "arabic": "ملاحظة: بعد إضافة مصباح التيار المتردد، يزيد التيار المسحوب من البطارية بشكل ملحوظ. يمكنك توصيل أحمال متناوبة إضافية على التوازي لملاحظة استجابة النظام لزيادة الطلب على الطاقة.",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
       "english": "“After adding the AC lamp, the current drawn from the battery increased significantly. You can connect additional AC loads in parallel to observe the system's response to higher power demands.",
-      "arabic": "ملاحظة: بعد إضافة المصباح متردد، يزيد التيار المسحوب من البطارية بشكل ملحوظ. يمكنك توصيل أحمال متناوبة إضافية على التوازي لملاحظة استجابة النظام لزيادة الطلب على الطاقة.",
+      "arabic": "ملاحظة: بعد إضافة مصباح التيار المتردد، يزيد التيار المسحوب من البطارية بشكل ملحوظ. يمكنك توصيل أحمال متناوبة إضافية على التوازي لملاحظة استجابة النظام لزيادة الطلب على الطاقة.",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
@@ -412,7 +412,7 @@
     },
     {
       "english": "Connect the (+VE) and (-VE) output terminals of the Rectifier module to the (+VE) and (-VE) DC input terminals of the Off-Grid Inverter module.",
-      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المعدل بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة العاكس خارج الشبكة.",
+      "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المقوم بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة العاكس خارج الشبكة.",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
@@ -432,12 +432,12 @@
     },
     {
       "english": "Pop-up Quiz: What does a positive current reading on the battery indicate after connecting the AC grid? A) The battery is discharging B) The battery is idle C) The battery is charging ✅ Correct Answer: C",
-      "arabic": "سؤال: ما الذي يدل عليه قراءة التيار الموجب على البطارية بعد توصيل الشبكة الكهربائية؟ أ) البطارية تفرغ طاقتها ب) البطارية في حالة سكون ج) البطارية تُشحن ✅ الإجابة الصحيحة: ج",
+      "arabic": "سؤال: ما الذي تدل عليه قراءة التيار الموجب على البطارية بعد توصيل الشبكة الكهربائية؟ أ) البطارية تفرغ طاقتها ب) البطارية في حالة سكون ج) البطارية تُشحن ✅ الإجابة الصحيحة: ج",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
       "english": "What does a positive current reading on the battery indicate after connecting the AC grid?",
-      "arabic": "ما الذي يدل عليه قراءة التيار الموجب على البطارية بعد توصيل الشبكة الكهربائية؟",
+      "arabic": "ما الذي تدل عليه قراءة التيار الموجب على البطارية بعد توصيل الشبكة الكهربائية؟",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
@@ -462,7 +462,7 @@
     },
     {
       "english": "Experiment 4: OFF Grid System Using wind turbine",
-      "arabic": "التجربة4 : تجربة العاكس خارج الشبكة باستخدام توربينة الرياح",
+      "arabic": "التجربة 4: نظام العاكس خارج الشبكة باستخدام توربينة الرياح",
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
@@ -741,8 +741,8 @@
       "source": "Supplemental UI translation"
     },
     {
-      "english": "If you are going to reset the experiment, you have to reset the simulation in tia portal too.",
-      "arabic": "عند إعادة ضبط التجربة، يجب أيضًا إعادة ضبط المحاكاة في TIA Portal.",
+      "english": "Resetting the experiment will return it to its initial state.",
+      "arabic": "عند إعادة ضبط التجربة، ستعود إلى حالتها الأولية.",
       "source": "Supplemental UI translation"
     },
     {
@@ -921,8 +921,8 @@
       "source": "Supplemental UI translation"
     },
     {
-      "english": "Press “Connect” from the top right of the screen to connect the software with TIA portal.",
-      "arabic": "اضغط «اتصال» أعلى يمين الشاشة لربط البرنامج بـ TIA Portal.",
+      "english": "Connection is not available in this module.",
+      "arabic": "الاتصال غير متاح في هذا الجهاز.",
       "source": "Supplemental UI translation"
     },
     {
@@ -1016,8 +1016,8 @@
       "source": "Supplemental UI translation"
     },
     {
-      "english": "TIA Portal Connection",
-      "arabic": "اتصال TIA Portal",
+      "english": "Connection",
+      "arabic": "اتصال",
       "source": "Supplemental UI translation"
     },
     {
@@ -1347,7 +1347,7 @@
     },
     {
       "english": "AC Multimeter",
-      "arabic": "مقياس التيار المتردد",
+      "arabic": "ملتيميتر التيار المتردد",
       "source": "Supplemental UI translation"
     },
     {
@@ -1766,8 +1766,8 @@
       "source": "Equipment tooltip translation"
     },
     {
-      "english": "Photovoltaics Training System VL-RE",
-      "arabic": "نظام التدريب على الخلايا الكهروضوئية VL-RE",
+      "english": "Wind Energy",
+      "arabic": "طاقة الرياح",
       "source": "Equipment tooltip translation"
     },
     {
@@ -2010,5 +2010,45 @@
       "arabic": "لا يمكن تنفيذ هذا الإجراء الآن.",
       "source": "Runtime interaction warning"
     }
-  ]
+  ,
+    {
+      "english": "PWM is more advanced than MPPT in optimizing energy capture.",
+      "arabic": "متحكم الـ PWM أكثر تقدماً من متحكم الـ MPPT في تحسين استغلال الطاقة.",
+      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+    }
+,
+    {
+      "english": "Language",
+      "arabic": "اللغة",
+      "source": "Main Settings language selector"
+    }
+,
+    {
+      "english": "English",
+      "arabic": "الإنجليزية",
+      "source": "Main Settings language selector"
+    }
+,
+    {
+      "english": "Arabic",
+      "arabic": "العربية",
+      "source": "Main Settings language selector"
+    },
+    {
+      "english": "Experiment 1: PV Characteristic Curve Experiment",
+      "arabic": "التجربة 1: تجربة منحنى الخصائص للخلايا الكهروضوئية",
+      "source": "PV Lab experiment title"
+    },
+    {
+      "english": "Experiment 4: OFF Grid System Using Wind Turbine",
+      "arabic": "التجربة 4: نظام العاكس خارج الشبكة باستخدام توربينة الرياح",
+      "source": "Wind experiment title"
+    },
+    {"english":"To understand the function of an MPPT charge controller in regulating DC power from a wind mill for battery charging and DC load supply, and to observe the dynamic power sharing between the mill and the battery.","arabic":"فهم وظيفة وحدة تحكم شحن MPPT في تنظيم الطاقة المستمرة من طاحونة الرياح لشحن البطارية وتغذية الحمل المستمر، وملاحظة تقاسم الطاقة الديناميكي بين الطاحونة والبطارية.","source":"Experiment card terminology (checklist 79)"},
+    {"english":"To understand the operation of an off-grid inverter in converting DC power to AC power, and to study the effect of changing wind mill speed on system performance and observe power flow between wind mill, battery, and loads.","arabic":"فهم تشغيل العاكس خارج الشبكة في تحويل الطاقة المستمرة إلى طاقة متناوبة، ودراسة تأثير تغيير سرعة طاحونة الرياح على أداء النظام. وملاحظة تدفق الطاقة بين الطاحونة الهوائية والبطارية والأحمال.","source":"Experiment card terminology (checklist 79)"},
+    {"english":"Regulating DC Output from Wind Mill using MPPT Charger","arabic":"تنظيم الخرج المستمر من طاحونة الرياح باستخدام وحدة تحكم شحن MPPT","source":"Experiment card terminology (checklist 79)"},
+    {"english":"OFF Grid System Using Wind Mill","arabic":"تجربة العاكس خارج الشبكة باستخدام طاحونة الرياح","source":"Experiment card terminology (checklist 79)"},
+    {"english":"Regulating DC Output from Wind Mill using PWM Charger","arabic":"تنظيم الخرج المستمر من طاحونة الرياح باستخدام وحدة تحكم شحن PWM","source":"Experiment card terminology (checklist 79)"},
+    { "english": "Speed", "arabic": "السرعة", "source": "Guided graph tab" }
+]
 }

@@ -22,7 +22,7 @@ public static class WindSimulationStateAudit
     public static void Audit()
     {
         var scene=SceneManager.GetActiveScene();
-        Require(scene.path=="Assets/_Project/Scenes/PV Lab.unity"&&!scene.isDirty&&!EditorApplication.isPlayingOrWillChangePlaymode,"Open saved PV Lab outside Play Mode.");
+        Require(scene.path=="Assets/_Project/Scenes/Wind Lab.unity"&&!scene.isDirty&&!EditorApplication.isPlayingOrWillChangePlaymode,"Open saved Wind Lab outside Play Mode.");
         Canvas.ForceUpdateCanvases();
         var all=scene.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<Transform>(true)).ToArray();
         var session=all.Select(t=>t.GetComponent<WindSimulationSession>()).Single(s=>s);

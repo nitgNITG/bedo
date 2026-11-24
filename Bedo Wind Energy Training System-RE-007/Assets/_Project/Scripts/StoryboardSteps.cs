@@ -63,6 +63,8 @@ namespace TutorialFramework
 
             [Header("Delay Step")]
             public float delayDuration = 0f;
+            [Tooltip("Use elapsed real time for instructions that must remain visible for a fixed duration.")]
+            public bool useRealtimeDelay;
 
 
             [Header("Guided UI")]
@@ -607,12 +609,40 @@ namespace TutorialFramework
             if (interactionManager == null)
                 return;
 
-
             if (experimentTitleText != null)
             {
-                experimentTitleText.text =
-                    interactionManager.ExperimentName;
+                // Keep the English source key here; the existing localization pass
+                // renders the translated and correctly shaped Arabic title.
+                experimentTitleText.text = interactionManager.ExperimentName;
+
+                if (WindLocalization.Instance != null)
+                    WindLocalization.Instance.SetLanguage(
+                        WindLocalization.Arabic ? "Arabic" : "English");
+
+                // Startup selection can assign this title before localization has
+                // initialized; retry on the next frame so it is never left English.
+                // Selection also runs on inactive storyboards before a scene reload.
+                // Keep the localization retry on an active owner in that case.
+                MonoBehaviour titleHost = gameObject.activeInHierarchy ? this :
+                    (WindLocalization.Instance != null ? (MonoBehaviour)WindLocalization.Instance : interactionManager);
+                if (titleHost != null && titleHost.gameObject.activeInHierarchy)
+                    titleHost.StartCoroutine(RefreshExperimentTitleLocalization());
             }
+        }
+
+        private IEnumerator RefreshExperimentTitleLocalization()
+        {
+            yield return null;
+
+            while (WindLocalization.Instance == null)
+            {
+                if (this == null) yield break;
+                yield return null;
+            }
+
+            if (experimentTitleText != null)
+                WindLocalization.Instance.SetLanguage(
+                    WindLocalization.Arabic ? "Arabic" : "English");
         }
 
 
@@ -623,6 +653,21 @@ namespace TutorialFramework
         public void StartStoryboard()
         {
             currentStep = -1;
+
+            bool trackingGuided = InteractionManager.Instance != null &&
+                InteractionManager.Instance.Guided;
+            string trackingExperimentId = trackingGuided
+                ? WindStudentTracking.GuidedExperimentId(StoryboardID)
+                : WindStudentTracking.FreeExperimentIdFromStoryboard(StoryboardID);
+            if (!string.IsNullOrEmpty(trackingExperimentId))
+            {
+                WindStudentTracking.StartExperiment(
+                    trackingExperimentId,
+                    trackingGuided ? "guided" : "free");
+                if (!trackingGuided)
+                    WindStudentTracking.StartStep(1);
+            }
+
 
 
             if (InteractionManager.Instance.Guided)
@@ -1301,6 +1346,8 @@ namespace TutorialFramework
             {
                 Step previous =
                     steps[currentStep];
+                WindStudentTracking.CompleteStep(currentStep + 1);
+
 
 
                 if (previous != null)
@@ -1337,7 +1384,8 @@ namespace TutorialFramework
             if (index < 0 ||
                 index >= steps.Count)
             {
-                Debug.Log(
+                WindStudentTracking.CompleteExperiment();
+Debug.Log(
                     "Storyboard Finished"
                 );
 
@@ -1351,6 +1399,17 @@ namespace TutorialFramework
 
             Step step =
                 steps[currentStep];
+
+            if (currentStep == steps.Count - 1)
+            {
+                // The final storyboard entry is the completion screen/chime.
+                WindStudentTracking.CompleteExperiment();
+            }
+            else if (step != null && step.interaction != null)
+            {
+                WindStudentTracking.StartStep(currentStep + 1);
+            }
+
 
 
             if (step.uiObject)
@@ -1429,9 +1488,10 @@ namespace TutorialFramework
             Step step
         )
         {
-            yield return new WaitForSeconds(
-                step.delayDuration
-            );
+            if (step.useRealtimeDelay)
+                yield return new WaitForSecondsRealtime(step.delayDuration);
+            else
+                yield return new WaitForSeconds(step.delayDuration);
 
 
             step.onStepEnd?.Invoke();

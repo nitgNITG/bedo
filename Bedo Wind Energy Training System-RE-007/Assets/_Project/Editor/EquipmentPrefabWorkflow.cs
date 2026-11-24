@@ -19,7 +19,7 @@ public static class EquipmentPrefabWorkflow
         if (previous.isDirty || EditorApplication.isPlayingOrWillChangePlaymode)
             throw new InvalidOperationException("Save your scene and leave Play Mode before auditing delivery scenes.");
         var previousPath = previous.path;
-        foreach (var path in new[] { "Assets/_Project/Scenes/Main Menu.unity", "Assets/_Project/Scenes/PV Lab.unity" })
+        foreach (var path in new[] { "Assets/_Project/Scenes/Main Menu.unity", "Assets/_Project/Scenes/Wind Lab.unity" })
         {
             EditorSceneManager.OpenScene(path); Audit();
         }

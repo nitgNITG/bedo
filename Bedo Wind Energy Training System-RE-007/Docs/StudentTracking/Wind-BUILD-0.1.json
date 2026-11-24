@@ -1,0 +1,757 @@
+{
+    "schemaVersion": "2.1",
+    "projectId": "com.BEDO.Wind-Energy-Training-System",
+    "projectVersion": "0.1",
+    "assessmentVersion": "1.0.0",
+    "experiments": [
+        {
+            "experimentId": "EXP01_FREE",
+            "title": "Wind Experiment 1",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        },
+        {
+            "experimentId": "EXP01_GUIDED",
+            "title": "Speed Curve Characteristics",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 2,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 3,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 4,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 5,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 6,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 7,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 8,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 9,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 10,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 11,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 12,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 13,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 14,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 15,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 16,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 17,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 18,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 19,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 20,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 21,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 22,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 23,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 24,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 25,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        },
+        {
+            "experimentId": "EXP02_FREE",
+            "title": "Wind Experiment 2",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        },
+        {
+            "experimentId": "EXP02_GUIDED",
+            "title": "Regulating DC Output from Wind Turbine using PWM Charger",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 2,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 3,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 4,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 5,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 6,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 7,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 8,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 9,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 10,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 11,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 12,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 13,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 14,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 15,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 16,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 17,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 18,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 19,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 20,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 21,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 22,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 23,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 24,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 25,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 26,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 27,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 28,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 29,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 30,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 31,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        },
+        {
+            "experimentId": "EXP03_FREE",
+            "title": "Wind Experiment 3",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        },
+        {
+            "experimentId": "EXP03_GUIDED",
+            "title": "Regulating DC Output from Wind Turbine using MPPT Charger",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 2,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 3,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 4,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 5,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 6,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 7,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 8,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 9,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 10,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 11,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 12,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 13,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 14,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 15,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 16,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 17,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 18,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 19,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 20,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 21,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 22,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 23,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 24,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 25,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 26,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 27,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 28,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 29,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 30,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 31,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        },
+        {
+            "experimentId": "EXP04_FREE",
+            "title": "Wind Experiment 4",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        },
+        {
+            "experimentId": "EXP04_GUIDED",
+            "title": "OFF Grid System Using Wind Turbine",
+            "steps": [
+                {
+                    "stepNumber": 1,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 2,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 3,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 4,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 5,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 6,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 7,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 8,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 9,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 10,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 11,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 12,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 13,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 14,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 15,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 16,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 17,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 18,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 19,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 20,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 21,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 22,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 23,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 24,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 25,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 26,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 27,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 28,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 29,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 30,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 31,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 32,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 33,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 34,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 35,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 36,
+                    "tracked": true,
+                    "requiredForCompletion": true
+                },
+                {
+                    "stepNumber": 37,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                },
+                {
+                    "stepNumber": 38,
+                    "tracked": false,
+                    "requiredForCompletion": false
+                }
+            ],
+            "questions": [
+                {
+                    "questionId": "Q_TRUEANDFALSEQUESTION",
+                    "questionType": "TrueFalse",
+                    "requiredForCompletion": false
+                }
+            ]
+        }
+    ]
+}

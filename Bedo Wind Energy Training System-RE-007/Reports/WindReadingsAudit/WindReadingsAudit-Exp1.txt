@@ -1,0 +1,27 @@
+Wind guided functional audit, experiment 1
+STEP 0 @ 5.255 s
+STEP 1 @ 5.755 s
+STEP 2 @ 6.258 s
+STEP 3 @ 6.759 s
+STEP 4 @ 7.261 s
+STEP 5 @ 7.762 s
+STEP 6 @ 8.264 s
+STEP 7 @ 8.765 s
+STEP 8 @ 9.267 s
+STEP 9 @ 9.768 s
+STEP 10 @ 10.270 s
+STEP 11 @ 10.521 s
+STEP 12 @ 10.771 s
+STEP 13 @ 11.023 s
+STEP 14 @ 11.274 s
+STEP 15 @ 11.526 s
+STEP 16 @ 11.777 s
+STEP 17 @ 12.027 s
+STEP 18 @ 13.282 s
+STEP 19 @ 18.041 s
+STEP 20 @ 18.291 s
+STEP 21 @ 19.043 s
+STEP 22 @ 20.046 s
+STEP 23 @ 21.300 s
+STEP 24 @ 23.301 s
+FINISHED points=5 chart=5 tables=200,400,600,800,1000 / 9.17,18.33,27.5,36.67,45.83 / 2.29,4.58,6.88,9.17,11.46

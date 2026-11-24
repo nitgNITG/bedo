@@ -43,7 +43,7 @@ public static class WindExp4WireCurveSetup
  [MenuItem("PV System/Smooth Created EXP4 Wire Curves")]
  public static void Smooth()
  {
-  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||preview.Count>0||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Save PV Lab and end previews first.");
+  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||preview.Count>0||scene.path!="Assets/_Project/Scenes/Wind Lab.unity")throw new InvalidOperationException("Save Wind Lab and end previews first.");
   var owned=Wires();var containers=owned.Select(w=>w.wireObject.GetComponentInChildren<SplineContainer>(true)).ToHashSet();
   var originals=scene.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<SplineContainer>(true)).Where(c=>!containers.Contains(c)).ToDictionary(c=>c,c=>EditorJsonUtility.ToJson(c));
   foreach(var w in owned)

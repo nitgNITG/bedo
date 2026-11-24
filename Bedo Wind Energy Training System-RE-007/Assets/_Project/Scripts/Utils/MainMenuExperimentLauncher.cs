@@ -5,7 +5,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Lightweight Main Menu replacement for the old scene-local experiment
 /// button events.  It keeps only an experiment ID and display name, then asks
-/// the persistent InteractionManager to load the complete PV Lab scene.
+/// the persistent InteractionManager to load the complete Wind Lab scene.
 /// </summary>
 [RequireComponent(typeof(Button))]
 public class MainMenuExperimentLauncher : MonoBehaviour

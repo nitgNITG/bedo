@@ -11,7 +11,7 @@ public static class WindMainMenuSetup
     [MenuItem("Tools/Wind/Update Main Menu For EXP1")]
     public static void Configure()
     {
-        var lab = EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+        var lab = EditorSceneManager.OpenScene("Assets/_Project/Scenes/Wind Lab.unity");
         var storyboard = UnityEngine.Object.FindObjectsByType<StoryboardSteps>(FindObjectsInactive.Include, FindObjectsSortMode.None)
             .Single(s => s.StoryboardID == "Speed Curve Characteristics");
         string id = storyboard.StoryboardID;

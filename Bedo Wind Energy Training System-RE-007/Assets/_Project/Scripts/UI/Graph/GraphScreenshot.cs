@@ -7,9 +7,6 @@ public class GraphScreenshot : MonoBehaviour
     [Header("Graph Area")]
     [SerializeField] private RectTransform graphRect;
 
-    private int imageCounter = 0;
-
-
     public void SaveGraphImage()
     {
         StartCoroutine(CaptureGraph());
@@ -72,27 +69,7 @@ public class GraphScreenshot : MonoBehaviour
         byte[] bytes = texture.EncodeToPNG();
 
 
-        string path =
-            Application.persistentDataPath +
-            "/PV_Graph_" +
-            imageCounter +
-            ".png";
-
-
-        System.IO.File.WriteAllBytes(
-            path,
-            bytes
-        );
-
-
-        imageCounter++;
-
-
-        Debug.Log(
-            "Graph saved at: " + path
-        );
-
-
         Destroy(texture);
+        PVExperimentExporter.SaveWindFile(bytes, "Wind_Graph", "png");
     }
 }

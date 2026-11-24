@@ -60,6 +60,8 @@ public class ExperimentUIActions : MonoBehaviour
     /// </summary>
     public void ExitGame()
     {
+        WindStudentTracking.CompleteSession();
+
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

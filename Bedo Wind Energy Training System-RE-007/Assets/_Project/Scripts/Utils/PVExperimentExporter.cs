@@ -204,7 +204,7 @@ public class PVExperimentExporter : MonoBehaviour
         SaveWindFile(bytes, "Wind_Screen", "png");
     }
 
-    private static void SaveWindFile(byte[] bytes, string name, string extension)
+    internal static void SaveWindFile(byte[] bytes, string name, string extension)
     {
         if (bytes == null || bytes.Length == 0) return;
 #if UNITY_WEBGL && !UNITY_EDITOR
