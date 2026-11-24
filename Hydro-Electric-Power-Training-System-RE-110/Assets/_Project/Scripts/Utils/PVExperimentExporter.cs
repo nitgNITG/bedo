@@ -41,11 +41,11 @@ public class PVExperimentExporter : MonoBehaviour
 
     public string BuildWindCSV()
     {
-        var text = new System.Text.StringBuilder("Speed (RPM),DC voltage (V)\n");
+        var text = new System.Text.StringBuilder("Speed (RPM),DC voltage (V),DC current (A)\n");
         for (int row = 0; row < windPoints.Count; row++)
         {
             var p = windPoints[row];
-            float[] values = { p.rpm, windGraphVoltages[row] };
+            float[] values = { p.rpm, windGraphVoltages[row], p.dcCurrent };
             for (int i = 0; i < values.Length; i++)
             {
                 if (i > 0) text.Append(',');
@@ -103,9 +103,19 @@ public class PVExperimentExporter : MonoBehaviour
         if (windExport)
         {
             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(BuildWindCSV());
-            SaveWindFile(bytes, "Wind_Speed_Curve", "csv");
+            SaveWindFile(bytes, "Hydro_Speed_Curve", "csv");
             return;
         }
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        var csv = new System.Text.StringBuilder("Resistance (Ohm),Voltage (V),Current (A)\n");
+        foreach (var p in points)
+            csv.Append(p.resistance.ToString(CultureInfo.InvariantCulture)).Append(',')
+                .Append(p.voltage.ToString(CultureInfo.InvariantCulture)).Append(',')
+                .Append(p.current.ToString(CultureInfo.InvariantCulture)).Append('\n');
+        SaveWindFile(System.Text.Encoding.UTF8.GetBytes(csv.ToString()), "PV_Data", "csv");
+        return;
+#else
 
         string folder =
             StandaloneFileBrowser.OpenFolderPanel(
@@ -151,6 +161,7 @@ public class PVExperimentExporter : MonoBehaviour
         Debug.Log(
             "CSV saved: " + path
         );
+#endif
     }
 
 
@@ -172,6 +183,11 @@ public class PVExperimentExporter : MonoBehaviour
             return;
         }
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+        StartCoroutine(CaptureGraphForWebGL());
+        return;
+#else
+
         string folder =
             StandaloneFileBrowser.OpenFolderPanel(
                 "Choose Image Save Location",
@@ -188,6 +204,7 @@ public class PVExperimentExporter : MonoBehaviour
         StartCoroutine(
             CaptureGraph(folder)
         );
+#endif
 
     }
 
@@ -204,8 +221,21 @@ public class PVExperimentExporter : MonoBehaviour
             yield break;
         }
         byte[] bytes = MapCameraScreenshotButton_RT.CaptureSurfaceToPngBytes(windCaptureSurface, 2048);
-        SaveWindFile(bytes, "Wind_Screen", "png");
+        SaveWindFile(bytes, "Hydro_Screen", "png");
     }
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    private IEnumerator CaptureGraphForWebGL()
+    {
+        yield return new WaitForEndOfFrame();
+        var texture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        texture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+        texture.Apply();
+        byte[] bytes = texture.EncodeToPNG();
+        Destroy(texture);
+        SaveWindFile(bytes, "PV_Graph", "png");
+    }
+#endif
 
     private static void SaveWindFile(byte[] bytes, string name, string extension)
     {
@@ -214,9 +244,9 @@ public class PVExperimentExporter : MonoBehaviour
         Download(System.Convert.ToBase64String(bytes), name + "." + extension);
 #else
 #if UNITY_EDITOR
-        string path = UnityEditor.EditorUtility.SaveFilePanel("Save Wind " + extension.ToUpperInvariant(), "", name + "." + extension, extension);
+        string path = UnityEditor.EditorUtility.SaveFilePanel("Save Hydro " + extension.ToUpperInvariant(), "", name + "." + extension, extension);
 #else
-        string path = StandaloneFileBrowser.SaveFilePanel("Save Wind " + extension.ToUpperInvariant(), "", name, extension);
+        string path = StandaloneFileBrowser.SaveFilePanel("Save Hydro " + extension.ToUpperInvariant(), "", name, extension);
 #endif
         if (!string.IsNullOrEmpty(path))
         {
@@ -236,7 +266,7 @@ public class PVExperimentExporter : MonoBehaviour
         string path =
             Path.Combine(
                 folder,
-                windExport ? "Wind_Graph.png" : "PV_Graph.png"
+                windExport ? "Hydro_Graph.png" : "PV_Graph.png"
             );
 
 

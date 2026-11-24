@@ -8,6 +8,7 @@ namespace Bedo.Hydro
     public sealed class HydroOffGridGuided : MonoBehaviour
     {
         public StoryboardSteps storyboard;
+        [SerializeField] private string speedStepId;
         public Slider slider;
         public Button shortcut;
         public CanvasGroup panel;
@@ -20,7 +21,10 @@ namespace Bedo.Hydro
         [SerializeField] private HydroGuidedMonitor graph;
         private HydroReferenceControls referenceControls;
         private bool inverter, acLoad, generator, grid, speedUnlocked, advanced;
-        private int rpm;
+        private float rpm;
+        public bool GeneratorEnabled => generator;
+        public HydroExperimentOneReadings.Reading GeneratorReading => HydroExperimentOneReadings.ReadLoaded(generator ? rpm : 0f, 4f);
+        public bool CanAdjustSpeed => speedUnlocked;
 
         private void OnEnable()
         {
@@ -28,11 +32,11 @@ namespace Bedo.Hydro
             if (referenceControls) referenceControls.enabled = false;
             slider.minValue = 0;
             slider.maxValue = 5;
-            slider.wholeNumbers = true;
+            slider.wholeNumbers = false;
             slider.interactable = true;
             slider.SetValueWithoutNotify(0);
             slider.onValueChanged.AddListener(SetSpeed);
-            shortcut.onClick.AddListener(ToggleSpeed);
+
             ShowSpeed(false);
             Refresh();
         }
@@ -73,15 +77,15 @@ namespace Bedo.Hydro
 
         private void SetSpeed(float stop)
         {
-            if (!speedUnlocked || !panel.interactable) return;
-            rpm = Mathf.Clamp(Mathf.RoundToInt(stop), 0, 5) * 200;
+            if (!speedUnlocked || (HydroSpeedInput.Instance ? !HydroSpeedInput.Instance.AcceptSpeedChange : !panel.interactable)) return;
+            rpm = Mathf.Clamp(stop, 0, 5) * 200;
             Refresh();
             if (graph && generator && rpm > 0)
             {
-                float dcVoltage = rpm * .4f / 1.2f;
-                graph.AddDcReading(rpm, dcVoltage, dcVoltage / 4f);
+                var reading = HydroExperimentOneReadings.ReadLoaded(rpm, 4f);
+                graph.AddDcReading(reading.Rpm, reading.DcVoltage, reading.DcCurrent);
             }
-            if (rpm != 1000 || advanced) return;
+            if (rpm != 1000 || advanced || !storyboard.IsCurrentStep(speedStepId)) return;
             advanced = true;
             ShowSpeed(false);
             storyboard.GoNextStep();
@@ -101,26 +105,22 @@ namespace Bedo.Hydro
 
         private void Refresh()
         {
-            // Hydro workbook, Sheet1 rows 70–76. Preserve the printed load
-            // constants and the subtraction in column W.
-            float acVoltage = generator ? rpm * .4f : 0;
-            float acCurrent = acVoltage / 4f;
-            float dcVoltage = acVoltage / 1.2f;
-            float dcCurrent = dcVoltage / 4f;
-            float dcLoadCurrent = inverter ? 20.8f : 0;
-            float acLoadInput = inverter && acLoad ? 20.8f : 0;
-            float acLoadVoltage = inverter && acLoad ? 220f : 0;
-            float acLoadCurrent = inverter && acLoad ? 2.27f : 0;
-            float batteryVoltage = inverter ? 24f : 0;
-            float balance = dcCurrent - dcLoadCurrent - acLoadInput;
-            float batteryCurrent = !inverter ? 0 : grid ? balance - 40f : Mathf.Min(balance, 40f);
-            float gridCurrent = grid ? -batteryCurrent * 24f / 220f : 0;
+            var source = HydroExperimentOneReadings.ReadLoaded(generator ? rpm : 0f, 4f);
+            float dcLoadCurrent = inverter ? HydroFreeLabReadings.DcLedCurrent : 0f;
+            float acLoadInput = inverter && acLoad ? HydroFreeLabReadings.AcLampBatteryCurrent : 0f;
+            float acLoadVoltage = inverter && acLoad ? HydroFreeLabReadings.GridVoltage : 0f;
+            float acLoadCurrent = inverter && acLoad ? HydroFreeLabReadings.AcLampDisplayedCurrent : 0f;
+            float batteryVoltage = inverter ? HydroFreeLabReadings.BatteryVoltage : 0f;
+            float balance = HydroFreeLabReadings.ChargeSource(source) - dcLoadCurrent - acLoadInput;
+            float batteryCurrent = inverter ? HydroFreeLabReadings.BatteryCurrent(balance, grid) : 0f;
+            float gridVoltage = grid ? HydroFreeLabReadings.GridVoltage : 0f;
+            float gridCurrent = grid ? HydroFreeLabReadings.GridCurrent(balance) : 0f;
             SetLamp(dcLamp, dcLampOff, inverter);
             SetLamp(acLamp, acLampOff, inverter && acLoad);
             if (speedText) speedText.text = rpm.ToString();
-            float[] values = { rpm, acVoltage, acCurrent, acVoltage * acCurrent, dcVoltage, dcCurrent, dcVoltage * dcCurrent,
-                batteryVoltage, batteryCurrent, batteryVoltage * batteryCurrent, inverter ? 24f : 0, dcLoadCurrent, 24f * dcLoadCurrent,
-                acLoadVoltage, acLoadCurrent, acLoadVoltage * acLoadCurrent, grid ? 220f : 0, gridCurrent, 220f * gridCurrent };
+            float[] values = { rpm, source.AcVoltage, source.AcCurrent, source.AcPower, source.DcVoltage, source.DcCurrent, source.DcPower,
+                batteryVoltage, batteryCurrent, batteryVoltage * batteryCurrent, batteryVoltage, dcLoadCurrent, batteryVoltage * dcLoadCurrent,
+                acLoadVoltage, acLoadCurrent, acLoadVoltage * acLoadCurrent, gridVoltage, gridCurrent, gridVoltage * gridCurrent };
             for (int i = 0; i < values.Length && i < meters.Length; i++)
                 if (meters[i]) meters[i].text = values[i].ToString(i == 0 ? "0" : "0.00");
         }

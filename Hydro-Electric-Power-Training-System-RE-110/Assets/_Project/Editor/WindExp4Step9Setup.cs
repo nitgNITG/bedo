@@ -49,7 +49,7 @@ public static class WindExp4Step9Setup
  public static void Configure()
  {
   var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-  if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Save PV Lab and stop Play Mode first.");
+  if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/Hydro Lab.unity")throw new InvalidOperationException("Save Hydro Lab and stop Play Mode first.");
   var steps=Steps();var owner=steps.GetComponentInParent<StoryboardSteps>();var root=steps.Find("Step 9");
   var templates=steps.GetComponentsInChildren<WireInteraction>(true).Where(w=>w.pointA&&w.pointB&&w.plugA&&w.plugB&&w.wireObject).ToArray();
   var uiRoot=scene.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<Transform>(true)).Single(t=>t.name=="Exp 4 UI");

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#111b29">
+  <title>{{{ PRODUCT_NAME }}} | BEDO</title>
+  <link rel="icon" type="image/png" href="TemplateData/bedo-logo.png">
+  <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+<body>
+  <div id="webgl-shell">
+    <header class="brandbar">
+      <img class="brand-logo" src="TemplateData/bedo-logo.png" alt="BEDO">
+      <div class="brand-copy">
+        <div id="unity-build-title">{{{ PRODUCT_NAME }}}</div>
+        <div class="brand-subtitle">Virtual Labs</div>
+      </div>
+    </header>
+
+    <main id="unity-container">
+      <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1" aria-label="{{{ PRODUCT_NAME }}}"></canvas>
+      <div id="unity-loading-bar" aria-live="polite">
+        <img src="TemplateData/bedo-logo.png" alt="BEDO">
+        <div class="loading-label">Loading training system</div>
+        <div id="unity-progress-bar-empty"><div id="unity-progress-bar-full"></div></div>
+      </div>
+      <div id="unity-warning" role="alert"></div>
+    </main>
+  </div>
+
+  <script>
+    // The WebGL plugin queues events here and forwards them to the optional
+    // platform callback or the "student-tracking" CustomEvent channel.
+    window.studentTrackingEvents = Array.isArray(window.studentTrackingEvents)
+      ? window.studentTrackingEvents
+      : [];
+    const canvas = document.querySelector("#unity-canvas");
+
+    function unityShowBanner(message, type) {
+      const banner = document.querySelector("#unity-warning");
+      const item = document.createElement("div");
+      item.textContent = message;
+      item.className = type === "error" ? "warning-item error" : "warning-item notice";
+      banner.appendChild(item);
+      banner.classList.add("is-visible");
+      if (type !== "error") {
+        window.setTimeout(() => {
+          item.remove();
+          if (!banner.children.length) banner.classList.remove("is-visible");
+        }, 5000);
+      }
+    }
+
+    const buildUrl = "Build";
+    const loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+    const config = {
+      arguments: [],
+      dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+      frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_THREADS
+      workerUrl: buildUrl + "/{{{ WORKER_FILENAME }}}",
+#endif
+#if USE_WASM
+      codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+      symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+      productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+      productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+      showBanner: unityShowBanner
+    };
+
+    document.querySelector("#unity-loading-bar").style.display = "grid";
+    const loader = document.createElement("script");
+    loader.src = loaderUrl;
+    loader.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        document.querySelector("#unity-progress-bar-full").style.width = `${progress * 100}%`;
+      }).then(() => {
+        document.querySelector("#unity-loading-bar").classList.add("is-hidden");
+      }).catch((message) => {
+        unityShowBanner(message, "error");
+      });
+    };
+    loader.onerror = () => unityShowBanner("Unable to load the Unity WebGL player.", "error");
+    document.body.appendChild(loader);
+  </script>
+</body>
+</html>

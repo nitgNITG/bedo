@@ -1,4 +1,4 @@
-using System.Collections;
+using TutorialFramework;using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -105,7 +105,8 @@ public class MultipleChoiceQuestionPanel : MonoBehaviour
     /// </summary>
     private void HandleQuestionActivated(MultipleChoiceQuestionScriptableObject question)
     {
-        currentQuestion = question;
+        currentQuestion = question;
+        HydroStudentTracking.ShowQuestion(currentQuestion.name, "MultipleChoice");
         IsMultipleChoiceQuestionPanelShowen.Value = true;
     }
 
@@ -162,7 +163,8 @@ public class MultipleChoiceQuestionPanel : MonoBehaviour
     /// </summary>
     private void OnChoiceSelected(int selectedIndex)
     {
-        bool correct = currentQuestion.IsAnsweredCorrectly(selectedIndex);
+        bool correct = currentQuestion.IsAnsweredCorrectly(selectedIndex);
+        HydroStudentTracking.AnswerQuestion(currentQuestion.name, "MultipleChoice", selectedIndex.ToString(), correct);
         if (answerResult != null)
             answerResult.Raise(correct)  ;
         else

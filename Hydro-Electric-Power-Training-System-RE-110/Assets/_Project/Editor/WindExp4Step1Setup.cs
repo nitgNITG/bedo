@@ -72,7 +72,7 @@ public static class WindExp4Step1Setup
     public static void Configure()
     {
         var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-        if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Open saved PV Lab in Edit Mode.");
+        if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/Hydro Lab.unity")throw new InvalidOperationException("Open saved Hydro Lab in Edit Mode.");
         var steps=Steps();var step=steps.Find("Step 1");var wires=steps.Find("Wires");var pointers=steps.Find("Pointers");
         if(step==null||wires==null||pointers==null)throw new InvalidOperationException("Missing new EXP4 folders.");
         var templates=steps.GetComponentsInChildren<WireInteraction>(true).Where(w=>w.pointA&&w.pointB&&w.wireObject&&w.plugA&&w.plugB).ToArray();

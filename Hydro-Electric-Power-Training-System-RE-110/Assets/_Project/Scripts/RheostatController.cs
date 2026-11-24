@@ -77,7 +77,7 @@ public class RheostatController : MonoBehaviour
 
     private void UpdateGraph()
     {
-        if (pvGraphController != null)
+        if (pvGraphController != null && pvGraphController.isActiveAndEnabled)
             pvGraphController.UpdateMeasurement(currentResistance, this);
     }
 

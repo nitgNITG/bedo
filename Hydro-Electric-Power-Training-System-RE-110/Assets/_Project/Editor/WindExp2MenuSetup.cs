@@ -18,7 +18,7 @@ public static class WindExp2MenuSetup
             throw new InvalidOperationException("Save your current scene edits first.");
         const string id = "Regulating DC Output from Wind Turbine using MPPT Charger";
         string display = "Experiment 3: " + id;
-        EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+        EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hydro Lab.unity");
         var owner = Object.FindObjectsByType<TutorialFramework.StoryboardSteps>(FindObjectsInactive.Include, FindObjectsSortMode.None).Single(s => s.StoryboardID == id);
         var manager = Object.FindObjectsByType<TutorialFramework.InteractionManager>(FindObjectsInactive.Include, FindObjectsSortMode.None).Single();
         var labSelector = Object.FindObjectsByType<ExperimentSelector>(FindObjectsInactive.Include, FindObjectsSortMode.None).Single();

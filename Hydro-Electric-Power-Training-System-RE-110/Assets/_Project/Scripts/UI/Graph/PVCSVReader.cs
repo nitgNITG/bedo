@@ -103,46 +103,15 @@ public class PVCSVReader : MonoBehaviour
             float.IsNaN(resistance) || float.IsInfinity(resistance) || resistance <= 0f)
             return false;
 
-        var factors = new SortedDictionary<float, Vector2>();
-        using (var reader = new StringReader(calibration.text))
-        {
-            reader.ReadLine(); // R, C1, C2, followed by workbook reference values.
-            string row;
-            while ((row = reader.ReadLine()) != null)
-            {
-                if (string.IsNullOrWhiteSpace(row)) continue;
-                string[] cells = row.Split(',');
-                if (cells.Length < 3 ||
-                    !float.TryParse(cells[0], NumberStyles.Float, CultureInfo.InvariantCulture, out float r) ||
-                    !float.TryParse(cells[1], NumberStyles.Float, CultureInfo.InvariantCulture, out float c1) ||
-                    !float.TryParse(cells[2], NumberStyles.Float, CultureInfo.InvariantCulture, out float c2) ||
-                    r <= 0f || c1 <= 0f || c2 <= 0f)
-                    return false;
-                factors[r] = new Vector2(c1, c2);
-            }
-        }
-        if (factors.Count == 0) return false;
-
-        // Interpolate only the source calibration factors, then evaluate the
-        // equations at the exact RPM and load. Do not interpolate power values.
-        var lower = factors.First();
-        var upper = factors.Last();
-        foreach (var pair in factors)
-        {
-            if (pair.Key <= resistance) lower = pair;
-            if (pair.Key >= resistance) { upper = pair; break; }
-        }
-        Vector2 constants = lower.Key == upper.Key ? lower.Value :
-            Vector2.Lerp(lower.Value, upper.Value,
-                Mathf.InverseLerp(lower.Key, upper.Key, resistance));
-        reading.rpm = Mathf.Clamp(rpm, 0f, 1000f);
+        var source = Bedo.Hydro.HydroExperimentOneReadings.ReadLoaded(rpm, resistance);
+        reading.rpm = source.Rpm;
         reading.resistance = resistance;
-        reading.acVoltage = 0.055f * reading.rpm;
-        reading.acCurrent = reading.acVoltage / resistance;
-        reading.acPower = reading.acVoltage * reading.acCurrent;
-        reading.dcVoltage = reading.acVoltage / 1.2f * constants.x;
-        reading.dcCurrent = reading.dcVoltage / (resistance * constants.y);
-        reading.dcPower = reading.dcVoltage * reading.dcCurrent;
+        reading.acVoltage = source.AcVoltage;
+        reading.acCurrent = source.AcCurrent;
+        reading.acPower = source.AcPower;
+        reading.dcVoltage = source.DcVoltage;
+        reading.dcCurrent = source.DcCurrent;
+        reading.dcPower = source.DcPower;
         return true;
     }
 

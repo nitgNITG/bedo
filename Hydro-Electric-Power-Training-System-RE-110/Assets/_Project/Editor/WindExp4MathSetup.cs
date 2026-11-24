@@ -93,7 +93,7 @@ public static class WindExp4MathSetup
     public static void Configure()
     {
         var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-        if (Application.isPlaying || scene.path != "Assets/_Project/Scenes/PV Lab.unity") throw new Exception("Open PV Lab and stop Play Mode first.");
+        if (Application.isPlaying || scene.path != "Assets/_Project/Scenes/Hydro Lab.unity") throw new Exception("Open Hydro Lab and stop Play Mode first.");
         var owner = Owner(Id); var steps = Steps(owner); var binder = Binder(owner);
         var root = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)).Single(t => t.name == "Wind UI").Find("Diversion control/Exp 4 Numbers");
         if (!root) throw new Exception("Missing EXP4 number group.");

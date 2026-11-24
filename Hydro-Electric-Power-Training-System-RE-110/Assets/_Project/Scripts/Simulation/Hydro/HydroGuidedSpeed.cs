@@ -10,7 +10,7 @@ namespace Bedo.Hydro
         [SerializeField] private UnityEvent<float, float> onReading = new UnityEvent<float, float>();
 
         private readonly HashSet<int> measuredStops = new HashSet<int>();
-        private int unloadedStop;
+        private float unloadedStop;
         private float rpm;
         [SerializeField] private Transform rotorVisual;
 
@@ -26,6 +26,7 @@ namespace Bedo.Hydro
         private bool countingUnloadedReadings;
         private bool unloadedStepCompleted;
 
+        public bool OutputEnabled => outputEnabled;
         public bool IsLoaded => positiveConnected && negativeConnected;
 
         public HydroExperimentOneReadings.Reading CurrentReading => !outputEnabled
@@ -93,9 +94,12 @@ namespace Bedo.Hydro
             FinishSpeedChange(previousRpm);
         }
 
-        public int SliderStop => IsLoaded ? Mathf.FloorToInt(rpm / HydroExperimentOneReadings.LoadedSpeedIncrement) : unloadedStop;
+        public float SliderPosition => IsLoaded ? rpm / HydroExperimentOneReadings.LoadedSpeedIncrement : unloadedStop;
+        public int SliderStop => Mathf.FloorToInt(SliderPosition);
 
-        public void SetSliderStop(int stop)
+        public void SetSliderStop(int stop) => SetSliderPosition(stop);
+
+        public void SetSliderPosition(float stop)
         {
             if (!outputEnabled) return;
             float previousRpm = rpm;
@@ -118,7 +122,7 @@ namespace Bedo.Hydro
 
             PublishReading();
             if (!IsLoaded && countingUnloadedReadings && unloadedStop > 0 &&
-                measuredStops.Add(unloadedStop) && measuredStops.Count == 3)
+                measuredStops.Add(Mathf.RoundToInt(rpm)) && measuredStops.Count == 3)
             {
                 countingUnloadedReadings = false;
                 unloadedStepCompleted = true;

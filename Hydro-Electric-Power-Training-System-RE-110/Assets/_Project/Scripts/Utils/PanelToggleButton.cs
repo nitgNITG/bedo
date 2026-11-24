@@ -3,6 +3,8 @@ using TutorialFramework;
 
 public class PanelToggleButton : MonoBehaviour
 {
+    public bool IsOpen => panel != null && panel.activeInHierarchy;
+
     [Header("Panel")]
     [SerializeField] private GameObject panel;
 

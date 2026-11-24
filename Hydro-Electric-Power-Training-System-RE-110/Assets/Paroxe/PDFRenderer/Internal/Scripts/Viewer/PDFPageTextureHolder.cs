@@ -1,4 +1,4 @@
-﻿using Paroxe.PdfRenderer.WebGL;
+using Paroxe.PdfRenderer.WebGL;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +10,8 @@ namespace Paroxe.PdfRenderer.Internal.Viewer
         public int m_PageIndex;
         public GameObject m_Page;
 #if UNITY_WEBGL
-        public bool m_RenderingStarted;
-        public bool m_Visible;
+        [System.NonSerialized] public bool m_RenderingStarted;
+        [System.NonSerialized] public bool m_Visible;
         public IPDFJS_Promise m_RenderingPromise;
 #endif
 

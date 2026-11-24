@@ -28,7 +28,7 @@ public static class WindExp4MenuAndStoryboardSetup
     public static void Configure()
     {
         if(Application.isPlaying||UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty)throw new InvalidOperationException("Save scene edits and stop Play Mode first.");
-        EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+        EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hydro Lab.unity");
         WindExp4Step1Setup.OnlyNewBlack=true;
         try{WindExp4Step1Setup.Configure();}finally{WindExp4Step1Setup.OnlyNewBlack=false;}
         var owner=Object.FindObjectsByType<StoryboardSteps>(FindObjectsInactive.Include,FindObjectsSortMode.None).Single(o=>o.name=="Exp 4"&&o.GetComponentsInChildren<Transform>(true).Any(t=>t.name=="Steps"));
@@ -66,7 +66,7 @@ public static class WindExp4MenuAndStoryboardSetup
         var launcher=Object.FindObjectsByType<MainMenuExperimentLauncher>(FindObjectsInactive.Include,FindObjectsSortMode.None).Single(l=>new SerializedObject(l).FindProperty("experimentName").stringValue.StartsWith("Experiment 4:"));
         launcher.Configure(Id,Display);EditorUtility.SetDirty(launcher);PrefabUtility.RecordPrefabInstancePropertyModifications(launcher);SetCard(Card(launcher.transform));
         EditorSceneManager.MarkSceneDirty(launcher.gameObject.scene);EditorSceneManager.SaveScene(launcher.gameObject.scene);
-        EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+        EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hydro Lab.unity");
         Debug.Log("EXP4 BOTH MENUS SAVED: "+Display+" launches the new EXP4 via unique storyboard ID "+Id);
     }
 }

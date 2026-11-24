@@ -74,7 +74,7 @@ public class GraphScreenshot : MonoBehaviour
 
         string path =
             Application.persistentDataPath +
-            "/PV_Graph_" +
+            "/Hydro_Graph_" +
             imageCounter +
             ".png";
 

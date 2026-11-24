@@ -582,7 +582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858074149995313702, guid: 5eb1f87dc427f3b4da8cca36f8b432a1, type: 3}
       propertyPath: m_text
-      value: Mulitple Choices Question
+      value: Multiple Choice Question
       objectReference: {fileID: 0}
     - target: {fileID: 3881165995872048681, guid: 5eb1f87dc427f3b4da8cca36f8b432a1, type: 3}
       propertyPath: m_AnchorMax.y

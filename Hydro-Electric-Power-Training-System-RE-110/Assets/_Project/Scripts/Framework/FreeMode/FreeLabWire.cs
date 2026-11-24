@@ -283,31 +283,33 @@ namespace TutorialFramework
                 foreach (var spline in container.Splines)
                 {
                     if (spline.Count < 2) continue;
-                    float length = SplineUtility.CalculateLength(spline, container.transform.localToWorldMatrix);
-                    float start = 0f, end = 1f;
-                    // At a stackable terminal the next plug uses the same socket.
-                    // Leave the cable's removable hit surface clear of the plug entry.
-                    if (owner && owner.GetComponent<Bedo.Hydro.HydroFreeLabCircuits>() && endpointA && endpointB)
+                    using var worldSpline = new NativeSpline(spline, container.transform.localToWorldMatrix, Unity.Collections.Allocator.Temp);
+                    float length = worldSpline.GetLength();
+                    if (length <= Mathf.Epsilon) continue;
+
+                    // Leave a dead zone at each plug while retaining a clickable
+                    // middle on even the shortest cables.
+                    const float plugClearance = 1f;
+                    float start = Mathf.Min(plugClearance, length * .25f) / length;
+                    float end = start;
+                    if (endpointA && endpointB)
                     {
-                        var firstKnot = container.transform.TransformPoint((Vector3)spline[0].Position);
-                        var lastKnot = container.transform.TransformPoint((Vector3)spline[spline.Count - 1].Position);
-                        bool aStarts = (firstKnot - endpointA.transform.position).sqrMagnitude +
-                                       (lastKnot - endpointB.transform.position).sqrMagnitude <=
-                                       (firstKnot - endpointB.transform.position).sqrMagnitude +
-                                       (lastKnot - endpointA.transform.position).sqrMagnitude;
-                        float entryFraction = Mathf.Min(.24f, 2f / Mathf.Max(length, .01f));
-                        if ((aStarts ? endpointA : endpointB).AdditionalConnectionPlugCount > 0)
-                            start = entryFraction;
-                        if ((aStarts ? endpointB : endpointA).AdditionalConnectionPlugCount > 0)
-                            end -= entryFraction;
+                        Vector3 firstPoint = (Vector3)SplineUtility.EvaluatePosition(worldSpline, 0f);
+                        Vector3 last = (Vector3)SplineUtility.EvaluatePosition(worldSpline, 1f);
+                        bool aStarts = (firstPoint - endpointA.transform.position).sqrMagnitude + (last - endpointB.transform.position).sqrMagnitude <=
+                            (firstPoint - endpointB.transform.position).sqrMagnitude + (last - endpointA.transform.position).sqrMagnitude;
+                        float stackedClearance = Mathf.Min(2f, length * .25f) / length;
+                        if ((aStarts ? endpointA : endpointB).AdditionalConnectionPlugCount > 0) start = stackedClearance;
+                        if ((aStarts ? endpointB : endpointA).AdditionalConnectionPlugCount > 0) end = stackedClearance;
                     }
-                    int segments = Mathf.Clamp(Mathf.CeilToInt(length * (end - start) / .5f), 16, 512);
+                    float clickableLength = length * (1f - start - end);
+                    int segments = Mathf.Clamp(Mathf.CeilToInt(clickableLength / .5f), 16, 512);
                     int first = vertices.Count;
                     for (int i = 0; i <= segments; i++)
                     {
-                        float t = Mathf.Lerp(start, end, (float)i / segments);
-                        Vector3 center = container.transform.TransformPoint((Vector3)SplineUtility.EvaluatePosition(spline, t));
-                        Vector3 tangent = container.transform.TransformVector((Vector3)SplineUtility.EvaluateTangent(spline, t)).normalized;
+                        float t = Mathf.Lerp(start, 1f - end, (float)i / segments);
+                        Vector3 center = (Vector3)SplineUtility.EvaluatePosition(worldSpline, t);
+                        Vector3 tangent = ((Vector3)SplineUtility.EvaluateTangent(worldSpline, t)).normalized;
                         if (tangent.sqrMagnitude < .01f) tangent = Vector3.forward;
                         Vector3 side = Vector3.Cross(tangent, Mathf.Abs(Vector3.Dot(tangent, Vector3.up)) > .95f ? Vector3.right : Vector3.up).normalized;
                         Vector3 up = Vector3.Cross(tangent, side).normalized;
@@ -337,7 +339,8 @@ namespace TutorialFramework
             surface.sharedMesh = mesh;
             surface.enabled = true; surface.isTrigger = false;
             clickCollider = surface;
-            foreach (var collider in GetComponentsInChildren<MeshCollider>()) if (collider != surface) collider.enabled = false;
+            foreach (var collider in GetComponentsInChildren<Collider>(true))
+                if (collider != surface) collider.enabled = false;
             if (cableClickMesh) Destroy(cableClickMesh);
             cableClickMesh = mesh;
             return true;

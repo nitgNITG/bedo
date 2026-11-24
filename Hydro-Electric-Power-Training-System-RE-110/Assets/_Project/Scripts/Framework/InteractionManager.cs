@@ -181,6 +181,7 @@ namespace TutorialFramework
             // disable only runtime components that must not initialize in the
             // lightweight menu scene.
             PrepareMainMenuScene();
+            HydroStudentTracking.StartSession();
         }
 
 
@@ -553,6 +554,8 @@ namespace TutorialFramework
             if (IsInMainMenuScene)
                 return;
 
+            HydroStudentTracking.AbortActiveExperiment();
+
 
             FirstTimeRun = false;
             ClearActiveStoryboard();
@@ -599,6 +602,8 @@ namespace TutorialFramework
 
         public void RestartScenario()
         {
+            HydroStudentTracking.AbortActiveExperiment();
+
             if (restarting)
             {
                 if (sceneReloaded)
@@ -807,21 +812,7 @@ namespace TutorialFramework
             // DEBUG
             // =================================================
 
-            Debug.Log(
-                "===== INTERACTION DEBUG =====\n" +
-                "Clicked Object: " + clicked.gameObject.name + "\n" +
-                "BaseInteraction: " + interaction.gameObject.name + "\n" +
-                "Owning Storyboard: " +
-                    (storyboard != null
-                        ? storyboard.StoryboardID
-                        : "NULL") + "\n" +
-                "Active Storyboard: " +
-                    ActiveStoryboardName + "\n" +
-                "Is Owning Storyboard Active: " +
-                    (storyboard != null &&
-                     IsExperimentActive(storyboard)) + "\n" +
-                "============================="
-            );
+
 
 
             // =================================================

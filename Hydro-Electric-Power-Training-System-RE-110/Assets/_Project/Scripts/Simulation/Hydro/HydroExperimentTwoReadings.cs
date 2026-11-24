@@ -4,8 +4,8 @@ namespace Bedo.Hydro
 {
     public static class HydroExperimentTwoReadings
     {
-        public const float BatteryVoltage = 24f;
-        public const float HalogenCurrent = 20.8f;
+        public const float BatteryVoltage = HydroFreeLabReadings.BatteryVoltage;
+        public const float HalogenCurrent = HydroFreeLabReadings.DcHalogenCurrent;
 
         public readonly struct Reading
         {
@@ -23,7 +23,7 @@ namespace Bedo.Hydro
             }
         }
 
-        // Sheet1 rows 70-75. The single DC halogen case uses column N.
+        // The charge controller supplies the battery once the generator reaches battery voltage.
         public static Reading Read(float rpm, bool mainPower, bool generatorEnabled, bool loadEnabled)
         {
             if (!mainPower)
@@ -31,7 +31,7 @@ namespace Bedo.Hydro
 
             var generator = HydroExperimentOneReadings.ReadLoaded(generatorEnabled ? rpm : 0f, 4f);
             float loadCurrent = loadEnabled ? HalogenCurrent : 0f;
-            float batteryCurrent = generator.DcCurrent - loadCurrent;
+            float batteryCurrent = HydroFreeLabReadings.BatteryCurrent(HydroFreeLabReadings.ChargeSource(generator) - loadCurrent, false);
             return new Reading(generator, loadCurrent, batteryCurrent);
         }
     }

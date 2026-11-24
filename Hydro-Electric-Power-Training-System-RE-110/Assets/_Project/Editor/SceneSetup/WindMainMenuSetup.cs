@@ -11,7 +11,7 @@ public static class WindMainMenuSetup
     [MenuItem("Tools/Wind/Update Main Menu For EXP1")]
     public static void Configure()
     {
-        var lab = EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+        var lab = EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hydro Lab.unity");
         var storyboard = UnityEngine.Object.FindObjectsByType<StoryboardSteps>(FindObjectsInactive.Include, FindObjectsSortMode.None)
             .Single(s => s.StoryboardID == "Speed Curve Characteristics");
         string id = storyboard.StoryboardID;
@@ -45,7 +45,7 @@ public static class WindMainMenuSetup
         Transform firstCard = Card(exp1.transform);
         foreach (var launcher in launchers) Card(launcher.transform).gameObject.SetActive(launcher == exp1);
         firstCard.gameObject.SetActive(true);
-        firstCard.name = "Experiment 1: Speed Curve Characteristics";
+        firstCard.name = "Experiment 1: Hydro Turbine Speed Curve Characteristics";
         PrefabUtility.RecordPrefabInstancePropertyModifications(firstCard.gameObject);
         foreach (var text in firstCard.GetComponentsInChildren<TMP_Text>(true))
             if (textByPath.TryGetValue(TextKey(text), out var value))
@@ -53,7 +53,7 @@ public static class WindMainMenuSetup
                 text.text = value;
                 PrefabUtility.RecordPrefabInstancePropertyModifications(text);
             }
-        exp1.Configure(id, "Experiment 1: Speed Curve Characteristics");
+        exp1.Configure(id, "Experiment 1: Hydro Turbine Speed Curve Characteristics");
         EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
         Debug.Log("Wind main menu configured: only EXP1, storyboard ID = " + id + "; card=" + firstCard.name);
     }

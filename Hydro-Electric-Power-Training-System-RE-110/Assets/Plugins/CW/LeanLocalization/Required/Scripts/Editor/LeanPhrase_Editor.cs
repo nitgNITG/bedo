@@ -175,7 +175,7 @@ namespace Lean.Localization.Editor
 		{
 			try
 			{
-				var url       = string.Format("https://translate.googleapis.com/translate_a/single?client=gtx&sl={0}&tl={1}&dt=t&q={2}", languageCodeInput, languageCodeOutput, System.Web.HttpUtility.UrlEncode(wordInput));
+				var url       = string.Format("https://translate.googleapis.com/translate_a/single?client=gtx&sl={0}&tl={1}&dt=t&q={2}", languageCodeInput, languageCodeOutput, UnityEngine.Networking.UnityWebRequest.EscapeURL(wordInput));
 				var webClient = new System.Net.WebClient { Encoding = System.Text.Encoding.UTF8 };
 				var result    = webClient.DownloadString(url);
 

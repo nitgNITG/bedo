@@ -8,6 +8,7 @@ namespace Bedo.Hydro
     public sealed class HydroMpptGuided : MonoBehaviour
     {
         public StoryboardSteps storyboard;
+        [SerializeField] private string speedStepId;
         public Slider slider;
         public CanvasGroup speedPanel;
         public TMP_Text speedText;
@@ -22,10 +23,13 @@ namespace Bedo.Hydro
         public TMP_Text[] monitorValues;
         public HydroGuidedMonitor graph;
         public bool IsPowered => powered;
+        public bool GeneratorEnabled => generator;
+        public HydroExperimentOneReadings.Reading GeneratorReading => HydroExperimentTwoReadings.Read(rpm, powered, generator, load).Generator;
 
         private HydroReferenceControls referenceControls;
         private bool powered, load, generator, speedUnlocked;
-        private int rpm;
+        private float rpm;
+        public bool CanAdjustSpeed => speedUnlocked;
 
         private void OnEnable()
         {
@@ -34,12 +38,12 @@ namespace Bedo.Hydro
             if (slider)
             {
                 slider.maxValue = 5;
-                slider.wholeNumbers = true;
+                slider.wholeNumbers = false;
                 slider.SetValueWithoutNotify(0);
                 slider.interactable = true;
                 slider.onValueChanged.AddListener(SetSpeed);
             }
-            if (shortcut) shortcut.onClick.AddListener(ToggleSpeed);
+            
         }
 
         private void OnDisable()
@@ -79,10 +83,10 @@ namespace Bedo.Hydro
 
         private void SetSpeed(float value)
         {
-            if (!speedUnlocked || !speedPanel || !speedPanel.interactable) return;
-            rpm = Mathf.Clamp(Mathf.RoundToInt(value), 0, 5) * 200;
+            if (!speedUnlocked || (HydroSpeedInput.Instance ? !HydroSpeedInput.Instance.AcceptSpeedChange : !speedPanel.interactable)) return;
+            rpm = Mathf.Clamp(value, 0, 5) * 200;
             Refresh();
-            if (rpm == 1000 && storyboard.CurrentStep == 33)
+            if (rpm == 1000 && storyboard.IsCurrentStep(speedStepId))
             {
                 ShowSpeed(false);
                 storyboard.GoNextStep();
@@ -93,7 +97,7 @@ namespace Bedo.Hydro
         {
             if (mpptScreen && mpptScreen.activeSelf && mpptText)
             {
-                const float ratedCurrent = 9f;
+                const float ratedCurrent = HydroFreeLabReadings.ChargeLimit;
                 var battery = HydroExperimentTwoReadings.Read(rpm, powered, generator, load);
                 chargeDisplay = Mathf.MoveTowards(chargeDisplay, Mathf.Clamp01(battery.BatteryCurrent / ratedCurrent) * 100f, (100f / ratedCurrent) * .1f * Time.deltaTime);
                 mpptText.text = chargeDisplay.ToString("F2") + "%";

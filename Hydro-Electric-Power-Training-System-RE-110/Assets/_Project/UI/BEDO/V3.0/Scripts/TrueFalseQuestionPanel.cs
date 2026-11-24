@@ -1,4 +1,4 @@
-using UnityEngine;
+using TutorialFramework;using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Obvious.Soap;
@@ -128,7 +128,8 @@ public class TrueFalseQuestionPanel : MonoBehaviour
     /// </summary>
     private void HandleQuestionActivated(TrueAndFalseQuestionScriptableObject question)
     {
-        currentQuestion = question;
+        currentQuestion = question;
+        HydroStudentTracking.ShowQuestion(currentQuestion.name, "TrueFalse");
         IsTrueFalseQuestionPanelShowen.Value = true;
         //ShowPanel();
     }
@@ -156,7 +157,8 @@ public class TrueFalseQuestionPanel : MonoBehaviour
     /// </summary>
     private void OnAnswerSelected(bool answer, Button buttonPressed)
     {
-        bool correct = currentQuestion.IsAnsweredCorrectly(answer);
+        bool correct = currentQuestion.IsAnsweredCorrectly(answer);
+        HydroStudentTracking.AnswerQuestion(currentQuestion.name, "TrueFalse", answer ? "true" : "false", correct);
         // Store result in BoolVariable
         if (correct)
         {

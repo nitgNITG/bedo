@@ -85,7 +85,7 @@ public static class WindExp4Step11Setup
  [MenuItem("PV System/Configure EXP4 Step11 DC Connections And Pointer Clearance")]
  public static void Configure()
  {
-  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Save PV Lab and stop Play Mode first.");
+  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/Hydro Lab.unity")throw new InvalidOperationException("Save Hydro Lab and stop Play Mode first.");
   var steps=Steps();var owner=steps.GetComponentInParent<StoryboardSteps>();
   var root=steps.Cast<Transform>().Where(t=>t.name=="Step 11").Single(t=>t.Cast<Transform>().Any(c=>c.name=="Off grid inverter DC Input -ve"));
   if(root.GetComponentInChildren<WireInteraction>(true))throw new InvalidOperationException("Step11 already configured.");

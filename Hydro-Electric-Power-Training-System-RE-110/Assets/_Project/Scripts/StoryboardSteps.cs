@@ -52,6 +52,7 @@ namespace TutorialFramework
         [System.Serializable]
         public class Step
         {
+            [HideInInspector] public string stableId;
             [Header("Step Type")]
             public StepType stepType =
                 StepType.Interaction;
@@ -581,6 +582,10 @@ namespace TutorialFramework
         // EXPERIMENT NAME
         // =====================================================
 
+        public bool IsCurrentStep(string stableId) =>
+            !string.IsNullOrEmpty(stableId) && currentStep >= 0 && currentStep < steps.Count &&
+            steps[currentStep].stableId == stableId;
+
         public void SetExperimentName(string experimentName)
         {
             // Menu buttons survive scene reloads through their scene-local
@@ -610,8 +615,9 @@ namespace TutorialFramework
 
             if (experimentTitleText != null)
             {
-                experimentTitleText.text =
-                    interactionManager.ExperimentName;
+                experimentTitleText.text = interactionManager.Free
+                    ? "Free Mode"
+                    : interactionManager.ExperimentName;
             }
         }
 
@@ -623,6 +629,20 @@ namespace TutorialFramework
         public void StartStoryboard()
         {
             currentStep = -1;
+
+            bool trackingGuided = InteractionManager.Instance != null &&
+                InteractionManager.Instance.Guided;
+            string trackingExperimentId = trackingGuided
+                ? HydroStudentTracking.GuidedExperimentId(StoryboardID)
+                : HydroStudentTracking.FreeExperimentIdFromStoryboard(StoryboardID);
+            if (!string.IsNullOrEmpty(trackingExperimentId))
+            {
+                HydroStudentTracking.StartExperiment(
+                    trackingExperimentId,
+                    trackingGuided ? "guided" : "free");
+                if (!trackingGuided)
+                    HydroStudentTracking.StartStep(1);
+            }
 
 
             if (InteractionManager.Instance.Guided)
@@ -1301,6 +1321,7 @@ namespace TutorialFramework
             {
                 Step previous =
                     steps[currentStep];
+                HydroStudentTracking.CompleteStep(currentStep + 1);
 
 
                 if (previous != null)
@@ -1337,6 +1358,7 @@ namespace TutorialFramework
             if (index < 0 ||
                 index >= steps.Count)
             {
+                HydroStudentTracking.CompleteExperiment();
                 Debug.Log(
                     "Storyboard Finished"
                 );
@@ -1351,6 +1373,15 @@ namespace TutorialFramework
 
             Step step =
                 steps[currentStep];
+
+            if (currentStep == steps.Count - 1)
+            {
+                HydroStudentTracking.CompleteExperiment();
+            }
+            else if (step != null && step.interaction != null)
+            {
+                HydroStudentTracking.StartStep(currentStep + 1);
+            }
 
 
             if (step.uiObject)

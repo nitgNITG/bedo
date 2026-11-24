@@ -128,6 +128,12 @@ public static class ArabicTextLayout
         bool rotated=logical.Contains("<rotate=");
         string plain=Regex.Replace(logical,"<[^>]*>","");
         if(rotated)return "<rotate=90>"+Visual(Shape(plain))+"</rotate>";
+        // TextMesh Pro receives visual order here. Keep the title separator
+        // to the left of the digits, and the shaped experiment label to their right.
+        var experimentTitle = Regex.Match(plain, @"^التجربة\s+(\d+)\s*:\s*(.+)$");
+        if (!rotated && experimentTitle.Success)
+            return Line(Shape(experimentTitle.Groups[2].Value)) + " : " +
+                experimentTitle.Groups[1].Value + " " + Line(Shape("التجربة"));
         float width=Math.Max(1,(availableWidth > 0 ? availableWidth : target.rectTransform.rect.width)-target.margin.x-target.margin.z);
         var lines=new List<string>();
         foreach(string paragraph in plain.Replace("\r", "").Split('\n'))

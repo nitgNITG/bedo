@@ -50,8 +50,11 @@ namespace Bedo.Hydro
         public Transform rotor;
         public GameObject[] guidedControlVisuals;
         public GameObject[] passiveWindHardware;
+        [SerializeField] private GameObject unusedWindInputBoard;
         public Template.OnMouseDownE hydroOffButton;
 
+        public bool CanAdjustSpeed => profile > 0 && hydroEmergency.Value && hydroBreaker.Value && hydroPower.Value;
+        public HydroExperimentOneReadings.Reading GeneratorReading { get; private set; }
         private FreeLabWindController labView;
         private bool graphShown;
         private int profile;
@@ -65,22 +68,16 @@ namespace Bedo.Hydro
         {
             labView = view;
             foreach (var visual in guidedControlVisuals) visual.SetActive(false);
-            foreach (var hardware in passiveWindHardware)
-            {
-                foreach (var collider in hardware.GetComponentsInChildren<BoxCollider>(true))
-                    collider.enabled = false;
-                hardware.SetActive(true);
-            }
-            if (passiveWindHardware.Length > 0)
-                passiveWindHardware[0].transform.parent.gameObject.SetActive(true);
+            // Hydro uses Inputs_hydro; never enable the unrelated Wind board.
+            if (unusedWindInputBoard) unusedWindInputBoard.SetActive(false);
             hydroOffButton.mouseDown = new UnityEngine.Events.UnityEvent();
             hydroOffButton.mouseDown.AddListener(StopHydro);
             var reference = speedPanel.GetComponent<HydroReferenceControls>();
             if (reference) reference.enabled = false;
-            speed.wholeNumbers = true;
+            speed.wholeNumbers = false;
             speed.minValue = 0;
             speed.SetValueWithoutNotify(0);
-            shortcut.onClick.AddListener(ToggleSpeed);
+
             SetSpeedVisible(false);
             foreach (var page in pages)
             {
@@ -101,11 +98,6 @@ namespace Bedo.Hydro
                 {
                     button.onClick = new Button.ButtonClickedEvent();
                     button.onClick.AddListener(page.chart.ShowGraph);
-                }
-                else if (button.name == "AC-Speed Graph Tab")
-                {
-                    button.onClick = new Button.ButtonClickedEvent();
-                    button.onClick.AddListener(page.chart.ShowCurrentGraph);
                 }
             }
             foreach (var click in page.graphs.GetComponentsInChildren<Template.OnMouseDownE>(true))
@@ -193,14 +185,15 @@ namespace Bedo.Hydro
             if (previousLoaded != loaded)
             {
                 previousLoaded = loaded;
-                if (loaded && lastRpm > 0) speed.SetValueWithoutNotify(Mathf.Round(lastRpm / 200f));
+                if (loaded && lastRpm > 0) speed.SetValueWithoutNotify(lastRpm / 200f);
             }
 
-            int speedStop = Mathf.RoundToInt(speed.value);
+            float speedStop = speed.value;
             float requestedRpm = loaded ? speedStop * 200 : HydroExperimentOneReadings.ReadUnloaded(speedStop).Rpm;
             float resistance = active == 1 && rheostat != null ? rheostat.controller.CurrentResistance : 4f;
             var source = generating && !loaded ? HydroExperimentOneReadings.ReadUnloaded(speedStop) :
-                HydroFreeLabReadings.Generator(generating ? requestedRpm : 0f, resistance);
+                HydroExperimentOneReadings.ReadLoaded(generating ? requestedRpm : 0f, resistance);
+            GeneratorReading = source;
             if (rpmLabel) rpmLabel.text = requestedRpm.ToString("0.##");
             if (running && rotor && requestedRpm > 0f)
                 rotor.Rotate(Vector3.forward, requestedRpm * 6f * Time.deltaTime, Space.Self);
@@ -221,14 +214,17 @@ namespace Bedo.Hydro
             }
 
             float battery = mpptOn || inverterOn ? HydroFreeLabReadings.BatteryVoltage : 0;
-            float batteryCurrent = battery > 0 ? HydroFreeLabReadings.BatteryCurrent(source.DcCurrent, dcLoad, acLoad, grid) : 0;
+            float sourceCurrent = HydroFreeLabReadings.ChargeSource(source);
+            float balance = sourceCurrent - dcLoad - (acLoad ? HydroFreeLabReadings.AcLampBatteryCurrent : 0f);
+            float batteryCurrent = battery > 0 ? HydroFreeLabReadings.BatteryCurrent(balance, grid) : 0;
             float acVoltage = acLoad ? HydroFreeLabReadings.GridVoltage : 0;
             float acCurrent = acLoad ? HydroFreeLabReadings.AcLampDisplayedCurrent : 0;
             float gridVoltage = grid ? HydroFreeLabReadings.GridVoltage : 0;
-            float gridCurrent = grid ? -batteryCurrent * battery / gridVoltage : 0;
-            mpptScreen.SetActive(mpptOn);
-            if (mpptText && mpptOn)
-                mpptText.text = (Mathf.Clamp01(batteryCurrent / HydroFreeLabReadings.ChargeLimit) * 100f).ToString("F2") + "%";
+            float gridCurrent = grid ? HydroFreeLabReadings.GridCurrent(balance) : 0;
+            bool mpptDisplayPowered = active == 2 && mppt.Value;
+            mpptScreen.SetActive(mpptDisplayPowered);
+            if (mpptText)
+                mpptText.text = (mpptOn ? Mathf.Clamp01(batteryCurrent / HydroFreeLabReadings.ChargeLimit) * 100f : 0f).ToString("F2") + "%";
             if (active == 0) return;
 
             var page = pages[active - 1];
@@ -243,7 +239,7 @@ namespace Bedo.Hydro
             if (source.Rpm > 0 && (!Mathf.Approximately(lastRpm, source.Rpm) ||
                 !Mathf.Approximately(lastVoltage, source.DcVoltage) || !Mathf.Approximately(lastCurrent, source.DcCurrent)))
             {
-                page.chart.AddDcReading(source.Rpm, source.DcVoltage, source.DcCurrent);
+                page.chart.AddDcReading(source.Rpm, source.DcVoltage, source.DcCurrent, loaded);
                 lastRpm = source.Rpm;
                 lastVoltage = source.DcVoltage;
                 lastCurrent = source.DcCurrent;

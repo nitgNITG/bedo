@@ -60,6 +60,7 @@ public class ExperimentUIActions : MonoBehaviour
     /// </summary>
     public void ExitGame()
     {
+        HydroStudentTracking.CompleteSession();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

@@ -12,8 +12,8 @@ public static class WindExp4ButtonOrderSetup
     public static void Configure()
     {
         var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-        if (Application.isPlaying || scene.isDirty || scene.path != "Assets/_Project/Scenes/PV Lab.unity")
-            throw new InvalidOperationException("Save PV Lab in Edit Mode first.");
+        if (Application.isPlaying || scene.isDirty || scene.path != "Assets/_Project/Scenes/Hydro Lab.unity")
+            throw new InvalidOperationException("Save Hydro Lab in Edit Mode first.");
         var owner = Object.FindObjectsByType<StoryboardSteps>(FindObjectsInactive.Include, FindObjectsSortMode.None)
             .Single(o => o.StoryboardID == "OFF Grid System Using Wind Turbine");
         var steps = owner.GetComponentsInChildren<Transform>(true).Single(t => t.name == "Steps");

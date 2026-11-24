@@ -1,5 +1,136 @@
 {
   "entries": [
+{
+    "english": "Navigate to the \"Graphs\" tab.",
+    "arabic": "انتقل إلى صفحة \"Graphs\".",
+    "source": "Hydro checklist issue 31"
+},
+{
+    "english": "Experiment 1: Hydro Turbine Speed Curve Characteristics",
+    "arabic": "التجربة 1 : خصائص منحنى سرعة التوربينة الكهرومائية",
+    "source": "Hydro Experiment 1 title"
+},
+{
+    "english": "Supply the measured three-phase AC to the Full Bridge Rectifier.",
+    "arabic": "توصّل التيار المتردد ثلاثي الأطوار بعد قياسه إلى مقوم الجسر الكامل.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Universal Measuring Device Output Terminals",
+    "arabic": "أطراف خرج جهاز القياس العالمي",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Receive three-phase AC from the Hydro-Power Turbine Generator Output.",
+    "arabic": "تستقبل خرج المولد ثلاثي الأطوار من التوربينة الكهرومائية.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Universal Measuring Device Input Terminals",
+    "arabic": "أطراف دخل جهاز القياس العالمي",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Supply three-phase AC from the Hydro-Power Turbine to the measuring device and rectifier.",
+    "arabic": "توصّل خرج التيار المتردد ثلاثي الأطوار من التوربينة الكهرومائية إلى جهاز القياس والمقوم.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Converts DC power from the Hydro-Power Turbine and battery into AC power for connected AC loads.",
+    "arabic": "يحوّل التيار المستمر من التوربينة الكهرومائية والبطارية إلى تيار متردد لتغذية أحمال التيار المتردد المتصلة.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Uses maximum power point tracking to regulate battery charging from the Hydro-Power Turbine's rectified DC output.",
+    "arabic": "يستخدم تتبع نقطة القدرة القصوى لتنظيم شحن البطارية من خرج التوربينة الكهرومائية المستمر بعد التقويم.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "MPPT Charge Controller",
+    "arabic": "وحدة التحكم في الشحن MPPT",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Regulates battery charging from the Hydro-Power Turbine's rectified DC output.",
+    "arabic": "ينظّم شحن البطارية من خرج التوربينة الكهرومائية المستمر بعد التقويم.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "PWM Charge Controller",
+    "arabic": "وحدة التحكم في الشحن PWM",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Converts rotation of the Hydro-Power Turbine into electrical energy.",
+    "arabic": "يحوّل دوران التوربينة الكهرومائية إلى طاقة كهربائية.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Hydro-Power Turbine Generator",
+    "arabic": "مولد التوربينة الكهرومائية",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Displays the Hydro-Power Turbine shaft speed in RPM.",
+    "arabic": "تعرض سرعة عمود التوربينة الكهرومائية بوحدة دورة في الدقيقة.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Hydro-Power Turbine Shaft Speed Display",
+    "arabic": "شاشة سرعة عمود التوربينة الكهرومائية",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Starts or stops the Hydro-Power Turbine.",
+    "arabic": "يبدأ دوران التوربينة الكهرومائية أو يوقفه.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Hydro-Power Turbine Run/Stop Selector",
+    "arabic": "مفتاح تشغيل وإيقاف دوران التوربينة الكهرومائية",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Enables or disables the Generator Output supplied to the rectifier.",
+    "arabic": "يفعّل خرج المولد الواصل إلى المقوم أو يعطّله.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Generator Output Enable/Disable Switch",
+    "arabic": "مفتاح تفعيل وتعطيل خرج المولد",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Turns the Hydro-Power Turbine on or off.",
+    "arabic": "يشغّل التوربينة الكهرومائية أو يوقفها.",
+    "source": "Hydro RE-110 tooltips"
+},
+{
+    "english": "Hydro-Power Turbine ON/OFF Switch",
+    "arabic": "مفتاح تشغيل وإيقاف التوربينة الكهرومائية",
+    "source": "Hydro RE-110 tooltips"
+},
+    {"english":"Experiment 2: Regulating DC Output","arabic":"التجربة 2 : تنظيم خرج التيار المستمر","source":"Hydro RE-110 Experiment 2 title"},
+    {
+      "english": "Arabic",
+      "arabic": "العربية",
+      "source": "Main Settings language selector"
+    },
+    {
+      "english": "English",
+      "arabic": "الإنجليزية",
+      "source": "Main Settings language selector"
+    },
+    {
+      "english": "Language",
+      "arabic": "اللغة",
+      "source": "Main Settings language selector"
+    },
+    {
+      "english": "Connection is not available in this module.",
+      "arabic": "الاتصال غير متاح في هذا الجهاز.",
+      "source": "Supplemental UI translation"
+    },
     {
       "english": "Connect (220 VAC) terminal and the neutral path (N) of all used modules to the (220 VAC) terminal and the neutral path (N) of the main board.",
       "arabic": "قم بتوصيل طرف (220 VAC)، والمسار المحايد (N) لجميع الوحدات المستخدمة بأطراف (220 VAC)، والمسار المحايد (N) في اللوحة الرئيسية.",
@@ -56,10 +187,10 @@
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
-      "english": "Enable the generator output enable/ disable switch to allow the voltage to reach the input of the rectifier module",
-      "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المحول للسماح بوصول الجهد إلى دخل وحدة المقوم،.",
-      "source": "Experiment 1. Speed Curve Characteristics.docx"
-    },
+    "english": "Enable the Generator Output enable/disable switch to allow the voltage to reach the input of the rectifier module",
+    "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المولد للسماح بوصول الجهد إلى دخل وحدة المقوم",
+    "source": "Experiment 1. Speed Curve Characteristics.docx"
+},
     {
       "english": "Notice: The speeds of the generator and the motor increase and the voltage increases on the power analyzer.",
       "arabic": "تزداد سرعات المولد والمحرك ويزداد الجهد على شاشة محلل الطاقة.",
@@ -87,7 +218,7 @@
     },
     {
       "english": "Switch to the software monitor.",
-      "arabic": "قم بالانتقال الى شاشة السوفت.",
+      "arabic": "قم بالانتقال الي شاشة التحكم.",
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
@@ -106,15 +237,15 @@
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
-      "english": "Pop-up Quiz: What is the observed relationship between turbine speed and output voltage? A) Voltage decreases as speed increases B) Voltage increases as speed increases ✅ C) Voltage remains constant regardless of speed Correct Answer: B",
-      "arabic": "سؤال: ما هي العلاقة الملحوظة بين سرعة التوربينة وجهد الخرج؟ أ) ينخفض الجهد مع زيادة السرعة ب) يزداد الجهد مع زيادة السرعة ✅ ج) يظل الجهد ثابتًا بغض النظر عن السرعة الإجابة الصحيحة: ب",
-      "source": "Experiment 1. Speed Curve Characteristics.docx"
-    },
+    "english": "Pop-up Quiz: What is the observed relationship between Hydro-Power Turbine speed and output voltage? A) Voltage decreases as speed increases B) Voltage increases as speed increases ✅ C) Voltage remains constant regardless of speed Correct Answer: B",
+    "arabic": "سؤال: ما هي العلاقة الملحوظة بين سرعة التوربينة وجهد الخرج؟ أ) ينخفض الجهد مع زيادة السرعة ب) يزداد الجهد مع زيادة السرعة ✅ ج) يظل الجهد ثابتًا بغض النظر عن السرعة الإجابة الصحيحة: ب",
+    "source": "Experiment 1. Speed Curve Characteristics.docx"
+},
     {
-      "english": "What is the observed relationship between turbine speed and output voltage?",
-      "arabic": "ما هي العلاقة الملحوظة بين سرعة التوربينة وجهد الخرج؟",
-      "source": "Experiment 1. Speed Curve Characteristics.docx"
-    },
+    "english": "What is the observed relationship between Hydro-Power Turbine speed and output voltage?",
+    "arabic": "ما هي العلاقة الملحوظة بين سرعة التوربينة وجهد الخرج؟",
+    "source": "Experiment 1. Speed Curve Characteristics.docx"
+},
     {
       "english": "Voltage decreases as speed increases",
       "arabic": "ينخفض الجهد مع زيادة السرعة",
@@ -146,20 +277,20 @@
       "source": "Experiment 1. Speed Curve Characteristics.docx"
     },
     {
-      "english": "Experiment 1: Speed Curve Characteristics",
-      "arabic": "التجربة 1: خصائص منحنى السرعة",
-      "source": "Experiment 1. Speed Curve Characteristics.docx"
-    },
+    "english": "Experiment 1: Hydro Hydro-Power Turbine speed Curve Characteristics",
+    "arabic": "التجربة 1: خصائص منحنى السرعة",
+    "source": "Experiment 1. Speed Curve Characteristics.docx"
+},
     {
-      "english": "🎓 Instructor’s IntroductionWelcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control turbine speed and measure its effect on DC voltage and current.",
-      "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
-      "source": "Experiment 1. Speed Curve Characteristics.docx"
-    },
+    "english": "🎓 Instructor’s IntroductionWelcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control Hydro-Power Turbine speed and measure its effect on DC voltage and current.",
+    "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
+    "source": "Experiment 1. Speed Curve Characteristics.docx"
+},
     {
-      "english": "Welcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control turbine speed and measure its effect on DC voltage and current.",
-      "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
-      "source": "Experiment 1. Speed Curve Characteristics.docx"
-    },
+    "english": "Welcome! In this experiment, you’ll study the relationship between the speed of the wind mill and the generated electrical output. You will learn how to control Hydro-Power Turbine speed and measure its effect on DC voltage and current.",
+    "arabic": "مرحبًا!   في هذه التجربة، ستدرس العلاقة بين سرعة طاحونة الهوائية والناتج الكهربائي للمولد. ستتعلم كيفية التحكم في سرعة التوربينة وقياس تأثيرها على الجهد والتيار المستمر.",
+    "source": "Experiment 1. Speed Curve Characteristics.docx"
+},
     {
       "english": "🎯 Objective of the ExperimentTo examine the relationship between the rotational speed of the wind mill emulator and the electrical output (DC voltage and current).",
       "arabic": "فحص العلاقة بين السرعة الدورانية لطاحونة الهواء والناتج الكهربائي (الجهد والتيار المستمر)",
@@ -196,10 +327,10 @@
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
-      "english": "Enable the generator output enable/ disable switch to allow the voltage to reach the input of the rectifier module and adjust the emulator to minimum speed.",
-      "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المحول للسماح بوصول الجهد إلى دخل وحدة المقوم، ثم اضبط المحاكي على أقل سرعة.",
-      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
-    },
+    "english": "Enable the Generator Output enable/disable switch to allow the voltage to reach the input of the rectifier module and adjust the emulator to minimum speed.",
+    "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المولد للسماح بوصول الجهد إلى دخل وحدة المقوم، ثم اضبط المحاكي على أقل سرعة.",
+    "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+},
     {
       "english": "Pop-up Quiz: Which of the following best describes the difference between a PWM controller and an MPPT controller in a Wind Energy Training System? A) PWM extracts maximum power, while MPPT only regulates charging. B) PWM is simple and less efficient, while MPPT tracks maximum power and is more efficient. C) Both PWM and MPPT provide the same efficiency but use different circuits. D) PWM is more advanced than MPPT in optimizing energy capture. Correct Answer: B",
       "arabic": "سؤال: أيٌّ من التالي يوضح بشكل أدق الفرق بين متحكم PWM ومتحكم MPPT في نظام تدريب طاقة الرياح؟ أ) يقوم متحكم الـ PWM باستخراج أقصى قدرة، بينما يقتصر متحكم الـ MPPT على تنظيم الشحن. ب) متحكم الـ PWM أبسط وأقل كفاءة، بينما يقوم متحكم الـ MPPT بتتبع أقصى قدرة وهو أكثر كفاءة. ج) يوفر كل من متحكم الـ PWM ومتحكم الـ MPPT نفس الكفاءة لكن باستخدام دوائر مختلفة. د) متحكم الـ PWM أكثر تقدماً من متحكم الـ MPPT في تحسين استغلال الطاقة الإجابة الصحيحة: ب",
@@ -231,20 +362,20 @@
       "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
     },
     {
-      "english": "Use the slider in the Wind Speed Section on the screen to gradually increase the motor speed in small increments.",
-      "arabic": "استخدم السليدر في قسم سرعة الرياح على الشاشة لزيادة سرعة المحرك تدريجيًا ..",
-      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
-    },
+    "english": "Use the slider in the Wind Speed Section on the screen to gradually increase the Hydro-Power Turbine speed in small increments.",
+    "arabic": "استخدم السليدر في قسم سرعة التوربينة الكهرومائية على الشاشة لزيادة سرعة التوربينة الكهرومائية تدريجيًا ..",
+    "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+},
     {
-      "english": "Note: As the turbine speed increases, the current and voltage output from the turbine rise. The battery power reading becomes positive, confirming that the battery is now being charged.",
-      "arabic": "ملاحظة: مع زيادة سرعة التوربينة، يرتفع التيار وجهد الخرج منه. تصبح قراءة طاقة البطارية موجبة، مما يؤكد أنها الآن تُشحن.",
-      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
-    },
+    "english": "Note: As the Hydro-Power Turbine speed increases, the current and voltage output from the turbine rise. The battery power reading becomes positive, confirming that the battery is now being charged.",
+    "arabic": "ملاحظة: مع زيادة سرعة التوربينة، يرتفع التيار وجهد الخرج منه. تصبح قراءة طاقة البطارية موجبة، مما يؤكد أنها الآن تُشحن.",
+    "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+},
     {
-      "english": "As the turbine speed increases, the current and voltage output from the turbine rise. The battery power reading becomes positive, confirming that the battery is now being charged.",
-      "arabic": "ملاحظة: مع زيادة سرعة التوربينة، يرتفع التيار وجهد الخرج منه. تصبح قراءة طاقة البطارية موجبة، مما يؤكد أنها الآن تُشحن.",
-      "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
-    },
+    "english": "As the Hydro-Power Turbine speed increases, the current and voltage output from the turbine rise. The battery power reading becomes positive, confirming that the battery is now being charged.",
+    "arabic": "ملاحظة: مع زيادة سرعة التوربينة، يرتفع التيار وجهد الخرج منه. تصبح قراءة طاقة البطارية موجبة، مما يؤكد أنها الآن تُشحن.",
+    "source": "Experiment 2. Regulating DC Output from Wind Turbine using PWM Charger.docx"
+},
     {
       "english": "Switch to the software monitor to observe the results",
       "arabic": "قم بالانتقال الي شاشة التحكم لملاحظة النتائج.",
@@ -316,15 +447,15 @@
       "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
     },
     {
-      "english": "Pop-up Quiz: What happens to the battery's power reading when the turbine speed is increased sufficiently? A) It remains negative B) It becomes zero C) It becomes positive ✅ Correct Answer: C",
-      "arabic": "سؤال: ماذا يحدث لقراءة طاقة البطارية عندما تزداد سرعة التوربين بشكل كافٍ؟ أ) تبقى سالبة ب) تصبح صفر ج) تصبح موجبة ✅ الإجابة الصحيحة: ج",
-      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
-    },
+    "english": "Pop-up Quiz: What happens to the battery's power reading when the Hydro-Power Turbine speed is increased sufficiently? A) It remains negative B) It becomes zero C) It becomes positive ✅ Correct Answer: C",
+    "arabic": "سؤال: ماذا يحدث لقراءة طاقة البطارية عندما تزداد سرعة التوربين بشكل كافٍ؟ أ) تبقى سالبة ب) تصبح صفر ج) تصبح موجبة ✅ الإجابة الصحيحة: ج",
+    "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+},
     {
-      "english": "What happens to the battery's power reading when the turbine speed is increased sufficiently?",
-      "arabic": "ماذا يحدث لقراءة طاقة البطارية عندما تزداد سرعة التوربين بشكل كافٍ؟",
-      "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
-    },
+    "english": "What happens to the battery's power reading when the Hydro-Power Turbine speed is increased sufficiently?",
+    "arabic": "ماذا يحدث لقراءة طاقة البطارية عندما تزداد سرعة التوربين بشكل كافٍ؟",
+    "source": "Experiment 3. Regulating DC Output from Wind Turbine using MPPT Charger.docx"
+},
     {
       "english": "It remains negative",
       "arabic": "تبقى سالبة",
@@ -476,10 +607,10 @@
       "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
     },
     {
-      "english": "To understand the operation of an off-grid inverter in converting DC power to AC power, and to study the effect of changing wind turbine speed on system performance and observe power flow between wind mill, battery, and loads.",
-      "arabic": "فهم تشغيل العاكس خارج الشبكة في تحويل الطاقة المستمرة إلى طاقة متناوبة، ودراسة تأثير تغيير سرعة طاحونة الرياح على أداء النظام. وملاحظة تدفق الطاقة بين التوربينة الهوائية والبطارية والأحمال.",
-      "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
-    },
+    "english": "To understand the operation of an off-grid inverter in converting DC power to AC power, and to study the effect of changing wind Hydro-Power Turbine speed on system performance and observe power flow between wind mill, battery, and loads.",
+    "arabic": "فهم تشغيل العاكس خارج الشبكة في تحويل الطاقة المستمرة إلى طاقة متناوبة، ودراسة تأثير تغيير سرعة طاحونة الرياح على أداء النظام. وملاحظة تدفق الطاقة بين التوربينة الهوائية والبطارية والأحمال.",
+    "source": "Experiment 4. OFF Grid System Using wind turbine.docx"
+},
     {
       "english": "Attention when you finish the experiment, perform the following steps in order: \r\n1)Disconnect the DC load. \r\n2)Disconnect the wind Turbine. \r\n3)Finally disconnect the battery.",
       "arabic": "عند الانتهاء من التجربة، قم بالخطوات التالية بالترتيب: قم بفصل الحمل المستمر. قم بفصل التوربينة الرياح وأخيرًا، قم بفصل البطارية.",
@@ -727,7 +858,7 @@
     },
     {
       "english": "Gradually decrease the rheostat's resistance (increase the load) by turning its knob counter-clockwise. Observe that the current increases while the voltage drops.",
-      "arabic": "قلل تدريجيًا مقاومة المقاومة المتغيرة (زِد الحمل) بتدوير مقبضها عكس اتجاه عقارب الساعة. لاحظ أن التيار يزداد بينما ينخفض الجهد.",
+      "arabic": "قلل تدريجيًا من مقاومة المقاومة المتغيرة (زِدْ الحمل) بتدوير مقبضها عكس اتجاه عقارب الساعة. لاحظ أن التيار يزداد بينما ينخفض الجهد.",
       "source": "Supplemental UI translation"
     },
     {
@@ -841,7 +972,7 @@
       "source": "Supplemental UI translation"
     },
     {
-      "english": "Mulitple Choices Question",
+      "english": "Multiple Choice Question",
       "arabic": "سؤال اختيار من متعدد",
       "source": "Supplemental UI translation"
     },
@@ -852,7 +983,7 @@
     },
     {
       "english": "Navigate to the \"Measurements Graph\" tab.",
-      "arabic": "انتقل إلى علامة تبويب الرسم البياني للقياسات.",
+      "arabic": "انتقل الى صفحة \"Measurements Graph\".",
       "source": "Supplemental UI translation"
     },
     {
@@ -1007,7 +1138,7 @@
     },
     {
       "english": "Switch the Run/Stop selector to Run state.",
-      "arabic": "حوّل مفتاح التشغيل والإيقاف إلى وضع التشغيل.",
+      "arabic": "بدّل مفتاح التشغيل/الإيقاف (Run/Stop) إلى وضع التشغيل (Run).",
       "source": "Supplemental UI translation"
     },
     {
@@ -1691,10 +1822,10 @@
       "source": "Equipment tooltip translation"
     },
     {
-      "english": "Generator output terminals",
-      "arabic": "أطراف خرج المولد",
-      "source": "Equipment tooltip translation"
-    },
+    "english": "Generator Output terminals",
+    "arabic": "أطراف خرج المولد",
+    "source": "Equipment tooltip translation"
+},
     {
       "english": "Generator power analyzer",
       "arabic": "محلل قدرة المولد",
@@ -1931,17 +2062,17 @@
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Releace The Device's Emergency Button First",
+      "english": "Release The Device's Emergency Button First",
       "arabic": "حرّر زر الطوارئ الخاص بالجهاز أولًا.",
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Releace The Device's Emergency Button First Before Adjusting",
+      "english": "Release The Device's Emergency Button First Before Adjusting",
       "arabic": "حرّر زر الطوارئ الخاص بالجهاز قبل إجراء الضبط.",
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Release The Curcuit Breaker First Turning On Device",
+      "english": "Release The Circuit Breaker First Turning On Device",
       "arabic": "ارفع قاطع الدائرة أولًا قبل تشغيل الجهاز.",
       "source": "Runtime interaction warning"
     },
@@ -1956,22 +2087,22 @@
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Release The Main Board's Curcuit Breaker first",
+      "english": "Release The Main Board's Circuit Breaker first",
       "arabic": "ارفع قاطع الدائرة الخاص باللوحة الرئيسية أولًا.",
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Release The Main Board's Curcuit Breaker first Before Adjusting",
+      "english": "Release The Main Board's Circuit Breaker first Before Adjusting",
       "arabic": "ارفع قاطع الدائرة الخاص باللوحة الرئيسية قبل إجراء الضبط.",
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Release The Main Board'sEmergency Button First",
+      "english": "Release The Main Board's Emergency Button First",
       "arabic": "حرّر زر الطوارئ الخاص باللوحة الرئيسية أولًا.",
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Release The Main Board'sEmergency Button First Before Adjusting",
+      "english": "Release The Main Board's Emergency Button First Before Adjusting",
       "arabic": "حرّر زر الطوارئ الخاص باللوحة الرئيسية قبل إجراء الضبط.",
       "source": "Runtime interaction warning"
     },
@@ -2011,50 +2142,50 @@
       "source": "Runtime interaction warning"
     },
     {
-      "english": "Connect an Ethernet cable from the Main Control Board (Comm. Out) to the Hydro Power turbine module (Comm. In)",
-      "arabic": "قم بتوصيل كابل إيثرنت من اللوحة الرئيسية للتحكم (Comm. Out) إلى وحدة التوربينة الكهرومائي.",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Connect an Ethernet cable from the Main Control Board (Comm. Out) to the Hydro-Power Turbine module (Comm. In)",
+    "arabic": "قم بتوصيل كابل إيثرنت من اللوحة الرئيسية للتحكم (Comm. Out) إلى وحدة التوربينة الكهرومائي.",
+    "source": "Hydro Exp.1.pdf"
+},
     {
-      "english": "Connect (L1), (L2), and (L3) terminals of the Generator Output from the Hydro Power turbine module to the (L1), (L2), and (L3) input terminals of the Universal Measuring Device module.",
-      "arabic": "قم بتوصيل الأطراف (L1) و (L2) و (L3) الخاصة بمخرج المولد من وحدة التوربينة الكهرومائي بأطراف الدخول المقابلة (L1) و (L2) و (L3) في وحدة جهاز القياس العالمي.",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Connect (L1), (L2), and (L3) terminals of the Generator Output from the Hydro-Power Turbine module to the (L1), (L2), and (L3) input terminals of the Universal Measuring Device module.",
+    "arabic": "قم بتوصيل الأطراف (L1) و (L2) و (L3) الخاصة بمخرج المولد من وحدة التوربينة الكهرومائي بأطراف الدخول المقابلة (L1) و (L2) و (L3) في وحدة جهاز القياس العالمي.",
+    "source": "Hydro Exp.1.pdf"
+},
     {
       "english": "Connect (L1), (L2), and (L3) output terminals of the Universal Measuring Device module to (L1), (L2), and (L3) terminals of the Full Bridge Rectifier.",
       "arabic": "قم بتوصيل أطراف الخروج (L1) و (L2) و (L3) لوحدة جهاز القياس العالمي بالأطراف (L1) و (L2) و (L3) الخاصة بمقوم الجسر الكامل.",
       "source": "Hydro Exp.1.pdf"
     },
     {
-      "english": "Release the emergency button on the Hydro-power turbine emulator.",
-      "arabic": "قم بتحرير زر الطوارئ على محاكي التوربين الكهرومائي.",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Release the emergency button on the Hydro-Power Turbine.",
+    "arabic": "قم بتحرير زر الطوارئ على محاكي التوربين الكهرومائي.",
+    "source": "Hydro Exp.1.pdf"
+},
     {
-      "english": "Raise the circuit breaker (C.B) of the Hydro-power turbine emulator.",
-      "arabic": "ارفع قاطع الدائرة (C.B) الخاص بمحاكي التوربينة الكهرومائي.",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Raise the circuit breaker (C.B) of the Hydro-Power Turbine.",
+    "arabic": "ارفع قاطع الدائرة (C.B) الخاص بمحاكي التوربينة الكهرومائي.",
+    "source": "Hydro Exp.1.pdf"
+},
     {
-      "english": "Switch on the Hydro-power turbine ON/OFF.",
-      "arabic": "شغّل التوربينة الكهرومائي باستخدام مفتاح التشغيل والإيقاف (ON/OFF) الخاص به.",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Switch on the Hydro-Power Turbine ON/OFF switch.",
+    "arabic": "شغّل التوربينة الكهرومائي باستخدام مفتاح التشغيل والإيقاف (ON/OFF) الخاص به.",
+    "source": "Hydro Exp.1.pdf"
+},
     {
-      "english": "Enable the motor output enable/ disable switch to allow the voltage to reach the input of the rectifier module",
-      "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المحرك للسماح بوصول الجهد إلى دخل وحدة المقوم",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Enable the Generator Output enable/disable switch to allow the voltage to reach the input of the rectifier module",
+    "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المولد للسماح بوصول الجهد إلى دخل وحدة المقوم",
+    "source": "Hydro Exp.1.pdf"
+},
     {
       "english": "Switch to the control software",
       "arabic": "قم بالانتقال الى شاشة التحكم.",
       "source": "Hydro Exp.1.pdf"
     },
     {
-      "english": "Gradually increase the motor speed in small increments.",
-      "arabic": "قم بزيادة سرعة المحرك تدريجيا.",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Gradually increase the Hydro-Power Turbine speed in small increments.",
+    "arabic": "قم بزيادة سرعة التوربينة الكهرومائية تدريجياً.",
+    "source": "Hydro Exp.1.pdf"
+},
     {
       "english": "Note: Observe the curve being drawn on the graph, showing the proportional relationship between speed and voltage.",
       "arabic": "ملاحظة: لاحظ المنحنى الذي يتم رسمه على الرسم البياني، والذي يُظهر العلاقة التناسبية بين السرعة والجهد.",
@@ -2066,126 +2197,126 @@
       "source": "Hydro Exp.1.pdf"
     },
     {
-      "english": "Now, gradually increase the turbine speed. Observe that the system compensates for the voltage drop by increasing the output voltage as speed increases.",
-      "arabic": "الآن، زِدْ تدريجيًا من سرعة التوربينة. لاحظ أن النظام يعوّض عن انخفاض الجهد بزيادة جهد الخرج مع زيادة السرعة.",
-      "source": "Hydro Exp.1.pdf"
-    },
+    "english": "Now, gradually increase the Hydro-Power Turbine speed. Observe that the system compensates for the voltage drop by increasing the output voltage as speed increases.",
+    "arabic": "الآن، زِدْ تدريجيًا من سرعة التوربينة. لاحظ أن النظام يعوّض عن انخفاض الجهد بزيادة جهد الخرج مع زيادة السرعة.",
+    "source": "Hydro Exp.1.pdf"
+},
 
         {
             "english": "Connect the 220 VAC and neutral terminals of the used modules to the corresponding terminals on the main board.",
-            "arabic": "وصّل أطراف التغذية (220 VAC) والأطراف المحايدة (N) للوحدات المستخدمة بالأطراف المقابلة على اللوحة الرئيسية.",
+            "arabic": "قم بتوصيل طرف (220 VAC)، والمسار المحايد (N) لجميع الوحدات المستخدمة بأطراف (220 VAC)، والمسار المحايد (N) في اللوحة الرئيسية.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Connect the Ethernet cable from Main Control Board Comm. Out to Hydro Power turbine Comm. In.",
-            "arabic": "وصّل كابل إيثرنت من منفذ الاتصال (Comm. Out) في لوحة التحكم الرئيسية إلى منفذ الاتصال (Comm. In) في وحدة التوربين الكهرومائي.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Connect the Ethernet cable from Main Control Board Comm. Out to Hydro-Power Turbine Comm. In.",
+    "arabic": "قم بتوصيل كابل إيثرنت من اللوحة الرئيسية للتحكم (Comm. Out) إلى وحدة التوربينة الكهرومائي.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "Connect the battery +VE and −VE to the inverter battery input +VE and −VE.",
-            "arabic": "وصّل طرفي البطارية (+VE) و(−VE) بطرفي إدخال البطارية المقابلين في العاكس خارج الشبكة.",
+            "arabic": "قم بتوصيل طرفي (+VE) و (-VE) لوحدة البطارية بطرفي إدخال البطارية (+VE) و (-VE) لوحدة العاكس خارج الشبكة.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Connect the DC LED lamp +VE and −VE to the inverter battery input +VE and −VE.",
-            "arabic": "وصّل طرفي مصباح التيار المستمر (DC LED) الموجب والسالب بطرفي إدخال البطارية (+VE) و(−VE) في العاكس خارج الشبكة.",
+            "arabic": "قم بتوصيل طرفي (+VE) و (-VE) لوحدة المصباح الليد ذو التيار المستمر بطرفي إدخال البطارية (+VE) و (-VE) لوحدة العاكس خارج الشبكة.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Switch on the off-grid inverter using the power switch beneath the device.",
-            "arabic": "شغّل العاكس خارج الشبكة باستخدام مفتاح الطاقة الموجود أسفل الجهاز.",
+            "english": "Switch on the off-grid inverter using the four buttons on the front panel.",
+            "arabic": "قم بتشغيل العاكس خارج الشبكة باستخدام الأزرار الأربعة الموجودة على اللوحة الأمامية للجهاز.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Connect the inverter AC Output L and N to L and N on the AC LED lamp module.",
-            "arabic": "وصّل طرفي خرج التيار المتردد (L) و(N) في العاكس بالطرفين المقابلين في وحدة مصباح (AC LED).",
+            "arabic": "قم بتوصيل طرفي (L) و (N) لخرج التيار المتردد لوحدة العاكس خارج الشبكة بطرفي (L) و (N) لوحدة مصباح LED ذي التيار المتردد.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "A negative battery power reading means the battery is discharging to supply the DC load and the off-grid inverter.",
-            "arabic": "تشير قراءة قدرة البطارية السالبة إلى أن البطارية تفرغ شحنتها لتغذية حمل التيار المستمر والعاكس خارج الشبكة.",
+            "arabic": "\"ستلاحظ في البرنامج أن طاقة البطارية تعرض إشارة سالبة. هذا يدل على أن البطارية تفرغ طاقتها لتزويد كلا من الحمل المستمر ووحدة العاكس خارج الشبكة\".",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Connect generator output L1, L2, and L3 to the Universal Measuring Device inputs.",
-            "arabic": "وصّل أطراف خرج المولد (L1) و(L2) و(L3) بمداخل جهاز القياس الشامل المقابلة.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Connect Generator Output L1, L2, and L3 to the Universal Measuring Device inputs.",
+    "arabic": "قم بتوصيل الأطراف (L1) و (L2) و (L3) الخاصة بمخرج المولد من وحدة التوربينة الكهرومائي بأطراف الدخول المقابلة (L1) و (L2) و (L3) في وحدة جهاز القياس العالمي.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "Adding the AC lamp increases battery current draw. Additional AC loads in parallel increase the demand.",
-            "arabic": "تؤدي إضافة مصباح التيار المتردد إلى زيادة التيار المسحوب من البطارية. وتزيد الأحمال المترددة الإضافية الموصولة على التوازي من الطلب على الطاقة.",
+            "arabic": "ملاحظة: بعد إضافة مصباح التيار المتردد، يزيد التيار المسحوب من البطارية بشكل ملحوظ. يمكنك توصيل أحمال متناوبة إضافية على التوازي لملاحظة استجابة النظام لزيادة الطلب على الطاقة.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Connect Universal Measuring Device output L1, L2, and L3 to the Full Bridge Rectifier.",
-            "arabic": "وصّل أطراف خرج جهاز القياس الشامل (L1) و(L2) و(L3) بأطراف مقوم الجسر الكامل المقابلة.",
+            "arabic": "قم بتوصيل أطراف الخروج (L1) و (L2) و (L3) لوحدة جهاز القياس العالمي بالأطراف (L1) و (L2) و (L3) الخاصة بمقوم الجسر الكامل.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Connect the rectifier +VE and −VE to the inverter DC input +VE and −VE.",
-            "arabic": "وصّل طرفي خرج المقوم (+VE) و(−VE) بطرفي دخل التيار المستمر المقابلين في العاكس.",
+            "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المقوم بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة العاكس خارج الشبكة.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Switch on the Hydro-power turbine ON/OFF switch.",
-            "arabic": "شغّل التوربين الكهرومائي باستخدام مفتاح التشغيل والإيقاف (ON/OFF).",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Switch on the Hydro-Power Turbine ON/OFF switch.",
+    "arabic": "شغّل التوربينة الكهرومائي باستخدام مفتاح التشغيل والإيقاف (ON/OFF) الخاص به.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "Switch the Run/Stop selector to Run.",
-            "arabic": "اضبط مفتاح التشغيل والإيقاف (Run/Stop) على وضع التشغيل (Run).",
+            "arabic": "بدّل مفتاح التشغيل/الإيقاف (Run/Stop) إلى وضع التشغيل (Run).",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Enable the motor output to supply voltage to the rectifier input.",
-            "arabic": "فعّل خرج المحرك لإيصال الجهد إلى دخل المقوم.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Enable the Generator Output to supply voltage to the rectifier input.",
+    "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المولد للسماح بوصول الجهد إلى دخل وحدة المقوم",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "When the hydro turbine is activated, the battery and turbine share current.",
-            "arabic": "عند تشغيل التوربين الكهرومائي، تتقاسم البطارية والتوربين التيار.",
+            "arabic": "\"بمجرد تفعيل التوربين الكهرومائي، يحدث تقاسم للتيار بين البطارية والتوربين.\"",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Connect inverter AC Input L and N to the main board 220 VAC and neutral terminals.",
-            "arabic": "وصّل طرفي دخل التيار المتردد (L) و(N) في العاكس بطرف التغذية (220 VAC) والطرف المحايد (N) في اللوحة الرئيسية.",
+            "arabic": "قم بتوصيل طرفي التوصيل (L) و(N) لمدخل التيار المتردد لوحدة العاكس خارج الشبكة بطرف (220 VAC) والمسار المحايد (N) للوحة الرئيسية.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "A positive battery current indicates charging from the AC grid.",
-            "arabic": "تشير قراءة تيار البطارية الموجبة إلى أن الشبكة الكهربائية تشحن البطارية.",
+            "arabic": "\"الآن، يمكنك ملاحظة أن تيار البطارية أصبح موجبًا، مما يدل على أنه يتم شحنها من الشبكة الكهربائية.\"",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Disconnect the AC and DC loads first, then the AC input source, then the hydro turbine, and finally the battery.",
-            "arabic": "افصل أولًا أحمال التيار المتردد والمستمر، ثم مصدر دخل التيار المتردد، ثم التوربين الكهرومائي، وأخيرًا البطارية.",
+            "arabic": "عند الانتهاء من التجربة، قم بالخطوات التالية بالترتيب:\nقم بفصل الحمل المستمر والمتردد.\nقم بفصل مصدر دخول التيار المتردد.\nقم بفصل التوربينة الكهرومائية.\nوأخيرًا، قم بفصل البطارية.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Hydro Turbine Speed Curve Characteristics",
-            "arabic": "خصائص منحنى سرعة التوربين الكهرومائي",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Hydro Hydro-Power Turbine speed Curve Characteristics",
+    "arabic": "خصائص منحنى سرعة التوربين الكهرومائي",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "Regulating DC Output",
             "arabic": "تنظيم خرج التيار المستمر",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "OFF Grid System Using Hydro-power turbine",
-            "arabic": "نظام خارج الشبكة باستخدام توربين كهرومائي",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "OFF Grid System Using Hydro-Power Turbine",
+    "arabic": "نظام خارج الشبكة باستخدام توربين كهرومائي",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
-            "english": "Experiment 3: OFF Grid System Using Hydro-power turbine",
-            "arabic": "التجربة 3: نظام خارج الشبكة باستخدام توربين كهرومائي",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Experiment 3: OFF Grid System Using Hydro-Power Turbine",
+    "arabic": "التجربة 3: نظام خارج الشبكة باستخدام توربين كهرومائي",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
-            "english": "To examine the relationship between the water flow rate (simulated by turbine speed) and the rotational speed of the water turbine, and its effect on the electrical output (voltage and current).",
-            "arabic": "دراسة العلاقة بين معدل تدفق المياه، الذي تحاكيه سرعة التوربين، وسرعة دوران التوربين المائي، وأثرها في الجهد والتيار الناتجين.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "To examine the relationship between the water flow rate (simulated by Hydro-Power Turbine speed) and the rotational speed of the water turbine, and its effect on the electrical output (voltage and current).",
+    "arabic": "دراسة العلاقة بين معدل تدفق المياه، الذي تحاكيه سرعة التوربين، وسرعة دوران التوربين المائي، وأثرها في الجهد والتيار الناتجين.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "To understand how the MPPT charge controller regulates DC power from the hydro turbine for battery charging and DC load supply, and observe how the turbine and battery share power.",
             "arabic": "فهم كيفية تنظيم وحدة التحكم بالشحن (MPPT) لقدرة التيار المستمر من التوربين الكهرومائي لشحن البطارية وتغذية حمل التيار المستمر، وملاحظة تقاسم القدرة بين التوربين والبطارية.",
@@ -2203,79 +2334,83 @@
         },
         {
             "english": "Connect the positive and negative Battery 24 V terminals to the matching battery terminals on the MPPT charge controller.",
-            "arabic": "وصّل طرفي البطارية (24 V) الموجب والسالب بطرفي البطارية المقابلين في وحدة التحكم بالشحن (MPPT).",
+            "arabic": "قم بتوصيل طرفي(+VE) و (-VE) لوحدة البطارية بطرفي البطارية (+VE) و (-VE) لوحدة التحكم في شاحن MPPT.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Connect the Hydro Power Turbine generator output L1, L2 and L3 to the corresponding inputs of the Universal Measuring Device.",
-            "arabic": "وصّل أطراف خرج مولد التوربين الكهرومائي (L1) و(L2) و(L3) بمداخل جهاز القياس الشامل المقابلة.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Connect the Hydro-Power Turbine Generator Output L1, L2 and L3 to the corresponding inputs of the Universal Measuring Device.",
+    "arabic": "قم بتوصيل الأطراف (L1) و (L2) و (L3) الخاصة بمخرج المولد من وحدة التوربينة الكهرومائي بأطراف الدخول المقابلة (L1) و (L2) و (L3) في وحدة جهاز القياس العالمي.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "Connect the Universal Measuring Device output L1, L2 and L3 to the corresponding terminals on the Full Bridge Rectifier.",
-            "arabic": "وصّل أطراف خرج جهاز القياس الشامل (L1) و(L2) و(L3) بأطراف مقوم الجسر الكامل المقابلة.",
+            "arabic": "قم بتوصيل أطراف الخروج (L1) و (L2) و (L3) لوحدة جهاز القياس العالمي بالأطراف (L1) و (L2) و (L3) الخاصة بمقوم الجسر الكامل.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Connect the positive and negative DC outputs of the rectifier to the matching DC inputs of the MPPT charge controller.",
-            "arabic": "وصّل طرفي خرج التيار المستمر الموجب والسالب من المقوم بطرفي الدخل المقابلين في وحدة التحكم بالشحن (MPPT).",
+            "arabic": "قم بتوصيل طرفي الإخراج (+VE) و (-VE) لوحدة المقوم بطرفي إدخال التيار المستمر (+VE) و (-VE) لوحدة التحكم في شاحن MPPT.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Connect the positive and negative DC load terminals of the MPPT controller to the corresponding DC halogen lamp terminals.",
-            "arabic": "وصّل طرفي حمل التيار المستمر الموجب والسالب من وحدة التحكم (MPPT) بطرفي مصباح الهالوجين للتيار المستمر المقابلين.",
+            "arabic": "قم بتوصيل طرفي (+VE) و (-VE) للحمل ذو التيار المستمر لوحدة التحكم في شاحن MPPT بطرفي (+VE) و (-VE) لوحدة مصباح الهالوجين ذو التيار المستمر.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Raise the main board circuit breaker.",
-            "arabic": "ارفع قاطع الدائرة في اللوحة الرئيسية.",
+            "arabic": "ارفع قاطع الدائرة (C.B) الخاص باللوحة الرئيسية.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Switch on the main board.",
-            "arabic": "شغّل اللوحة الرئيسية.",
+            "arabic": "شغّل اللوحة الرئيسية باستخدام مفتاح التشغيل والإيقاف (ON/OFF).",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "Operate the DC load from the MPPT charge controller.",
-            "arabic": "شغّل حمل التيار المستمر من وحدة التحكم بالشحن (MPPT).",
+            "arabic": "قم بتشغيل الحمل المستمر من وحدة تحكم شحن MPPT.",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
             "english": "The negative battery power indicates that the battery is discharging to supply the DC load and MPPT controller.",
-            "arabic": "تشير قدرة البطارية السالبة إلى أنها تفرغ شحنتها لتغذية حمل التيار المستمر ووحدة التحكم (MPPT).",
+            "arabic": "\"ستلاحظ في البرنامج أن طاقة البطارية تعرض إشارة سالبة. هذا يدل على أن البطارية تفرغ طاقتها لتزويد كلا من الحمل المستمر ووحدة MPPT بالطاقة.\"",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Raise the Hydro Power Turbine emulator circuit breaker.",
-            "arabic": "ارفع قاطع الدائرة في محاكي التوربين الكهرومائي.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Raise the Hydro-Power Turbine circuit breaker.",
+    "arabic": "ارفع قاطع الدائرة (C.B) الخاص بمحاكي التوربينة الكهرومائي.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
-            "english": "Switch on the Hydro Power Turbine.",
-            "arabic": "شغّل التوربين الكهرومائي.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Switch on the Hydro-Power Turbine.",
+    "arabic": "شغّل التوربينة الكهرومائي باستخدام مفتاح التشغيل والإيقاف (ON/OFF) الخاص به.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
             "english": "Set the Run/Stop selector to Run.",
-            "arabic": "اضبط مفتاح التشغيل والإيقاف (Run/Stop) على وضع التشغيل (Run).",
+            "arabic": "بدّل مفتاح التشغيل/الإيقاف (Run/Stop) إلى وضع التشغيل (Run).",
             "source": "Hydro RE-110 storyboard and scene text"
         },
         {
-            "english": "Enable generator output so voltage reaches the rectifier input.",
-            "arabic": "فعّل خرج المولد حتى يصل الجهد إلى دخل المقوم.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "Enable Generator Output so voltage reaches the rectifier input.",
+    "arabic": "قم بتفعيل مفتاح تشغيل/إيقاف خرج المولد للسماح بوصول الجهد إلى دخل وحدة المقوم",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
-            "english": "As turbine speed rises, output voltage and current rise. Positive battery power indicates charging.",
-            "arabic": "يزداد جهد الخرج وتياره مع زيادة سرعة التوربين. وتشير قدرة البطارية الموجبة إلى أنها تُشحن.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
+    "english": "As Hydro-Power Turbine speed rises, output voltage and current rise. Positive battery power indicates charging.",
+    "arabic": "ملاحظة: مع زيادة سرعة التوربينة، يرتفع التيار وجهد الخرج منه. تصبح قراءة طاقة البطارية موجبة، مما يؤكد أنها الآن تُشحن.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
         {
-            "english": "After the experiment, disconnect the DC load first, then the Hydro Power Turbine, and finally the battery.",
-            "arabic": "بعد انتهاء التجربة، افصل حمل التيار المستمر أولًا، ثم التوربين الكهرومائي، وأخيرًا البطارية.",
-            "source": "Hydro RE-110 storyboard and scene text"
-        },
-    {"english":"Connect an Ethernet cable from Main Control Board Comm. Out to the Hydro Power Turbine Comm. In.","arabic":"وصّل كابل إيثرنت من منفذ الاتصال (Comm. Out) في لوحة التحكم الرئيسية إلى منفذ الاتصال (Comm. In) في وحدة التوربين الكهرومائي.","source":"Hydro RE-110 storyboard and scene text"}
+    "english": "After the experiment, disconnect the DC load first, then the Hydro-Power Turbine, and finally the battery.",
+    "arabic": "عند الانتهاء من التجربة، قم بالخطوات التالية بالترتيب:\nقم بفصل الحمل المستمر.\nقم بفصل التوربينة الكهرومائية.\nوأخيرًا، قم بفصل البطارية.",
+    "source": "Hydro RE-110 storyboard and scene text"
+},
+    {
+    "english": "Connect an Ethernet cable from Main Control Board Comm. Out to the Hydro-Power Turbine Comm. In.",
+    "arabic": "قم بتوصيل كابل إيثرنت من اللوحة الرئيسية للتحكم (Comm. Out) إلى وحدة التوربينة الكهرومائي.",
+    "source": "Hydro RE-110 storyboard and scene text"
+}
   ]
 }

@@ -35,7 +35,7 @@ public sealed class WindLocalization : MonoBehaviour
     {
         public string original, rendered; public TMP_FontAsset font; public TextAlignmentOptions alignment;
         public List<OTL_FeatureTag> features;
-        public bool rtl; public bool autoSize; public float minimum, fontSize, maximum, width;
+        public bool rtl; public bool wordWrapping; public bool autoSize; public float minimum, fontSize, maximum, width;
         public bool hasApplied, appliedArabic; public float alpha; public TMP_Text verticalLabel; public RectTransform verticalOwner; public Vector2 verticalOwnerSize;
     }
     private sealed class LegacyState { public string original, rendered; public Font font; public TextAnchor alignment; }
@@ -116,7 +116,7 @@ public sealed class WindLocalization : MonoBehaviour
             {
                 texts[text] = new TextState { original = text.text, font = text.font, alignment = text.alignment,
                     features = text.fontFeatures != null ? new List<OTL_FeatureTag>(text.fontFeatures) : new List<OTL_FeatureTag>(),
-                    rtl = text.isRightToLeftText, autoSize = text.enableAutoSizing, minimum = text.fontSizeMin, fontSize = text.fontSize, maximum = text.fontSizeMax, alpha=text.alpha };
+                    rtl = text.isRightToLeftText, wordWrapping = text.enableWordWrapping, autoSize = text.enableAutoSizing, minimum = text.fontSizeMin, fontSize = text.fontSize, maximum = text.fontSizeMax, alpha=text.alpha };
                 Apply(text);
             }
         foreach (var text in Resources.FindObjectsOfTypeAll<Text>())
@@ -140,12 +140,12 @@ public sealed class WindLocalization : MonoBehaviour
         if (dynamic.Success)
         {
             string word = dynamic.Groups[1].Value.ToLowerInvariant();
-            if (Arabic) translated = (word == "experiment" ? "Ø§Ù„ØªØ¬Ø±Ø¨Ø©" : word == "camera" ? "Ø§Ù„ÙƒØ§Ù…ÙŠØ±Ø§" : "Ø§Ù„Ù…Ù†Ø¸ÙˆØ±") + " " + dynamic.Groups[2].Value + dynamic.Groups[3].Value;
+            if (Arabic) translated = (word == "experiment" ? "التجربة" : word == "camera" ? "الكاميرا" : "المنظور") + " " + dynamic.Groups[2].Value + dynamic.Groups[3].Value;
             return true;
         }
         // Progress counters in the PDF viewer.
         var progress = Regex.Match(english, @"^(\(?\d+) of (\d+\)?)$");
-        if (progress.Success) { if (Arabic) translated = progress.Groups[1].Value + " Ù…Ù† " + progress.Groups[2].Value; return true; }
+        if (progress.Success) { if (Arabic) translated = progress.Groups[1].Value + " من " + progress.Groups[2].Value; return true; }
         return false;
     }
     private void Apply(TMP_Text text)
@@ -171,17 +171,24 @@ public sealed class WindLocalization : MonoBehaviour
             text.alignment = Mirror(state.alignment);
             // Give translated buttons the same bounds and allow a modest font reduction.
             text.enableAutoSizing = false; text.fontSize = state.fontSize;
+            // Step prose is wrapped in logical order by ArabicTextLayout.
+            // Wrapping that visual-order result again can put the sentence ending above its beginning.
+            var descriptionItem = text.GetComponentInParent<StepItem>();
+            if (descriptionItem != null && descriptionItem.IsDescription(text))
+                text.enableWordWrapping = false;
             text.text = ArabicTextLayout.Render(translation, text, LayoutWidth(text));
             // Fit short fixed-height controls without forcing long scrollable prose smaller.
             bool shortControl=state.original.Length<140 && text.rectTransform.rect.height<100;
             var fitter=text.GetComponent<ContentSizeFitter>();
+            var stepItem = text.GetComponentInParent<StepItem>();
+            bool isStepDescription = stepItem != null && stepItem.IsDescription(text);
             bool flexible=((fitter && fitter.verticalFit != ContentSizeFitter.FitMode.Unconstrained) || text.GetComponentInParent<AutoSizeSubtitleScrollContent>()) && !text.GetComponentInParent<Button>() && !shortControl;
-            if(!flexible && text.rectTransform.rect.height>0)
+            if(!isStepDescription && !flexible && text.rectTransform.rect.height>0)
             {
                 for(int i=0;i<16 && text.GetPreferredValues(text.text,text.rectTransform.rect.width,float.PositiveInfinity).y>text.rectTransform.rect.height-.5f && text.fontSize>8;i++)
                 { text.fontSize=Mathf.Max(8,text.fontSize*.9f); text.text=ArabicTextLayout.Render(translation,text, LayoutWidth(text)); }
             }
-            if(shortControl || !text.GetComponentInParent<AutoSizeSubtitleScrollContent>() || text.GetComponentInParent<Button>()){
+            if(!isStepDescription && (shortControl || !text.GetComponentInParent<AutoSizeSubtitleScrollContent>() || text.GetComponentInParent<Button>())){
                 text.fontSizeMax=state.fontSize; text.fontSizeMin=Mathf.Min(state.minimum,8);
                 text.enableAutoSizing=true;
             }
@@ -191,6 +198,7 @@ public sealed class WindLocalization : MonoBehaviour
             if(state.verticalLabel) state.verticalLabel.gameObject.SetActive(false);
             text.alpha = state.alpha;
             text.font = state.font; text.fontFeatures = new List<OTL_FeatureTag>(state.features); text.alignment = state.alignment; text.isRightToLeftText = state.rtl;
+            text.enableWordWrapping = state.wordWrapping;
             text.fontSize = state.fontSize; text.fontSizeMax = state.maximum;
             text.enableAutoSizing = state.autoSize; text.fontSizeMin = state.minimum; text.text = state.original;
         }
@@ -261,46 +269,46 @@ public sealed class WindLocalization : MonoBehaviour
             return Mathf.Max(1, parent.rect.width);
         return text.rectTransform.rect.width;
     }
-    private void EnsureSwitch()
+private void EnsureSwitch()
     {
-        var scene = SceneManager.GetActiveScene();
-        switches.RemoveAll(b => !b);
-        if (switches.Any(b => b.gameObject.scene == scene)) return;
-        var reload = Resources.FindObjectsOfTypeAll<Button>().FirstOrDefault(b => b.gameObject.scene == scene && b.name == "Restart Button Variant" && b.transform.parent && b.transform.parent.name == "Right Panel");
-        if (!reload || !(reload.transform.parent is RectTransform sourcePanel)) return;
+        // The Main Settings language controls are authored directly in the scene.
+        // They must remain editable and must not be recreated at runtime.
+    }
 
-        // Use a transform-only sibling of the right panel so the language choice also
-        // remains available when Main Menu hides its gameplay controls.
-        var panel = new GameObject("Language Controls", typeof(RectTransform)).GetComponent<RectTransform>();
-        panel.SetParent(sourcePanel.parent, false);
-        panel.anchorMin = sourcePanel.anchorMin; panel.anchorMax = sourcePanel.anchorMax;
-        panel.pivot = sourcePanel.pivot; panel.sizeDelta = sourcePanel.sizeDelta;
-        panel.anchoredPosition3D = sourcePanel.anchoredPosition3D;
-        panel.localRotation = sourcePanel.localRotation; panel.localScale = sourcePanel.localScale;
 
-        // Copy the actual control, including its outline, glow, hover states and UI audio.
-        // Replacing the entire event object removes every inherited Reload callback.
-        var go = Instantiate(reload.gameObject, panel, false);
-        go.SetActive(false); go.name = "EN AR Language Button";
-        var button = go.GetComponent<Button>();
-        button.onClick = new Button.ButtonClickedEvent();
-        button.onClick.AddListener(ToggleLanguage); button.interactable = true;
-        var icon = go.transform.Find("Icon") as RectTransform;
-        if (!icon) { Destroy(panel.gameObject); return; }
-        var rect = (RectTransform)go.transform;
-        rect.anchoredPosition += Vector2.up * (icon.rect.height + 12);
-        var oldIcon = icon.GetComponent<Image>(); if (oldIcon) oldIcon.enabled = false;
-        var label = new GameObject("Language", typeof(RectTransform), typeof(TextMeshProUGUI));
-        label.transform.SetParent(icon, false);
-        var lr = (RectTransform)label.transform;
-        lr.anchorMin = Vector2.zero; lr.anchorMax = Vector2.one;
-        lr.offsetMin = lr.offsetMax = Vector2.zero;
-        var tmp = label.GetComponent<TextMeshProUGUI>();
-        var styledText = Resources.FindObjectsOfTypeAll<TMP_Text>().FirstOrDefault(t => t.gameObject.scene == scene && t.font && t.font.name.Contains("Rajdhani"));
-        if (styledText) tmp.font = styledText.font;
-        tmp.text = Arabic ? "AR" : "EN"; tmp.fontSize = 20; tmp.fontStyle = FontStyles.Bold;
-        tmp.alignment = TextAlignmentOptions.Center; tmp.color = Color.white; tmp.raycastTarget = true;
-        if (button.targetGraphic == oldIcon || !button.targetGraphic) button.targetGraphic = tmp;
-        go.SetActive(true); switches.Add(button);
+private static Sprite languageCircleSprite;
+    private static Sprite LanguageCircleSprite()
+    {
+        if (languageCircleSprite) return languageCircleSprite;
+        const int size = 96;
+        var texture = new Texture2D(size, size, TextureFormat.RGBA32, false);
+        texture.filterMode = FilterMode.Bilinear;
+        float center = (size - 1) * .5f, radius = size * .42f;
+        for (int y = 0; y < size; y++) for (int x = 0; x < size; x++)
+        {
+            float distance = Mathf.Sqrt((x - center) * (x - center) + (y - center) * (y - center));
+            float alpha = Mathf.Clamp01(1f - Mathf.Abs(distance - radius) / 2.5f);
+            texture.SetPixel(x, y, new Color(1f, 1f, 1f, alpha));
+        }
+        texture.Apply();
+        languageCircleSprite = Sprite.Create(texture, new Rect(0, 0, size, size), new Vector2(.5f, .5f), size);
+        return languageCircleSprite;
+    }
+
+
+private void SelectSettingsLanguage(string language, TMP_Text value, TMP_Text dots)
+    {
+        if (value != null)
+        {
+            value.text = language;
+            if (texts.TryGetValue(value, out var state))
+            {
+                state.original = language;
+                state.hasApplied = false;
+            }
+        }
+        if (dots != null)
+            dots.text = language == "Arabic" ? "<color=#FF9D00>●</color>  <color=#FFFFFF>●</color>" : "<color=#FFFFFF>●</color>  <color=#FF9D00>●</color>";
+        SetLanguage(language);
     }
 }

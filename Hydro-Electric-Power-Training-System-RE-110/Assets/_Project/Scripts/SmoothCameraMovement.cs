@@ -57,8 +57,10 @@ public class SmoothCameraMovement : MonoBehaviour
     private bool mouseGestureBegan, mouseGestureEnded;
 #endif
 
-    private bool CanPan => InteractionManager.Instance != null && InteractionManager.Instance.Free;
-    private bool CanZoom => CanPan;
+    private bool IsGuided => InteractionManager.Instance != null && InteractionManager.Instance.Guided;
+    private bool IsFree => InteractionManager.Instance != null && InteractionManager.Instance.Free;
+    private bool CanOrbit => IsFree || IsGuided;
+    private bool CanDrag => IsFree || (IsGuided && orbitMode);
 
     private bool isMoving;
     private Transform movementTarget;
@@ -80,6 +82,65 @@ public class SmoothCameraMovement : MonoBehaviour
 #if ENABLE_INPUT_SYSTEM
         InputSystem.onEvent += CaptureMouseGesture;
 #endif
+    }
+
+    [SerializeField] private Button rotateViewButton;
+    private bool orbitMode;
+    private Vector3? orbitPivot;
+    private Vector3 preOrbitPosition;
+    private Quaternion preOrbitRotation;
+
+    public void RotateView()
+    {
+        if (!CanOrbit || isMoving)
+            return;
+
+        if (orbitMode)
+        {
+            BeginMove(preOrbitPosition, preOrbitRotation);
+        }
+        else
+        {
+            preOrbitPosition = transform.position;
+            preOrbitRotation = transform.rotation;
+        }
+
+        orbitMode = !orbitMode;
+        orbitPivot = null;
+        CancelMouseGesture();
+        UpdateRotateButton();
+    }
+
+    private void UpdateRotateButton()
+    {
+        if (!rotateViewButton)
+            return;
+
+        bool visible = CanOrbit && !string.IsNullOrEmpty(InteractionManager.Instance.ActiveStoryboardName);
+        rotateViewButton.gameObject.SetActive(visible);
+        rotateViewButton.targetGraphic.color = orbitMode
+            ? new Color(1f, .76f, .34f) : Color.white;
+        if (!visible)
+            orbitMode = false;
+    }
+
+    private void OrbitByDrag(Vector2 delta)
+    {
+        if (!orbitPivot.HasValue)
+        {
+            var ray = viewCamera.ViewportPointToRay(new Vector3(.5f, .5f));
+            orbitPivot = Physics.Raycast(ray, out var hit, 500f,
+                Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore)
+                ? hit.point : transform.position + transform.forward * 25f;
+        }
+
+        const float degreesPerPixel = .2f;
+        transform.RotateAround(orbitPivot.Value, Vector3.up, delta.x * degreesPerPixel);
+        float elevation = Mathf.Asin(Mathf.Clamp(transform.forward.y, -1f, 1f)) * Mathf.Rad2Deg;
+        float pitch = Mathf.Clamp(elevation + delta.y * degreesPerPixel, -75f, 75f);
+        transform.RotateAround(orbitPivot.Value, transform.right, elevation - pitch);
+        panOrigin = transform.position;
+        panOffset = Vector2.zero;
     }
 
     public void MoveToPosition(int index) => MoveToPosition(index, index);
@@ -112,6 +173,8 @@ public class SmoothCameraMovement : MonoBehaviour
 
         // Requests can come from buttons, keyboard input or storyboard events.
         // Only LateUpdate applies the camera pose, after normal frame updates.
+        orbitMode = false;
+        orbitPivot = null;
         movementTarget = cameraPositions[index];
         startPosition = transform.position;
         startRotation = transform.rotation;
@@ -138,8 +201,21 @@ public class SmoothCameraMovement : MonoBehaviour
         }
     }
 
+    private void BeginMove(Vector3 position, Quaternion rotation)
+    {
+        movementTarget = null;
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+        targetPosition = position;
+        targetRotation = rotation;
+        elapsedTime = 0f;
+        isMoving = true;
+        CancelMouseGesture();
+    }
+
     private void LateUpdate()
     {
+        UpdateRotateButton();
         if (resetManualView)
         {
             resetManualView = false;
@@ -154,15 +230,10 @@ public class SmoothCameraMovement : MonoBehaviour
             return;
         }
 
-        if (movementTarget == null)
-        {
-            isMoving = false;
-            return;
-        }
-
         if (moveDuration <= 0f)
         {
-            transform.SetPositionAndRotation(movementTarget.position, movementTarget.rotation);
+            transform.SetPositionAndRotation(movementTarget ? movementTarget.position : targetPosition,
+                movementTarget ? movementTarget.rotation : targetRotation);
             panOrigin = transform.position;
             isMoving = false;
             movementTarget = null;
@@ -179,7 +250,8 @@ public class SmoothCameraMovement : MonoBehaviour
 
         if (elapsedTime >= moveDuration)
         {
-            transform.SetPositionAndRotation(movementTarget.position, movementTarget.rotation);
+            transform.SetPositionAndRotation(movementTarget ? movementTarget.position : targetPosition,
+                movementTarget ? movementTarget.rotation : targetRotation);
             panOrigin = transform.position;
             isMoving = false;
             movementTarget = null;
@@ -205,7 +277,7 @@ public class SmoothCameraMovement : MonoBehaviour
 
     private void UpdateMouseNavigation()
     {
-        if (viewCamera == null || !Application.isFocused || (!CanPan && !CanZoom))
+        if (viewCamera == null || !Application.isFocused || !CanDrag)
         {
             dragging = false;
             leftPanAllowed = false;
@@ -232,7 +304,7 @@ public class SmoothCameraMovement : MonoBehaviour
         // A left gesture that starts on a wire, device or UI control belongs
         // entirely to that control. Empty-space dragging can pan the scene.
         if (leftPressed)
-            leftPanAllowed = CanPan && !overUI && !IsPointerOverWorldInteraction(mouse);
+            leftPanAllowed = CanDrag && !overUI && !IsPointerOverWorldInteraction(mouse);
         bool held = auxiliaryHeld || (leftHeld && leftPanAllowed);
         bool pressed = auxiliaryPressed || (leftPressed && leftPanAllowed);
         ProcessMouseNavigation(mouse, pressed, held, wheel, overUI);
@@ -255,7 +327,7 @@ public class SmoothCameraMovement : MonoBehaviour
         if (InputState.currentUpdateType == InputUpdateType.Editor) return;
 #endif
         var mouse = device as Mouse;
-        if (mouse == null || mouse != Mouse.current || !Application.isFocused || !CanPan || isMoving ||
+        if (mouse == null || mouse != Mouse.current || !Application.isFocused || !CanDrag || isMoving ||
             (!inputEvent.IsA<StateEvent>() && !inputEvent.IsA<DeltaStateEvent>())) return;
         Vector2 position = mouse.position.ReadValueFromEvent(inputEvent, out var p) ? p : mouse.position.ReadValue();
         bool left = mouse.leftButton.ReadValueFromEvent(inputEvent, out var l) ? l > .5f : mouse.leftButton.isPressed;
@@ -348,18 +420,18 @@ public class SmoothCameraMovement : MonoBehaviour
 
     private void ProcessMouseNavigation(Vector2 mouse, bool pressed, bool held, float wheel, bool overUI)
     {
-        if (viewCamera == null || isMoving || (!CanPan && !CanZoom) ||
+        if (viewCamera == null || isMoving || !CanDrag ||
             overUI || !viewCamera.pixelRect.Contains(mouse))
         {
             dragging = false;
             return;
         }
 
-        if (CanZoom && wheel != 0f)
+        if (IsFree && wheel != 0f)
             viewCamera.fieldOfView = Mathf.Clamp(viewCamera.fieldOfView - wheel * wheelZoomSpeed,
                 minimumFieldOfView, Mathf.Max(minimumFieldOfView, maximumFieldOfView));
 
-        if (!CanPan || !held) { dragging = false; return; }
+        if (!held) { dragging = false; return; }
         // Focus, a transition or UI may consume the initial down frame. A
         // held navigation button starts from its current position, without a jump.
         if (pressed || !dragging)
@@ -386,6 +458,12 @@ public class SmoothCameraMovement : MonoBehaviour
 
         Vector2 delta = mouse - lastMousePosition;
         lastMousePosition = mouse;
+        if (orbitMode)
+        {
+            OrbitByDrag(delta);
+            return;
+        }
+
         float unitsPerPixel = 2f * panDepth * Mathf.Tan(viewCamera.fieldOfView * Mathf.Deg2Rad * .5f)
             / Mathf.Max(1f, viewCamera.pixelHeight);
         panOffset = Vector2.ClampMagnitude(panOffset - delta * unitsPerPixel, maximumPanDistance);
