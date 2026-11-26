@@ -623,6 +623,8 @@ namespace TutorialFramework
         public void StartStoryboard()
         {
             currentStep = -1;
+            bool guided = InteractionManager.Instance.Guided;
+            HybridStudentTracking.StartExperiment(HybridStudentTracking.ExperimentId(StoryboardID, guided), guided ? "guided" : "free");
 
 
             if (InteractionManager.Instance.Guided)
@@ -1315,6 +1317,8 @@ namespace TutorialFramework
                             .SetActive(false);
 
 
+                    if (index == currentStep + 1)
+                        HybridStudentTracking.CompleteStep(currentStep + 1);
                     previous.onStepEnd?.Invoke();
 
 
@@ -1337,6 +1341,8 @@ namespace TutorialFramework
             if (index < 0 ||
                 index >= steps.Count)
             {
+                if (currentStep >= 0 && index == currentStep + 1 && index == steps.Count)
+                    HybridStudentTracking.CompleteExperiment();
                 Debug.Log(
                     "Storyboard Finished"
                 );
@@ -1347,6 +1353,7 @@ namespace TutorialFramework
 
             currentStep =
                 index;
+            HybridStudentTracking.StartStep(currentStep + 1);
 
 
             Step step =

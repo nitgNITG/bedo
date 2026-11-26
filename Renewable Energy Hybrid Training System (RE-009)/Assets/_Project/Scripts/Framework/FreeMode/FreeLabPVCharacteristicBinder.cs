@@ -147,7 +147,7 @@ public sealed class FreeLabPVCharacteristicBinder : MonoBehaviour
         if (GT <= 0.1f)
             return false;
 
-        float V = GetVo(resistance) * (1f - Mathf.Log(GT / 1000f));
+        float V = GetVo(resistance) * Mathf.Max(0f, 1f + 0.055f * Mathf.Log(GT / 1000f));
         float I = (V / resistance * 2.5f) * GT / 1000f;
 
         if (isSeries) V *= 3f;

@@ -36,10 +36,9 @@ namespace TutorialFramework
         }
         public StoryboardSteps storyboard;
         public WindTurbineSpeedController windSpeed;
-        public TextAsset windModel;
         public TextAsset hybridModelParameters;
         private HybridMath.Parameters parameters;
-        public PVCSVReader pvReader;
+        private bool parametersLoaded;
         public FreeLabWindController freeController;
         public FreeLabControl solarEmergency,solarPower,solarRun,windRun,solarEnable;
         public Renderer[] freeModeHiddenHardware=Array.Empty<Renderer>();
@@ -57,13 +56,13 @@ namespace TutorialFramework
         [Tooltip("Enable only when this storyboard explicitly includes plotting measurements.")] public bool recordGraphMeasurements;
         [Range(0f,1f)] public float irradiance=1f;
         public float tilt,azimuth,sun;
-        [SerializeField, Range(0,1)] private float batteryCharge=.5f;
+        [SerializeField, Range(0,1)] private float batteryCharge=0f;
         private readonly bool[] instructionStates=new bool[26];
         private HybridMath.Reading reading;
         public HybridMath.Reading Reading => reading;
         public bool MainPowered {get; private set;}
         public bool SolarEnabled=>sandbox?On(solarEnable):instructionStates[17];
-        public void ResetExperiment(){Array.Clear(instructionStates,0,instructionStates.Length);previousRPM=-1;previousSolarEnabled=false;previousSolarSettings=new Vector4(-1,-1,-1,-1);MainPowered=false;reading=default;if(windSpeed){windSpeed.TurnOff();windSpeed.SetSpeed(0);}if(graph)graph.ClearRuntimeGraph();}
+        public void ResetExperiment(){batteryCharge=0f;Array.Clear(instructionStates,0,instructionStates.Length);previousRPM=-1;previousSolarEnabled=false;previousSolarSettings=new Vector4(-1,-1,-1,-1);MainPowered=false;reading=default;if(windSpeed){windSpeed.TurnOff();windSpeed.SetSpeed(0);}if(graph)graph.ClearRuntimeGraph();}
 
         private bool sandbox => InteractionManager.Instance && InteractionManager.Instance.Free;
         private float previousRPM=-1;
@@ -74,7 +73,7 @@ namespace TutorialFramework
         public void CompleteInstruction(int number)
         {
             if(number>0&&number<instructionStates.Length)instructionStates[number]=true;
-            if(number==20&&windSpeed&&windSpeed.CurrentSpeed<=0)windSpeed.SetSpeed(200);
+            if(number==20&&windSpeed&&windSpeed.CurrentSpeed<=0)windSpeed.SetSpeed(600);
             Refresh();
         }
         public void ToggleSolarEnable()
@@ -93,7 +92,7 @@ namespace TutorialFramework
             // The Run selector owns visibility, generation owns the wind-only values.
             bool selected=sandbox?MainPowered&&freeController&&On(freeController.windPower)&&On(windRun):instructionStates[21];
             if(powerAnalyzerCanvas)powerAnalyzerCanvas.SetActive(selected);
-            if(powerAnalyzerText)powerAnalyzerText.text=PVGuidedDataBinder.FormatPowerAnalyzer(reading.wind.acPower,Mathf.Abs(reading.wind.acVoltage*reading.wind.acCurrent));
+            if(powerAnalyzerText)powerAnalyzerText.text=PVGuidedDataBinder.FormatPowerAnalyzer(reading.wind.acPower,Mathf.Sqrt(3f)*Mathf.Abs(reading.wind.acVoltage*reading.wind.acCurrent));
         }
         private void Update()
         {
@@ -124,9 +123,14 @@ namespace TutorialFramework
                 if(lit){if(lamp.led)led++;else halogen++;}
             }
             float rpm=sandbox&&freeController?freeController.RPM:windSpeed?windSpeed.CurrentSpeed:0;
-            if(parameters==null&&hybridModelParameters)parameters=HybridMath.ReadParameters(hybridModelParameters);
+            if(!parametersLoaded)
+            {
+                parametersLoaded=true;
+                try { parameters=HybridMath.ReadParameters(hybridModelParameters); }
+                catch(System.Exception error) { Debug.LogError("Hybrid model parameters could not be loaded: "+error.Message,this); }
+            }
             reading=parameters!=null?HybridMath.Calculate(parameters,bus,wind,pv,rpm,irradiance,tilt,azimuth,sun,halogen,led,inv,batteryCharge):default;
-            if(powerAnalyzerText)powerAnalyzerText.text=PVGuidedDataBinder.FormatPowerAnalyzer(reading.wind.acPower,Mathf.Abs(reading.wind.acVoltage*reading.wind.acCurrent));
+            if(powerAnalyzerText)powerAnalyzerText.text=PVGuidedDataBinder.FormatPowerAnalyzer(reading.wind.acPower,Mathf.Sqrt(3f)*Mathf.Abs(reading.wind.acVoltage*reading.wind.acCurrent));
             if(windAC!=null)windAC.Set(reading.wind.acVoltage,reading.wind.acCurrent,reading.wind.acPower);
             if(windDC!=null)windDC.Set(reading.wind.dcVoltage,reading.wind.dcCurrent,reading.wind.dcPower);
             if(solar!=null)solar.Set(reading.pvVoltage,reading.pvCurrent,reading.pvPower);

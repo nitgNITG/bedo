@@ -14,7 +14,7 @@ public static partial class HybridGuidedCompletion
  [MenuItem("RE009/Remove Inverter Ethernet Instruction And Renumber")]
  public static void RemoveInverterEthernetInstruction(){
  if(Application.isPlaying)throw new Exception("Stop Play Mode first.");
- EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+ EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hybrid Lab.unity");
  var board=All<StoryboardSteps>().Single(b=>b.StoryboardID==HybridExperimentSetup.Id);
  var stepRoot=board.transform.Find("Steps");var panelRoot=At("Interface/Main UI/Popups/Instructions/Hybrid Experiment UI");
  var obsolete=board.steps.Where(s=>s.interaction&&s.interaction.name=="Off-grid Inverter Module Comm.In to Inverter Device COM").ToArray();

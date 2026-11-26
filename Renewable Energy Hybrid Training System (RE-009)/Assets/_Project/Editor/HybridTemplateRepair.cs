@@ -21,7 +21,7 @@ public static class HybridTemplateRepair
  [MenuItem("RE009/Preserve Partial Repair And Restore Verified Baseline")]
  public static void RestoreBaseline(){
  if(Application.isPlaying)throw new Exception("Stop Play Mode first.");
- const string path="Assets/_Project/Scenes/PV Lab.unity",backup="Logs/HybridRepairBackup/PV Lab.saved-before-repair.unity";
+ const string path="Assets/_Project/Scenes/Hybrid Lab.unity",backup="Logs/HybridRepairBackup/Hybrid Lab.saved-before-repair.unity";
  if(!All<Transform>().Any(t=>t.name=="Exp 1 (Repair In Progress)"))throw new Exception("No incomplete repair to restore.");
  if(!File.ReadAllBytes(path).SequenceEqual(File.ReadAllBytes(backup)))throw new Exception("Saved scene changed since the backup; stop to preserve user work.");
  string snapshot=AssetDatabase.GenerateUniqueAssetPath("Assets/_Project/Scenes/HybridRepairPartial.unity");

@@ -91,7 +91,7 @@ public static partial class HybridGuidedCompletion
  public static void Menus(){
  if(Application.isPlaying)throw new Exception("Stop Play Mode first.");
  definition=JsonUtility.FromJson<Definition>(File.ReadAllText("Assets/_Project/Data/Hybrid/RE009Storyboard.json"));
- if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().path!="Assets/_Project/Scenes/PV Lab.unity")EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+ if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().path!="Assets/_Project/Scenes/Hybrid Lab.unity")EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hybrid Lab.unity");
  owner=All<StoryboardSteps>().Single(b=>b.StoryboardID==HybridExperimentSetup.Id);
  if(owner.steps.Count<45)throw new Exception("Complete the sequence first.");
  var manager=All<InteractionManager>().Single();var selector=All<ExperimentSelector>().Single();ArrayRefs(selector,"experiments",new[]{owner});
@@ -106,6 +106,6 @@ public static partial class HybridGuidedCompletion
  foreach(var l in launchers)Card(l.transform).gameObject.SetActive(l==launcher);CardText(Card(launcher.transform));launcher.Configure(HybridExperimentSetup.Id,Display);Dirty(launcher);
  foreach(var m in All<InteractionManager>()){var ms=new SerializedObject(m);ms.FindProperty("fixedWindowTitle").stringValue="Renewable Energy Hybrid Training System (RE-009)";ms.ApplyModifiedPropertiesWithoutUndo();Dirty(m);}
  foreach(var title in All<TMP_Text>().Where(t=>t.text=="Wind Energy Training System"||t.text=="Wind Energy Training System (RE-007)")){title.text="Renewable Energy Hybrid Training System (RE-009)";Dirty(title);}
- EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+ EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hybrid Lab.unity");
  }
 }

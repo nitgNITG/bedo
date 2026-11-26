@@ -16,10 +16,15 @@ public class PVCSVReader : MonoBehaviour
         public float availableChargeCurrent, dumpCurrent;
     }
 
+    public static float BatterySourceCurrent(float voltage, float current, float batteryVoltage)
+    {
+        return voltage >= batteryVoltage && !float.IsNaN(current) ? Mathf.Max(0f,current) : 0f;
+    }
+
     // EXP4 reads the off-grid columns of the source workbook. AC lamp display
     // current (P) and its DC-equivalent calculation current (Q) are distinct.
     public static bool TryCalculateOffGrid(TextAsset model, float sourceCurrent,
-        int dcLoads, int acLoads, bool gridConnected, out OffGridReading reading, bool dcLED = false)
+        int dcLoads, int acLoads, bool gridConnected, out OffGridReading reading, bool dcLED = false, float sourceVoltage = float.PositiveInfinity)
     {
         reading = default;
         if (model == null || float.IsNaN(sourceCurrent) || float.IsInfinity(sourceCurrent)) return false;
@@ -43,7 +48,7 @@ public class PVCSVReader : MonoBehaviour
         reading.acLoadPower = reading.acLoadVoltage * reading.acLoadCurrent;
         reading.inverterCurrent = Mathf.Max(0, acLoads) * constants["AC_Lamp_DC_Equivalent_A"];
         reading.inverterPower = busVoltage * reading.inverterCurrent;
-        float balance = sourceCurrent - reading.dcLoadCurrent - reading.inverterCurrent;
+        float balance = BatterySourceCurrent(sourceVoltage, sourceCurrent, busVoltage) - reading.dcLoadCurrent - reading.inverterCurrent;
         reading.availableChargeCurrent = Mathf.Clamp(balance, 0, limit); // column S and its limits
         reading.batteryCurrent = gridConnected ? limit : Mathf.Min(balance, limit);
         reading.batteryPower = busVoltage * reading.batteryCurrent;
@@ -164,25 +169,14 @@ public class PVCSVReader : MonoBehaviour
 
     private void LoadCSV()
     {
-        string path = Path.Combine(
-            Application.streamingAssetsPath,
-            "PVData.csv"
-        );
-
-
-        if (!File.Exists(path))
+        TextAsset csv = Resources.Load<TextAsset>("PVData");
+        if (csv == null)
         {
-            Debug.LogError(
-                "CSV not found: " + path
-            );
-
+            Debug.LogError("PV calibration TextAsset 'PVData' was not found.", this);
             return;
         }
 
-
-        string[] lines = File.ReadAllLines(path);
-
-
+        string[] lines = csv.text.Split('\n');
 
         // Skip:
         // Line 0 = headers
@@ -254,18 +248,13 @@ public class PVCSVReader : MonoBehaviour
         }
 
 
-        Debug.Log(
-            "PV rows loaded: "
-            + data.Count
-        );
+        if (data.Count == 0)
+        {
+            Debug.LogError("PV calibration TextAsset 'PVData' has no data rows.", this);
+            return;
+        }
 
-        Debug.Log(
-    "First Point: " +
-    data[0].voltage +
-    "V  " +
-    data[0].current +
-    "A"
-);
+        Debug.Log($"PV rows loaded: {data.Count}", this);
     }
 
 
@@ -321,7 +310,7 @@ public class PVCSVReader : MonoBehaviour
             return true;
 
         result.voltage = result.openCircuitVoltage *
-            (1f - Mathf.Log(result.adjustedIrradiance / 1000f));
+            Mathf.Max(0f, 1f + 0.055f * Mathf.Log(result.adjustedIrradiance / 1000f));
         result.shortCircuitCurrent = result.voltage / resistance *
             shortCircuitCurrentMultiplier;
         result.current = result.shortCircuitCurrent *

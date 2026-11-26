@@ -342,24 +342,14 @@ namespace TutorialFramework
             bool created = !HasConnection(selectedEndpoint, endpoint) &&
                 CreateConnection(selectedEndpoint, endpoint);
 
-            if (created)
-            {
-                // A completed wire owns both plugs until that exact wire is
-                // removed. Clear the click-preview now; the allocated plugs
-                // stay visible through their wire ownership. Leaving preview
-                // enabled here would incorrectly show a second plug after
-                // only the first connection.
-                selectedEndpoint.SetSelectionPlugVisible(false);
-                endpoint.SetSelectionPlugVisible(false);
-            }
-            else
-            {
-                selectedEndpoint.SetSelectionPlugVisible(false);
-                endpoint.SetSelectionPlugVisible(false);
-            }
-
+            selectedEndpoint.SetSelectionPlugVisible(false);
+            endpoint.SetSelectionPlugVisible(false);
             selectedEndpoint = null;
             ClearPossibleConnectionHighlights();
+
+            if (!created)
+                Warn("Connection is not available in this module.", "Continue");
+
             EvaluateAll();
             return true;
         }
@@ -748,7 +738,7 @@ namespace TutorialFramework
             }
         }
 
-        private void Warn(string message)
+        private void Warn(string message, string dismissLabel = "OK")
         {
             Debug.Log("FREE MODE: " + message);
 
@@ -762,6 +752,10 @@ namespace TutorialFramework
                     freeModeWarningText.text = message;
                 if (legacyFreeModeWarningText != null)
                     legacyFreeModeWarningText.text = message;
+                var dismissButton = freeModeWarningPanel.GetComponentInChildren<UnityEngine.UI.Button>(true);
+                var label = dismissButton != null ? dismissButton.GetComponentInChildren<TMP_Text>(true) : null;
+                if (label != null)
+                    label.text = dismissLabel;
                 freeModeWarningPanel.SetActive(true);
             }
             else if (WarningManager.Instance != null)

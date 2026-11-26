@@ -24,7 +24,7 @@ public static class WindReportedIssuesFix
     public static void Fix()
     {
         var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-        if (Application.isPlaying || scene.path != "Assets/_Project/Scenes/PV Lab.unity") throw new Exception("Stop play mode and open PV Lab.");
+        if (Application.isPlaying || scene.path != "Assets/_Project/Scenes/Hybrid Lab.unity") throw new Exception("Stop play mode and open Hybrid Lab.");
         if (scene.isDirty) EditorSceneManager.SaveScene(scene);
         var exp2 = Owner(WindExp2MenuSetup.Id);
         var exp3 = Owner("Regulating DC Output from Wind Turbine using MPPT Charger");

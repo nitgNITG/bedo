@@ -103,16 +103,16 @@ public static class CameraPositionReorderUtility
     public static void VerifyHybridCameraGallery()
     {
         var movement=FindSingleCameraMovement();var s=new SerializedObject(movement);var poses=s.FindProperty("cameraPositions");var buttons=s.FindProperty("cameraButtons");var content=FindCameraGalleryContent();
-        if(poses.arraySize!=17||buttons.arraySize!=17)throw new InvalidOperationException("Camera views and buttons must both have 17 entries.");
+        if(poses.arraySize!=buttons.arraySize)throw new InvalidOperationException("Camera views and buttons must have matching entry counts.");
         int count=0;foreach(Transform card in content){if(!card.gameObject.activeSelf||!TryGetMoveToPositionIndex(card,movement,out int index))continue;
             if(index!=count||card.name!="Camera "+count)throw new InvalidOperationException("Gallery order mismatch: "+card.name);
             if(card.GetComponentsInChildren<TMPro.TMP_Text>(true).Any(t=>t.text!=(count+1).ToString()))throw new InvalidOperationException("Incorrect camera badge: "+card.name);
             if(buttons.GetArrayElementAtIndex(count).objectReferenceValue!=card.GetComponentInChildren<ButtonSelection>(true))throw new InvalidOperationException("Selection link mismatch: "+card.name);
             count++;
         }
-        if(count!=17)throw new InvalidOperationException("Gallery does not expose all 17 views.");
+        if(count!=poses.arraySize)throw new InvalidOperationException("Gallery does not expose all saved views.");
         for(int i=0;i<3;i++)if(!poses.GetArrayElementAtIndex(11+i).objectReferenceValue.name.Contains("Hybrid Solar Board "+(i+1)))throw new InvalidOperationException("Solar camera order is incorrect.");
-        System.IO.File.WriteAllText("Logs/HybridReview/camera-gallery-verification.txt","PASS: 17 ordered gallery entries, badges 1–18, matching selection links, solar views at indices 11–13. Existing screenshots preserved; new thumbnails left blank for the user.");
+        System.IO.File.WriteAllText("Logs/HybridReview/camera-gallery-verification.txt","PASS: all ordered gallery entries, numbered badges and selection links verified; original solar board views remain at indices 11–13.");
     }
 
     [MenuItem("Bedo/Cameras/Test Hybrid Gallery Button Links In Play Mode")]
@@ -134,8 +134,8 @@ public static class CameraPositionReorderUtility
             tested++;
         }
         movement.MoveToPosition(HybridMonitorIndex());
-        if(tested!=17)throw new InvalidOperationException("Not all gallery buttons tested.");
-        System.IO.File.WriteAllText("Logs/HybridReview/camera-gallery-runtime.txt","PASS: all 17 menu button callbacks request the matching camera pose, show the matching HUD number, and select their own gallery card. The full guided test checks actual camera movement and endpoint framing.");
+        if(tested!=poses.arraySize)throw new InvalidOperationException("Not all gallery buttons tested.");
+        System.IO.File.WriteAllText("Logs/HybridReview/camera-gallery-runtime.txt","PASS: all menu button callbacks request the matching camera pose, show the matching HUD number, and select their own gallery card. The full guided test checks actual camera movement and endpoint framing.");
     }
 
     public static int HybridMonitorIndex()

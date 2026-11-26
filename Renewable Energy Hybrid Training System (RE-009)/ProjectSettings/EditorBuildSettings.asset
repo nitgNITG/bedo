@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Main Menu.unity
     guid: 704fc4e5e671bfe4aba1f05f1cce0bfc
   - enabled: 1
-    path: Assets/_Project/Scenes/PV Lab.unity
+    path: Assets/_Project/Scenes/Hybrid Lab.unity
     guid: 0e1d88516ec0e334b83cb1d6b12918f5
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

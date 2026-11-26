@@ -15,7 +15,7 @@ public static class WindUnusedVisualAudit
  [MenuItem("PV System/Audit Unused Wind EXP2 EXP3 EXP4 Wires And Pointers")]
  public static void Audit()
  {
-  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Save PV Lab first.");
+  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/Hybrid Lab.unity")throw new InvalidOperationException("Save Hybrid Lab first.");
   var owners=Object.FindObjectsByType<StoryboardSteps>(FindObjectsInactive.Include,FindObjectsSortMode.None).Where(o=>o.gameObject.scene==scene&&new[]{"Exp 2","Exp 3","Exp 4"}.Contains(o.name)&&o.StoryboardID.IndexOf("Wind",StringComparison.OrdinalIgnoreCase)>=0).ToArray();
   foreach(var o in owners)Debug.Log("WIND CLEAN OWNER "+o.name+" ID="+o.StoryboardID+" path="+Path(o.transform));
   var all=scene.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<Component>(true)).Where(c=>c!=null).ToArray();

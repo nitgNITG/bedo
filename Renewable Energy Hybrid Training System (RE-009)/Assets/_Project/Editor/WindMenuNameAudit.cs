@@ -10,8 +10,10 @@ public static class WindMenuNameAudit
     static WindMenuNameAudit() { EditorApplication.delayCall += Run; }
     static void Run()
     {
-        if (Application.isPlaying || UnityEngine.SceneManagement.SceneManager.GetActiveScene().path != "Assets/_Project/Scenes/PV Lab.unity") return;
+        if (Application.isPlaying || UnityEngine.SceneManagement.SceneManager.GetActiveScene().path != "Assets/_Project/Scenes/Hybrid Lab.unity") return;
         if (SessionState.GetBool("WindMenuNameFix.v1",false)) return;
+        // The standalone Wind card repair is not applicable to Hybrid cards.
+        if(Object.FindObjectsByType<HybridTrainingController>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length>0)return;
         int fixedCount=0;
         foreach(var b in Object.FindObjectsByType<Button>(FindObjectsInactive.Include,FindObjectsSortMode.None))
         {
@@ -41,6 +43,6 @@ public static class WindMenuNameAudit
         if(fixedCount!=2) throw new System.Exception("Expected two EXP3/EXP4 name listeners, got "+fixedCount);
         var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);
         SessionState.SetBool("WindMenuNameFix.v1",true);
-        Debug.Log("WIND TITLE FIX VERIFIED: EXP3/EXP4 setters target their own storyboards, with names before selection; PV Lab saved.");
+        Debug.Log("WIND TITLE FIX VERIFIED: EXP3/EXP4 setters target their own storyboards, with names before selection; Hybrid Lab saved.");
     }
 }

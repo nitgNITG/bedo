@@ -79,7 +79,7 @@ public static class WindExp4Step4Setup
  [MenuItem("PV System/Configure EXP4 Step4 And Step1 LED Fix")]
  public static void Configure()
  {
-  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Save PV Lab and stop Play Mode first.");
+  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/Hybrid Lab.unity")throw new InvalidOperationException("Save Hybrid Lab and stop Play Mode first.");
   var steps=Steps();var owner=steps.GetComponentInParent<StoryboardSteps>();var pointers=steps.Find("Pointers");var wires=steps.Find("Wires");
   var templates=steps.GetComponentsInChildren<WireInteraction>(true).Where(w=>w.pointA&&w.pointB&&w.plugA&&w.plugB&&w.wireObject).ToArray();
   var step1=steps.Find("Step 1");

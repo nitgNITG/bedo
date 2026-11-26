@@ -331,7 +331,16 @@ namespace TutorialFramework
             if (graphPage) graphPage.SetActive(powered && graphShown);
             if (graphButton) graphButton.Allow = powered && !graphShown;
             if (systemButton) systemButton.Allow = powered && graphShown;
-            for (int i = 0; i < pages.Length; i++) if (pages[i].root) pages[i].root.SetActive(i == ActiveExperiment - 1);
+            // Hybrid owns its monitor directly; it is not a Wind experiment slot.
+            if (hybrid)
+            {
+                foreach (var page in pages) if (page.root) page.root.SetActive(page.root == hybrid.monitor);
+                if (hybrid.monitor) hybrid.monitor.SetActive(true);
+            }
+            else
+            {
+                for (int i = 0; i < pages.Length; i++) if (pages[i].root) pages[i].root.SetActive(i == ActiveExperiment - 1);
+            }
         }
         public void Refresh()
         {
@@ -392,7 +401,7 @@ namespace TutorialFramework
             }
             float bus = Constant("Battery_Voltage_V", 24), limit = Constant("Grid_Charge_Current_A", 9), acVoltage = Constant("AC_Lamp_Voltage_V", 220);
             bool grid = batteryBus && ActiveExperiment == 4 && Connected(gridConnections);
-            float balance = reading.dcCurrent - dcLoad - acEquivalent;
+            float balance = PVCSVReader.BatterySourceCurrent(reading.dcVoltage, reading.dcCurrent, bus) - dcLoad - acEquivalent;
             var result = new PVCSVReader.OffGridReading();
             if (batteryBus)
             {
@@ -455,7 +464,6 @@ namespace TutorialFramework
             }
             hybrid.Refresh();
             Reading = hybrid.Reading.wind;
-            ActiveExperiment = 1;
             if (speedSliderText) speedSliderText.text = RPM.ToString("0");
             if (speedSlider) speedSlider.interactable = powered && On(windPower);
             if (speedCollider) speedCollider.enabled = powered && On(windPower);

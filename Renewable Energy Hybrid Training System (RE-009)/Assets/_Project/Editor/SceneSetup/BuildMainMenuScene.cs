@@ -10,7 +10,7 @@ using UnityEngine.UI;
 /// <summary>
 /// One-time Unity editor utility that splits the current combined scene into:
 /// - Main Menu: the existing experiment-selection UI only
-/// - PV Lab: the complete physical lab and experiment scenes
+/// - Hybrid Lab: the complete physical lab and experiment scenes
 ///
 /// This intentionally uses Unity's scene API, so all retained references are
 /// remapped by Unity rather than by editing YAML scene files directly.
@@ -21,19 +21,19 @@ public static class BuildMainMenuScene
         "Assets/_Reference/Scenes/PVTemplate/Plc_Lab-solar.unity";
 
     private const string LabScene =
-        "Assets/_Project/Scenes/PV Lab.unity";
+        "Assets/_Project/Scenes/Hybrid Lab.unity";
 
     private const string MenuScene =
         "Assets/_Project/Scenes/Main Menu.unity";
 
-    [MenuItem("Tools/PV Lab/Create Main Menu and Lab Scenes")]
+    [MenuItem("Tools/Hybrid Lab/Create Main Menu and Lab Scenes")]
     public static void CreateScenes()
     {
         if (AssetDatabase.LoadAssetAtPath<SceneAsset>(LabScene) != null ||
             AssetDatabase.LoadAssetAtPath<SceneAsset>(MenuScene) != null)
         {
             Debug.LogError(
-                "Scene split stopped: Main Menu or PV Lab already exists. " +
+                "Scene split stopped: Main Menu or Hybrid Lab already exists. " +
                 "This command never overwrites existing scenes."
             );
             return;
@@ -57,7 +57,7 @@ public static class BuildMainMenuScene
         );
 
 
-        ConfigureSceneManager(menu, "PV Lab", "Main Menu");
+        ConfigureSceneManager(menu, "Hybrid Lab", "Main Menu");
         StripPhysicalLabFromMenu(menu);
         EditorSceneManager.SaveScene(menu);
 
@@ -68,7 +68,7 @@ public static class BuildMainMenuScene
         );
 
 
-        ConfigureSceneManager(lab, "PV Lab", "Main Menu");
+        ConfigureSceneManager(lab, "Hybrid Lab", "Main Menu");
         EditorSceneManager.SaveScene(lab);
 
 
@@ -85,12 +85,12 @@ public static class BuildMainMenuScene
 
         Debug.Log(
             "Scene split complete. Build starts at Main Menu; " +
-            "selecting an experiment opens PV Lab."
+            "selecting an experiment opens Hybrid Lab."
         );
     }
 
 
-    [MenuItem("Tools/PV Lab/Rebuild Main Menu Scene")]
+    [MenuItem("Tools/Hybrid Lab/Rebuild Main Menu Scene")]
     public static void RebuildMainMenuScene()
     {
         if (AssetDatabase.LoadAssetAtPath<SceneAsset>(MenuScene) == null)
@@ -106,7 +106,7 @@ public static class BuildMainMenuScene
         );
 
 
-        ConfigureSceneManager(menu, "PV Lab", "Main Menu");
+        ConfigureSceneManager(menu, "Hybrid Lab", "Main Menu");
         StripPhysicalLabFromMenu(menu);
         EditorSceneManager.SaveScene(menu);
         AssetDatabase.SaveAssets();

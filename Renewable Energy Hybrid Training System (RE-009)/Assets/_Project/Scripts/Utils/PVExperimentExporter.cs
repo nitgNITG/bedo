@@ -100,16 +100,17 @@ public class PVExperimentExporter : MonoBehaviour
         if (windExport)
         {
             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(BuildWindCSV());
-            SaveWindFile(bytes, "Wind_Speed_Curve", "csv");
+            SaveWindFile(bytes, "RE009_Hybrid_Speed_Curve", "csv");
             return;
         }
 
-        string folder =
+        string[] folders =
             StandaloneFileBrowser.OpenFolderPanel(
                 "Choose CSV Save Location",
                 "",
                 false
-            )[0];
+            );
+        string folder = folders != null && folders.Length > 0 ? folders[0] : null;
 
 
         if (string.IsNullOrEmpty(folder))
@@ -120,7 +121,7 @@ public class PVExperimentExporter : MonoBehaviour
         string path =
             Path.Combine(
                 folder,
-                "PV_Data.csv"
+                "RE009_PV_Data.csv"
             );
 
 
@@ -169,12 +170,13 @@ public class PVExperimentExporter : MonoBehaviour
             return;
         }
 
-        string folder =
+        string[] folders =
             StandaloneFileBrowser.OpenFolderPanel(
                 "Choose Image Save Location",
                 "",
                 false
-            )[0];
+            );
+        string folder = folders != null && folders.Length > 0 ? folders[0] : null;
 
 
         if (string.IsNullOrEmpty(folder))
@@ -201,7 +203,7 @@ public class PVExperimentExporter : MonoBehaviour
             yield break;
         }
         byte[] bytes = MapCameraScreenshotButton_RT.CaptureSurfaceToPngBytes(windCaptureSurface, 2048);
-        SaveWindFile(bytes, "Wind_Screen", "png");
+        SaveWindFile(bytes, "RE009_Hybrid_Screen", "png");
     }
 
     private static void SaveWindFile(byte[] bytes, string name, string extension)
@@ -211,9 +213,9 @@ public class PVExperimentExporter : MonoBehaviour
         Download(System.Convert.ToBase64String(bytes), name + "." + extension);
 #else
 #if UNITY_EDITOR
-        string path = UnityEditor.EditorUtility.SaveFilePanel("Save Wind " + extension.ToUpperInvariant(), "", name + "." + extension, extension);
+        string path = UnityEditor.EditorUtility.SaveFilePanel("Save Hybrid " + extension.ToUpperInvariant(), "", name + "." + extension, extension);
 #else
-        string path = StandaloneFileBrowser.SaveFilePanel("Save Wind " + extension.ToUpperInvariant(), "", name, extension);
+        string path = StandaloneFileBrowser.SaveFilePanel("Save Hybrid " + extension.ToUpperInvariant(), "", name, extension);
 #endif
         if (!string.IsNullOrEmpty(path))
         {
@@ -233,7 +235,7 @@ public class PVExperimentExporter : MonoBehaviour
         string path =
             Path.Combine(
                 folder,
-                windExport ? "Wind_Graph.png" : "PV_Graph.png"
+                windExport ? "RE009_Wind_Graph.png" : "RE009_PV_Graph.png"
             );
 
 

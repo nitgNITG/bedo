@@ -266,7 +266,7 @@ public class PVBatterySystemBinder : MonoBehaviour
 
         // The battery-charging experiments use two series panel sections:
         // voltage doubles while the panel current remains that of one section.
-        float sectionVoltage = FixedVo * (1f - Mathf.Log(GT / 1000f));
+        float sectionVoltage = FixedVo * Mathf.Max(0f, 1f + 0.055f * Mathf.Log(GT / 1000f));
         float ISC = sectionVoltage / FixedResistance * 2.5f;
         float I = ISC * GT / 1000f;
         float V = sectionVoltage * 2f;

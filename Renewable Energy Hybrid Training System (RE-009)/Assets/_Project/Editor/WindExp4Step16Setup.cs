@@ -65,7 +65,7 @@ public static class WindExp4Step16Setup
  [MenuItem("PV System/Configure EXP4 Step16 At Elements34 And35")]
  public static void Configure()
  {
-  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Save PV Lab and stop Play Mode first.");
+  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/Hybrid Lab.unity")throw new InvalidOperationException("Save Hybrid Lab and stop Play Mode first.");
   var steps=Steps();var owner=steps.GetComponentInParent<StoryboardSteps>();var root=steps.Find("Step 16");
   if(!root||root.GetComponentInChildren<WireInteraction>(true)||owner.steps.Count<36||owner.steps[34].interaction)throw new InvalidOperationException("Step16 already configured, missing, or element34 is occupied.");
   var original=owner.steps.ToArray();var templates=steps.GetComponentsInChildren<WireInteraction>(true).Where(w=>w.pointA&&w.pointB&&w.plugA&&w.plugB&&w.wireObject).ToArray();

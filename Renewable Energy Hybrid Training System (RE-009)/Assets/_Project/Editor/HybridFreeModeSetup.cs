@@ -48,7 +48,7 @@ public static class HybridFreeModeSetup
  [MenuItem("RE009/Require Guided Lamp Wiring In Free Mode")]
  public static void RequireGuidedLamps(){
   if(Application.isPlaying)throw new Exception("Stop Play first.");EditorSceneManager.SaveOpenScenes();
-  File.Copy("Assets/_Project/Scenes/PV Lab.unity","Logs/HybridReview/before-required-lamps.unity",true);
+  File.Copy("Assets/_Project/Scenes/Hybrid Lab.unity","Logs/HybridReview/before-required-lamps.unity",true);
   var f=HybridGuidedCompletion.All<FreeLabWindController>().Single();var h=f.hybrid;
   var so=new SerializedObject(f.mainPower);var row=so.FindProperty("enableConfigurations").GetArrayElementAtIndex(0);
   row.FindPropertyRelative("anyConnectionGroups").ClearArray();var groups=row.FindPropertyRelative("requiredConnectionGroups");
@@ -59,7 +59,7 @@ public static class HybridFreeModeSetup
  [MenuItem("RE009/Repair Free Main OFF Piece And Graph Selection")]
  public static void RepairOffAndSelection(){
   if(Application.isPlaying)throw new Exception("Stop Play first.");EditorSceneManager.SaveOpenScenes();
-  if(!File.Exists("Logs/HybridReview/before-free-controls-repair.unity"))File.Copy("Assets/_Project/Scenes/PV Lab.unity","Logs/HybridReview/before-free-controls-repair.unity");
+  if(!File.Exists("Logs/HybridReview/before-free-controls-repair.unity"))File.Copy("Assets/_Project/Scenes/Hybrid Lab.unity","Logs/HybridReview/before-free-controls-repair.unity");
   var f=HybridGuidedCompletion.All<FreeLabWindController>().Single();
   var guided=HybridGuidedCompletion.All<HybridTrainingController>().Single(h=>h.storyboard&&h.storyboard.StoryboardID==HybridExperimentSetup.Id);
   var main=guided.storyboard.steps.Select(r=>r.interaction).OfType<SingleClickInteraction>().Single(c=>c.name=="Main Board ON");
@@ -81,7 +81,7 @@ public static class HybridFreeModeSetup
  public static void PreviewGraph(){if(!Application.isPlaying)throw new Exception("Run Free Mode test first.");var f=HybridGuidedCompletion.All<FreeLabWindController>().Single();f.mainEmergency.SetValue(true);f.mainBreaker.SetValue(true);f.lab.HandleInteraction(f.mainPower.GetComponent<Interaction>(),out _);f.Refresh();f.graphButton.onClicked.Invoke();HybridGuidedCompletion.All<SmoothCameraMovement>().Single().MoveToPosition(CameraPositionReorderUtility.HybridMonitorIndex());}
  [MenuItem("RE009/Remove Inherited Free Inverter Button")]
  public static void RemoveInheritedInverterButton(){
-  if(Application.isPlaying)throw new Exception("Stop Play first.");EditorSceneManager.SaveOpenScenes();File.Copy("Assets/_Project/Scenes/PV Lab.unity","Logs/HybridReview/before-remove-inverter-button.unity",true);
+  if(Application.isPlaying)throw new Exception("Stop Play first.");EditorSceneManager.SaveOpenScenes();File.Copy("Assets/_Project/Scenes/Hybrid Lab.unity","Logs/HybridReview/before-remove-inverter-button.unity",true);
   var f=HybridGuidedCompletion.All<FreeLabWindController>().Single();var obsolete=f.inverterPower;if(!obsolete)throw new Exception("Imported inverter button already removed");
   foreach(var control in f.GetComponentsInChildren<FreeLabControl>(true).Where(c=>c!=obsolete)){
    var so=new SerializedObject(control);var list=so.FindProperty("powerControlsToCutAndLock");for(int i=list.arraySize-1;i>=0;i--)if(list.GetArrayElementAtIndex(i).objectReferenceValue==obsolete){list.GetArrayElementAtIndex(i).objectReferenceValue=null;list.DeleteArrayElementAtIndex(i);}so.ApplyModifiedPropertiesWithoutUndo();
@@ -94,7 +94,7 @@ public static class HybridFreeModeSetup
  public static void Build()
  {
   if(Application.isPlaying)throw new Exception("Stop Play first.");
-  EditorSceneManager.SaveOpenScenes();Directory.CreateDirectory("Logs/HybridReview");File.Copy("Assets/_Project/Scenes/PV Lab.unity","Logs/HybridReview/before-hybrid-free.unity",true);
+  EditorSceneManager.SaveOpenScenes();Directory.CreateDirectory("Logs/HybridReview");File.Copy("Assets/_Project/Scenes/Hybrid Lab.unity","Logs/HybridReview/before-hybrid-free.unity",true);
   var source=HybridGuidedCompletion.All<HybridTrainingController>().Single(s=>s.storyboard&&s.storyboard.StoryboardID==HybridExperimentSetup.Id);
   var old=HybridGuidedCompletion.All<FreeLabWindController>().Single();
   var oldRoot=old.GetComponentInParent<FreeLabSceneRoot>(true).gameObject;
@@ -208,7 +208,7 @@ public static class HybridFreeModeVerification
  var removedA=wire.EndpointA;var removedB=wire.EndpointB;lab.RemoveConnection(wire);Check(!lab.HasConnection(removedA,removedB)&&!f.mainPower.CanEnable(lab),"Missing lamp wire does not prevent power-on");
  foreach(var d in lampWires)if(!lab.HasConnection(d.endpointA,d.endpointB))Connect(d);
  f.mainEmergency.SetValue(true);f.mainBreaker.SetValue(true);f.mainPower.SetValue(true);f.windEmergency.SetValue(true);f.windBreaker.SetValue(true);f.windPower.SetValue(true);h.windRun.SetValue(true);h.solarEmergency.SetValue(true);h.solarPower.SetValue(true);h.solarRun.SetValue(true);h.solarEnable.SetValue(true);f.SetRPM(1000);f.Refresh();h.SendMessage("LateUpdate");
- Check(h.lamps.All(l=>l.light.activeInHierarchy),"All connected lamps not on");Check(h.Reading.pvPower>0&&h.Reading.wind.acPower>0,"Hybrid sources not producing");Check(h.powerAnalyzerCanvas.activeInHierarchy,"Analyzer hidden");Check(h.powerAnalyzerText.text==PVGuidedDataBinder.FormatPowerAnalyzer(h.Reading.wind.acPower,Mathf.Abs(h.Reading.wind.acVoltage*h.Reading.wind.acCurrent)),"Analyzer wrong source");
+ Check(h.lamps.All(l=>l.light.activeInHierarchy),"All connected lamps not on");Check(h.Reading.pvPower>0&&h.Reading.wind.acPower>0,"Hybrid sources not producing");Check(h.powerAnalyzerCanvas.activeInHierarchy,"Analyzer hidden");Check(h.powerAnalyzerText.text==PVGuidedDataBinder.FormatPowerAnalyzer(h.Reading.wind.acPower,Mathf.Sqrt(3f)*Mathf.Abs(h.Reading.wind.acVoltage*h.Reading.wind.acCurrent)),"Analyzer wrong source");
  Check(f.sockets.Where(s=>s.endpoint.name.StartsWith("Off grid inverter Ac Output")).All(s=>s.plugs.Length==4&&s.plugs.All(p=>p.activeSelf)),"Inverter four-plug stack failed");
  f.graphButton.onClicked.Invoke();Check(f.graphPage.activeInHierarchy&&!f.monitors.activeSelf&&f.graphSelectionTab.activeInHierarchy&&!f.systemSelectionTab.activeSelf,"Graph selection failed");f.systemButton.onClicked.Invoke();Check(f.monitors.activeInHierarchy&&!f.graphPage.activeSelf&&f.systemSelectionTab.activeInHierarchy&&!f.graphSelectionTab.activeSelf,"System selection failed");
  h.solarEnable.SetValue(false);f.Refresh();Check(f.mainPower.Value&&h.Reading.pvPower==0&&h.Reading.wind.acPower>0,"PV Enable incorrectly cuts system/wind power");f.mainEmergency.SetValue(false);f.Refresh();Check(!f.mainPower.Value&&!f.windPower.Value&&h.lamps.All(l=>!l.light.activeSelf),"Emergency did not cut power and lamps");

@@ -67,7 +67,7 @@ namespace TutorialFramework
         [Tooltip("The fixed title currently required for the Photovoltaics lab.")]
         [SerializeField]
         private string fixedWindowTitle =
-            "Photovoltaics Training System VL-RE";
+            "Energy Hybrid Training System RE-009";
 
         [Tooltip("Leave off to keep the fixed machine title. Turn on later to restore experiment-specific window titles.")]
         [SerializeField]
@@ -244,7 +244,7 @@ namespace TutorialFramework
             experimentsRoot.SetActive(true);
 
 
-            // The physical lab is in PV Lab.  Main Menu retains only the
+            // The physical lab is in Hybrid Lab.  Main Menu retains only the
             // selector UI, so prevent Free Lab and storyboards from doing
             // their normal scene-wide initialization here.
             foreach (FreeLabManager freeLabManager in
@@ -550,6 +550,7 @@ namespace TutorialFramework
         /// </summary>
         public void ReturnToExperimentMenu()
         {
+            HybridStudentTracking.AbortActiveExperiment();
             if (IsInMainMenuScene)
                 return;
 
@@ -599,6 +600,7 @@ namespace TutorialFramework
 
         public void RestartScenario()
         {
+            HybridStudentTracking.AbortActiveExperiment();
             if (restarting)
             {
                 if (sceneReloaded)

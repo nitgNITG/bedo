@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 
 using UnityEngine;
 using Obvious.Soap;
@@ -36,3 +37,4 @@ namespace Bedo.Experiments.Compact_Mr109
         //[SerializeField][SubAsset(order = 4)] public BoolVariable m_CapacitiveTrigger;
     }
 }
+#endif

@@ -48,9 +48,9 @@ var PDFRenderer =
 	PDFJS_LoadDocumentFromURL__deps: ['PDFRenderer_loadedDocuments'],
 	PDFJS_LoadDocumentFromURL: function(promiseHandle, url)
 	{
-		var promiseHandleString = Pointer_stringify(promiseHandle);
+		var promiseHandleString = UTF8ToString(promiseHandle);
 		
-		var loadingTask = pdfjsLib.getDocument(Pointer_stringify(url));
+		var loadingTask = pdfjsLib.getDocument(UTF8ToString(url));
 		
 		loadingTask.onProgress = function(progress) {
 		  SendMessage("WebGL_JSRuntime", "OnPromiseProgress", "promiseHandle: " + promiseHandleString + " progress: " + (progress.loaded / progress.total));
@@ -85,9 +85,9 @@ var PDFRenderer =
 	PDFJS_LoadDocumentFromBytes__deps: ['PDFRenderer_loadedDocuments'],
 	PDFJS_LoadDocumentFromBytes: function(promiseHandle, base64)
 	{
-		var promiseHandleString = Pointer_stringify(promiseHandle);
+		var promiseHandleString = UTF8ToString(promiseHandle);
 		
-		var raw = atob(Pointer_stringify(base64));
+		var raw = atob(UTF8ToString(base64));
 		var uint8Array = new Uint8Array(new ArrayBuffer(raw.length));
 
 		for (var i = 0; i < raw.length; i++) 
@@ -138,7 +138,7 @@ var PDFRenderer =
 	PDFJS_LoadPage__deps: ['PDFRenderer_loadedDocuments', 'PDFRenderer_loadedPages'],
 	PDFJS_LoadPage: function(promiseHandle, documentHandle, pageIndex)
 	{
-		var promiseHandleString = Pointer_stringify(promiseHandle);
+		var promiseHandleString = UTF8ToString(promiseHandle);
 		var pdfDocument = _PDFRenderer_loadedDocuments[documentHandle - 1];
 		
 		pdfDocument.getPage(pageIndex).then(function(page)
@@ -191,7 +191,7 @@ var PDFRenderer =
 	PDFJS_RenderPageIntoCanvas__deps: ['PDFRenderer_loadedPages', 'PDFRenderer_loadedCanvas', 'PDFRenderer_workers'],
     PDFJS_RenderPageIntoCanvas: function(promiseHandle, pageHandle, scale, width, height)
     {
-		var promiseHandleString = Pointer_stringify(promiseHandle);
+		var promiseHandleString = UTF8ToString(promiseHandle);
 		var page = _PDFRenderer_loadedPages[pageHandle - 1];
 		var viewport = page.getViewport(scale);
 		var canvas = document.createElement('canvas');

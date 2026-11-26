@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 
 using Obvious.Soap;
@@ -55,3 +56,4 @@ namespace Bedo.Experiments.Compact_Mr109
         //[SerializeField][SubAsset(order = 0)] public BoolVariable MR109_07_011_Reed02_Led;
     }
 }
+#endif

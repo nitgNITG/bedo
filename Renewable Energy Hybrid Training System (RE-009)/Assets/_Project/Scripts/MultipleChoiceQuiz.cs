@@ -91,6 +91,10 @@ public class MultipleChoiceQuiz : MonoBehaviour
         Question question = questions[currentQuestion];
         ResetAnswerHighlights(question);
         SetAnswerHighlight(answer, answer.correct);
+        string trackingId = TutorialFramework.HybridStudentTracking.QuizQuestionId(
+            TutorialFramework.HybridStudentTracking.CurrentStepNumber, questionIndex + 1);
+        TutorialFramework.HybridStudentTracking.AnswerQuestion(
+            trackingId, "MultipleChoice", question.answers.IndexOf(answer).ToString(), answer.correct);
 
         StartCoroutine(answer.correct
             ? CorrectAnswerRoutine(question)

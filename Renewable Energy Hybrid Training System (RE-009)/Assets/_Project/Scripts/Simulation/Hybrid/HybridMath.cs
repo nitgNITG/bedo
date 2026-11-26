@@ -51,14 +51,14 @@ namespace TutorialFramework.Simulation
     v=Math.Min(p.V_reg,vocBattery+(ib>=0?p.dV_ch*(1-Math.Exp(-ib/p.I_0))+p.R_ch*ib:p.R_dis*ib));
    }
    double dump=Math.Max(0,net-ib),controller=iw+p.eta_pv*ipv-dump;
-   double acCurrent=p.k_Iac*iw,phase=rpm>0?Math.Max(0,p.ke*rpm/Math.Sqrt(3)-p.Z_ac*acCurrent):0;
+   double acCurrent=p.k_Iac*iw,phase=rpm>0?Math.Max(0,p.ke*rpm-Math.Sqrt(3)*p.Z_ac*acCurrent):0;
    var r=new Reading{
     pvVoltage=(float)(gt>1?Math.Min(voc,v):0),pvCurrent=(float)ipv,busVoltage=(float)v,sourcePower=(float)(v*(iw+p.eta_pv*ipv)),
     loadPower=(float)pac,acPower=(float)pac,acVoltage=(float)(inv?p.V_ac:0),acCurrent=(float)(pac/p.V_ac),
     batteryCurrent=(float)ib,batteryPower=(float)(v*ib),dumpCurrent=(float)dump,dumpPower=(float)Math.Min(v*dump,p.P_dump_max),
     controllerCurrent=(float)controller,controllerPower=(float)(v*controller),inverterCurrent=(float)(pinv/v),inverterPower=(float)pinv,
     balanceResidual=(float)(v*(controller-pdc/v-pinv/v-ib)),
-    wind=new PVCSVReader.WindReading{rpm=(float)rpm,resistance=(float)req,acVoltage=(float)phase,acCurrent=(float)acCurrent,acPower=(float)(phase*acCurrent),dcVoltage=(float)v,dcCurrent=(float)iw,dcPower=(float)(v*iw)}
+    wind=new PVCSVReader.WindReading{rpm=(float)rpm,resistance=(float)req,acVoltage=(float)phase,acCurrent=(float)acCurrent,acPower=(float)(Math.Sqrt(3)*phase*acCurrent),dcVoltage=(float)v,dcCurrent=(float)iw,dcPower=(float)(v*iw)}
    };
    r.pvPower=r.pvVoltage*r.pvCurrent;return r;
   }

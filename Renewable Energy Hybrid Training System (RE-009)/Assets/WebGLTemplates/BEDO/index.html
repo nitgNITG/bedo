@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{{ PRODUCT_NAME }}} | {{{ COMPANY_NAME }}}</title>
+  <link rel="icon" type="image/png" href="TemplateData/bedo-logo.png">
+  <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+<body>
+  <main id="player">
+    <header class="player-header">
+      <img class="brand-logo" src="TemplateData/bedo-logo.png" alt="{{{ COMPANY_NAME }}}">
+      <h1>{{{ PRODUCT_NAME }}}</h1>
+      <button id="fullscreen" type="button" disabled>Fullscreen</button>
+    </header>
+    <section class="player-stage" aria-label="Training system">
+      <canvas id="unity-canvas" tabindex="0"></canvas>
+      <div id="loading" role="status">
+        <span>Loading training system…</span>
+        <progress id="progress" max="1" value="0" aria-label="Loading progress"></progress>
+      </div>
+      <div id="notice" role="alert" hidden></div>
+    </section>
+  </main>
+  <script>
+    const canvas = document.querySelector("#unity-canvas");
+    const player = document.querySelector("#player");
+    const loading = document.querySelector("#loading");
+    const progress = document.querySelector("#progress");
+    const fullscreen = document.querySelector("#fullscreen");
+    const notice = document.querySelector("#notice");
+    let noticeTimer;
+
+    function showBanner(message, type) {
+      clearTimeout(noticeTimer);
+      notice.textContent = message;
+      notice.hidden = false;
+      notice.dataset.type = type;
+      if (type !== "error") {
+        noticeTimer = setTimeout(() => { notice.hidden = true; }, 5000);
+      }
+    }
+
+    const buildUrl = "Build";
+    const loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+    const config = {
+      arguments: [],
+      dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+      frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_THREADS
+      workerUrl: buildUrl + "/{{{ WORKER_FILENAME }}}",
+#endif
+#if USE_WASM
+      codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+      symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+      productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+      productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+      showBanner,
+    };
+
+    const script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onerror = () => {
+      loading.hidden = true;
+      showBanner("The Unity loader could not be loaded.", "error");
+    };
+    script.onload = async () => {
+      try {
+        const instance = await createUnityInstance(canvas, config, value => { progress.value = value; });
+        fullscreen.disabled = false;
+        function syncFullscreenButton() {
+          const expanded = document.fullscreenElement || player.classList.contains("expanded");
+          fullscreen.textContent = expanded ? "Exit fullscreen" : "Fullscreen";
+        }
+
+        fullscreen.addEventListener("click", async () => {
+          if (document.fullscreenElement) {
+            await document.exitFullscreen();
+          } else if (player.classList.contains("expanded")) {
+            player.classList.remove("expanded");
+          } else {
+            try {
+              await player.requestFullscreen();
+            } catch {
+              player.classList.add("expanded");
+            }
+          }
+          syncFullscreenButton();
+        });
+        document.addEventListener("fullscreenchange", syncFullscreenButton);
+      } catch (error) {
+        showBanner(String(error), "error");
+      } finally {
+        loading.hidden = true;
+      }
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
+

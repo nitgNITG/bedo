@@ -112,7 +112,7 @@ public static class ArabicTextLayout
     private static string Line(string text)
     {
         // Treat each Latin/number run as a single token before reversing the line.
-        var tokens=Regex.Matches(text, @"[A-Za-z0-9][A-Za-z0-9 ./+%:_-]*|\P{M}\p{M}*")
+        var tokens=Regex.Matches(text, @"[+-]?[A-Za-z0-9][A-Za-z0-9 ./+%:_-]*|\P{M}\p{M}*")
             .Cast<Match>().Select(m=>m.Value).ToList();
         tokens.Reverse(); var output=new StringBuilder();
         foreach(string token in tokens)
@@ -128,6 +128,12 @@ public static class ArabicTextLayout
         bool rotated=logical.Contains("<rotate=");
         string plain=Regex.Replace(logical,"<[^>]*>","");
         if(rotated)return "<rotate=90>"+Visual(Shape(plain))+"</rotate>";
+        // TextMesh Pro receives visual order here. Keep the title separator
+        // to the left of the digits, and the shaped experiment label to their right.
+        var experimentTitle = Regex.Match(plain, @"^التجربة\s+(\d+)\s*:\s*(.+)$");
+        if (!rotated && experimentTitle.Success)
+            return Line(Shape(experimentTitle.Groups[2].Value)) + " : " +
+                experimentTitle.Groups[1].Value + " " + Line(Shape("التجربة"));
         float width=Math.Max(1,(availableWidth > 0 ? availableWidth : target.rectTransform.rect.width)-target.margin.x-target.margin.z);
         var lines=new List<string>();
         foreach(string paragraph in plain.Replace("\r", "").Split('\n'))

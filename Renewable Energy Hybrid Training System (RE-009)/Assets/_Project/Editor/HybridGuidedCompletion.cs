@@ -22,7 +22,7 @@ public static partial class HybridGuidedCompletion
  public static void Dirty(Object target){EditorUtility.SetDirty(target);PrefabUtility.RecordPrefabInstancePropertyModifications(target);}
  public static void CopyHybridSelectionFields(StoryboardSteps from,StoryboardSteps to){CopyObjectFields(from,to,"storyboardID","selectedExperimentObject","startFromIntroObjects","guidedOnlyObjects");}
  [MenuItem("RE009/Reload Saved Staging After Incomplete Assembly")]
- public static void ReloadStaging(){if(Application.isPlaying)throw new Exception("Stop Play Mode first.");var b=All<StoryboardSteps>().Single(x=>x.StoryboardID==HybridExperimentSetup.Id);if(b.steps.Count!=32)throw new Exception("Only valid before final assembly has been saved.");EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");}
+ public static void ReloadStaging(){if(Application.isPlaying)throw new Exception("Stop Play Mode first.");var b=All<StoryboardSteps>().Single(x=>x.StoryboardID==HybridExperimentSetup.Id);if(b.steps.Count!=32)throw new Exception("Only valid before final assembly has been saved.");EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hybrid Lab.unity");}
  [MenuItem("RE009/Inspect Guided Reuse")]
  public static void Inspect(){var o=new StringBuilder();
  foreach(var c in All<SmoothCameraMovement>()){o.AppendLine("CAMERA "+Path(c.transform));var a=new SerializedObject(c).FindProperty("cameraPositions");for(int i=0;i<a.arraySize;i++){var t=a.GetArrayElementAtIndex(i).objectReferenceValue as Transform;o.AppendLine("POSE "+i+" "+(t?Path(t)+" "+t.position+" "+t.eulerAngles:"null"));}}

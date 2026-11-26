@@ -49,7 +49,7 @@ public static class WindExp4Step3Setup
  public static void Configure()
  {
   var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-  if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Save PV Lab and stop Play Mode first.");
+  if(Application.isPlaying||scene.isDirty||scene.path!="Assets/_Project/Scenes/Hybrid Lab.unity")throw new InvalidOperationException("Save Hybrid Lab and stop Play Mode first.");
   var steps=Steps();var owner=steps.GetComponentInParent<StoryboardSteps>();
   var roots=steps.Cast<Transform>().Where(t=>t.name=="Step 3").ToArray();
   var root=roots.Single(t=>t.GetComponentsInChildren<Transform>(true).Any(c=>c.name=="Off-Grid Inverter Battery -ve"));

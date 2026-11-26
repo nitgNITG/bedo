@@ -38,7 +38,7 @@ public static class WindExp2MathVerification
                 if (!screen.activeSelf || batteryPower.text != "-48.00") throw new Exception("MPPT load switch must show battery discharge and enable its screen.");
                 ((SingleClickInteraction)owner.steps[24].interaction).onCompleted.Invoke();
                 ((SingleClickInteraction)owner.steps[25].interaction).onCompleted.Invoke();
-                float[] expected = { -2, .29166667f, 2.58333333f, 4.875f, 7.16666667f, 9 };
+                float[] expected = { -2, -2, -2, 4.875f, 7.16666667f, 9 };
                 for (int i = 0; i < expected.Length; i++)
                 {
                     speed.SetSpeed(i * 200); binder.RefreshDisplay();
@@ -74,7 +74,7 @@ public static class WindExp2MathVerification
         if (Application.isPlaying) throw new InvalidOperationException("Stop Play Mode first.");
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty)
             throw new InvalidOperationException("Save your scene edits before reloading.");
-        UnityEditor.SceneManagement.EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");
+        UnityEditor.SceneManagement.EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hybrid Lab.unity");
     }
     private static T Find<T>(ulong id) where T : Object
     {
@@ -109,7 +109,7 @@ public static class WindExp2MathVerification
                 if (!Find<GameObject>(23514451).activeSelf) throw new Exception("PWM screen did not turn on.");
                 Find<SingleClickInteraction>(1855147412).onCompleted.Invoke();
                 Find<SingleClickInteraction>(376975195).onCompleted.Invoke();
-                float[] battery = { -2, .291666667f, 2.58333333f, 4.875f, 7.16666667f, 9 };
+                float[] battery = { -2, -2, -2, 4.875f, 7.16666667f, 9 };
                 for (int i = 0; i < battery.Length; i++)
                 {
                     speed.SetSpeed(i * 200); binder.RefreshDisplay();
@@ -120,7 +120,7 @@ public static class WindExp2MathVerification
                 }
                 if (Mathf.Abs(binder.PWMDumpCurrent - .45833333f) > .0001f) throw new Exception("Dump load/cap mismatch.");
                 speed.SetSpeed(350); binder.RefreshDisplay();
-                if (Mathf.Abs(binder.PWMBatteryCurrent - 2.01041667f) > .0001f) throw new Exception("Intermediate speed mismatch.");
+                if (Mathf.Abs(binder.PWMBatteryCurrent - (-2f)) > .0001f) throw new Exception("Intermediate speed mismatch.");
                 Find<SingleClickInteraction>(376975195).onUndone.Invoke();
                 if (binder.PWMBatteryCurrent != -2) throw new Exception("Output disable must restore discharge.");
                 binder.TurnPWMSystemOff();

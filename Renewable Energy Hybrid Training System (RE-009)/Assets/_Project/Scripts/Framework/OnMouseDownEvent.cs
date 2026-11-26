@@ -21,6 +21,7 @@ public class OnMouseDownEvent : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (HybridPVPopupSurface.BlocksWorldClick()) return;
         if (windMonitorTabs != null)
         {
             if (systemTab) windMonitorTabs.ShowSystem();

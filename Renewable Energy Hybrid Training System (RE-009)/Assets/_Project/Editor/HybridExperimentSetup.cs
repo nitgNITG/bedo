@@ -27,7 +27,7 @@ public static class HybridExperimentSetup
  public static void Prepare(){
  if(Application.isPlaying)throw new InvalidOperationException("Stop Play Mode first.");
  var scene=EditorSceneManager.GetActiveScene();
- if(scene.path!="Assets/_Project/Scenes/PV Lab.unity")throw new InvalidOperationException("Open PV Lab first.");
+ if(scene.path!="Assets/_Project/Scenes/Hybrid Lab.unity")throw new InvalidOperationException("Open Hybrid Lab first.");
  var equipment=All<Transform>().Single(t=>PathOf(t)=="Equipment/Wind Lab");
  var hybrid=equipment.Find("Wind-Solar-Hybrid sys");
  if(!hybrid)throw new InvalidOperationException("Hybrid controller missing.");
@@ -87,7 +87,7 @@ public static class HybridExperimentSetup
  if(ui.childCount!=25)throw new Exception("Expected 25 subtitle panels.");
  for(int n=1;n<=25;n++)if(!ui.Find("Subtitle Step "+n))throw new Exception("Subtitle missing: "+n);
  var system=owner.GetComponentInChildren<HybridTrainingController>(true);
- if(!system||!system.pvReader||!system.windModel||!system.monitor||!system.monitor.GetComponentInChildren<HybridEnableSwitch>(true))throw new Exception("Incomplete monitor staging.");
+ if(!system||!system.hybridModelParameters||!system.monitor||!system.monitor.GetComponentInChildren<HybridEnableSwitch>(true))throw new Exception("Incomplete monitor staging.");
  var capture=system.monitor.GetComponentsInChildren<Bedo.Core.UI.MapCameraScreenshotButton_RT>(true);
  if(capture.Length!=1)throw new Exception("Expected a single capture handler.");
  if(!system.monitor.transform.Find("save screen (1)").GetComponent<Template.OnMouseDownE>())throw new Exception("Collider screenshot click missing.");

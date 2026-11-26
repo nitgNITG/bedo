@@ -29,6 +29,7 @@ namespace TutorialFramework
 
         private void RequestRemoval()
         {
+            if (HybridPVPopupSurface.BlocksWorldClick()) return;
             if (removalRequested)
                 return;
 

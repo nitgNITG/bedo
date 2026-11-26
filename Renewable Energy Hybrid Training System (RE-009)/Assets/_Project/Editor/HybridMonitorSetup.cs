@@ -43,7 +43,7 @@ public static class HybridMonitorSetup
 
         sys.SendMessage("LateUpdate");
         Check(sys.powerAnalyzerCanvas.activeInHierarchy,"Wind Run analyzer is hidden");
-        Check(sys.powerAnalyzerText.text==PVGuidedDataBinder.FormatPowerAnalyzer(sys.Reading.wind.acPower,Mathf.Abs(sys.Reading.wind.acVoltage*sys.Reading.wind.acCurrent)),"Analyzer is not wind-only W/VAr/VA");
+        Check(sys.powerAnalyzerText.text==PVGuidedDataBinder.FormatPowerAnalyzer(sys.Reading.wind.acPower,Mathf.Sqrt(3f)*Mathf.Abs(sys.Reading.wind.acVoltage*sys.Reading.wind.acCurrent)),"Analyzer is not wind-only W/VAr/VA");
         foreach(string field in new[]{"voltageGraphTab","acSpeedGraphTab"}){
             var tab=(UnityEngine.UI.Button)graph.FindProperty(field).objectReferenceValue;
             Check(tab.targetGraphic.color.a==1&&tab.transition==UnityEngine.UI.Selectable.Transition.ColorTint&&tab.colors.highlightedColor.a>0&&tab.colors.disabledColor.a>tab.colors.highlightedColor.a,"Graph hover/selection tint is invisible");
@@ -135,8 +135,6 @@ public static class HybridMonitorSetup
         var numbers=Object.Instantiate(numbersSource.gameObject,page.transform,true);numbers.name="Hybrid Experiment Numbers";
         var systemObject=new GameObject("Hybrid Energy Runtime");systemObject.transform.SetParent(owner.transform,false);
         var system=systemObject.AddComponent<HybridTrainingController>();system.storyboard=owner;system.monitor=page;system.blackScreen=windUI.Find("Black Screen").gameObject;
-        system.windModel=AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Data/Wind/WindExp4Data.bytes");
-        system.pvReader=systemObject.AddComponent<PVCSVReader>();
         system.lamps=All<FreeLabWindController>().Single().lamps.Where(l=>l.ac).Select(l=>new HybridTrainingController.Lamp{led=l.led,light=l.light,connection=new HybridTrainingController.Circuit()}).ToArray();
         var wires=owner.steps.Select(s=>s.interaction).OfType<WireInteraction>().ToArray();
         HybridTrainingController.Circuit At(int n)=>new HybridTrainingController.Circuit{guided=wires.Where(w=>w.transform.parent.name=="Step "+n).ToArray()};

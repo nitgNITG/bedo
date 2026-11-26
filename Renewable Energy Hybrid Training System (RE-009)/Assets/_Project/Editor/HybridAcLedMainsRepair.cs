@@ -17,7 +17,7 @@ public static partial class HybridGuidedCompletion
  [MenuItem("RE009/Correct Step One To AC LED In Both Modes")]
  public static void CorrectAcLedMains(){
   if(Application.isPlaying)throw new Exception("Stop Play first.");EditorSceneManager.SaveOpenScenes();
-  File.Copy("Assets/_Project/Scenes/PV Lab.unity","Logs/HybridReview/before-ac-led-mains.unity",true);
+  File.Copy("Assets/_Project/Scenes/Hybrid Lab.unity","Logs/HybridReview/before-ac-led-mains.unity",true);
   var board=All<StoryboardSteps>().Single(b=>b.StoryboardID==HybridExperimentSetup.Id);var free=All<FreeLabWindController>().Single();
   var raw=All<Transform>().Single(t=>Path(t)=="Experiments/AC LED Lamp Module power Connectors");
   var targets=new Dictionary<string,Transform>{
@@ -84,7 +84,7 @@ public static partial class HybridGuidedCompletion
 
  [MenuItem("RE009/Repair Corrected Mains Plug Joints")]
  public static void RepairMainsJoints(){
-  if(Application.isPlaying)throw new Exception("Stop Play first.");EditorSceneManager.SaveOpenScenes();File.Copy("Assets/_Project/Scenes/PV Lab.unity","Logs/HybridReview/before-mains-joints.unity",true);
+  if(Application.isPlaying)throw new Exception("Stop Play first.");EditorSceneManager.SaveOpenScenes();File.Copy("Assets/_Project/Scenes/Hybrid Lab.unity","Logs/HybridReview/before-mains-joints.unity",true);
   var board=All<StoryboardSteps>().Single(b=>b.StoryboardID==HybridExperimentSetup.Id);var free=All<FreeLabWindController>().Single();
   var changed=board.steps.Take(12).Select(r=>r.interaction).OfType<WireInteraction>().Where(w=>w.name.Contains("AC LED Mains")).ToArray();
   foreach(var w in changed){var c=w.wireObject.GetComponentInChildren<SplineContainer>(true);var spline=new Spline(c.Spline);

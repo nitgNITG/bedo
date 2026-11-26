@@ -11,6 +11,7 @@ namespace Template
 
         private void OnMouseDown()
         {
+            if (HybridPVPopupSurface.BlocksWorldClick()) return;
             if (mouseDownSound != null) SharedInteractionClickSound.Play(mouseDownSound);
             mouseDown.Invoke();
         }

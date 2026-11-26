@@ -68,7 +68,7 @@ public static class HybridGuidedPlayTest
  SessionState.SetBool("RE009.TestFromLab",false);File.WriteAllText(ReportPath,"RUNNING\n");SessionState.SetBool("RE009.TestRequested",true);EditorApplication.isPlaying=true;
  }
  [MenuItem("RE009/Test Full Guided Run From Lab Experiment Card")]
- public static void BeginLab(){if(Application.isPlaying)throw new Exception("Stop Play Mode first.");EditorSceneManager.SaveOpenScenes();EditorSceneManager.OpenScene("Assets/_Project/Scenes/PV Lab.unity");SessionState.SetBool("RE009.TestFromLab",true);SessionState.SetBool("RE009.TestRequested",true);EditorApplication.isPlaying=true;}
+ public static void BeginLab(){if(Application.isPlaying)throw new Exception("Stop Play Mode first.");EditorSceneManager.SaveOpenScenes();EditorSceneManager.OpenScene("Assets/_Project/Scenes/Hybrid Lab.unity");SessionState.SetBool("RE009.TestFromLab",true);SessionState.SetBool("RE009.TestRequested",true);EditorApplication.isPlaying=true;}
  static void Check(bool condition,string text){if(!condition)throw new Exception(text);}
  static void Visible(Interaction point){
  var camera=HybridGuidedCompletion.All<SmoothCameraMovement>().Single().GetComponent<Camera>();var bounds=point.GetComponent<Collider>().bounds;var v=camera.WorldToViewportPoint(bounds.center);
@@ -89,18 +89,18 @@ public static class HybridGuidedPlayTest
    var start=HybridGuidedCompletion.All<Button>().FirstOrDefault(b=>b.name=="Start Underline Button"&&HybridGuidedCompletion.Path(b.transform).Contains(HybridGuidedCompletion.Display+"/"));if(!start)return;
    // The experiment card is normally shown by the Experiments panel toggle.
    for(var t=start.transform;t;t=t.parent)t.gameObject.SetActive(true);
-   start.onClick.Invoke();stage=1;next=EditorApplication.timeSinceStartup+5;Log("Launched hybrid card from PV Lab experiment menu.");return;
+   start.onClick.Invoke();stage=1;next=EditorApplication.timeSinceStartup+5;Log("Launched hybrid card from Hybrid Lab experiment menu.");return;
   }
   var launcher=HybridGuidedCompletion.All<MainMenuExperimentLauncher>().FirstOrDefault(l=>new SerializedObject(l).FindProperty("storyboardId").stringValue==HybridExperimentSetup.Id);
   if(!launcher)return;
   Check(launcher.gameObject.activeInHierarchy,"Hybrid main-menu card hidden");launcher.GetComponent<Button>().onClick.Invoke();stage=1;next=EditorApplication.timeSinceStartup+1;Log("Launched hybrid card from Main Menu.");return;
  }
  if(stage==1){
-  if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name!="PV Lab")return;
+  if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name!="Hybrid Lab")return;
   board=HybridGuidedCompletion.All<StoryboardSteps>().Single(b=>b.StoryboardID==HybridExperimentSetup.Id);
   if(!board.gameObject.activeInHierarchy||board.CurrentStep<0)return;
   Check(InteractionManager.Instance.ExperimentName==HybridGuidedCompletion.Display,"Wrong experiment title");
-  system=board.GetComponentInChildren<HybridTrainingController>();bindings=board.GetComponent<HybridGuidedBindings>();Time.timeScale=4;stage=2;next=EditorApplication.timeSinceStartup+.4;Log("PV Lab restored correct ID, title and guided storyboard.");return;
+  system=board.GetComponentInChildren<HybridTrainingController>();bindings=board.GetComponent<HybridGuidedBindings>();Time.timeScale=4;stage=2;next=EditorApplication.timeSinceStartup+.4;Log("Hybrid Lab restored correct ID, title and guided storyboard.");return;
  }
  int current=board.CurrentStep;
  if(current!=index){index=current;part=0;next=EditorApplication.timeSinceStartup+.4;return;}

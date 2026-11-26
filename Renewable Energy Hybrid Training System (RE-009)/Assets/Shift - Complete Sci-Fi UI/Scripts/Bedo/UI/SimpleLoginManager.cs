@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
@@ -53,3 +54,5 @@ public class SimpleLoginManager : MonoBehaviour
         Debug.Log("Username not found.");
     }
 }
+
+#endif

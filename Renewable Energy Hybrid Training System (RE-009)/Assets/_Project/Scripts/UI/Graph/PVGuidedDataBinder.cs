@@ -61,7 +61,7 @@ public class PVGuidedDataBinder : MonoBehaviour
         bool grid = powered && Connected(offGridGridWires);
         // EXP4 connects the LED module; use column M (0.2 A), rather than
         // column L's 2 A halogen example. AC calculation still uses column Q.
-        PVCSVReader.TryCalculateOffGrid(offGridModel, generating ? source.dcCurrent : 0, dcLoads, acLoads, grid, out var result, true);
+        PVCSVReader.TryCalculateOffGrid(offGridModel, generating ? source.dcCurrent : 0, dcLoads, acLoads, grid, out var result, true, generating ? source.dcVoltage : 0f);
         if (!powered) result = default;
         OffGridReading = result;
         // Generator/rectifier can run while inverter is off; its readings still
@@ -134,11 +134,11 @@ public class PVGuidedDataBinder : MonoBehaviour
     private void RefreshPWMDisplay(PVCSVReader.WindReading reading)
     {
         bool generating = pwmSystemOn && pwmOutputOn && windSpeedController.IsTurbineRunning;
-        float sourceCurrent = generating ? reading.dcCurrent : 0;
+        float sourceCurrent = generating ? PVCSVReader.BatterySourceCurrent(reading.dcVoltage, reading.dcCurrent, PWMBatteryVoltage) : 0;
         float loadCurrent = pwmSystemOn && pwmLoadOn ? PWMLoadCurrent : 0;
         PWMBatteryCurrent = pwmSystemOn ? Mathf.Min(sourceCurrent - loadCurrent, PWMMaximumChargeCurrent) : 0;
         PWMDumpCurrent = pwmSystemOn ? Mathf.Max(0, sourceCurrent - loadCurrent - PWMMaximumChargeCurrent) : 0;
-        SetOutput((generating ? reading.dcVoltage : 0).ToString("F2"), sourceCurrent.ToString("F2"), (generating ? reading.dcPower : 0).ToString("F2"));
+        SetOutput((generating ? reading.dcVoltage : 0).ToString("F2"), (generating ? reading.dcCurrent : 0).ToString("F2"), (generating ? reading.dcPower : 0).ToString("F2"));
         PWMTriplet(pwmBatteryTexts, pwmSystemOn ? PWMBatteryVoltage : 0, PWMBatteryCurrent, PWMBatteryVoltage * PWMBatteryCurrent);
         PWMTriplet(pwmLoadTexts, loadCurrent > 0 ? PWMBatteryVoltage : 0, loadCurrent, PWMBatteryVoltage * loadCurrent);
         PWMTriplet(pwmDumpTexts, PWMDumpCurrent > 0 ? PWMBatteryVoltage : 0, PWMDumpCurrent, PWMBatteryVoltage * PWMDumpCurrent);
@@ -357,7 +357,7 @@ public class PVGuidedDataBinder : MonoBehaviour
             return false;
 
         float Vo = GetVo(resistance);
-        float V = Vo * (1f - Mathf.Log(GT / 1000f));
+        float V = Vo * Mathf.Max(0f, 1f + 0.055f * Mathf.Log(GT / 1000f));
         float ISC = V / resistance * 2.5f;
         float I = ISC * GT / 1000f;
 

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,3 +27,4 @@ namespace Bedo.Experiments.Compact_Mr109
         [SerializeField][SubAsset(order = 5)] public BoolVariable m_IsHoveringCanvasIncreaseOrDecrease;
     }
 }
+#endif

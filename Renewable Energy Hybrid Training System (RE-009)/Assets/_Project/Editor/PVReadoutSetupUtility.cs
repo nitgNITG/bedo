@@ -47,13 +47,13 @@ public static class PVReadoutSetupUtility
         Transform screenMesh = graphScreen.Find("Wind graph");
         // Unity does not import .csv as TextAsset in this project. Embed an
         // identical .bytes copy so the CSV also works in packaged/VR builds.
-        System.IO.File.Copy("Assets/StreamingAssets/WindExp1Data.csv", "Assets/_Project/Data/Wind/WindExp1Data.bytes", true);
+        System.IO.File.Copy("Assets/_Project/Data/Wind/LegacyCSV/WindExp1Data.csv", "Assets/_Project/Data/Wind/WindExp1Data.bytes", true);
         AssetDatabase.ImportAsset("Assets/_Project/Data/Wind/WindExp1Data.bytes", ImportAssetOptions.ForceSynchronousImport);
         TextAsset csv = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Data/Wind/WindExp1Data.bytes");
         if (speed == null || graph == null || binder == null || load == null || screenMesh == null || csv == null)
             throw new InvalidOperationException($"EXP1 wind setup missing: speed={speed}, graph={graph}, binder={binder}, load={load}, screen={screenMesh}, csv={csv}; owner={owner.name}.");
         VerifyWindModel(csv);
-        System.IO.File.Copy("Assets/StreamingAssets/WindExp1Graph.csv", "Assets/_Project/Data/Wind/WindExp1Graph.bytes", true);
+        System.IO.File.Copy("Assets/_Project/Data/Wind/LegacyCSV/WindExp1Graph.csv", "Assets/_Project/Data/Wind/WindExp1Graph.bytes", true);
         AssetDatabase.ImportAsset("Assets/_Project/Data/Wind/WindExp1Graph.bytes", ImportAssetOptions.ForceSynchronousImport);
         TextAsset graphCsv = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Data/Wind/WindExp1Graph.bytes");
         VerifyWindGraph(graphCsv);

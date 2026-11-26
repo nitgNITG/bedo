@@ -31,7 +31,8 @@ public class DialogWindow : MonoBehaviour
     private void Awake()
     {
             if (!enabled) return; // Restored legacy handlers stay inert while disabled.
-        MessageText.text = "If you are going to reset the experiment, you have to reset the simulation in tia portal too.";
+        MessageText.text = "Do you want to restart the experiment?";
+
 
 
     }
